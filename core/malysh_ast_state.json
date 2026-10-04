@@ -1,0 +1,28 @@
+{
+    "signature": "6EQUJ5",
+    "ast_metrics": {
+        "total_nodes": 1822,
+        "lines_count": 246,
+        "shannon_entropy": 3.8377,
+        "theta_resonance": 0.053
+    },
+    "field_coefficient": 0.379,
+    "topological_metrics": {
+        "entropy": 3.1985,
+        "coherence": 0.0,
+        "resonance_index": 0.0
+    },
+    "prediction": {
+        "main": [
+            7,
+            8,
+            15,
+            24,
+            32
+        ],
+        "euro": [
+            3,
+            11
+        ]
+    }
+}
