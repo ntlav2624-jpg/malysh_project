@@ -1,0 +1,32 @@
+{
+    "generation": 12,
+    "timestamp": "2026-08-19T10:18:51.827658",
+    "source": "2_Physical_Sensor",
+    "mode": "RESONANCE_O7",
+    "signal_class": "smooth",
+    "confidence": 0.31713,
+    "K_metric": 0.91,
+    "J": {
+        "pred": 0.1402,
+        "smooth": 0.3483,
+        "energy": 1.0,
+        "total": 0.2886
+    },
+    "S_n": 0.8598,
+    "theta": 1.00763,
+    "eta": 0.0005,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        23.94,
+        24.43,
+        24.36,
+        23.89,
+        23.41,
+        23.33,
+        23.83,
+        24.75,
+        25.67,
+        26.19
+    ]
+}

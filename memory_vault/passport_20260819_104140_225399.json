@@ -1,0 +1,34 @@
+{
+    "generation": 20,
+    "timestamp": "2026-08-19T10:41:40.225355",
+    "source": "Predict_Test_1",
+    "mode": "SPIRAL_FLOW",
+    "predicted_strategy": "ADAPTIVE_STRATEGY",
+    "applied_strategy": "DAMPING_STRATEGY",
+    "signal_class": "chaotic",
+    "confidence": 0.23231,
+    "K_metric": 4.4781,
+    "J": {
+        "pred": 0.8454,
+        "smooth": 1.4436,
+        "energy": 1.0,
+        "total": 1.0403
+    },
+    "S_n": 0.4194,
+    "theta": 1.00352,
+    "eta": 0.000256,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        18.85,
+        22.03,
+        22.85,
+        21.99,
+        21.12,
+        21.91,
+        25.11,
+        30.01,
+        34.92,
+        38.15
+    ]
+}

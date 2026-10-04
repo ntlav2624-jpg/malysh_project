@@ -1,0 +1,45 @@
+{
+    "total_documents": 6,
+    "unique_signs": 8,
+    "attractors": [
+        "é",
+        "diš",
+        "gal",
+        "unug{ki}",
+        "lugal"
+    ],
+    "top_signs": [
+        [
+            "diš",
+            6
+        ],
+        [
+            "lugal",
+            6
+        ],
+        [
+            "é",
+            5
+        ],
+        [
+            "unug{ki}",
+            5
+        ],
+        [
+            "gal",
+            3
+        ],
+        [
+            "e2",
+            1
+        ],
+        [
+            "примечание",
+            1
+        ],
+        [
+            "...",
+            1
+        ]
+    ]
+}

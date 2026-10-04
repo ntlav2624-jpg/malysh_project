@@ -1,0 +1,32 @@
+{
+    "generation": 13,
+    "timestamp": "2026-08-19T10:18:51.828849",
+    "source": "3_Chaotic_Lottery",
+    "mode": "SPIRAL_FLOW",
+    "signal_class": "chaotic",
+    "confidence": 0.00305,
+    "K_metric": 1868.687,
+    "J": {
+        "pred": 0.9112,
+        "smooth": 16.8557,
+        "energy": 1.0,
+        "total": 5.7034
+    },
+    "S_n": 0.0888,
+    "theta": 1.00478,
+    "eta": 0.0005,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        88.91,
+        113.06,
+        110.14,
+        87.6,
+        64.56,
+        60.74,
+        84.81,
+        129.12,
+        173.94,
+        198.95
+    ]
+}

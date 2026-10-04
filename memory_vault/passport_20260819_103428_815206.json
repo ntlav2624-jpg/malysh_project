@@ -1,0 +1,33 @@
+{
+    "generation": 16,
+    "timestamp": "2026-08-19T10:34:28.815178",
+    "source": "Smooth_Wave_2",
+    "mode": "DAMPING_MODE",
+    "strategy": "DAMPING_STRATEGY",
+    "signal_class": "harmonic",
+    "confidence": 0.37564,
+    "K_metric": 2.6049,
+    "J": {
+        "pred": 0.5576,
+        "smooth": 1.8132,
+        "energy": 1.0,
+        "total": 0.9785
+    },
+    "S_n": 0.0006,
+    "theta": 1.00435,
+    "eta": 0.000256,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        70.56,
+        74.04,
+        74.57,
+        72.99,
+        71.38,
+        71.87,
+        75.36,
+        81.01,
+        86.68,
+        90.22
+    ]
+}

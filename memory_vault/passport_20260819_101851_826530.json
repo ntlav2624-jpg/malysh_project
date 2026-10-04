@@ -1,0 +1,32 @@
+{
+    "generation": 11,
+    "timestamp": "2026-08-19T10:18:51.826494",
+    "source": "1_Synthetic_Sine",
+    "mode": "SPIRAL_FLOW",
+    "signal_class": "chaotic",
+    "confidence": 0.20066,
+    "K_metric": 6.2481,
+    "J": {
+        "pred": 1.3524,
+        "smooth": 1.1458,
+        "energy": 0.985,
+        "total": 1.2537
+    },
+    "S_n": 0.3524,
+    "theta": 1.00777,
+    "eta": 0.0005,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        15.85,
+        17.34,
+        16.98,
+        15.3,
+        13.59,
+        13.19,
+        14.7,
+        17.58,
+        20.49,
+        22.04
+    ]
+}

@@ -1,0 +1,78 @@
+[
+    {
+        "line": 1,
+        "source": "1. lugal an-na nin unug ki",
+        "restored": [
+            "lugal",
+            "anna",
+            "nin",
+            "unug",
+            "ki"
+        ],
+        "tensions": [],
+        "translation": [
+            "царь / правитель",
+            "anna",
+            "nin",
+            "Урук",
+            "земля / место"
+        ]
+    },
+    {
+        "line": 2,
+        "source": "2. e2 gal an-unna dingir gal-gal",
+        "restored": [
+            "e2",
+            "gal",
+            "anunna",
+            "dingir",
+            "galgal"
+        ],
+        "tensions": [],
+        "translation": [
+            "дом / храм",
+            "gal",
+            "anunna",
+            "бог / божество",
+            "galgal"
+        ]
+    },
+    {
+        "line": 3,
+        "source": "3. abzu en nun ki-ag2",
+        "restored": [
+            "abzu",
+            "en",
+            "nun",
+            "kiag2"
+        ],
+        "tensions": [],
+        "translation": [
+            "подземный океан (Абзу)",
+            "господин / жрец",
+            "князь / владыка",
+            "kiag2"
+        ]
+    },
+    {
+        "line": 4,
+        "source": "4. sag gu7 udu ki lugal ma",
+        "restored": [
+            "sag",
+            "gu7",
+            "udu",
+            "ki",
+            "lugal",
+            "ma"
+        ],
+        "tensions": [],
+        "translation": [
+            "sag",
+            "gu7",
+            "udu",
+            "земля / место",
+            "царь / правитель",
+            "ma"
+        ]
+    }
+]

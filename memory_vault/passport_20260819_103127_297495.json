@@ -1,0 +1,33 @@
+{
+    "generation": 14,
+    "timestamp": "2026-08-19T10:31:27.297460",
+    "source": "Smooth_Resonance_Run",
+    "mode": "DAMPING_MODE",
+    "strategy": "DAMPING_STRATEGY",
+    "signal_class": "chaotic",
+    "confidence": 0.21802,
+    "K_metric": 3.1853,
+    "J": {
+        "pred": 0.0825,
+        "smooth": 1.8166,
+        "energy": 1.0,
+        "total": 0.6945
+    },
+    "S_n": 0.8287,
+    "theta": 1.00464,
+    "eta": 0.0004,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        60.08,
+        63.24,
+        63.43,
+        61.51,
+        59.57,
+        59.72,
+        62.88,
+        68.2,
+        73.55,
+        76.76
+    ]
+}

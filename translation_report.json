@@ -1,0 +1,70 @@
+[
+    {
+        "line": 1,
+        "source": "1. an-na ... nun ...",
+        "restored": [
+            "anna",
+            "[an-na*]",
+            "nun"
+        ],
+        "tensions": [
+            2.0
+        ],
+        "translation": [
+            "anna",
+            "небесный владыка",
+            "князь небес"
+        ]
+    },
+    {
+        "line": 2,
+        "source": "2. dingir [x] an-unna ...",
+        "restored": [
+            "dingir",
+            "[dingir*]",
+            "anunna"
+        ],
+        "tensions": [
+            4.125
+        ],
+        "translation": [
+            "бог / божество",
+            "бог / божество",
+            "anunna"
+        ]
+    },
+    {
+        "line": 3,
+        "source": "3. ... gal-gal ... ki",
+        "restored": [
+            "galgal",
+            "[an-unna*]",
+            "ki"
+        ],
+        "tensions": [
+            2.0
+        ],
+        "translation": [
+            "galgal",
+            "Анунна (пантеон)",
+            "земля / место"
+        ]
+    },
+    {
+        "line": 4,
+        "source": "4. abzu [x] en ...",
+        "restored": [
+            "abzu",
+            "[ki*]",
+            "en"
+        ],
+        "tensions": [
+            3.0
+        ],
+        "translation": [
+            "подземный океан (Абзу)",
+            "место господина",
+            "господин / жрец"
+        ]
+    }
+]

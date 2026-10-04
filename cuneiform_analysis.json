@@ -1,0 +1,68 @@
+{
+    "total_documents": 5,
+    "unique_signs": 4,
+    "top_signs": [
+        [
+            "diš",
+            4
+        ],
+        [
+            "lugal",
+            4
+        ],
+        [
+            "é",
+            4
+        ],
+        [
+            "gal",
+            3
+        ]
+    ],
+    "top_patterns": [
+        {
+            "sequence": [
+                "diš",
+                "lugal"
+            ],
+            "count": 3
+        },
+        {
+            "sequence": [
+                "é",
+                "gal"
+            ],
+            "count": 3
+        },
+        {
+            "sequence": [
+                "lugal",
+                "é"
+            ],
+            "count": 2
+        },
+        {
+            "sequence": [
+                "diš",
+                "lugal",
+                "é"
+            ],
+            "count": 2
+        }
+    ],
+    "transition_matrix_sample": {
+        "diš": {
+            "lugal": 0.75,
+            "é": 0.25
+        },
+        "lugal": {
+            "é": 1.0
+        },
+        "é": {
+            "gal": 1.0
+        },
+        "gal": {
+            "lugal": 1.0
+        }
+    }
+}

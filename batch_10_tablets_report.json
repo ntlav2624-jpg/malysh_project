@@ -1,0 +1,498 @@
+[
+    {
+        "tablet_id": 1,
+        "filename": "tablet_1.txt",
+        "lines": [
+            {
+                "source": "1. 2(barig) sze gur apin",
+                "tokens": [
+                    "2barig",
+                    "sze",
+                    "gur",
+                    "apin"
+                ],
+                "translation": [
+                    "2barig",
+                    "sze",
+                    "мера гур (зерновой объем)",
+                    "плуг / пахотный сектор"
+                ]
+            },
+            {
+                "source": "2. engar-e szu-ba-ti",
+                "tokens": [
+                    "engare",
+                    "szubati"
+                ],
+                "translation": [
+                    "engare",
+                    "szubati"
+                ]
+            },
+            {
+                "source": "3. iti sig4-ga",
+                "tokens": [
+                    "iti",
+                    "sig4ga"
+                ],
+                "translation": [
+                    "iti",
+                    "sig4ga"
+                ]
+            },
+            {
+                "source": "4. mu en-mah-gal-an-na",
+                "tokens": [
+                    "mu",
+                    "enmahgalanna"
+                ],
+                "translation": [
+                    "mu",
+                    "enmahgalanna"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 2,
+        "filename": "tablet_2.txt",
+        "lines": [
+            {
+                "source": "1. 15 udu-nita 5 masz",
+                "tokens": [
+                    "15",
+                    "udunita",
+                    "5",
+                    "masz"
+                ],
+                "translation": [
+                    "15",
+                    "udunita",
+                    "5",
+                    "козленок / процентный сбор"
+                ]
+            },
+            {
+                "source": "2. ki ur-mes-ta",
+                "tokens": [
+                    "ki",
+                    "urmesta"
+                ],
+                "translation": [
+                    "ki",
+                    "urmesta"
+                ]
+            },
+            {
+                "source": "3. kiszib3 ensi2",
+                "tokens": [
+                    "kiszib3",
+                    "ensi2"
+                ],
+                "translation": [
+                    "kiszib3",
+                    "ensi2"
+                ]
+            },
+            {
+                "source": "4. mu ki-masz{ki} ba-hul",
+                "tokens": [
+                    "mu",
+                    "kimaszki",
+                    "bahul"
+                ],
+                "translation": [
+                    "mu",
+                    "kimaszki",
+                    "bahul"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 3,
+        "filename": "tablet_3.txt",
+        "lines": [
+            {
+                "source": "1. 30 lu2-HUN-ga2",
+                "tokens": [
+                    "30",
+                    "lu2hunga2"
+                ],
+                "translation": [
+                    "30",
+                    "lu2hunga2"
+                ]
+            },
+            {
+                "source": "2. e2-kikken gub-ba",
+                "tokens": [
+                    "e2kikken",
+                    "gubba"
+                ],
+                "translation": [
+                    "e2kikken",
+                    "gubba"
+                ]
+            },
+            {
+                "source": "3. ugula lugal-ma2-gur8-re",
+                "tokens": [
+                    "ugula",
+                    "lugalma2gur8re"
+                ],
+                "translation": [
+                    "ugula",
+                    "lugalma2gur8re"
+                ]
+            },
+            {
+                "source": "4. szuku ba-ab-gu7",
+                "tokens": [
+                    "szuku",
+                    "baabgu7"
+                ],
+                "translation": [
+                    "продовольственный надел / пай",
+                    "baabgu7"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 4,
+        "filename": "tablet_4.txt",
+        "lines": [
+            {
+                "source": "1. nig2-dab5-ba bala-a",
+                "tokens": [
+                    "nig2dab5ba",
+                    "balaa"
+                ],
+                "translation": [
+                    "nig2dab5ba",
+                    "balaa"
+                ]
+            },
+            {
+                "source": "2. ga-esz8 unug{ki}-ga",
+                "tokens": [
+                    "gaesz8",
+                    "unugkiga"
+                ],
+                "translation": [
+                    "gaesz8",
+                    "unugkiga"
+                ]
+            },
+            {
+                "source": "3. mu us2-sa bad3 mar-tu",
+                "tokens": [
+                    "mu",
+                    "us2sa",
+                    "bad3",
+                    "martu"
+                ],
+                "translation": [
+                    "mu",
+                    "us2sa",
+                    "bad3",
+                    "martu"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 5,
+        "filename": "tablet_5.txt",
+        "lines": [
+            {
+                "source": "1. 10N14 sze gur",
+                "tokens": [
+                    "10n14",
+                    "sze",
+                    "gur"
+                ],
+                "translation": [
+                    "10n14",
+                    "sze",
+                    "мера гур (зерновой объем)"
+                ]
+            },
+            {
+                "source": "2. e2-gal unug{ki}",
+                "tokens": [
+                    "e2gal",
+                    "unugki"
+                ],
+                "translation": [
+                    "e2gal",
+                    "unugki"
+                ]
+            },
+            {
+                "source": "3. szu ti-a",
+                "tokens": [
+                    "szu",
+                    "tia"
+                ],
+                "translation": [
+                    "szu",
+                    "tia"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 6,
+        "filename": "tablet_6.txt",
+        "lines": [
+            {
+                "source": "1. 2gin2 ku3-babbar",
+                "tokens": [
+                    "2gin2",
+                    "ku3babbar"
+                ],
+                "translation": [
+                    "2gin2",
+                    "ku3babbar"
+                ]
+            },
+            {
+                "source": "2. masz a-sza3-ga",
+                "tokens": [
+                    "masz",
+                    "asza3ga"
+                ],
+                "translation": [
+                    "козленок / процентный сбор",
+                    "asza3ga"
+                ]
+            },
+            {
+                "source": "3. ki lu2-dingir-ra-ta",
+                "tokens": [
+                    "ki",
+                    "lu2dingirrata"
+                ],
+                "translation": [
+                    "ki",
+                    "lu2dingirrata"
+                ]
+            },
+            {
+                "source": "4. kiszib3 szesz-kal-la",
+                "tokens": [
+                    "kiszib3",
+                    "szeszkalla"
+                ],
+                "translation": [
+                    "kiszib3",
+                    "szeszkalla"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 7,
+        "filename": "tablet_7.txt",
+        "lines": [
+            {
+                "source": "1. 100 sa gi",
+                "tokens": [
+                    "100",
+                    "sa",
+                    "gi"
+                ],
+                "translation": [
+                    "100",
+                    "sa",
+                    "gi"
+                ]
+            },
+            {
+                "source": "2. e2-udu-niga-sze3",
+                "tokens": [
+                    "e2udunigasze3"
+                ],
+                "translation": [
+                    "e2udunigasze3"
+                ]
+            },
+            {
+                "source": "3. ki ur-{d}en-lil2-la2-ta",
+                "tokens": [
+                    "ki",
+                    "urdenlil2la2ta"
+                ],
+                "translation": [
+                    "ki",
+                    "urdenlil2la2ta"
+                ]
+            },
+            {
+                "source": "4. mu ha-ar-shi{ki} ba-hul",
+                "tokens": [
+                    "mu",
+                    "haarshiki",
+                    "bahul"
+                ],
+                "translation": [
+                    "mu",
+                    "haarshiki",
+                    "bahul"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 8,
+        "filename": "tablet_8.txt",
+        "lines": [
+            {
+                "source": "2(ban2) i3-nun",
+                "tokens": [
+                    "2ban2",
+                    "i3nun"
+                ],
+                "translation": [
+                    "2ban2",
+                    "i3nun"
+                ]
+            },
+            {
+                "source": "2. 1(barig) gesztin",
+                "tokens": [
+                    "1barig",
+                    "gesztin"
+                ],
+                "translation": [
+                    "1barig",
+                    "gesztin"
+                ]
+            },
+            {
+                "source": "3. kasz dida du",
+                "tokens": [
+                    "kasz",
+                    "dida",
+                    "du"
+                ],
+                "translation": [
+                    "kasz",
+                    "dida",
+                    "du"
+                ]
+            },
+            {
+                "source": "4. ensi2-ra se-ge4-de3",
+                "tokens": [
+                    "ensi2ra",
+                    "sege4de3"
+                ],
+                "translation": [
+                    "ensi2ra",
+                    "sege4de3"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 9,
+        "filename": "tablet_9.txt",
+        "lines": [
+            {
+                "source": "1. id2 nin-pirig-tur",
+                "tokens": [
+                    "id2",
+                    "ninpirigtur"
+                ],
+                "translation": [
+                    "id2",
+                    "ninpirigtur"
+                ]
+            },
+            {
+                "source": "2. ba-al-la",
+                "tokens": [
+                    "baalla"
+                ],
+                "translation": [
+                    "baalla"
+                ]
+            },
+            {
+                "source": "3. a-sza3 gub-ba",
+                "tokens": [
+                    "asza3",
+                    "gubba"
+                ],
+                "translation": [
+                    "asza3",
+                    "gubba"
+                ]
+            },
+            {
+                "source": "4. lu2 kin-gi4-a",
+                "tokens": [
+                    "lu2",
+                    "kingi4a"
+                ],
+                "translation": [
+                    "lu2",
+                    "kingi4a"
+                ]
+            }
+        ]
+    },
+    {
+        "tablet_id": 10,
+        "filename": "tablet_10.txt",
+        "lines": [
+            {
+                "source": "1. szu-nigin2 1(gesz2) sze gur",
+                "tokens": [
+                    "szunigin2",
+                    "1gesz2",
+                    "sze",
+                    "gur"
+                ],
+                "translation": [
+                    "szunigin2",
+                    "1gesz2",
+                    "sze",
+                    "мера гур (зерновой объем)"
+                ]
+            },
+            {
+                "source": "2. kiszib3 nu-tuku",
+                "tokens": [
+                    "kiszib3",
+                    "nutuku"
+                ],
+                "translation": [
+                    "kiszib3",
+                    "nutuku"
+                ]
+            },
+            {
+                "source": "3. e2-kikken2-ta",
+                "tokens": [
+                    "e2kikken2ta"
+                ],
+                "translation": [
+                    "e2kikken2ta"
+                ]
+            },
+            {
+                "source": "4. ba-zi",
+                "tokens": [
+                    "bazi"
+                ],
+                "translation": [
+                    "bazi"
+                ]
+            }
+        ]
+    }
+]

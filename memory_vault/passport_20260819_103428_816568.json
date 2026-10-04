@@ -1,0 +1,33 @@
+{
+    "generation": 17,
+    "timestamp": "2026-08-19T10:34:28.816544",
+    "source": "Smooth_Wave_3",
+    "mode": "ACTIVE_5",
+    "strategy": "ADAPTIVE_STRATEGY",
+    "signal_class": "harmonic",
+    "confidence": 0.37596,
+    "K_metric": 2.6008,
+    "J": {
+        "pred": 0.5571,
+        "smooth": 1.8118,
+        "energy": 1.0,
+        "total": 0.9778
+    },
+    "S_n": 0.0005,
+    "theta": 1.0041,
+    "eta": 0.000256,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        80.56,
+        84.04,
+        84.57,
+        82.99,
+        81.38,
+        81.87,
+        85.37,
+        91.01,
+        96.67,
+        100.21
+    ]
+}
