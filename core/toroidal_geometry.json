@@ -1,0 +1,83 @@
+{
+    "signature": "6EQUJ5",
+    "toroidal_metrics": {
+        "R_major": 10.0,
+        "r_minor": 3.0,
+        "euclidean_path": 60.43,
+        "resonance_path": 65.43
+    },
+    "nodes": [
+        {
+            "node_id": 1,
+            "symbol": "6",
+            "amplitude": 6,
+            "coords_xyz": [
+                12.427,
+                0.0,
+                1.763
+            ],
+            "time_coord_t": 0.6283,
+            "zone": "ROOT"
+        },
+        {
+            "node_id": 2,
+            "symbol": "E",
+            "amplitude": 14,
+            "coords_xyz": [
+                5.157,
+                8.932,
+                2.984
+            ],
+            "time_coord_t": 2.0944,
+            "zone": "ROOT"
+        },
+        {
+            "node_id": 3,
+            "symbol": "Q",
+            "amplitude": 26,
+            "coords_xyz": [
+                -3.63,
+                6.287,
+                1.22
+            ],
+            "time_coord_t": 4.8171,
+            "zone": "JILS"
+        },
+        {
+            "node_id": 4,
+            "symbol": "U",
+            "amplitude": 30,
+            "coords_xyz": [
+                -7.0,
+                0.0,
+                0.0
+            ],
+            "time_coord_t": 7.9587,
+            "zone": "TAIL"
+        },
+        {
+            "node_id": 5,
+            "symbol": "J",
+            "amplitude": 19,
+            "coords_xyz": [
+                -4.39,
+                -7.604,
+                2.741
+            ],
+            "time_coord_t": 9.9484,
+            "zone": "JILS"
+        },
+        {
+            "node_id": 6,
+            "symbol": "5",
+            "amplitude": 5,
+            "coords_xyz": [
+                6.299,
+                -10.91,
+                1.5
+            ],
+            "time_coord_t": 10.472,
+            "zone": "ROOT"
+        }
+    ]
+}

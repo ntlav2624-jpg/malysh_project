@@ -1,0 +1,159 @@
+{
+    "signature": "6EQUJ5",
+    "total_power": 100,
+    "zones": {
+        "ROOT": [],
+        "JILS": [
+            {
+                "node_id": 6,
+                "symbol": "5",
+                "amplitude": 5,
+                "energy_weight": 0.05,
+                "quaternary_state": 1,
+                "zone": "JILS",
+                "electrical_params": {
+                    "voltage_v": 1.2,
+                    "logic_level": "PAM-4_L1"
+                }
+            }
+        ],
+        "TAIL": [
+            {
+                "node_id": 1,
+                "symbol": "6",
+                "amplitude": 6,
+                "energy_weight": 0.06,
+                "quaternary_state": 2,
+                "zone": "TAIL",
+                "electrical_params": {
+                    "voltage_v": 2.4,
+                    "logic_level": "PAM-4_L2"
+                }
+            },
+            {
+                "node_id": 2,
+                "symbol": "E",
+                "amplitude": 14,
+                "energy_weight": 0.14,
+                "quaternary_state": 2,
+                "zone": "TAIL",
+                "electrical_params": {
+                    "voltage_v": 2.4,
+                    "logic_level": "PAM-4_L2"
+                }
+            },
+            {
+                "node_id": 3,
+                "symbol": "Q",
+                "amplitude": 26,
+                "energy_weight": 0.26,
+                "quaternary_state": 2,
+                "zone": "TAIL",
+                "electrical_params": {
+                    "voltage_v": 2.4,
+                    "logic_level": "PAM-4_L2"
+                }
+            },
+            {
+                "node_id": 4,
+                "symbol": "U",
+                "amplitude": 30,
+                "energy_weight": 0.3,
+                "quaternary_state": 2,
+                "zone": "TAIL",
+                "electrical_params": {
+                    "voltage_v": 2.4,
+                    "logic_level": "PAM-4_L2"
+                }
+            }
+        ],
+        "PHASE": [
+            {
+                "node_id": 5,
+                "symbol": "J",
+                "amplitude": 19,
+                "energy_weight": 0.19,
+                "quaternary_state": 3,
+                "zone": "PHASE",
+                "electrical_params": {
+                    "voltage_v": 3.6,
+                    "logic_level": "PAM-4_L3"
+                }
+            }
+        ]
+    },
+    "nodes": [
+        {
+            "node_id": 1,
+            "symbol": "6",
+            "amplitude": 6,
+            "energy_weight": 0.06,
+            "quaternary_state": 2,
+            "zone": "TAIL",
+            "electrical_params": {
+                "voltage_v": 2.4,
+                "logic_level": "PAM-4_L2"
+            }
+        },
+        {
+            "node_id": 2,
+            "symbol": "E",
+            "amplitude": 14,
+            "energy_weight": 0.14,
+            "quaternary_state": 2,
+            "zone": "TAIL",
+            "electrical_params": {
+                "voltage_v": 2.4,
+                "logic_level": "PAM-4_L2"
+            }
+        },
+        {
+            "node_id": 3,
+            "symbol": "Q",
+            "amplitude": 26,
+            "energy_weight": 0.26,
+            "quaternary_state": 2,
+            "zone": "TAIL",
+            "electrical_params": {
+                "voltage_v": 2.4,
+                "logic_level": "PAM-4_L2"
+            }
+        },
+        {
+            "node_id": 4,
+            "symbol": "U",
+            "amplitude": 30,
+            "energy_weight": 0.3,
+            "quaternary_state": 2,
+            "zone": "TAIL",
+            "electrical_params": {
+                "voltage_v": 2.4,
+                "logic_level": "PAM-4_L2"
+            }
+        },
+        {
+            "node_id": 5,
+            "symbol": "J",
+            "amplitude": 19,
+            "energy_weight": 0.19,
+            "quaternary_state": 3,
+            "zone": "PHASE",
+            "electrical_params": {
+                "voltage_v": 3.6,
+                "logic_level": "PAM-4_L3"
+            }
+        },
+        {
+            "node_id": 6,
+            "symbol": "5",
+            "amplitude": 5,
+            "energy_weight": 0.05,
+            "quaternary_state": 1,
+            "zone": "JILS",
+            "electrical_params": {
+                "voltage_v": 1.2,
+                "logic_level": "PAM-4_L1"
+            }
+        }
+    ]
+}
