@@ -4,6 +4,7 @@ import argparse
 from typing import Any
 
 from malysh_system.capability_router import route
+from malysh_system.legacy_memory import recall as recall_legacy_memory
 from malysh_system.human_layer import (
     build_human_thought,
     human_summary,
@@ -48,7 +49,7 @@ def consciousness(text: str) -> dict[str, Any]:
     }
 
 
-def subconscious(text: str) -> dict[str, Any]:
+def _subconscious_base(text: str) -> dict[str, Any]:
     """
     Независимый подсознательный анализ.
 
@@ -158,6 +159,60 @@ def subconscious(text: str) -> dict[str, Any]:
         "broad_fallback": False,
         "text": synthesize(plan),
     }
+
+
+def subconscious(text: str) -> dict[str, Any]:
+    """
+    Подсознательный контур с памятью наследия.
+
+    Базовый PLAN остаётся независимым.
+    Legacy Memory только вспоминает релевантные знания.
+    Она не запускает органы и не изменяет state.
+    """
+    base = _subconscious_base(text)
+
+    memory = recall_legacy_memory(
+        text,
+        limit=8,
+    )
+
+    recalled = []
+
+    for item in memory.get(
+        "results",
+        [],
+    ):
+        recalled.append(
+            {
+                "id": item["id"],
+                "title": item["title"],
+                "kind": item["kind"],
+                "status": item["status"],
+                "score": item["score"],
+                "paths": item.get(
+                    "paths",
+                    [],
+                ),
+                "meaning_invented": item.get(
+                    "meaning_invented",
+                    False,
+                ),
+            }
+        )
+
+    base["legacy_memory"] = {
+        "mode": "semantic_recall",
+        "recalled": recalled,
+        "possible": memory.get(
+            "possible",
+            False,
+        ),
+        "state_write": False,
+        "state_commit": False,
+    }
+
+    return base
+
 
 def joint(
     conscious: dict[str, Any],

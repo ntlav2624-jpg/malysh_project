@@ -1,0 +1,4156 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Total Legacy Memory",
+  "policy": {
+    "unknown_is_not_deleted": true,
+    "meaning_must_not_be_invented": true,
+    "named_memory_is_recallable": true,
+    "state_write": false,
+    "state_commit": false
+  },
+  "summary": {
+    "memory_count": 12,
+    "recovered": 8,
+    "historical": 1,
+    "named_unresolved": 3,
+    "indexed_files": 172
+  },
+  "memories": [
+    {
+      "id": "logic_567",
+      "title": "Логика 567",
+      "kind": "legacy_logic",
+      "aliases": [
+        "567",
+        "logic 567",
+        "logic_567",
+        "логика 567"
+      ],
+      "status": "named_unresolved",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [],
+      "git_history_evidence": []
+    },
+    {
+      "id": "kmbp",
+      "title": "КМБП",
+      "kind": "legacy_logic",
+      "aliases": [
+        "кмбп",
+        "kmbp"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "malysh_apsu_engine.py",
+          "aliases": [
+            "кмбп"
+          ],
+          "excerpts": [
+            {
+              "line": 25,
+              "text": "# 2. Кватернарный логический слой (КМБП): расчет состояний базы-4"
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": []
+    },
+    {
+      "id": "malysh_swarm",
+      "title": "Малыш Рой",
+      "kind": "collective_logic",
+      "aliases": [
+        "малыш рой",
+        "рой",
+        "swarm",
+        "malysh swarm"
+      ],
+      "status": "named_unresolved",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [],
+      "git_history_evidence": []
+    },
+    {
+      "id": "omni",
+      "title": "Омни",
+      "kind": "legacy_logic",
+      "aliases": [
+        "омни",
+        "omni"
+      ],
+      "status": "named_unresolved",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [],
+      "git_history_evidence": []
+    },
+    {
+      "id": "resonance_o7",
+      "title": "Резонанс O7",
+      "kind": "computational_logic",
+      "aliases": [
+        "resonance_o7",
+        "resonance o7",
+        "резонанс o7",
+        "operator_7",
+        "оператор 7"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "malysh_engine.py",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 132,
+              "text": "mode = \"RESONANCE_O7\""
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_master.py",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 156,
+              "text": "mode = \"RESONANCE_O7\""
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_project_passport.md",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 22,
+              "text": "| 2 | data_01.txt | RESONANCE_O7 | unknown | 0.0000 | 0.0000 | 0.0000 | 1.0120 | 0.0 |"
+            },
+            {
+              "line": 23,
+              "text": "| 3 | data_01.txt | RESONANCE_O7 | unknown | 0.0000 | 0.0000 | 0.0000 | 1.0136 | 0.0 |"
+            },
+            {
+              "line": 24,
+              "text": "| 4 | data_01.txt | RESONANCE_O7 | unknown | 0.0000 | 0.0000 | 0.0000 | 1.0146 | 0.0 |"
+            },
+            {
+              "line": 32,
+              "text": "| 12 | 2_Physical_Sens | RESONANCE_O7 | smooth | 0.3171 | 0.2886 | 0.8598 | 1.0076 | 200.0 |"
+            },
+            {
+              "line": 49,
+              "text": "| RESONANCE_O7 | 4 | тонкая настройка / резонанс |"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_094612_305974.json",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 6,
+              "text": "\"mode\": \"RESONANCE_O7\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_094919_389672.json",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 6,
+              "text": "\"mode\": \"RESONANCE_O7\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_095151_597603.json",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 5,
+              "text": "\"mode\": \"RESONANCE_O7\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_101851_827682.json",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 5,
+              "text": "\"mode\": \"RESONANCE_O7\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_pipeline.py",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 88,
+              "text": "mode = \"RESONANCE_O7\""
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_reflected_pipeline.py",
+          "aliases": [
+            "resonance_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 102,
+              "text": "mode = \"RESONANCE_O7\""
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "operator_7",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "operator_7",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "operator_7",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        },
+        {
+          "source": "git_history",
+          "alias": "operator_7",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        }
+      ]
+    },
+    {
+      "id": "n7_geometry",
+      "title": "Геометрия N7",
+      "kind": "geometric_logic",
+      "aliases": [
+        "n7",
+        "n7_nodes",
+        "n7_indices",
+        "compute_n7_nodes"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "malysh_system/genome_registry.json",
+          "aliases": [
+            "compute_n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 914,
+              "text": "\"compute_n7_nodes\","
+            },
+            {
+              "line": 990,
+              "text": "\"compute_n7_nodes\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/integration_queue.json",
+          "aliases": [
+            "compute_n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 185,
+              "text": "\"compute_n7_nodes\","
+            },
+            {
+              "line": 281,
+              "text": "\"compute_n7_nodes\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/organ_inventory.json",
+          "aliases": [
+            "compute_n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 864,
+              "text": "\"compute_n7_nodes\","
+            },
+            {
+              "line": 931,
+              "text": "\"compute_n7_nodes\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_adaptive_pipeline.py",
+          "aliases": [
+            "n7_indices",
+            "n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 49,
+              "text": "n7_nodes = []"
+            },
+            {
+              "line": 69,
+              "text": "n7_nodes.append(n)"
+            },
+            {
+              "line": 72,
+              "text": "\"n7_indices\": n7_nodes,"
+            },
+            {
+              "line": 77,
+              "text": "def __init__(self, n7_nodes, trajectory):"
+            },
+            {
+              "line": 78,
+              "text": "self.n7_set = set(n7_nodes)"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_malysh.py",
+          "aliases": [
+            "compute_n7_nodes",
+            "n7_indices",
+            "n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 53,
+              "text": "def compute_n7_nodes(self, phi_0=0.0, d_phi=0.1, n_max=300):"
+            },
+            {
+              "line": 58,
+              "text": "n7_nodes = []"
+            },
+            {
+              "line": 65,
+              "text": "n7_nodes.append(n)"
+            },
+            {
+              "line": 68,
+              "text": "\"n7_indices\": n7_nodes,"
+            },
+            {
+              "line": 75,
+              "text": "result = engine.compute_n7_nodes(phi_0=0.0, d_phi=0.05, n_max=400)"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_origin_of_life.py",
+          "aliases": [
+            "n7",
+            "n7_indices",
+            "n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 33,
+              "text": "n7_nodes = []"
+            },
+            {
+              "line": 48,
+              "text": "# Попадание в ядро пятиугольника — каталитический узел N7"
+            },
+            {
+              "line": 50,
+              "text": "n7_nodes.append(n)"
+            },
+            {
+              "line": 52,
+              "text": "return {\"n7_indices\": n7_nodes, \"trajectory\": trajectory}"
+            },
+            {
+              "line": 55,
+              "text": "def __init__(self, n7_nodes, trajectory):"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_pipeline.py",
+          "aliases": [
+            "compute_n7_nodes",
+            "n7_indices",
+            "n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 53,
+              "text": "def compute_n7_nodes(self, phi_0=0.0, d_phi=0.1, n_max=300):"
+            },
+            {
+              "line": 57,
+              "text": "n7_nodes = []"
+            },
+            {
+              "line": 63,
+              "text": "n7_nodes.append(n)"
+            },
+            {
+              "line": 65,
+              "text": "\"n7_indices\": n7_nodes,"
+            },
+            {
+              "line": 71,
+              "text": "def __init__(self, n7_nodes, valid_trajectory):"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_processor.py",
+          "aliases": [
+            "n7",
+            "n7_indices",
+            "n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 49,
+              "text": "n7_nodes = []"
+            },
+            {
+              "line": 67,
+              "text": "n7_nodes.append(n)"
+            },
+            {
+              "line": 70,
+              "text": "\"n7_indices\": n7_nodes,"
+            },
+            {
+              "line": 75,
+              "text": "def __init__(self, n7_nodes, trajectory):"
+            },
+            {
+              "line": 76,
+              "text": "self.n7_set = set(n7_nodes)"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "run_reflected_pipeline.py",
+          "aliases": [
+            "n7",
+            "n7_indices",
+            "n7_nodes"
+          ],
+          "excerpts": [
+            {
+              "line": 49,
+              "text": "n7_nodes = []"
+            },
+            {
+              "line": 70,
+              "text": "# Проверка попадания во внутренний пятиугольник (N7)"
+            },
+            {
+              "line": 72,
+              "text": "n7_nodes.append(n)"
+            },
+            {
+              "line": 75,
+              "text": "\"n7_indices\": n7_nodes,"
+            },
+            {
+              "line": 80,
+              "text": "def __init__(self, n7_nodes, trajectory):"
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "n7_nodes",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "n7_nodes",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "n7_nodes",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        },
+        {
+          "source": "git_history",
+          "alias": "n7_nodes",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        },
+        {
+          "source": "git_history",
+          "alias": "n7_indices",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        },
+        {
+          "source": "git_history",
+          "alias": "compute_n7_nodes",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "compute_n7_nodes",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "compute_n7_nodes",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        },
+        {
+          "source": "git_history",
+          "alias": "compute_n7_nodes",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        }
+      ]
+    },
+    {
+      "id": "adaptive_o7",
+      "title": "Адаптивный O7",
+      "kind": "adaptive_logic",
+      "aliases": [
+        "adaptive_o7",
+        "adaptive operator",
+        "adaptive_operator_7",
+        "адаптивный o7"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "run_adaptive_pipeline.py",
+          "aliases": [
+            "adaptive_o7"
+          ],
+          "excerpts": [
+            {
+              "line": 110,
+              "text": "mode = \"ADAPTIVE_O7\""
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "adaptive_operator_7",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "adaptive_operator_7",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "adaptive_operator_7",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        },
+        {
+          "source": "git_history",
+          "alias": "adaptive_operator_7",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        }
+      ]
+    },
+    {
+      "id": "reflected_trajectory",
+      "title": "Отражённая траектория",
+      "kind": "geometric_logic",
+      "aliases": [
+        "reflected",
+        "reflection",
+        "отражен",
+        "отражён",
+        "bounded_trajectory"
+      ],
+      "status": "historical",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "reflected",
+          "commit": "bcf0163b401996de662c56328e9f4a6f6e6c448d",
+          "commit_summary": "bcf0163b401996de662c56328e9f4a6f6e6c448d\tAdd Malysh 52 component completion plan"
+        },
+        {
+          "source": "git_history",
+          "alias": "reflected",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "reflected",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "reflected",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        },
+        {
+          "source": "git_history",
+          "alias": "отражен",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        },
+        {
+          "source": "git_history",
+          "alias": "bounded_trajectory",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "bounded_trajectory",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "bounded_trajectory",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        },
+        {
+          "source": "git_history",
+          "alias": "bounded_trajectory",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        }
+      ]
+    },
+    {
+      "id": "human_possible",
+      "title": "Human Layer: Возможно",
+      "kind": "cognitive_logic",
+      "aliases": [
+        "human layer",
+        "human_layer",
+        "возможно",
+        "reconsideration_possible"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "malysh_system/dual_mind.py",
+          "aliases": [
+            "human_layer"
+          ],
+          "excerpts": [
+            {
+              "line": 7,
+              "text": "from malysh_system.human_layer import ("
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/human_layer.py",
+          "aliases": [
+            "human layer",
+            "human_layer",
+            "reconsideration_possible",
+            "возможно"
+          ],
+          "excerpts": [
+            {
+              "line": 25,
+              "text": "reconsideration_possible: bool"
+            },
+            {
+              "line": 36,
+              "text": "\"reconsideration_possible\": ("
+            },
+            {
+              "line": 37,
+              "text": "self.reconsideration_possible"
+            },
+            {
+              "line": 368,
+              "text": "\"Human Layer сохраняет \""
+            },
+            {
+              "line": 381,
+              "text": "reconsideration_possible=True,"
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "human_layer",
+          "commit": "68833e15f88efb1757b64c25be79ccd922c07cd1",
+          "commit_summary": "68833e15f88efb1757b64c25be79ccd922c07cd1\tAdd Human Layer with possible reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "возможно",
+          "commit": "68833e15f88efb1757b64c25be79ccd922c07cd1",
+          "commit_summary": "68833e15f88efb1757b64c25be79ccd922c07cd1\tAdd Human Layer with possible reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "reconsideration_possible",
+          "commit": "68833e15f88efb1757b64c25be79ccd922c07cd1",
+          "commit_summary": "68833e15f88efb1757b64c25be79ccd922c07cd1\tAdd Human Layer with possible reasoning"
+        }
+      ]
+    },
+    {
+      "id": "dual_mind",
+      "title": "Двойной разум",
+      "kind": "cognitive_logic",
+      "aliases": [
+        "dual mind",
+        "dual_mind",
+        "сознание",
+        "подсознание",
+        "совместный"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "malysh_system/dual_mind.py",
+          "aliases": [
+            "dual mind",
+            "dual_mind",
+            "подсознание",
+            "совместный",
+            "сознание"
+          ],
+          "excerpts": [
+            {
+              "line": 167,
+              "text": "Совместный контур."
+            },
+            {
+              "line": 169,
+              "text": "Сознание предоставляет точные ID адаптеров."
+            },
+            {
+              "line": 170,
+              "text": "Подсознание предоставляет независимую проверку контуров."
+            },
+            {
+              "line": 182,
+              "text": "\"Сознание вычислило арифметический результат. \""
+            },
+            {
+              "line": 183,
+              "text": "\"Подсознание подтвердило рефлекторный режим. \""
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/human_layer.py",
+          "aliases": [
+            "подсознание"
+          ],
+          "excerpts": [
+            {
+              "line": 327,
+              "text": "\"Подсознание предлагает \""
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "dual_mind",
+          "commit": "c7b34ed8969b52f2e908838d2664bc465b7741e7",
+          "commit_summary": "c7b34ed8969b52f2e908838d2664bc465b7741e7\tAdd conscious subconscious and joint reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "сознание",
+          "commit": "68833e15f88efb1757b64c25be79ccd922c07cd1",
+          "commit_summary": "68833e15f88efb1757b64c25be79ccd922c07cd1\tAdd Human Layer with possible reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "сознание",
+          "commit": "e05d6271172996a08650c41c732f93e421b9b40e",
+          "commit_summary": "e05d6271172996a08650c41c732f93e421b9b40e\tAdd transactional execution to Malysh dual mind"
+        },
+        {
+          "source": "git_history",
+          "alias": "сознание",
+          "commit": "c7b34ed8969b52f2e908838d2664bc465b7741e7",
+          "commit_summary": "c7b34ed8969b52f2e908838d2664bc465b7741e7\tAdd conscious subconscious and joint reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "подсознание",
+          "commit": "68833e15f88efb1757b64c25be79ccd922c07cd1",
+          "commit_summary": "68833e15f88efb1757b64c25be79ccd922c07cd1\tAdd Human Layer with possible reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "подсознание",
+          "commit": "e05d6271172996a08650c41c732f93e421b9b40e",
+          "commit_summary": "e05d6271172996a08650c41c732f93e421b9b40e\tAdd transactional execution to Malysh dual mind"
+        },
+        {
+          "source": "git_history",
+          "alias": "совместный",
+          "commit": "e05d6271172996a08650c41c732f93e421b9b40e",
+          "commit_summary": "e05d6271172996a08650c41c732f93e421b9b40e\tAdd transactional execution to Malysh dual mind"
+        }
+      ]
+    },
+    {
+      "id": "passport_memory",
+      "title": "Паспортная память",
+      "kind": "memory_logic",
+      "aliases": [
+        "passport",
+        "паспорт",
+        "memory_vault",
+        "deep_history"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "compare_streams.py",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": [
+            {
+              "line": 24,
+              "text": "print(\"\\n[Анализ завершен]: Все паспорта зафиксированы в memory_vault/\")"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "deep_history.py",
+          "aliases": [
+            "deep_history",
+            "memory_vault"
+          ],
+          "excerpts": [
+            {
+              "line": 5,
+              "text": "vault_dir = \"memory_vault\""
+            },
+            {
+              "line": 9,
+              "text": "print(\"[Ошибка]: Нет данных в memory_vault для глубокого анализа.\")"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "generate_passport.py",
+          "aliases": [
+            "memory_vault",
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 6,
+              "text": "vault_dir = \"memory_vault\""
+            },
+            {
+              "line": 10,
+              "text": "print(\"[Ошибка]: Нет данных в memory_vault для формирования паспорта.\")"
+            },
+            {
+              "line": 42,
+              "text": "# Формирование Markdown-документа паспорта"
+            },
+            {
+              "line": 43,
+              "text": "report = f\"\"\"# Единый паспорт проекта «Малыш» (MalyshEngine)"
+            },
+            {
+              "line": 82,
+              "text": "Формирование базовой устойчивости, отладка формул паспортов, накопление резонансной стабильности."
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_engine.py",
+          "aliases": [
+            "memory_vault",
+            "passport"
+          ],
+          "excerpts": [
+            {
+              "line": 8,
+              "text": "def __init__(self, vault_dir=\"memory_vault\"):"
+            },
+            {
+              "line": 16,
+              "text": "files = sorted(glob.glob(os.path.join(self.vault_dir, \"passport_*.json\")))"
+            },
+            {
+              "line": 160,
+              "text": "passport = {"
+            },
+            {
+              "line": 184,
+              "text": "filename = os.path.join(self.vault_dir, f\"passport_{datetime.now().strftime('%Y%m%d_%H%M%S_%f')}.json\")"
+            },
+            {
+              "line": 186,
+              "text": "json.dump(passport, f, indent=4)"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_master.py",
+          "aliases": [
+            "memory_vault",
+            "passport",
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 9,
+              "text": "if not os.path.exists(\"memory_vault\"):"
+            },
+            {
+              "line": 10,
+              "text": "os.makedirs(\"memory_vault\")"
+            },
+            {
+              "line": 12,
+              "text": "def load_all_passports(self):"
+            },
+            {
+              "line": 13,
+              "text": "files = sorted(glob.glob(\"memory_vault/passport_*.json\"))"
+            },
+            {
+              "line": 21,
+              "text": "all_h = self.load_all_passports()"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_project_passport.md",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 1,
+              "text": "# Единый паспорт проекта «Малыш» (MalyshEngine)"
+            },
+            {
+              "line": 39,
+              "text": "Формирование базовой устойчивости, отладка формул паспортов, накопление резонансной стабильности."
+            },
+            {
+              "line": 64,
+              "text": "Система **MalyshEngine** успешно трансформировалась из локального скрипта прогнозирования в самостоятельный многоканальный аналитический контур. «Малыш» умеет дифференцировать структуру поступающих данных через метрику характера $K$, автома"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/adapters/native_engine_adapter.py",
+          "aliases": [
+            "memory_vault",
+            "passport"
+          ],
+          "excerpts": [
+            {
+              "line": 187,
+              "text": "/ \"memory_vault\""
+            },
+            {
+              "line": 198,
+              "text": "passport = engine.process_array("
+            },
+            {
+              "line": 205,
+              "text": "passports_written = len("
+            },
+            {
+              "line": 208,
+              "text": "\"passport_*.json\""
+            },
+            {
+              "line": 213,
+              "text": "if \"error\" in passport:"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/completion_plan.json",
+          "aliases": [
+            "deep_history"
+          ],
+          "excerpts": [
+            {
+              "line": 200,
+              "text": "\"id\": \"deep_history.py\","
+            },
+            {
+              "line": 201,
+              "text": "\"path\": \"deep_history.py\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/genome.py",
+          "aliases": [
+            "passport"
+          ],
+          "excerpts": [
+            {
+              "line": 48,
+              "text": "if \"passport\" in name:"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/genome_registry.json",
+          "aliases": [
+            "deep_history"
+          ],
+          "excerpts": [
+            {
+              "line": 178,
+              "text": "\"id\": \"deep_history.py\","
+            },
+            {
+              "line": 179,
+              "text": "\"path\": \"deep_history.py\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/human_layer.py",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 104,
+              "text": "\"паспорт\","
+            },
+            {
+              "line": 180,
+              "text": "f\"паспортов {count}\""
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/integration_queue.json",
+          "aliases": [
+            "deep_history"
+          ],
+          "excerpts": [
+            {
+              "line": 301,
+              "text": "\"id\": \"deep_history.py\","
+            },
+            {
+              "line": 302,
+              "text": "\"path\": \"deep_history.py\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/observers.py",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": [
+            {
+              "line": 12,
+              "text": "VAULT = ROOT / \"memory_vault\""
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/organ_inventory.json",
+          "aliases": [
+            "deep_history"
+          ],
+          "excerpts": [
+            {
+              "line": 80,
+              "text": "\"deep_history.py\","
+            },
+            {
+              "line": 243,
+              "text": "\"path\": \"deep_history.py\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_093201.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_094612_305974.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_094919_389672.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_095151_597603.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_095755_359619.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_095935_907389.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_100912_240763.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_101441_751333.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_101441_752413.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_101441_753383.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_101851_826530.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_101851_827682.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_101851_828871.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_103127_297495.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_103428_813788.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_103428_815206.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_103428_816568.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_103730_016772.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_103730_017249.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_104140_225399.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_104140_225840.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_104401_025027.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20260819_104401_025466.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20261018_141230_123291.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20261018_145809_117735.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "memory_vault/passport_20261018_150444_556721.json",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": []
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000001_1792325552.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 21,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 24) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4161 (Pred: 1.04, Smooth: 5.63, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000002_1792328687.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 23,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 26) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4091 (Pred: 1.04, Smooth: 5.62, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000003_1792331093.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 23,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 26) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4091 (Pred: 1.04, Smooth: 5.62, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000004_1792341727.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 23,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 26) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4091 (Pred: 1.04, Smooth: 5.62, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000005_1792342778.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 23,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 26) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4091 (Pred: 1.04, Smooth: 5.62, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/logs/3c20d8bb9eb646e783f2aec02df5fc05_generation7.log",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 11,
+              "text": "[Архив]: Паспорт Поколения 7 зафиксирован."
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/organ_logs/44fe8e284be046369f026ea0630226cc_generation7.log",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 11,
+              "text": "[Архив]: Паспорт Поколения 7 зафиксирован."
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/organ_logs/91182de57d00421a94cdee84e2e2e254_generation7.log",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 11,
+              "text": "[Архив]: Паспорт Поколения 7 зафиксирован."
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/results/44fe8e284be046369f026ea0630226cc.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 22,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 25) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4126 (Pred: 1.04, Smooth: 5.63, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/results/91182de57d00421a94cdee84e2e2e254.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 22,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 26) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4091 (Pred: 1.04, Smooth: 5.62, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/state.json",
+          "aliases": [
+            "паспорт"
+          ],
+          "excerpts": [
+            {
+              "line": 23,
+              "text": "\"output_tail\": \"--- Многокритериальный контур 'Малыш' (Поколение Gen 26) активирован ---\\n[Инженерный контур - Поколение 7]: Источник data_01.txt\\n  └─ Целевая функция (J)       : 2.4091 (Pred: 1.04, Smooth: 5.62, Energy: 1.00)\\n  └─ Мета-с"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "visualize_vault.py",
+          "aliases": [
+            "memory_vault"
+          ],
+          "excerpts": [
+            {
+              "line": 5,
+              "text": "vault_dir = \"memory_vault\""
+            },
+            {
+              "line": 9,
+              "text": "print(\"[Ошибка]: В архиве memory_vault нет паспортов для визуализации.\")"
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "68833e15f88efb1757b64c25be79ccd922c07cd1",
+          "commit_summary": "68833e15f88efb1757b64c25be79ccd922c07cd1\tAdd Human Layer with possible reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "e31b6cf7b63e7f9335203c30eb877c5867c469a8",
+          "commit_summary": "e31b6cf7b63e7f9335203c30eb877c5867c469a8\tIntegrate passive observers into Malysh"
+        },
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "e335eb80f472babf03ee33ea60af58e5c11c38bd",
+          "commit_summary": "e335eb80f472babf03ee33ea60af58e5c11c38bd\tIntegrate legacy Malysh engine as recalled skill"
+        },
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "bcf0163b401996de662c56328e9f4a6f6e6c448d",
+          "commit_summary": "bcf0163b401996de662c56328e9f4a6f6e6c448d\tAdd Malysh 52 component completion plan"
+        },
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        },
+        {
+          "source": "git_history",
+          "alias": "passport",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        },
+        {
+          "source": "git_history",
+          "alias": "паспорт",
+          "commit": "68833e15f88efb1757b64c25be79ccd922c07cd1",
+          "commit_summary": "68833e15f88efb1757b64c25be79ccd922c07cd1\tAdd Human Layer with possible reasoning"
+        },
+        {
+          "source": "git_history",
+          "alias": "паспорт",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        },
+        {
+          "source": "git_history",
+          "alias": "memory_vault",
+          "commit": "e31b6cf7b63e7f9335203c30eb877c5867c469a8",
+          "commit_summary": "e31b6cf7b63e7f9335203c30eb877c5867c469a8\tIntegrate passive observers into Malysh"
+        },
+        {
+          "source": "git_history",
+          "alias": "memory_vault",
+          "commit": "e335eb80f472babf03ee33ea60af58e5c11c38bd",
+          "commit_summary": "e335eb80f472babf03ee33ea60af58e5c11c38bd\tIntegrate legacy Malysh engine as recalled skill"
+        },
+        {
+          "source": "git_history",
+          "alias": "memory_vault",
+          "commit": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633",
+          "commit_summary": "235717ef4ec21bba8eaa4e9ac3a1681d69d64633\tAdd core runtime scripts and semantic tables"
+        },
+        {
+          "source": "git_history",
+          "alias": "deep_history",
+          "commit": "bcf0163b401996de662c56328e9f4a6f6e6c448d",
+          "commit_summary": "bcf0163b401996de662c56328e9f4a6f6e6c448d\tAdd Malysh 52 component completion plan"
+        },
+        {
+          "source": "git_history",
+          "alias": "deep_history",
+          "commit": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab",
+          "commit_summary": "1bd5f14f8298d9d8b6b7658e2e3b7dfc29bd6bab\tAdd complete Malysh integration queue"
+        },
+        {
+          "source": "git_history",
+          "alias": "deep_history",
+          "commit": "a56a0670d51b25655537356f41696c7ac2beedc5",
+          "commit_summary": "a56a0670d51b25655537356f41696c7ac2beedc5\tAdd complete Malysh genome registry"
+        },
+        {
+          "source": "git_history",
+          "alias": "deep_history",
+          "commit": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477",
+          "commit_summary": "1caefec6bbf32a9cd52e8c2ef09a29b79eb2a477\tAdd Malysh organism inventory"
+        }
+      ]
+    },
+    {
+      "id": "quaternary_logic",
+      "title": "Четверичная логика",
+      "kind": "computational_logic",
+      "aliases": [
+        "quaternary",
+        "четверич",
+        "четверичная",
+        "четверичную",
+        "четверичной",
+        "четверичное",
+        "четверичный",
+        "четверичные",
+        "pam4",
+        "pam-4",
+        "base-4",
+        "base4"
+      ],
+      "status": "recovered",
+      "recallable": true,
+      "meaning_invented": false,
+      "working_tree_evidence": [
+        {
+          "source": "working_tree",
+          "path": "config/adapters.json",
+          "aliases": [
+            "pam4"
+          ],
+          "excerpts": [
+            {
+              "line": 14,
+              "text": "\"pam4\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "core/malysh_grand_unified_state.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 8,
+              "text": "\"Q4 Quaternary Firmware (PAM-4)\": \"online\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "core/malysh_hypervisor_state.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 6,
+              "text": "\"Q4 Quaternary Firmware (PAM-4)\": \"online\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "core/malysh_master_engine.py",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 112,
+              "text": "(\"Q4 Quaternary Firmware (PAM-4)\", \"online\"),"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "core/malysh_topological_state.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 14,
+              "text": "\"Q4 Quaternary Firmware (PAM-4)\": \"online\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "core/malysh_wave_state.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 10,
+              "text": "\"Q4 Quaternary Firmware (PAM-4)\": \"online\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "install_malysh_brain.sh",
+          "aliases": [
+            "base-4",
+            "четверич"
+          ],
+          "excerpts": [
+            {
+              "line": 139,
+              "text": "\"logic.q4\": [\"q4\", \"base-4\", \"base 4\", \"четверич\"],"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "install_malysh_executor.sh",
+          "aliases": [
+            "base-4",
+            "четверич"
+          ],
+          "excerpts": [
+            {
+              "line": 439,
+              "text": "\"base-4\","
+            },
+            {
+              "line": 441,
+              "text": "\"четверич\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/capability_router.py",
+          "aliases": [
+            "pam-4",
+            "pam4",
+            "четверич"
+          ],
+          "excerpts": [
+            {
+              "line": 111,
+              "text": "\"pam-4\","
+            },
+            {
+              "line": 112,
+              "text": "\"pam4\","
+            },
+            {
+              "line": 113,
+              "text": "\"четверич\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "malysh_system/orchestrator.py",
+          "aliases": [
+            "base-4",
+            "четверич"
+          ],
+          "excerpts": [
+            {
+              "line": 110,
+              "text": "\"base-4\","
+            },
+            {
+              "line": 112,
+              "text": "\"четверич\","
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000001_1792325552.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 29,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000002_1792328687.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 32,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000003_1792331093.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 32,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000004_1792341727.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 32,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/checkpoints/state_g000005_1792342778.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 32,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/logs/3c20d8bb9eb646e783f2aec02df5fc05_grand_unified.log",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 9,
+              "text": "[BOOT] Q4 Quaternary Firmware (PAM-4)               ........ ONLINE"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/organ_logs/38317178410649568d11eea858ac8a8e_grand_unified.log",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 9,
+              "text": "[BOOT] Q4 Quaternary Firmware (PAM-4)               ........ ONLINE"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/organ_logs/44fe8e284be046369f026ea0630226cc_grand_unified.log",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 9,
+              "text": "[BOOT] Q4 Quaternary Firmware (PAM-4)               ........ ONLINE"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/organ_logs/91182de57d00421a94cdee84e2e2e254_grand_unified.log",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 9,
+              "text": "[BOOT] Q4 Quaternary Firmware (PAM-4)               ........ ONLINE"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/organ_logs/e3e01afa23984be3b83822eebeb00903_grand_unified.log",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 9,
+              "text": "[BOOT] Q4 Quaternary Firmware (PAM-4)               ........ ONLINE"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/results/44fe8e284be046369f026ea0630226cc.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 39,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/results/91182de57d00421a94cdee84e2e2e254.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 39,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        },
+        {
+          "source": "working_tree",
+          "path": "runtime/state.json",
+          "aliases": [
+            "pam-4",
+            "quaternary"
+          ],
+          "excerpts": [
+            {
+              "line": 32,
+              "text": "\"output_tail\": \"====================================================================\\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\\n====================================================================\\n   [BOOT] AST Code Top"
+            }
+          ]
+        }
+      ],
+      "git_history_evidence": [
+        {
+          "source": "git_history",
+          "alias": "quaternary",
+          "commit": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503",
+          "commit_summary": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503\tIntegrate firmware and toroidal organs into Malysh"
+        },
+        {
+          "source": "git_history",
+          "alias": "quaternary",
+          "commit": "3af8737251f11279c84c04840be4da3b66505074",
+          "commit_summary": "3af8737251f11279c84c04840be4da3b66505074\tAdd dual-contour eurotube constructor, Q4 firmware compiler, and toroidal XYZT geometry modules"
+        },
+        {
+          "source": "git_history",
+          "alias": "четверич",
+          "commit": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503",
+          "commit_summary": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503\tIntegrate firmware and toroidal organs into Malysh"
+        },
+        {
+          "source": "git_history",
+          "alias": "четверич",
+          "commit": "cd916112fdf32867b569a4e7f6adb088673e4ebb",
+          "commit_summary": "cd916112fdf32867b569a4e7f6adb088673e4ebb\tAdd safe organ execution layer"
+        },
+        {
+          "source": "git_history",
+          "alias": "четверич",
+          "commit": "5fdbcc7682e0dc0822c93b5386c31dfe68cb1f1b",
+          "commit_summary": "5fdbcc7682e0dc0822c93b5386c31dfe68cb1f1b\tAdd Malysh unified command bus and orchestrator"
+        },
+        {
+          "source": "git_history",
+          "alias": "pam4",
+          "commit": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503",
+          "commit_summary": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503\tIntegrate firmware and toroidal organs into Malysh"
+        },
+        {
+          "source": "git_history",
+          "alias": "pam-4",
+          "commit": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503",
+          "commit_summary": "8d0ff8d9b654b050ba45c75de82313c4ac5c8503\tIntegrate firmware and toroidal organs into Malysh"
+        },
+        {
+          "source": "git_history",
+          "alias": "base-4",
+          "commit": "cd916112fdf32867b569a4e7f6adb088673e4ebb",
+          "commit_summary": "cd916112fdf32867b569a4e7f6adb088673e4ebb\tAdd safe organ execution layer"
+        },
+        {
+          "source": "git_history",
+          "alias": "base-4",
+          "commit": "5fdbcc7682e0dc0822c93b5386c31dfe68cb1f1b",
+          "commit_summary": "5fdbcc7682e0dc0822c93b5386c31dfe68cb1f1b\tAdd Malysh unified command bus and orchestrator"
+        },
+        {
+          "source": "git_history",
+          "alias": "base4",
+          "commit": "6d1a2e97ae9c179e89279fadd9ae3eb53e3d8589",
+          "commit_summary": "6d1a2e97ae9c179e89279fadd9ae3eb53e3d8589\tInitial commit: Malysh core, plasma vortex simulation, and Whitepaper"
+        }
+      ]
+    }
+  ],
+  "passport_memory": {
+    "passport_count": 26,
+    "modes": [
+      "ACTIVE_5",
+      "DAMPING_MODE",
+      "RESONANCE_O7",
+      "RESONANCE_SEARCH_MODE",
+      "SPIRAL_FLOW",
+      "STABLE_6"
+    ],
+    "sources": [
+      "1_Synthetic_Sine",
+      "2_Physical_Sensor",
+      "3_Chaotic_Lottery",
+      "Geo_Chaotic",
+      "Geo_Smooth",
+      "Meta_Smooth",
+      "Meta_Smooth_2",
+      "Predict_Test_1",
+      "Predict_Test_2",
+      "Smooth_Resonance_Run",
+      "Smooth_Wave_1",
+      "Smooth_Wave_2",
+      "Smooth_Wave_3",
+      "data_01.txt"
+    ],
+    "signal_classes": [
+      "chaotic",
+      "harmonic",
+      "smooth"
+    ]
+  },
+  "file_index": [
+    {
+      "path": "PUBLICATION_KIT.md",
+      "sha256": "adbee3567778f39bfe20c34616aa6b18ffefc4858d98f2367e898579399e4c20",
+      "size": 45,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "README.md",
+      "sha256": "dcf89899800e6382919362d0c68f9ef89ec62622895e8bd80e47c591a0f623b7",
+      "size": 776,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "anunnaki_raw_tablet.txt",
+      "sha256": "32fa2fa0a833bf561248b1579c00bf44502be0eca6be48bfab5d3debb4e56855",
+      "size": 189,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "archaic_tablet_1.txt",
+      "sha256": "4e226d79ed20fc7be317f9f8c9815ba955ec3fad0294d28ae829cb07dc4e3736",
+      "size": 166,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "astrophysical_turbulence.py",
+      "sha256": "363614ee7e06eefbaf8b1a63634d0b66e56082fd61b0720cb748478b7966ab9c",
+      "size": 1537,
+      "classes": [
+        "AstroTurbulenceSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_accretion_flow"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "batch_10_tablets_report.json",
+      "sha256": "273d98cc27bdfd9f4e76fe42f62f6e077ef59842241b03310baa6e8fbf795fc8",
+      "size": 12953,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "batch_process_ten.py",
+      "sha256": "349c376abf8aa2621a7a8519caf418edbca39f45fcc8fe572e1087588972525e",
+      "size": 7072,
+      "classes": [
+        "BatchTenEngine"
+      ],
+      "functions": [
+        "__init__",
+        "process_batch"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "certify_pending.py",
+      "sha256": "5b266cd2b18253a5f726b29d31abd1da9d7d7245e2d20c883b9f39ea48476b9f",
+      "size": 3146,
+      "classes": [],
+      "functions": [],
+      "constants": [
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "compare_streams.py",
+      "sha256": "a53485f6aabf03b86f596a02c34551b9058402d097f4c12cc3b12511af97311e",
+      "size": 1119,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "config/adapters.json",
+      "sha256": "693bb76a4e39246984211afa3397241c925d64944495074a9a681bfe6acfa2db",
+      "size": 8130,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "config/malysh.json",
+      "sha256": "4f0581f5d59bb5b5cd67c154b72cff40ec960d5058952edd4981f7147e40d3c0",
+      "size": 506,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "config/organs.json",
+      "sha256": "1e5bbed983515a8e7863d63c1b5c29de00e0cd638bcc289ba6627545014322a1",
+      "size": 890,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/euro_tube_constructor.py",
+      "sha256": "04cce94f2bf940217b92dd93b6609b70bb4875aab680e042631e0025ae1ed2e3",
+      "size": 2977,
+      "classes": [
+        "DualTubeConstructor"
+      ],
+      "functions": [
+        "__init__",
+        "_build_transitions",
+        "calculate_path_strength",
+        "construct_prediction"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_ast_state.json",
+      "sha256": "bc8e9615ee99b6afeb9fc61a8d248874bdf3da823e5ff0a02a9a336eb54bd8f7",
+      "size": 525,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_firmware.json",
+      "sha256": "69a9a33572df0647909dc8d54a5307aee802da6efc5b06a6f8e587f71658b08a",
+      "size": 4396,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_firmware_compiler.py",
+      "sha256": "67427930c966d4c889015460d3a3dd2aba525e9e2a84841f6c82265e9684bbc5",
+      "size": 1825,
+      "classes": [
+        "FirmwareCompiler"
+      ],
+      "functions": [
+        "__init__",
+        "compile_firmware",
+        "decode_signal"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_grand_unified_state.json",
+      "sha256": "ea55ee2ac98e13bf45ce407ac0c75833c3dd20dd2a1452ca9fcb9372675309c5",
+      "size": 785,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_hypervisor_state.json",
+      "sha256": "0d08b3a51859e2152a15b0e55fad2999ae56cf7c329b5395bbe1519be6930a9a",
+      "size": 692,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_master_engine.py",
+      "sha256": "ef6a5127bf334b17f9951a8c78d125abbfdfb3ea633fa09180469b735ed08dfd",
+      "size": 10438,
+      "classes": [
+        "ASTTopologyEvaluator",
+        "MalyshGrandUnifiedEngine",
+        "TopologicalResonanceCore"
+      ],
+      "functions": [
+        "__init__",
+        "_calculate_phase_coherence",
+        "_calculate_shannon_entropy",
+        "analyze_natural_market_attractors",
+        "calculate_resonance",
+        "decode_signal",
+        "evaluate_state",
+        "execute_unified_pipeline",
+        "full_system_boot",
+        "visit"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_master_state.json",
+      "sha256": "8e9a58e5a45ac31761978877b1f0fd1742790c50950b4991d74082b6e2a0df60",
+      "size": 803,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_topological_state.json",
+      "sha256": "d348fdce5ae77a5e3c3710d4a04280b21a80fa0e307bc77a2e3260666dd6c035",
+      "size": 973,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_toroidal_geometry.py",
+      "sha256": "69c20537f0e7011913499a1b2d14c7ecd7530988d5b2a99d1f6a094900e9eb78",
+      "size": 3804,
+      "classes": [
+        "ToroidalTubeGeometry"
+      ],
+      "functions": [
+        "__init__",
+        "compute_geometry",
+        "decode_signal"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/malysh_wave_state.json",
+      "sha256": "13d8a99321bead1b635657c092f889a08b12fcba7df9e2e20702edb449854f8c",
+      "size": 874,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "core/toroidal_geometry.json",
+      "sha256": "dfa19de56a14040878e9e763cd02fc2b2281972d4bd99537577556e461754c4e",
+      "size": 1850,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "cuneiform_analysis.json",
+      "sha256": "ae1988942dcb3a4e2fbfc47332d047dbadf9db6177b7998f9881c688cfcd6b03",
+      "size": 1144,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "cuneiform_analysis_567.json",
+      "sha256": "1004a0346bbdae77d23878f4847deb66e608b4bac5e69bf42dac44fac5f1d858",
+      "size": 639,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "data_01.txt",
+      "sha256": "845f69682e740579df2c1ee6afb60705f8e14be6fe22189c5d9bbff2ca387665",
+      "size": 18,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "deep_history.py",
+      "sha256": "3b0155f6e645c4bf7728721a1b313225977af268807644356dcb2f2eed9dd0f0",
+      "size": 2360,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "demo.py",
+      "sha256": "c89a208a7f6a4dba51846b42c86e92e2c6e95d33594decf251ff4db3030516fd",
+      "size": 623,
+      "classes": [],
+      "functions": [
+        "run_layer7_demo"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "enki_micro_v3.1.py",
+      "sha256": "b66291b5661ced73171fba3be2c7c2b7040ca4b66e80daafc73840708e419735",
+      "size": 1598,
+      "classes": [
+        "MicroEnkiSystem"
+      ],
+      "functions": [
+        "__init__",
+        "process_flow"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "flush_chaos.py",
+      "sha256": "3f928e21431d12be005adb5f2b3ac8b34e79773ccb84700b9026aef928da5e52",
+      "size": 954,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "generate_passport.py",
+      "sha256": "0de50e69dd0245949b005648ea3a094c7cfa06e7e5ed563dc21ace82ba88107a",
+      "size": 5696,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "install_malysh_adapters.sh",
+      "sha256": "9bbc6fc255e433f84d6161dab4930283412f09efa55e1149b60f70d59d48cd8c",
+      "size": 19883,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "install_malysh_brain.sh",
+      "sha256": "00a7bf99cb65b5681b4424359951d412bdf80349d77babe4c4c5d9c74d7fd9a8",
+      "size": 8540,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "install_malysh_certification.sh",
+      "sha256": "ca4a074e1b354f40759cd139772c3c1fbd08dc763ce93e07cf83cdb4eaef31d2",
+      "size": 11419,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "install_malysh_executor.sh",
+      "sha256": "fcdb9b58488fb4d97b2660fe3a6db32403f5505866dac9534380b7a2df95b7f3",
+      "size": 20357,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "install_malysh_state_commit.sh",
+      "sha256": "459f9e4f0c09ad68a8ce056231e0584f3be7aa282aab9fb5a8def5bd8fae243a",
+      "size": 12391,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "install_unified_malysh.sh",
+      "sha256": "e28c8d1185208d7789093857279af004505975abc147fa7c952b710d48915cf9",
+      "size": 15293,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh.py",
+      "sha256": "37a472ca0906087f1ab19d292c4dc4fa48c8daab1bdc120bd9212ecded693d33",
+      "size": 106,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_apsu_engine.py",
+      "sha256": "20f542614c77942baa0abd9719d8602368bb2230e56069f02201ce98f572f933",
+      "size": 2163,
+      "classes": [
+        "ApsuMalyshComplex"
+      ],
+      "functions": [
+        "__init__",
+        "run_full_simulation"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_bony_paraproduct_engine.py",
+      "sha256": "3be9b9d3b47efdd0609ff49183fe839d7970e770d80a83ff4eccd24ef9ee6091",
+      "size": 2610,
+      "classes": [
+        "BonyParaproductEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_bony_decomposition_bounds",
+        "verify_clebsch_map_gluing"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_chaos.py",
+      "sha256": "1f8b007b2bbec76b02f4a2ea9a206721b45c47e44d184f516e8d0cc6275f3695",
+      "size": 1779,
+      "classes": [
+        "ChaosAndUncertaintyHandler"
+      ],
+      "functions": [
+        "calculate_lyapunov_horizon",
+        "evaluate_incomplete_data_risk"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_chaos_bypass.py",
+      "sha256": "7defaca645662ece5e33853d7565024e6667b4ead880ad23e8cf57e71167a1d7",
+      "size": 1544,
+      "classes": [
+        "LyapunovBypassEngine"
+      ],
+      "functions": [
+        "__init__",
+        "activate_attractor_fallback",
+        "evaluate_strategy"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_cuneiform_engine.py",
+      "sha256": "9c8e6cd98b8cc60b156b79105a35a1292697960333dd5c022c4beb239afda394",
+      "size": 7237,
+      "classes": [
+        "MalyshCuneiformEngine567"
+      ],
+      "functions": [
+        "__init__",
+        "_build_topological_field",
+        "clean_token",
+        "evaluate_topological_tension",
+        "load_corpus_from_text",
+        "restore_gap",
+        "translate_tablet"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_engine.py",
+      "sha256": "d87ffa6f6fb486ca1816e1ab7ce1a2d2f1308ab61f9837bc87f64ad2b010ca78",
+      "size": 7512,
+      "classes": [
+        "MalyshEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_load_state",
+        "predict_next_strategy",
+        "process_array"
+      ],
+      "constants": [
+        "K"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_extreme_stress_test.py",
+      "sha256": "f5d0a244015e58aee23b05627407358c4446b4eaf4e731997e814b759a1eb4ec",
+      "size": 2035,
+      "classes": [
+        "ExtremeStressTestEngine"
+      ],
+      "functions": [
+        "__init__",
+        "run_taylor_green_stress_simulation"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_master.py",
+      "sha256": "f1396767efb98f41af9a89f89d8c9d0067131dc6e4525173f0e769b09aedfac0",
+      "size": 8607,
+      "classes": [
+        "Generation7Core",
+        "HierarchicalMemory"
+      ],
+      "functions": [
+        "__init__",
+        "compute_forecast",
+        "get_memory_layers",
+        "load_all_passports",
+        "run",
+        "store_passport"
+      ],
+      "constants": [
+        "J"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_navier_continuum_closure.py",
+      "sha256": "bc55850de95a69a1b491ad5efbfbfb52f00da11a269206dcb9c2635bb197854f",
+      "size": 2804,
+      "classes": [
+        "NavierStokesContinuumEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_littlewood_paley_bound",
+        "verify_partition_of_unity_residuals"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_navier_dynamic.py",
+      "sha256": "37588b9434545d87bcd9b58608ba9cdd887500015b4ccf06d963027ee44ea4f5",
+      "size": 3418,
+      "classes": [
+        "NavierStokesDynamicEngine"
+      ],
+      "functions": [
+        "__init__",
+        "step_evolution"
+      ],
+      "constants": [
+        "E"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_navier_spectral.py",
+      "sha256": "dcad3475049b46fbfe999cfde0901e60563cdb2c655846fd42ca650cfcb5e8c2",
+      "size": 2805,
+      "classes": [
+        "NavierStokesRigorousEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_spectral_majorant",
+        "verify_helicity_dissipation"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_physical_legacy.py",
+      "sha256": "b31a9950266f673a1745f245446cff210b25737738fd7d4eb00784ee17bc456e",
+      "size": 1448,
+      "classes": [
+        "MalyshPhysicalEngine"
+      ],
+      "functions": [
+        "__init__",
+        "apply_real_physics"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_plasma_vortex.py",
+      "sha256": "0abef747ea9bdc9228a1fabdda18a3cbdd4eabbc5c4bcc964bdc9e4f44ae10ec",
+      "size": 2297,
+      "classes": [
+        "PlasmaVortexSimulationEngine"
+      ],
+      "functions": [
+        "__init__",
+        "compute_plasma_evolution"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_pro_engine.py",
+      "sha256": "dbab4c6a44b740375f3d4fe8d57686a7aa4f300bfb1463577dc6ad8e1016a3e1",
+      "size": 10159,
+      "classes": [
+        "MalyshProCuneiformEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_build_topological_field",
+        "clean_token",
+        "evaluate_topological_tension",
+        "load_corpus_from_text",
+        "parse_morphology",
+        "restore_gap",
+        "translate_and_analyze"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_project_passport.md",
+      "sha256": "0803e99be52f57f84aaec0ebadce1559950c49d3c984ddbbdb6ca75be21de749",
+      "size": 4599,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/adapter_lab.py",
+      "sha256": "44c27757d303821070c140d7ed59a77b92edf76313cf1a15a6bcaa83503c5e57",
+      "size": 4429,
+      "classes": [],
+      "functions": [
+        "load_state",
+        "main"
+      ],
+      "constants": [
+        "REPORT_DIR",
+        "REPORT_PATH",
+        "ROOT",
+        "STATE_PATH"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/adapters/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/adapters/firmware_entry.py",
+      "sha256": "7bc937aa1cf35680a413949e682203c0682050fa4ccbfb3f948daa87e0a2aea1",
+      "size": 1173,
+      "classes": [],
+      "functions": [
+        "main",
+        "signal_from_environment"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/adapters/native_engine_adapter.py",
+      "sha256": "11bde33d37e947bad7ea7bad11d619823074a67fac5d4d8cf030eaaba5144441",
+      "size": 8338,
+      "classes": [
+        "RecalledMalyshEngineSkill"
+      ],
+      "functions": [
+        "build_native_adapters",
+        "context_series",
+        "extract_series",
+        "invoke",
+        "validate"
+      ],
+      "constants": [
+        "NUMBER_PATTERN"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/adapters/process_adapter.py",
+      "sha256": "f78bf64aab4d04fed842cace920700ab546485a41e4b30bfd4376316e9511dd1",
+      "size": 9820,
+      "classes": [
+        "ProcessOrganAdapter"
+      ],
+      "functions": [
+        "__init__",
+        "build_adapters",
+        "compact_context",
+        "digest_payload",
+        "invoke",
+        "load_adapter_config",
+        "organ_id",
+        "validate"
+      ],
+      "constants": [
+        "ADAPTER_CONFIG",
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/adapters/toroidal_entry.py",
+      "sha256": "087e531e99d136d06d0e63a7785e3817b2dcc6a0aab86b8ee1f171f1c1ed98bd",
+      "size": 1247,
+      "classes": [],
+      "functions": [
+        "main",
+        "signal_from_environment"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/brain.py",
+      "sha256": "bdad7a134a3514bf186ff7513e977c9c47585e3a30f70033815b7838840d06ee",
+      "size": 1575,
+      "classes": [],
+      "functions": [
+        "main"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/capability_router.py",
+      "sha256": "79c56c9f26ea5bce14607af250711b309ec82e145162ebc2d972ef48840784c3",
+      "size": 9714,
+      "classes": [],
+      "functions": [
+        "arithmetic",
+        "arithmetic_node",
+        "load",
+        "main",
+        "organs",
+        "recalled_skills",
+        "route"
+      ],
+      "constants": [
+        "KEYWORDS",
+        "OPS",
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/certification.py",
+      "sha256": "7b18b2ad9691e1d7e841eafb1e8b57ed81750e3969b293d4a6cba77002b26709",
+      "size": 8900,
+      "classes": [],
+      "functions": [
+        "certify",
+        "file_hash",
+        "inspect_source",
+        "main",
+        "smoke_test",
+        "utc_now"
+      ],
+      "constants": [
+        "CANDIDATES",
+        "REPORT_DIR",
+        "REPORT_PATH",
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/completion_plan.json",
+      "sha256": "22471f2ad853a65151193199c4c54d63462f399b73298ebeb7104e16b95ddb67",
+      "size": 5806,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/completion_plan.py",
+      "sha256": "ea5f06c9c260a36e6c9ea32e0a11d1c874651c75eafc4d60960822585ee19db2",
+      "size": 6068,
+      "classes": [],
+      "functions": [
+        "load",
+        "main"
+      ],
+      "constants": [
+        "GENOME",
+        "OUTPUT",
+        "QUEUE",
+        "ROOT",
+        "STATE",
+        "TARGET"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/dual_mind.py",
+      "sha256": "390fc5fe97798b5f3179099decec943ac15bb7b764c5c855494b8684d93e3e59",
+      "size": 13086,
+      "classes": [],
+      "functions": [
+        "build_parser",
+        "consciousness",
+        "execute_joint",
+        "joint",
+        "main",
+        "print_consciousness",
+        "print_joint",
+        "print_subconscious",
+        "result_counts",
+        "run",
+        "subconscious"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/executor.py",
+      "sha256": "72d91e4043aa67da501e01fe1a316fc22373a7863c9611feb758e493e703ae6e",
+      "size": 7666,
+      "classes": [
+        "OrganExecutor"
+      ],
+      "functions": [
+        "__init__",
+        "available_organs",
+        "context_digest",
+        "execute",
+        "execute_one",
+        "load_executor_config",
+        "select_specs"
+      ],
+      "constants": [
+        "CONFIG_PATH",
+        "LOG_DIR",
+        "RESULT_DIR",
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/genome.py",
+      "sha256": "3b3842b6d9e12f7938f17b746e7b72c0297669c133ba1eb0c44b475b4cbd0519",
+      "size": 4640,
+      "classes": [],
+      "functions": [
+        "classify_role",
+        "execution_policy",
+        "load",
+        "main"
+      ],
+      "constants": [
+        "ADAPTERS",
+        "INVENTORY",
+        "OUTPUT",
+        "PRODUCTION",
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/genome_registry.json",
+      "sha256": "9c58f634957b42f9afb1cc6da4be7b7eb9bca91d19e9fcacaf11e344e07dbaf8",
+      "size": 27331,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/human_layer.py",
+      "sha256": "9d67b59237d1e647650a5a9cf88f5a65e6882b8429047f7fd4107a7ac5902a10",
+      "size": 10088,
+      "classes": [
+        "HumanThought",
+        "Hypothesis"
+      ],
+      "functions": [
+        "build_human_thought",
+        "clamp",
+        "human_summary",
+        "relevant_observer_evidence",
+        "text_matches",
+        "to_dict"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/integration_queue.json",
+      "sha256": "9ab4416324eba47421aa2d0f77045890c3e839e4964ce4628e43ecef78f1b8eb",
+      "size": 9378,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/integration_queue.py",
+      "sha256": "aa0ef15ae5db8e879a1e73edda0eace198a121f6bc45b5b85f21758df6c36ddf",
+      "size": 3364,
+      "classes": [],
+      "functions": [
+        "load",
+        "main",
+        "priority",
+        "strategy"
+      ],
+      "constants": [
+        "GENOME",
+        "OUTPUT",
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/inventory.py",
+      "sha256": "3bf632dea0d4734f51260ffb91cb12b2ee87225747249cf33b2652fd91d9780b",
+      "size": 4389,
+      "classes": [],
+      "functions": [
+        "category_for",
+        "inspect_python",
+        "main"
+      ],
+      "constants": [
+        "EXCLUDE_DIRS",
+        "ORGAN_HINTS",
+        "ROOT",
+        "UTILITY_PREFIXES"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/modules/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/observers.py",
+      "sha256": "e363f8adc926fc035af01cf16e147902e0fdcdddacea15c84cb8a940764bfe95",
+      "size": 5793,
+      "classes": [
+        "PassiveObserver",
+        "PhaseObserver",
+        "VaultObserver",
+        "VortexObserver"
+      ],
+      "functions": [
+        "build_observers",
+        "observe",
+        "observe_all"
+      ],
+      "constants": [
+        "ROOT",
+        "VAULT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/orchestrator.py",
+      "sha256": "0bb6a8153f75316a0bb5dd85b7b0a2b466ca0bae07add758ba66f457f784b17f",
+      "size": 9079,
+      "classes": [
+        "CommandBus",
+        "Orchestrator",
+        "SharedContext"
+      ],
+      "functions": [
+        "__init__",
+        "load_state",
+        "process",
+        "publish",
+        "select_organs",
+        "synthesize"
+      ],
+      "constants": [
+        "BUS_PATH",
+        "ROOT",
+        "STATE_PATH"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/organ_inventory.json",
+      "sha256": "dd4f44def1adfda7b03476120711ea4237bf2ca02456ef33b6d8ded0bda27d64",
+      "size": 22629,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/protocols.py",
+      "sha256": "95abc65b6a285d010b7cfd831c29bdf30ccee3b1f9d9dd390ba45d4ab14ad7b8",
+      "size": 522,
+      "classes": [
+        "Command",
+        "OrganResult"
+      ],
+      "functions": [
+        "to_dict"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/registry.py",
+      "sha256": "14c6b870558e1783c5176c44ee6785058117deb091e5f97dfd3aa9267c8954e3",
+      "size": 1048,
+      "classes": [],
+      "functions": [
+        "load_organs"
+      ],
+      "constants": [
+        "INVENTORY",
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/routed_executor.py",
+      "sha256": "3d2e888e6e3a87d8faf2490c626b2bafc0a6da904b91090e73da687f1ff1632b",
+      "size": 5953,
+      "classes": [],
+      "functions": [
+        "execute_selected",
+        "load_state",
+        "main",
+        "print_results",
+        "run_one"
+      ],
+      "constants": [
+        "ROOT"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/supervisor.py",
+      "sha256": "a0a66a0fd3e06602f8cd43a103dd0ded6660e3e37b44e9a9617dfe821dc95195",
+      "size": 13324,
+      "classes": [
+        "MalyshSupervisor",
+        "ProcessModule",
+        "StateStore",
+        "WAL"
+      ],
+      "functions": [
+        "__init__",
+        "acquire_lock",
+        "append",
+        "atomic_write_json",
+        "build_parser",
+        "checkpoint",
+        "execute",
+        "initial_state",
+        "inspect",
+        "latest_checkpoint",
+        "load",
+        "load_json",
+        "main",
+        "read_valid_events",
+        "recover",
+        "release_lock",
+        "run_cycle",
+        "save",
+        "state_hash",
+        "status",
+        "unlock",
+        "utc_now"
+      ],
+      "constants": [
+        "CHECKPOINT_DIR",
+        "CONFIG_PATH",
+        "LOCK_PATH",
+        "LOG_DIR",
+        "ROOT",
+        "RUNTIME_DIR",
+        "STATE_PATH",
+        "WAL_PATH"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_system/transaction.py",
+      "sha256": "f0f163bcf3b5392d6ff82591f3c1aa3a16a523fd0e73e72eb28f19bd299fd629",
+      "size": 5843,
+      "classes": [
+        "OrganismTransaction"
+      ],
+      "functions": [
+        "__init__",
+        "abort",
+        "acquire_lock",
+        "begin",
+        "commit",
+        "release_lock"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_vortex_visualization.py",
+      "sha256": "bc33bdfa3ff1097e11f6f14850de6fe56a85ce6f96ca6d1ca2b7535394452075",
+      "size": 2275,
+      "classes": [
+        "MalyshVortexVisualizer"
+      ],
+      "functions": [
+        "__init__",
+        "compute_clebsch_potentials",
+        "compute_vorticity_field",
+        "render_3d_vortex_plot"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "malysh_weighted_bony_closure.py",
+      "sha256": "801e8641a4517e39ab88945757c5715cf7407f242b01d26de01a12aa19f3303f",
+      "size": 2414,
+      "classes": [
+        "WeightedBonyClosureEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_weighted_tail_bound",
+        "verify_dynamic_cutoff_stability"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_093201.json",
+      "sha256": "a7edbdf4c4030f5ef226717c0634668b4ab292066b72e700ea1ace25d7d1ff3c",
+      "size": 348,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_094612_305974.json",
+      "sha256": "fa98309d6e80de175bdef3e5c79dec092afbd45d04282483ad87dc86710cbd6a",
+      "size": 596,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_094919_389672.json",
+      "sha256": "d0f354e4151de8ce20568af78ebf97ebcb40b257f85439cea0e3d1847501bef9",
+      "size": 532,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_095151_597603.json",
+      "sha256": "055abdffe0b8c90ca5ec4e1c4641466c71cf55f07f5c22c46a73076beb04a9f7",
+      "size": 601,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_095755_359619.json",
+      "sha256": "a367d65a867b57a984f23297fb95e92baad29a2d3b3b015382266569b6263ae9",
+      "size": 498,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_095935_907389.json",
+      "sha256": "2db1d6fae108135adf5b387b2a97f0ca3811697f11b6603c8c6c5ddbc1d3fe65",
+      "size": 592,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_100912_240763.json",
+      "sha256": "5b3f8db98521d02e7c84ef21f9d265755ffb3783ca28e255200d786e04848606",
+      "size": 657,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_101441_751333.json",
+      "sha256": "23ed77a997846024af3c30c6923035d60a90fa4c7fb37b062f4d5397049466aa",
+      "size": 553,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_101441_752413.json",
+      "sha256": "f8e28e362e3a3a8eb2c2374cf26ca32befd449fbd6178e480665f2d0f1b37042",
+      "size": 552,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_101441_753383.json",
+      "sha256": "f755303bf2c133d80f794f53c92cd7069efd1e7e11f70c5a718c08c43070a54f",
+      "size": 559,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_101851_826530.json",
+      "sha256": "eaf4931155808405bb90006c361d63f9a76110f14efb1d537241ab70f13d0d4a",
+      "size": 607,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_101851_827682.json",
+      "sha256": "66ef4cfc5b61877005188d7d8fbdc18c7d083efd796db07e696073e7f211e2a6",
+      "size": 606,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_101851_828871.json",
+      "sha256": "dc9a8f9a6943bd0272f432ae549ded8e423246c4498d9f8ac59dbce41fc0b904",
+      "size": 615,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_103127_297495.json",
+      "sha256": "3bede6b7d7ee6598c5854a5a286ebe863daf69b8dc6a8cd36b5aa62f41f08081",
+      "size": 647,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_103428_813788.json",
+      "sha256": "c4ae3aad289aa99b280460c56dab8e53635be1b4bd2677e30fb9184ccfae5668",
+      "size": 641,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_103428_815206.json",
+      "sha256": "85233e52aafbf4e281da2458289458111be441fb7b2367ee6371b895dc1234b9",
+      "size": 644,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_103428_816568.json",
+      "sha256": "757b89692904ff2552179308771e0b1fd6e80323b3e4760183de7f1260827770",
+      "size": 641,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_103730_016772.json",
+      "sha256": "e7e02ace341630423bd08476975065b8b5efb5d13f706b9afe11b44876c9f4c2",
+      "size": 680,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_103730_017249.json",
+      "sha256": "c6b79715708d29470354052aea71cc16025a22633c2d51924c4a10343cc48190",
+      "size": 680,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_104140_225399.json",
+      "sha256": "c01824ac98a1cad7d6c2b8f232fd387accc80eaf51f9990dbdc0fe2e2d4ad81d",
+      "size": 698,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_104140_225840.json",
+      "sha256": "9bcdf3dc2942edca0ada3b50a83243522f0966e176032774d7c4f8771082abeb",
+      "size": 698,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_104401_025027.json",
+      "sha256": "d750ccdca1c7e22a50ae45a3cdaeee26f1ad716a58bf4a23176a8ed20dddebfe",
+      "size": 691,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20260819_104401_025466.json",
+      "sha256": "f8566bc43da23a4c87ae36cc3bdd06af1ba91046b6a25d2898e3a29d47d53087",
+      "size": 700,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20261018_141230_123291.json",
+      "sha256": "cf9d1aec8e57bd6931e744d02591ca6dd97f0629ff12829796172bc36b19437d",
+      "size": 619,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20261018_145809_117735.json",
+      "sha256": "9ba8eaa06400bf3f8e9cc2042e781f55624ca6f008d611160dcdc8debdad8697",
+      "size": 621,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "memory_vault/passport_20261018_150444_556721.json",
+      "sha256": "86e3d02cb739f8ec0a7c26501253b42dfc6d0667b38b3a91f18f72302eae54be",
+      "size": 619,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "meso_power_engine.py",
+      "sha256": "f0ec2ea63c2e452d7ce7057abd5c310c409961ebbb7ece52f2b48e77ddea2b65",
+      "size": 1712,
+      "classes": [
+        "MesoScaleSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_power_surge"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "navier_stokes_engine.py",
+      "sha256": "64736acb03374f0501b13f09bb610ebde2708fd61cb2696d7872ffc2eb7c75f2",
+      "size": 1770,
+      "classes": [
+        "NavierStokesMalyshSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_blow_up_prevention"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "phase_coupling.py",
+      "sha256": "920953c0375af8417e54b1fcc30818cf1f81fda736926416d3d3995c94bd30f9",
+      "size": 1942,
+      "classes": [],
+      "functions": [
+        "simulate_phase_entanglement"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "plot_phase.py",
+      "sha256": "bd98e273392e135903570414f05ca92e64ef74c5b509320ded6bad1d0a7903c6",
+      "size": 1776,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "real_tablet.txt",
+      "sha256": "748de3e262f143d612ff4cbafa34625cad60e94fe277d5600bcf6d5351f53099",
+      "size": 185,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "royal_tablet_report.json",
+      "sha256": "356fc36c44062d8a5a7ea981047e1c01c8f31ed9a3c2e73cfd7979bbc2db23af",
+      "size": 1682,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_adaptive_pipeline.py",
+      "sha256": "bbe71f46817cb5ef996e912b9885c675d0283e56de7b95d93f18faac0e90a3a0",
+      "size": 5172,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_adaptive_operator_7",
+        "_is_inside_polygon",
+        "_phase_detector",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_full_translation.py",
+      "sha256": "d01ce108b44f3b1b5a8bd5c835695717f58b46f62b9c752774dcbae3d1b07116",
+      "size": 285,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_maglev_flywheel.py",
+      "sha256": "dc97ef7b091ace8fa9742fcbf3657fc6f8f16aa322d22085d840c186bcff10ac",
+      "size": 1815,
+      "classes": [
+        "MaglevFlywheelSystem"
+      ],
+      "functions": [
+        "__init__",
+        "simulate"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_malysh.py",
+      "sha256": "930168774131f7e5786c3d976c79c1f09fc01e0a542d597c1990ff8ad97ecb6d",
+      "size": 2933,
+      "classes": [
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "compute_n7_nodes",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_malysh_all.py",
+      "sha256": "ac4c6059933b614c55b59e700a47d02dfec0c10b116721bc9717ac8acfd923b7",
+      "size": 3137,
+      "classes": [
+        "ResonantNavierStokesModel"
+      ],
+      "functions": [
+        "__init__",
+        "compute_dynamics",
+        "main"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_origin_of_life.py",
+      "sha256": "c45ba2d08f5e59f3aebf96c02ab9ad6e6e9203fd58188f132c29c9350193274f",
+      "size": 4340,
+      "classes": [
+        "BiogenesisSimulator",
+        "MalyshBiogenesisEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "run_simulation",
+        "simulate_geological_phase"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_pipeline.py",
+      "sha256": "5e5fc334befe39677a98a919e66633f5f159d4119e84c73b48f669a1bd714f80",
+      "size": 3814,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "compute_n7_nodes",
+        "execute_stream",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_processor.py",
+      "sha256": "80944e7e74f574a66d2e855b67a478cf276daff4360d03ab872b9c42f60f6616",
+      "size": 4833,
+      "classes": [
+        "MalyshDataProcessor",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "process_stream"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "run_reflected_pipeline.py",
+      "sha256": "84a74730fa045e0a945af06b5b34dba4df5affaad5ae86f9b958a2c9ede5fa11",
+      "size": 4728,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/adapter_lab/latest.json",
+      "sha256": "50825871d7bdcc76be05404a5800d61f2a491d0b8d7d5ef2515086246a0829ea",
+      "size": 11976,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/certification/latest.json",
+      "sha256": "71f0464f9a07b870867760ecaf38c07f29cbc3ea568db464012925281e55d418",
+      "size": 17063,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/checkpoints/state_g000001_1792325552.json",
+      "sha256": "32ccea42e8da7da4dfdecfa90c5f54fb76ad0533b35497aeafaed7f86914c353",
+      "size": 4565,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/checkpoints/state_g000002_1792328687.json",
+      "sha256": "75bae2f5e4b0ac8640f2ad01bcf9e0d6c65c6569f5920b5f4b051ace9be19ae8",
+      "size": 4868,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/checkpoints/state_g000003_1792331093.json",
+      "sha256": "51e1c1f0ed7f063b6c867a65cd69176ca2c0bb73be27f2df7e65f7a1d9eb5e19",
+      "size": 8764,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/checkpoints/state_g000004_1792341727.json",
+      "sha256": "84b106f299a634d3076a5deff9def1b5bc70848bde6cd1640275c6f4bd1ff7a4",
+      "size": 12257,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/checkpoints/state_g000005_1792342778.json",
+      "sha256": "64730cd101d99bfc62a0a172f69d6e5ad102b4d5e256638acbafd223845491e8",
+      "size": 12257,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/logs/3c20d8bb9eb646e783f2aec02df5fc05_generation7.log",
+      "sha256": "802902c1c9874f13f903423cb6702b2b8743e4b0ecf7c71634ef4f10a5fd1b21",
+      "size": 968,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/logs/3c20d8bb9eb646e783f2aec02df5fc05_grand_unified.log",
+      "sha256": "970485c827cd6fde25a8ff90f3c0a3c6e56e97c4b366229b3e46fa090b3ee1f5",
+      "size": 2191,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/logs/3c20d8bb9eb646e783f2aec02df5fc05_navier_resonance.log",
+      "sha256": "26adc1b6bc65d5d55147d77b23b32ebef5b237e89e1de5b3d7e804626948f540",
+      "size": 153,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/38317178410649568d11eea858ac8a8e_grand_unified.log",
+      "sha256": "970485c827cd6fde25a8ff90f3c0a3c6e56e97c4b366229b3e46fa090b3ee1f5",
+      "size": 2191,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/44fe8e284be046369f026ea0630226cc_generation7.log",
+      "sha256": "9e04393680b3837d1246caeb93629042fdd88e48fb9ee947c0993a2fabf819ff",
+      "size": 969,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/44fe8e284be046369f026ea0630226cc_grand_unified.log",
+      "sha256": "970485c827cd6fde25a8ff90f3c0a3c6e56e97c4b366229b3e46fa090b3ee1f5",
+      "size": 2191,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/44fe8e284be046369f026ea0630226cc_navier_resonance.log",
+      "sha256": "26adc1b6bc65d5d55147d77b23b32ebef5b237e89e1de5b3d7e804626948f540",
+      "size": 153,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/91182de57d00421a94cdee84e2e2e254_generation7.log",
+      "sha256": "31bf40c7b78a2f6d2044f2bb3e6c492ed92c90565c9668cbb6f27c5b5e231c1d",
+      "size": 967,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/91182de57d00421a94cdee84e2e2e254_grand_unified.log",
+      "sha256": "970485c827cd6fde25a8ff90f3c0a3c6e56e97c4b366229b3e46fa090b3ee1f5",
+      "size": 2191,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/91182de57d00421a94cdee84e2e2e254_navier_resonance.log",
+      "sha256": "26adc1b6bc65d5d55147d77b23b32ebef5b237e89e1de5b3d7e804626948f540",
+      "size": 153,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/e3e01afa23984be3b83822eebeb00903_grand_unified.log",
+      "sha256": "970485c827cd6fde25a8ff90f3c0a3c6e56e97c4b366229b3e46fa090b3ee1f5",
+      "size": 2191,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/organ_logs/ebc265a404084b6ebe5f1b8922f2f08c_navier_resonance.log",
+      "sha256": "26adc1b6bc65d5d55147d77b23b32ebef5b237e89e1de5b3d7e804626948f540",
+      "size": 153,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/process_certification.json",
+      "sha256": "8c0824a72351ef9c8018229d4d3da0f6319f6be6692365161a88f113f2ba291b",
+      "size": 14272,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/results/44fe8e284be046369f026ea0630226cc.json",
+      "sha256": "1f0723f501326890f57c0fddffa1a2848d08b6e53470ec2c401de17c2beb283d",
+      "size": 4992,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/results/91182de57d00421a94cdee84e2e2e254.json",
+      "sha256": "187795c00138f6791a4673e09879c4d786e1e4b8522a09dd52914d046f0a5673",
+      "size": 5006,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/router/latest.json",
+      "sha256": "abc740bd4bd70fe90798b92e0faa03c22a1e304207c859bbbee4b3eb29e6e624",
+      "size": 4690,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "runtime/state.json",
+      "sha256": "64730cd101d99bfc62a0a172f69d6e5ad102b4d5e256638acbafd223845491e8",
+      "size": 12257,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "sample_corpus.txt",
+      "sha256": "8d3298b893b4f11b2202396f0e1be398e7de3cb7681ed7f0d8f22d9b960490c3",
+      "size": 200,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_1.txt",
+      "sha256": "c621d3e86d410f236252ebe847adc21d9cf654943a41de361faa650c814ce002",
+      "size": 84,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_10.txt",
+      "sha256": "4fbca0700660cfc2c60657d7bc0246c04ecde1f4acab86bb284492ff2199232a",
+      "size": 76,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_2.txt",
+      "sha256": "35c5107286ff6999220cefa321fb1d23df8d6521e91c612c88fc362fced4cd89",
+      "size": 80,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_3.txt",
+      "sha256": "3ff0ffae32aa38f9c8545c4d3a1d11775532362686697720c58fd92763113463",
+      "size": 84,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_4.txt",
+      "sha256": "fcf8bc237faca96dd1cf57a15e523efb2b509dadb2be60c6959dfd74facd7e95",
+      "size": 71,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_5.txt",
+      "sha256": "9b8027e071a6702ac0af9030b8d3345267d49668896470bca77b4e732a3ebbf8",
+      "size": 48,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_6.txt",
+      "sha256": "a1f5378eaf4f0765bd55c7518629002e5730746bcd1a2dbd9efab85fbf3f89e7",
+      "size": 85,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_7.txt",
+      "sha256": "3237183fb3f37790b77dff2bb319f9767db249cb520e7b8275b15ff9be9f26d0",
+      "size": 87,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_8.txt",
+      "sha256": "07ee8187959813a97e0b970dab3f682788c306f945e739f4fb201d068a00f1f5",
+      "size": 74,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_9.txt",
+      "sha256": "847495661624bec6f2fe735aa3a5b394a5d1b4e410fe3d8d7865285ddf1f1cd9",
+      "size": 67,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_fragment_2.txt",
+      "sha256": "effdb9e94b42e99abcc8c79390af51fccd21e2c3270340b2e2b0999c8b982224",
+      "size": 151,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "tablet_fragment_3.txt",
+      "sha256": "a1fa8c4d7c965372af68bf85e7ad7b33d8a6536759909f34a344d8fea92cbad4",
+      "size": 151,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "test_class.py",
+      "sha256": "78ef76143140f699c76f9fba2bf75454916b8ab77a72278e3c4c1b1e3e5f4507",
+      "size": 1040,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "test_cuneiform.txt",
+      "sha256": "a4f4806a6cb3f66683b2a671f57251971b85467a7f6dc772ecf3b2df5b3d81a8",
+      "size": 68,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "test_geometry.py",
+      "sha256": "916eeb8ef68a670b44b0b3783c0d7eba10161ddbc54dce556b8d43f51c1b4958",
+      "size": 972,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "test_meta.py",
+      "sha256": "d6445a760f025617ef5269ccdb3115d5ffb74b90f0abcb40201eec45b6ff2bdf",
+      "size": 976,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "test_predict.py",
+      "sha256": "b82d21ce06a4b71cd3216c4d32ed4f7062ffa16dedc35993807de2a53cbd09be",
+      "size": 1184,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "test_resonance.py",
+      "sha256": "ee1c24ed1301b34e14d10a833fed9eee942be4fde7119f2dd08d7ff038b439f5",
+      "size": 805,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "translation_report.json",
+      "sha256": "0756db3dd90e2294aad973380306572b0f78c6d4d6b24ba75355e1e199c6fce6",
+      "size": 1479,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "unknown_royal_tablet.txt",
+      "sha256": "a517c913e02bc968c5d07f8119fceed1c69661f8298759b9679656e49b4030a8",
+      "size": 216,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    },
+    {
+      "path": "visualize_vault.py",
+      "sha256": "abf5b2ad0777a2a21c3a58a71e480804dbe2b9e9a868e9ba75a53fd09492254d",
+      "size": 1597,
+      "classes": [],
+      "functions": [],
+      "constants": [],
+      "parse_error": null
+    }
+  ]
+}

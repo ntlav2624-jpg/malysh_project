@@ -345,6 +345,99 @@ def build_human_thought(
                 )
             )
 
+    legacy_memory = subconscious.get(
+        "legacy_memory",
+        {},
+    )
+
+    recalled_memories = legacy_memory.get(
+        "recalled",
+        [],
+    )
+
+    for memory in recalled_memories[:5]:
+        status = memory.get(
+            "status",
+            "named_unresolved",
+        )
+
+        title = memory.get(
+            "title",
+            memory.get(
+                "id",
+                "Неизвестное воспоминание",
+            ),
+        )
+
+        score = float(
+            memory.get(
+                "score",
+                0,
+            )
+            or 0
+        )
+
+        if status == "recovered":
+            certainty = min(
+                0.58,
+                0.28 + score / 200.0,
+            )
+
+            hypothesis = (
+                "Восстановленное знание "
+                f"«{title}» может быть "
+                "полезно для текущей задачи"
+            )
+
+        elif status == "historical":
+            certainty = min(
+                0.42,
+                0.20 + score / 250.0,
+            )
+
+            hypothesis = (
+                "Историческое воспоминание "
+                f"«{title}» может содержать "
+                "подходящий прежний опыт"
+            )
+
+        else:
+            certainty = 0.12
+
+            hypothesis = (
+                "Малыш помнит название "
+                f"«{title}», но содержание "
+                "ещё не восстановлено"
+            )
+
+        possible.append(
+            Hypothesis(
+                hypothesis=hypothesis,
+                certainty=clamp(
+                    certainty
+                ),
+                evidence=[
+                    (
+                        "Legacy Memory: "
+                        f"status={status}"
+                    ),
+                    (
+                        "Смысл не выдуман"
+                        if not memory.get(
+                            "meaning_invented",
+                            False,
+                        )
+                        else (
+                            "Требуется проверка "
+                            "происхождения"
+                        )
+                    ),
+                ],
+                source="legacy_memory",
+                status="possible",
+            )
+        )
+
     uncertainty_text = (
         "Интерпретация запроса может быть пересмотрена"
         if is_reflex
