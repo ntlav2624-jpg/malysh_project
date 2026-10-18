@@ -1,0 +1,1135 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Unified Genome",
+  "summary": {
+    "total": 52,
+    "production": 3,
+    "adapted": 9,
+    "discovered": 40,
+    "broken": 0
+  },
+  "modules": [
+    {
+      "id": "astrophysical_turbulence.py",
+      "path": "astrophysical_turbulence.py",
+      "category": "physics.turbulence",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "AstroTurbulenceSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_accretion_flow"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "batch_process_ten.py",
+      "path": "batch_process_ten.py",
+      "category": "unclassified",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "BatchTenEngine"
+      ],
+      "functions": [
+        "__init__",
+        "process_batch"
+      ],
+      "imports": [
+        "collections",
+        "json",
+        "malysh_pro_engine",
+        "os",
+        "re"
+      ]
+    },
+    {
+      "id": "compare_streams.py",
+      "path": "compare_streams.py",
+      "category": "unclassified",
+      "role": "support",
+      "execution_policy": "library",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "json",
+        "malysh_engine"
+      ]
+    },
+    {
+      "id": "core::euro_tube_constructor.py",
+      "path": "core/euro_tube_constructor.py",
+      "category": "unclassified",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "DualTubeConstructor"
+      ],
+      "functions": [
+        "__init__",
+        "_build_transitions",
+        "calculate_path_strength",
+        "construct_prediction"
+      ],
+      "imports": [
+        "collections",
+        "itertools"
+      ]
+    },
+    {
+      "id": "core::malysh_firmware_compiler.py",
+      "path": "core/malysh_firmware_compiler.py",
+      "category": "logic.firmware",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "FirmwareCompiler"
+      ],
+      "functions": [
+        "__init__",
+        "compile_firmware",
+        "decode_signal"
+      ],
+      "imports": [
+        "json"
+      ]
+    },
+    {
+      "id": "core::malysh_master_engine.py",
+      "path": "core/malysh_master_engine.py",
+      "category": "engine",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "production",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "ASTTopologyEvaluator",
+        "MalyshGrandUnifiedEngine",
+        "TopologicalResonanceCore"
+      ],
+      "functions": [
+        "__init__",
+        "_calculate_phase_coherence",
+        "_calculate_shannon_entropy",
+        "analyze_natural_market_attractors",
+        "calculate_resonance",
+        "decode_signal",
+        "evaluate_state",
+        "execute_unified_pipeline",
+        "full_system_boot",
+        "visit"
+      ],
+      "imports": [
+        "ast",
+        "cmath",
+        "collections",
+        "inspect",
+        "itertools",
+        "json",
+        "math",
+        "os"
+      ]
+    },
+    {
+      "id": "core::malysh_toroidal_geometry.py",
+      "path": "core/malysh_toroidal_geometry.py",
+      "category": "geometry.toroidal",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "ToroidalTubeGeometry"
+      ],
+      "functions": [
+        "__init__",
+        "compute_geometry",
+        "decode_signal"
+      ],
+      "imports": [
+        "json",
+        "math"
+      ]
+    },
+    {
+      "id": "deep_history.py",
+      "path": "deep_history.py",
+      "category": "unclassified",
+      "role": "memory",
+      "execution_policy": "memory_access",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "glob",
+        "json",
+        "os"
+      ]
+    },
+    {
+      "id": "demo.py",
+      "path": "demo.py",
+      "category": "unclassified",
+      "role": "functional_organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [],
+      "functions": [
+        "run_layer7_demo"
+      ],
+      "imports": [
+        "numpy"
+      ]
+    },
+    {
+      "id": "enki_micro_v3.1.py",
+      "path": "enki_micro_v3.1.py",
+      "category": "unclassified",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MicroEnkiSystem"
+      ],
+      "functions": [
+        "__init__",
+        "process_flow"
+      ],
+      "imports": [
+        "math",
+        "time"
+      ]
+    },
+    {
+      "id": "flush_chaos.py",
+      "path": "flush_chaos.py",
+      "category": "dynamics.chaos",
+      "role": "support",
+      "execution_policy": "library",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ]
+    },
+    {
+      "id": "generate_passport.py",
+      "path": "generate_passport.py",
+      "category": "unclassified",
+      "role": "memory",
+      "execution_policy": "memory_access",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "datetime",
+        "glob",
+        "json",
+        "os"
+      ]
+    },
+    {
+      "id": "malysh.py",
+      "path": "malysh.py",
+      "category": "unclassified",
+      "role": "support",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_system.supervisor"
+      ]
+    },
+    {
+      "id": "malysh_apsu_engine.py",
+      "path": "malysh_apsu_engine.py",
+      "category": "engine.apsu",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "ApsuMalyshComplex"
+      ],
+      "functions": [
+        "__init__",
+        "run_full_simulation"
+      ],
+      "imports": [
+        "math",
+        "time"
+      ]
+    },
+    {
+      "id": "malysh_bony_paraproduct_engine.py",
+      "path": "malysh_bony_paraproduct_engine.py",
+      "category": "math.bony",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "BonyParaproductEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_bony_decomposition_bounds",
+        "verify_clebsch_map_gluing"
+      ],
+      "imports": [
+        "logging",
+        "numpy"
+      ]
+    },
+    {
+      "id": "malysh_chaos.py",
+      "path": "malysh_chaos.py",
+      "category": "dynamics.chaos",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "ChaosAndUncertaintyHandler"
+      ],
+      "functions": [
+        "calculate_lyapunov_horizon",
+        "evaluate_incomplete_data_risk"
+      ],
+      "imports": [
+        "logging",
+        "math"
+      ]
+    },
+    {
+      "id": "malysh_chaos_bypass.py",
+      "path": "malysh_chaos_bypass.py",
+      "category": "dynamics.chaos",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "LyapunovBypassEngine"
+      ],
+      "functions": [
+        "__init__",
+        "activate_attractor_fallback",
+        "evaluate_strategy"
+      ],
+      "imports": [
+        "logging",
+        "math"
+      ]
+    },
+    {
+      "id": "malysh_cuneiform_engine.py",
+      "path": "malysh_cuneiform_engine.py",
+      "category": "analysis.cuneiform",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshCuneiformEngine567"
+      ],
+      "functions": [
+        "__init__",
+        "_build_topological_field",
+        "clean_token",
+        "evaluate_topological_tension",
+        "load_corpus_from_text",
+        "restore_gap",
+        "translate_tablet"
+      ],
+      "imports": [
+        "collections",
+        "json",
+        "os",
+        "re"
+      ]
+    },
+    {
+      "id": "malysh_engine.py",
+      "path": "malysh_engine.py",
+      "category": "engine",
+      "role": "organ",
+      "execution_policy": "adapter_required",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [
+        "MalyshEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_load_state",
+        "predict_next_strategy",
+        "process_array"
+      ],
+      "imports": [
+        "datetime",
+        "glob",
+        "json",
+        "math",
+        "os"
+      ]
+    },
+    {
+      "id": "malysh_extreme_stress_test.py",
+      "path": "malysh_extreme_stress_test.py",
+      "category": "unclassified",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "ExtremeStressTestEngine"
+      ],
+      "functions": [
+        "__init__",
+        "run_taylor_green_stress_simulation"
+      ],
+      "imports": [
+        "logging",
+        "numpy"
+      ]
+    },
+    {
+      "id": "malysh_master.py",
+      "path": "malysh_master.py",
+      "category": "unclassified",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "production",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "Generation7Core",
+        "HierarchicalMemory"
+      ],
+      "functions": [
+        "__init__",
+        "compute_forecast",
+        "get_memory_layers",
+        "load_all_passports",
+        "run",
+        "store_passport"
+      ],
+      "imports": [
+        "datetime",
+        "glob",
+        "json",
+        "math",
+        "os"
+      ]
+    },
+    {
+      "id": "malysh_navier_continuum_closure.py",
+      "path": "malysh_navier_continuum_closure.py",
+      "category": "physics.navier",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "NavierStokesContinuumEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_littlewood_paley_bound",
+        "verify_partition_of_unity_residuals"
+      ],
+      "imports": [
+        "logging",
+        "numpy"
+      ]
+    },
+    {
+      "id": "malysh_navier_dynamic.py",
+      "path": "malysh_navier_dynamic.py",
+      "category": "physics.navier",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "NavierStokesDynamicEngine"
+      ],
+      "functions": [
+        "__init__",
+        "step_evolution"
+      ],
+      "imports": [
+        "logging",
+        "numpy"
+      ]
+    },
+    {
+      "id": "malysh_navier_spectral.py",
+      "path": "malysh_navier_spectral.py",
+      "category": "physics.navier",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "NavierStokesRigorousEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_spectral_majorant",
+        "verify_helicity_dissipation"
+      ],
+      "imports": [
+        "logging",
+        "numpy"
+      ]
+    },
+    {
+      "id": "malysh_physical_legacy.py",
+      "path": "malysh_physical_legacy.py",
+      "category": "unclassified",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshPhysicalEngine"
+      ],
+      "functions": [
+        "__init__",
+        "apply_real_physics"
+      ],
+      "imports": [
+        "random"
+      ]
+    },
+    {
+      "id": "malysh_plasma_vortex.py",
+      "path": "malysh_plasma_vortex.py",
+      "category": "physics.plasma",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "PlasmaVortexSimulationEngine"
+      ],
+      "functions": [
+        "__init__",
+        "compute_plasma_evolution"
+      ],
+      "imports": [
+        "logging",
+        "numpy"
+      ]
+    },
+    {
+      "id": "malysh_pro_engine.py",
+      "path": "malysh_pro_engine.py",
+      "category": "engine",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshProCuneiformEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_build_topological_field",
+        "clean_token",
+        "evaluate_topological_tension",
+        "load_corpus_from_text",
+        "parse_morphology",
+        "restore_gap",
+        "translate_and_analyze"
+      ],
+      "imports": [
+        "collections",
+        "json",
+        "os",
+        "re"
+      ]
+    },
+    {
+      "id": "malysh_system::__init__.py",
+      "path": "malysh_system/__init__.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "execution_policy": "infrastructure",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": []
+    },
+    {
+      "id": "malysh_system::inventory.py",
+      "path": "malysh_system/inventory.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "execution_policy": "infrastructure",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [],
+      "functions": [
+        "category_for",
+        "inspect_python",
+        "main"
+      ],
+      "imports": [
+        "ast",
+        "json",
+        "pathlib"
+      ]
+    },
+    {
+      "id": "malysh_system::modules::__init__.py",
+      "path": "malysh_system/modules/__init__.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "execution_policy": "infrastructure",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": []
+    },
+    {
+      "id": "malysh_system::supervisor.py",
+      "path": "malysh_system/supervisor.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "execution_policy": "infrastructure",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshSupervisor",
+        "ProcessModule",
+        "StateStore",
+        "WAL"
+      ],
+      "functions": [
+        "__init__",
+        "acquire_lock",
+        "append",
+        "atomic_write_json",
+        "build_parser",
+        "checkpoint",
+        "execute",
+        "initial_state",
+        "inspect",
+        "latest_checkpoint",
+        "load",
+        "load_json",
+        "main",
+        "read_valid_events",
+        "recover",
+        "release_lock",
+        "run_cycle",
+        "save",
+        "state_hash",
+        "status",
+        "unlock",
+        "utc_now"
+      ],
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "id": "malysh_vortex_visualization.py",
+      "path": "malysh_vortex_visualization.py",
+      "category": "physics.vortex",
+      "role": "visualizer",
+      "execution_policy": "on_demand",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshVortexVisualizer"
+      ],
+      "functions": [
+        "__init__",
+        "compute_clebsch_potentials",
+        "compute_vorticity_field",
+        "render_3d_vortex_plot"
+      ],
+      "imports": [
+        "matplotlib.pyplot",
+        "mpl_toolkits.mplot3d",
+        "numpy"
+      ]
+    },
+    {
+      "id": "malysh_weighted_bony_closure.py",
+      "path": "malysh_weighted_bony_closure.py",
+      "category": "math.bony",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "adapted",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "WeightedBonyClosureEngine"
+      ],
+      "functions": [
+        "__init__",
+        "evaluate_weighted_tail_bound",
+        "verify_dynamic_cutoff_stability"
+      ],
+      "imports": [
+        "logging",
+        "numpy"
+      ]
+    },
+    {
+      "id": "meso_power_engine.py",
+      "path": "meso_power_engine.py",
+      "category": "engine",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MesoScaleSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_power_surge"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "navier_stokes_engine.py",
+      "path": "navier_stokes_engine.py",
+      "category": "physics.navier",
+      "role": "organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "NavierStokesMalyshSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_blow_up_prevention"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "phase_coupling.py",
+      "path": "phase_coupling.py",
+      "category": "geometry.phase",
+      "role": "functional_organ",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [],
+      "functions": [
+        "simulate_phase_entanglement"
+      ],
+      "imports": [
+        "numpy"
+      ]
+    },
+    {
+      "id": "plot_phase.py",
+      "path": "plot_phase.py",
+      "category": "geometry.phase",
+      "role": "visualizer",
+      "execution_policy": "on_demand",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "matplotlib.pyplot",
+        "numpy"
+      ]
+    },
+    {
+      "id": "run_adaptive_pipeline.py",
+      "path": "run_adaptive_pipeline.py",
+      "category": "adaptation",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_adaptive_operator_7",
+        "_is_inside_polygon",
+        "_phase_detector",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "run_full_translation.py",
+      "path": "run_full_translation.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_pro_engine"
+      ]
+    },
+    {
+      "id": "run_maglev_flywheel.py",
+      "path": "run_maglev_flywheel.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MaglevFlywheelSystem"
+      ],
+      "functions": [
+        "__init__",
+        "simulate"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "run_malysh.py",
+      "path": "run_malysh.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "adapter_required",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "compute_n7_nodes",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "run_malysh_all.py",
+      "path": "run_malysh_all.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "production",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "ResonantNavierStokesModel"
+      ],
+      "functions": [
+        "__init__",
+        "compute_dynamics",
+        "main"
+      ],
+      "imports": [
+        "matplotlib.pyplot",
+        "numpy",
+        "os"
+      ]
+    },
+    {
+      "id": "run_origin_of_life.py",
+      "path": "run_origin_of_life.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "BiogenesisSimulator",
+        "MalyshBiogenesisEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "run_simulation",
+        "simulate_geological_phase"
+      ],
+      "imports": [
+        "math",
+        "random"
+      ]
+    },
+    {
+      "id": "run_pipeline.py",
+      "path": "run_pipeline.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "compute_n7_nodes",
+        "execute_stream",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "run_processor.py",
+      "path": "run_processor.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshDataProcessor",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "process_stream"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "run_reflected_pipeline.py",
+      "path": "run_reflected_pipeline.py",
+      "category": "launcher",
+      "role": "launcher",
+      "execution_policy": "process_candidate",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "imports": [
+        "math"
+      ]
+    },
+    {
+      "id": "test_class.py",
+      "path": "test_class.py",
+      "category": "utility",
+      "role": "immune_test",
+      "execution_policy": "diagnostic",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "json",
+        "malysh_engine"
+      ]
+    },
+    {
+      "id": "test_geometry.py",
+      "path": "test_geometry.py",
+      "category": "geometry",
+      "role": "immune_test",
+      "execution_policy": "diagnostic",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ]
+    },
+    {
+      "id": "test_meta.py",
+      "path": "test_meta.py",
+      "category": "utility",
+      "role": "immune_test",
+      "execution_policy": "diagnostic",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ]
+    },
+    {
+      "id": "test_predict.py",
+      "path": "test_predict.py",
+      "category": "prediction",
+      "role": "immune_test",
+      "execution_policy": "diagnostic",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ]
+    },
+    {
+      "id": "test_resonance.py",
+      "path": "test_resonance.py",
+      "category": "resonance",
+      "role": "immune_test",
+      "execution_policy": "diagnostic",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "json",
+        "malysh_engine"
+      ]
+    },
+    {
+      "id": "visualize_vault.py",
+      "path": "visualize_vault.py",
+      "category": "utility",
+      "role": "visualizer",
+      "execution_policy": "on_demand",
+      "integration": "discovered",
+      "syntax_ok": true,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "glob",
+        "json",
+        "os"
+      ]
+    }
+  ]
+}
