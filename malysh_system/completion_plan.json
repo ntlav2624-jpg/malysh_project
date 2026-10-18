@@ -5,8 +5,8 @@
   "current": {
     "total": 52,
     "production": 3,
-    "adapted": 25,
-    "discovered": 24
+    "adapted": 28,
+    "discovered": 21
   },
   "runtime_guard": {
     "generation": 5,
@@ -15,12 +15,11 @@
     "active_cycle": null
   },
   "queue": {
-    "pending": 24,
+    "pending": 21,
     "strategies": {
       "analyze_as_composite_workflow": 8,
       "integrate_as_diagnostic": 5,
       "integrate_as_memory_provider": 2,
-      "integrate_as_observer": 3,
       "keep_as_infrastructure": 4,
       "register_as_library": 2
     }
@@ -35,32 +34,7 @@
   "phases": {
     "phase_1_organs": [],
     "phase_2_api": [],
-    "phase_3_observers": [
-      {
-        "id": "malysh_vortex_visualization.py",
-        "path": "malysh_vortex_visualization.py",
-        "role": "visualizer",
-        "category": "physics.vortex",
-        "strategy": "integrate_as_observer",
-        "priority": 80
-      },
-      {
-        "id": "plot_phase.py",
-        "path": "plot_phase.py",
-        "role": "visualizer",
-        "category": "geometry.phase",
-        "strategy": "integrate_as_observer",
-        "priority": 50
-      },
-      {
-        "id": "visualize_vault.py",
-        "path": "visualize_vault.py",
-        "role": "visualizer",
-        "category": "utility",
-        "strategy": "integrate_as_observer",
-        "priority": 0
-      }
-    ],
+    "phase_3_observers": [],
     "phase_4_workflows": [
       {
         "id": "run_adaptive_pipeline.py",

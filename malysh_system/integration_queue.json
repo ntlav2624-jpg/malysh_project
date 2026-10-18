@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 24,
+  "total_pending": 21,
   "strategies": {
     "certify_process_adapter": 0,
     "build_api_adapter": 0,
-    "integrate_as_observer": 3,
+    "integrate_as_observer": 0,
     "analyze_as_composite_workflow": 8,
     "register_as_library": 2,
     "integrate_as_diagnostic": 5,
@@ -13,25 +13,6 @@
     "integrate_as_memory_provider": 2
   },
   "queue": [
-    {
-      "id": "malysh_vortex_visualization.py",
-      "path": "malysh_vortex_visualization.py",
-      "category": "physics.vortex",
-      "role": "visualizer",
-      "strategy": "integrate_as_observer",
-      "priority": 80,
-      "has_main": true,
-      "classes": [
-        "MalyshVortexVisualizer"
-      ],
-      "functions": [
-        "__init__",
-        "compute_clebsch_potentials",
-        "compute_vorticity_field",
-        "render_3d_vortex_plot"
-      ],
-      "status": "pending"
-    },
     {
       "id": "run_adaptive_pipeline.py",
       "path": "run_adaptive_pipeline.py",
@@ -63,18 +44,6 @@
       "category": "dynamics.chaos",
       "role": "support",
       "strategy": "register_as_library",
-      "priority": 50,
-      "has_main": false,
-      "classes": [],
-      "functions": [],
-      "status": "pending"
-    },
-    {
-      "id": "plot_phase.py",
-      "path": "plot_phase.py",
-      "category": "geometry.phase",
-      "role": "visualizer",
-      "strategy": "integrate_as_observer",
       "priority": 50,
       "has_main": false,
       "classes": [],
@@ -394,18 +363,6 @@
       "category": "utility",
       "role": "immune_test",
       "strategy": "integrate_as_diagnostic",
-      "priority": 0,
-      "has_main": false,
-      "classes": [],
-      "functions": [],
-      "status": "pending"
-    },
-    {
-      "id": "visualize_vault.py",
-      "path": "visualize_vault.py",
-      "category": "utility",
-      "role": "visualizer",
-      "strategy": "integrate_as_observer",
       "priority": 0,
       "has_main": false,
       "classes": [],

@@ -4,8 +4,8 @@
   "summary": {
     "total": 52,
     "production": 3,
-    "adapted": 25,
-    "discovered": 24,
+    "adapted": 28,
+    "discovered": 21,
     "broken": 0
   },
   "modules": [
@@ -712,9 +712,9 @@
       "id": "malysh_vortex_visualization.py",
       "path": "malysh_vortex_visualization.py",
       "category": "physics.vortex",
-      "role": "visualizer",
-      "execution_policy": "on_demand",
-      "integration": "discovered",
+      "role": "observer",
+      "execution_policy": "passive_observation",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -730,7 +730,10 @@
         "matplotlib.pyplot",
         "mpl_toolkits.mplot3d",
         "numpy"
-      ]
+      ],
+      "observer_id": "vortex_observer",
+      "state_write": false,
+      "decision_authority": false
     },
     {
       "id": "malysh_weighted_bony_closure.py",
@@ -815,9 +818,9 @@
       "id": "plot_phase.py",
       "path": "plot_phase.py",
       "category": "geometry.phase",
-      "role": "visualizer",
-      "execution_policy": "on_demand",
-      "integration": "discovered",
+      "role": "observer",
+      "execution_policy": "passive_observation",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": false,
       "classes": [],
@@ -825,7 +828,10 @@
       "imports": [
         "matplotlib.pyplot",
         "numpy"
-      ]
+      ],
+      "observer_id": "phase_observer",
+      "state_write": false,
+      "decision_authority": false
     },
     {
       "id": "run_adaptive_pipeline.py",
@@ -1124,9 +1130,9 @@
       "id": "visualize_vault.py",
       "path": "visualize_vault.py",
       "category": "utility",
-      "role": "visualizer",
-      "execution_policy": "on_demand",
-      "integration": "discovered",
+      "role": "observer",
+      "execution_policy": "passive_observation",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": false,
       "classes": [],
@@ -1135,7 +1141,10 @@
         "glob",
         "json",
         "os"
-      ]
+      ],
+      "observer_id": "vault_observer",
+      "state_write": false,
+      "decision_authority": false
     }
   ]
 }
