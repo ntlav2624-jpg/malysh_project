@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "timeout_seconds": 120,
+  "continue_on_error": true,
+  "organs": [
+    {
+      "id": "generation7",
+      "name": "Generation 7",
+      "path": "malysh_master.py",
+      "category": "adaptation",
+      "command": ["python", "malysh_master.py"],
+      "enabled": true,
+      "safe": true,
+      "priority": 100
+    },
+    {
+      "id": "grand_unified",
+      "name": "Grand Unified Core",
+      "path": "core/malysh_master_engine.py",
+      "category": "engine",
+      "command": ["python", "core/malysh_master_engine.py"],
+      "enabled": true,
+      "safe": true,
+      "priority": 90
+    },
+    {
+      "id": "navier_resonance",
+      "name": "Navier Resonance",
+      "path": "run_malysh_all.py",
+      "category": "physics.navier",
+      "command": ["python", "run_malysh_all.py"],
+      "enabled": true,
+      "safe": true,
+      "priority": 80
+    }
+  ]
+}

@@ -9,3 +9,6 @@ __pycache__/
 *.py[cod]
 runtime/
 *.log
+runtime/organ_logs/
+runtime/results/
+runtime/command_bus.jsonl
