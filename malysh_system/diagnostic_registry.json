@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Diagnostic Immune System",
+  "subject": "Malysh",
+  "policy": {
+    "diagnostic_is_independent_mind": false,
+    "diagnostic_is_internal_check": true,
+    "automatic_execution": false,
+    "influence_on_answer": false,
+    "decision_authority": false,
+    "state_write": false,
+    "state_commit": false
+  },
+  "diagnostics": [
+    {
+      "id": "test_geometry.py",
+      "path": "test_geometry.py",
+      "entrypoint": "run_geometry_diagnostic",
+      "family": "geometry",
+      "status": "integrated_as_diagnostic"
+    },
+    {
+      "id": "test_predict.py",
+      "path": "test_predict.py",
+      "entrypoint": "run_prediction_diagnostic",
+      "family": "prediction",
+      "status": "integrated_as_diagnostic"
+    },
+    {
+      "id": "test_resonance.py",
+      "path": "test_resonance.py",
+      "entrypoint": "run_resonance_diagnostic",
+      "family": "resonance",
+      "status": "integrated_as_diagnostic"
+    },
+    {
+      "id": "test_class.py",
+      "path": "test_class.py",
+      "entrypoint": "run_classification_diagnostic",
+      "family": "classification",
+      "status": "integrated_as_diagnostic"
+    },
+    {
+      "id": "test_meta.py",
+      "path": "test_meta.py",
+      "entrypoint": "run_meta_diagnostic",
+      "family": "meta_strategy",
+      "status": "integrated_as_diagnostic"
+    }
+  ]
+}

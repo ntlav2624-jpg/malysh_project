@@ -1,20 +1,61 @@
-import json
-from malysh_engine import MalyshEngine
+from __future__ import annotations
 
-print("=== ТЕСТ СТРАТЕГИИ RESONANCE_SEARCH ===")
+from typing import Any
 
-# Плавный, предсказуемый поток данных
-smooth_stream = [50, 52, 55, 53, 56, 58, 60]
+from malysh_system.diagnostic_contract import (
+    DiagnosticResult,
+    EngineFactory,
+    build_result,
+    default_engine_factory,
+)
 
-engine = MalyshEngine()
-res = engine.process_array(smooth_stream, source_name="Smooth_Resonance_Run")
 
-print(f"\n[Результат теста]")
-print(f"  └─ Класс сигнала: {res['signal_class']}")
-print(f"  └─ Стратегия: {res['strategy']}")
-print(f"  └─ Режим: {res['mode']}")
-print(f"  └─ Метрика K: {res['K_metric']}")
-print(f"  └─ Уверенность C: {res['confidence']}")
-print(f"  └─ Параметр R7: {res['r7_val']}")
+def run_resonance_diagnostic(
+    engine_factory: EngineFactory = default_engine_factory,
+) -> DiagnosticResult:
+    engine = engine_factory()
 
-print("\n[Готово]: Резонансный контур проверен.")
+    result = engine.process_array(
+        [50, 52, 55, 53, 56, 58, 60],
+        source_name="Smooth_Resonance_Run",
+    )
+
+    checks: list[dict[str, Any]] = [
+        {
+            "signal_class": result["signal_class"],
+            "strategy": result["strategy"],
+            "mode": result["mode"],
+            "K_metric": result["K_metric"],
+            "confidence": result["confidence"],
+            "r7_val": result["r7_val"],
+        }
+    ]
+
+    return build_result(
+        diagnostic_id="test_resonance.py",
+        family="resonance",
+        checks=checks,
+        conclusion=(
+            "Проверен отклик резонансного "
+            "контура на плавный поток"
+        ),
+    )
+
+
+def main() -> None:
+    result = run_resonance_diagnostic()
+    check = result.checks[0]
+
+    print(
+        "=== ДИАГНОСТИКА RESONANCE_SEARCH ==="
+    )
+
+    for key, value in check.items():
+        print(f"{key:<13}:", value)
+
+    print()
+    print(result.conclusion)
+
+
+if __name__ == "__main__":
+    main()

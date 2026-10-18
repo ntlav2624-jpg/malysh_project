@@ -1,21 +1,93 @@
-from malysh_engine import MalyshEngine
+from __future__ import annotations
 
-print("=== ТЕСТ ПРЕДИКТИВНОГО КОНТУРА (PREDICTIVE STRATEGY) ===")
+from typing import Any
 
-engine = MalyshEngine()
+from malysh_system.diagnostic_contract import (
+    DiagnosticResult,
+    EngineFactory,
+    build_result,
+    default_engine_factory,
+)
 
-# Шаг 1: Подаем плавный сигнал
-res1 = engine.process_array([10, 12, 14, 16, 18], source_name="Predict_Test_1")
-print(f"\n[Шаг 1]")
-print(f"  └─ Предсказанная стратегия: {res1['predicted_strategy']}")
-print(f"  └─ Фактическая стратегия:  {res1['applied_strategy']}")
-print(f"  └─ Класс сигнала:          {res1['signal_class']}")
 
-# Шаг 2: Подаем следующий плавный сигнал (предиктор уже опирается на Шаг 1)
-res2 = engine.process_array([18, 20, 22, 24, 26], source_name="Predict_Test_2")
-print(f"\n[Шаг 2]")
-print(f"  └─ Предсказанная стратегия: {res2['predicted_strategy']}")
-print(f"  └─ Фактическая стратегия:  {res2['applied_strategy']}")
-print(f"  └─ Класс сигнала:          {res2['signal_class']}")
+def run_prediction_diagnostic(
+    engine_factory: EngineFactory = default_engine_factory,
+) -> DiagnosticResult:
+    engine = engine_factory()
 
-print("\n[Готово]: Предиктивный контур успешно протестирован.")
+    first = engine.process_array(
+        [10, 12, 14, 16, 18],
+        source_name="Predict_Test_1",
+    )
+
+    second = engine.process_array(
+        [18, 20, 22, 24, 26],
+        source_name="Predict_Test_2",
+    )
+
+    checks: list[dict[str, Any]] = []
+
+    for step, result in enumerate(
+        (first, second),
+        start=1,
+    ):
+        checks.append(
+            {
+                "step": step,
+                "predicted_strategy": result[
+                    "predicted_strategy"
+                ],
+                "applied_strategy": result[
+                    "applied_strategy"
+                ],
+                "signal_class": result[
+                    "signal_class"
+                ],
+                "agreement": (
+                    result["predicted_strategy"]
+                    == result["applied_strategy"]
+                ),
+            }
+        )
+
+    return build_result(
+        diagnostic_id="test_predict.py",
+        family="prediction",
+        checks=checks,
+        conclusion=(
+            "Сопоставлены предсказанная и "
+            "фактически применённая стратегии"
+        ),
+    )
+
+
+def main() -> None:
+    result = run_prediction_diagnostic()
+
+    print(
+        "=== ДИАГНОСТИКА ПРЕДИКТИВНОГО "
+        "КОНТУРА ==="
+    )
+
+    for check in result.checks:
+        print()
+        print("step      :", check["step"])
+        print(
+            "predicted :",
+            check["predicted_strategy"],
+        )
+        print(
+            "applied   :",
+            check["applied_strategy"],
+        )
+        print(
+            "agreement :",
+            check["agreement"],
+        )
+
+    print()
+    print(result.conclusion)
+
+
+if __name__ == "__main__":
+    main()

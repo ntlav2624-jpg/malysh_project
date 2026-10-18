@@ -1,21 +1,83 @@
-from malysh_engine import MalyshEngine
+from __future__ import annotations
 
-print("=== ТЕСТ ДИНАМИЧЕСКОЙ ГЕОМЕТРИИ РЕЗОНАНСА (R7) ===")
+from typing import Any
 
-engine = MalyshEngine()
+from malysh_system.diagnostic_contract import (
+    DiagnosticResult,
+    EngineFactory,
+    build_result,
+    default_engine_factory,
+)
 
-# Поток 1: Плавный линейный ряд
-res1 = engine.process_array([10, 15, 20, 25, 30], source_name="Geo_Smooth")
-print(f"\n[Тест 1: Плавный сигнал]")
-print(f"  └─ Класс: {res1['signal_class']}")
-print(f"  └─ Метрика K: {res1['K_metric']}")
-print(f"  └─ Геометрия R7: {res1['r7_val']}")
 
-# Поток 2: Хаотический/резкий скачок
-res2 = engine.process_array([30, 80, 10, 95, 20], source_name="Geo_Chaotic")
-print(f"\n[Тест 2: Хаотический сигнал]")
-print(f"  └─ Класс: {res2['signal_class']}")
-print(f"  └─ Метрика K: {res2['K_metric']}")
-print(f"  └─ Геометрия R7: {res2['r7_val']}")
+def run_geometry_diagnostic(
+    engine_factory: EngineFactory = default_engine_factory,
+) -> DiagnosticResult:
+    engine = engine_factory()
 
-print("\n[Готово]: Динамика геометрии проверена.")
+    smooth = engine.process_array(
+        [10, 15, 20, 25, 30],
+        source_name="Geo_Smooth",
+    )
+
+    chaotic = engine.process_array(
+        [30, 80, 10, 95, 20],
+        source_name="Geo_Chaotic",
+    )
+
+    checks: list[dict[str, Any]] = [
+        {
+            "case": "smooth",
+            "signal_class": smooth["signal_class"],
+            "K_metric": smooth["K_metric"],
+            "r7_val": smooth["r7_val"],
+        },
+        {
+            "case": "chaotic",
+            "signal_class": chaotic["signal_class"],
+            "K_metric": chaotic["K_metric"],
+            "r7_val": chaotic["r7_val"],
+        },
+    ]
+
+    return build_result(
+        diagnostic_id="test_geometry.py",
+        family="geometry",
+        checks=checks,
+        conclusion=(
+            "Сравнены геометрические реакции R7 "
+            "на плавный и резкий потоки"
+        ),
+    )
+
+
+def main() -> None:
+    result = run_geometry_diagnostic()
+
+    print(
+        "=== ДИАГНОСТИКА ДИНАМИЧЕСКОЙ "
+        "ГЕОМЕТРИИ R7 ==="
+    )
+
+    for check in result.checks:
+        print()
+        print("case        :", check["case"])
+        print(
+            "signal_class:",
+            check["signal_class"],
+        )
+        print(
+            "K_metric    :",
+            check["K_metric"],
+        )
+        print(
+            "r7_val      :",
+            check["r7_val"],
+        )
+
+    print()
+    print(result.conclusion)
+
+
+if __name__ == "__main__":
+    main()

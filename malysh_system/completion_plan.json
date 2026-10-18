@@ -5,8 +5,8 @@
   "current": {
     "total": 52,
     "production": 3,
-    "adapted": 38,
-    "discovered": 11
+    "adapted": 43,
+    "discovered": 6
   },
   "runtime_guard": {
     "generation": 5,
@@ -15,11 +15,11 @@
     "active_cycle": null
   },
   "queue": {
-    "pending": 11,
+    "pending": 6,
     "strategies": {
       "analyze_as_composite_workflow": 0,
       "register_as_library": 0,
-      "integrate_as_diagnostic": 5,
+      "integrate_as_diagnostic": 0,
       "integrate_as_memory_provider": 2,
       "keep_as_infrastructure": 4
     }
@@ -194,7 +194,15 @@
         "role": "immune_test",
         "category": "geometry",
         "strategy": "integrate_as_diagnostic",
-        "priority": 50
+        "priority": 50,
+        "status": "integrated_as_diagnostic",
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "fake_engine_tested": true,
+        "automatic_execution": false,
+        "influence_on_answer": false,
+        "decision_authority": false
       },
       {
         "id": "test_predict.py",
@@ -202,7 +210,15 @@
         "role": "immune_test",
         "category": "prediction",
         "strategy": "integrate_as_diagnostic",
-        "priority": 50
+        "priority": 50,
+        "status": "integrated_as_diagnostic",
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "fake_engine_tested": true,
+        "automatic_execution": false,
+        "influence_on_answer": false,
+        "decision_authority": false
       },
       {
         "id": "test_resonance.py",
@@ -210,7 +226,15 @@
         "role": "immune_test",
         "category": "resonance",
         "strategy": "integrate_as_diagnostic",
-        "priority": 50
+        "priority": 50,
+        "status": "integrated_as_diagnostic",
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "fake_engine_tested": true,
+        "automatic_execution": false,
+        "influence_on_answer": false,
+        "decision_authority": false
       },
       {
         "id": "test_class.py",
@@ -218,7 +242,15 @@
         "role": "immune_test",
         "category": "utility",
         "strategy": "integrate_as_diagnostic",
-        "priority": 0
+        "priority": 0,
+        "status": "integrated_as_diagnostic",
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "fake_engine_tested": true,
+        "automatic_execution": false,
+        "influence_on_answer": false,
+        "decision_authority": false
       },
       {
         "id": "test_meta.py",
@@ -226,7 +258,15 @@
         "role": "immune_test",
         "category": "utility",
         "strategy": "integrate_as_diagnostic",
-        "priority": 0
+        "priority": 0,
+        "status": "integrated_as_diagnostic",
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "fake_engine_tested": true,
+        "automatic_execution": false,
+        "influence_on_answer": false,
+        "decision_authority": false
       }
     ],
     "phase_7_infrastructure": [
@@ -285,7 +325,7 @@
   "phase_status": {
     "phase_4_workflows": "complete",
     "phase_5_libraries": "complete",
-    "phase_6_diagnostics": "pending",
+    "phase_6_diagnostics": "complete",
     "phase_7_infrastructure": "pending",
     "phase_8_memory": "pending"
   }

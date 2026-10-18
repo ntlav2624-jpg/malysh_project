@@ -1,21 +1,76 @@
-from malysh_engine import MalyshEngine
+from __future__ import annotations
 
-print("=== ТЕСТ МЕТА-СТРАТЕГИЧЕСКОГО КОНТУРА (M-METRIC) ===")
+from typing import Any
 
-engine = MalyshEngine()
+from malysh_system.diagnostic_contract import (
+    DiagnosticResult,
+    EngineFactory,
+    build_result,
+    default_engine_factory,
+)
 
-# Тест 1: Плавный сигнал
-res1 = engine.process_array([50, 51, 52, 53, 54], source_name="Meta_Smooth")
-print(f"\n[Шаг 1: Smooth]")
-print(f"  └─ Стратегия: {res1['strategy']}")
-print(f"  └─ Мета-метрика M: {res1['meta_metric_M']}")
-print(f"  └─ Режим: {res1['mode']}")
 
-# Тест 2: Тот же гладкий поток (накапливаем историю)
-res2 = engine.process_array([54, 55, 56, 57, 58], source_name="Meta_Smooth_2")
-print(f"\n[Шаг 2: Smooth Continued]")
-print(f"  └─ Стратегия: {res2['strategy']}")
-print(f"  └─ Мета-метрика M: {res2['meta_metric_M']}")
-print(f"  └─ Режим: {res2['mode']}")
+def run_meta_diagnostic(
+    engine_factory: EngineFactory = default_engine_factory,
+) -> DiagnosticResult:
+    engine = engine_factory()
 
-print("\n[Готово]: Мета-стратегический контур протестирован.")
+    first = engine.process_array(
+        [50, 51, 52, 53, 54],
+        source_name="Meta_Smooth",
+    )
+
+    second = engine.process_array(
+        [54, 55, 56, 57, 58],
+        source_name="Meta_Smooth_2",
+    )
+
+    checks: list[dict[str, Any]] = [
+        {
+            "step": 1,
+            "strategy": first["strategy"],
+            "meta_metric_M": first[
+                "meta_metric_M"
+            ],
+            "mode": first["mode"],
+        },
+        {
+            "step": 2,
+            "strategy": second["strategy"],
+            "meta_metric_M": second[
+                "meta_metric_M"
+            ],
+            "mode": second["mode"],
+        },
+    ]
+
+    return build_result(
+        diagnostic_id="test_meta.py",
+        family="meta_strategy",
+        checks=checks,
+        conclusion=(
+            "Сопоставлена мета-метрика M "
+            "на последовательных гладких потоках"
+        ),
+    )
+
+
+def main() -> None:
+    result = run_meta_diagnostic()
+
+    print(
+        "=== ДИАГНОСТИКА МЕТА-СТРАТЕГИИ ==="
+    )
+
+    for check in result.checks:
+        print()
+
+        for key, value in check.items():
+            print(f"{key:<14}:", value)
+
+    print()
+    print(result.conclusion)
+
+
+if __name__ == "__main__":
+    main()
