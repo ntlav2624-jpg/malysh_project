@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 6,
+  "total_pending": 2,
   "strategies": {
     "certify_process_adapter": 0,
     "build_api_adapter": 0,
@@ -9,7 +9,7 @@
     "analyze_as_composite_workflow": 0,
     "register_as_library": 0,
     "integrate_as_diagnostic": 0,
-    "keep_as_infrastructure": 4,
+    "keep_as_infrastructure": 0,
     "integrate_as_memory_provider": 2
   },
   "queue": [
@@ -181,7 +181,16 @@
         "unlock",
         "utc_now"
       ],
-      "status": "pending"
+      "status": "integrated_as_infrastructure",
+      "integration_evidence": {
+        "passive_import": true,
+        "technical_layer": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false,
+        "runtime_mutation_only_by_explicit_call": true
+      }
     },
     {
       "id": "run_maglev_flywheel.py",
@@ -362,7 +371,16 @@
         "inspect_python",
         "main"
       ],
-      "status": "pending"
+      "status": "integrated_as_infrastructure",
+      "integration_evidence": {
+        "passive_import": true,
+        "technical_layer": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false,
+        "runtime_mutation_only_by_explicit_call": true
+      }
     },
     {
       "id": "run_full_translation.py",
@@ -475,7 +493,16 @@
       "has_main": false,
       "classes": [],
       "functions": [],
-      "status": "pending"
+      "status": "integrated_as_infrastructure",
+      "integration_evidence": {
+        "passive_import": true,
+        "technical_layer": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false,
+        "runtime_mutation_only_by_explicit_call": true
+      }
     },
     {
       "id": "malysh_system::modules::__init__.py",
@@ -487,7 +514,16 @@
       "has_main": false,
       "classes": [],
       "functions": [],
-      "status": "pending"
+      "status": "integrated_as_infrastructure",
+      "integration_evidence": {
+        "passive_import": true,
+        "technical_layer": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false,
+        "runtime_mutation_only_by_explicit_call": true
+      }
     },
     {
       "id": "test_class.py",
@@ -538,5 +574,5 @@
       }
     }
   ],
-  "total_integrated": 15
+  "total_integrated": 19
 }

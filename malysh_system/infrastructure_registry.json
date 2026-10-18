@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Infrastructure",
+  "subject": "Malysh",
+  "policy": {
+    "infrastructure_is_independent_mind": false,
+    "infrastructure_is_technical_layer": true,
+    "automatic_execution": false,
+    "decision_authority": false,
+    "semantic_authority": false
+  },
+  "components": [
+    {
+      "id": "malysh_system::supervisor.py",
+      "path": "malysh_system/supervisor.py",
+      "role": "runtime_supervisor",
+      "status": "integrated_as_infrastructure",
+      "provides": [
+        "WAL",
+        "StateStore",
+        "ProcessModule",
+        "MalyshSupervisor",
+        "locking",
+        "checkpoint",
+        "recovery"
+      ],
+      "mutating_operations_require_explicit_call": true
+    },
+    {
+      "id": "malysh_system::inventory.py",
+      "path": "malysh_system/inventory.py",
+      "role": "inventory_inspector",
+      "status": "integrated_as_infrastructure",
+      "mutating_operations_require_explicit_call": true
+    },
+    {
+      "id": "malysh_system::__init__.py",
+      "path": "malysh_system/__init__.py",
+      "role": "package_boundary",
+      "status": "integrated_as_infrastructure",
+      "mutating_operations_require_explicit_call": true
+    },
+    {
+      "id": "malysh_system::modules::__init__.py",
+      "path": "malysh_system/modules/__init__.py",
+      "role": "module_namespace",
+      "status": "integrated_as_infrastructure",
+      "mutating_operations_require_explicit_call": true
+    }
+  ]
+}

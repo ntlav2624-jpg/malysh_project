@@ -5,8 +5,8 @@
   "current": {
     "total": 52,
     "production": 3,
-    "adapted": 43,
-    "discovered": 6
+    "adapted": 47,
+    "discovered": 2
   },
   "runtime_guard": {
     "generation": 5,
@@ -15,13 +15,13 @@
     "active_cycle": null
   },
   "queue": {
-    "pending": 6,
+    "pending": 2,
     "strategies": {
       "analyze_as_composite_workflow": 0,
       "register_as_library": 0,
       "integrate_as_diagnostic": 0,
-      "integrate_as_memory_provider": 2,
-      "keep_as_infrastructure": 4
+      "keep_as_infrastructure": 0,
+      "integrate_as_memory_provider": 2
     }
   },
   "integrity": {
@@ -276,7 +276,13 @@
         "role": "nervous_system",
         "category": "unclassified",
         "strategy": "keep_as_infrastructure",
-        "priority": 30
+        "priority": 30,
+        "status": "integrated_as_infrastructure",
+        "passive_import": true,
+        "technical_layer": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false
       },
       {
         "id": "malysh_system::inventory.py",
@@ -284,7 +290,13 @@
         "role": "nervous_system",
         "category": "unclassified",
         "strategy": "keep_as_infrastructure",
-        "priority": 20
+        "priority": 20,
+        "status": "integrated_as_infrastructure",
+        "passive_import": true,
+        "technical_layer": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false
       },
       {
         "id": "malysh_system::__init__.py",
@@ -292,7 +304,13 @@
         "role": "nervous_system",
         "category": "unclassified",
         "strategy": "keep_as_infrastructure",
-        "priority": 0
+        "priority": 0,
+        "status": "integrated_as_infrastructure",
+        "passive_import": true,
+        "technical_layer": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false
       },
       {
         "id": "malysh_system::modules::__init__.py",
@@ -300,7 +318,13 @@
         "role": "nervous_system",
         "category": "unclassified",
         "strategy": "keep_as_infrastructure",
-        "priority": 0
+        "priority": 0,
+        "status": "integrated_as_infrastructure",
+        "passive_import": true,
+        "technical_layer": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "semantic_authority": false
       }
     ],
     "phase_8_memory": [
@@ -326,7 +350,7 @@
     "phase_4_workflows": "complete",
     "phase_5_libraries": "complete",
     "phase_6_diagnostics": "complete",
-    "phase_7_infrastructure": "pending",
+    "phase_7_infrastructure": "complete",
     "phase_8_memory": "pending"
   }
 }
