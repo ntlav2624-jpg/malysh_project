@@ -452,6 +452,50 @@ def build_human_thought(
         )
     )
 
+    for signal in experience_signals:
+        if signal.get(
+            "status"
+        ) != "recalled_skill":
+            continue
+
+        statement = signal.get(
+            "statement",
+            "Вспомнен прежний навык Малыша",
+        )
+
+        possible.append(
+            Hypothesis(
+                hypothesis=(
+                    statement
+                    + " и может быть полезен "
+                    "для текущего анализа"
+                ),
+                certainty=clamp(
+                    min(
+                        0.56,
+                        float(
+                            signal.get(
+                                "strength",
+                                0.20,
+                            )
+                        ),
+                    )
+                ),
+                evidence=[
+                    *signal.get(
+                        "evidence",
+                        [],
+                    ),
+                    (
+                        "Навык вспомнен, "
+                        "но автоматически не запущен"
+                    ),
+                ],
+                source="workflow_experience",
+                status="possible",
+            )
+        )
+
     recalled_memories = []
 
     for signal in experience_signals:

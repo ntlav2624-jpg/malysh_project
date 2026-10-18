@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 from typing import Any
 
+from malysh_system.workflow_recall import recall_workflows
+
 
 @dataclass
 class ExperienceSignal:
@@ -212,6 +214,35 @@ def memory_signal(
     )
 
 
+def workflow_signal(
+    recalled: dict[str, Any],
+) -> ExperienceSignal:
+    return ExperienceSignal(
+        source_id=recalled["source_id"],
+        family=(
+            "workflow_experience:"
+            + recalled["family"]
+        ),
+        status="recalled_skill",
+        strength=clamp(
+            recalled["strength"]
+        ),
+        statement=(
+            "Малыш вспоминает навык "
+            f"«{recalled['title']}»: "
+            + recalled["capability"]
+        ),
+        evidence=list(
+            recalled.get(
+                "evidence",
+                [],
+            )
+        ),
+        factual=False,
+        generated=False,
+    )
+
+
 def detect_contradictions(
     signals: list[ExperienceSignal],
 ) -> list[dict[str, Any]]:
@@ -363,6 +394,20 @@ def build_experience(
                     ),
                 )
             )
+
+    workflow_recall = recall_workflows(
+        text,
+        limit=4,
+    )
+
+    for recalled_workflow in workflow_recall[
+        "recalled"
+    ]:
+        signals.append(
+            workflow_signal(
+                recalled_workflow
+            )
+        )
 
     for observation in observations:
         signals.append(
