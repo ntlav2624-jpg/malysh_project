@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Internal Libraries",
+  "subject": "Malysh",
+  "policy": {
+    "library_is_independent_mind": false,
+    "library_is_internal_tool": true,
+    "automatic_execution": false,
+    "decision_authority": false,
+    "state_write": false,
+    "state_commit": false
+  },
+  "libraries": [
+    {
+      "id": "flush_chaos.py",
+      "path": "flush_chaos.py",
+      "family": "stream_dynamics",
+      "entrypoint": "analyze_smooth_streams",
+      "capability": "анализ реакции исторического движка Малыша на гладкие потоки",
+      "status": "integrated_as_library"
+    },
+    {
+      "id": "compare_streams.py",
+      "path": "compare_streams.py",
+      "family": "stream_comparison",
+      "entrypoint": "compare_streams",
+      "capability": "сравнение нескольких потоков через исторический движок Малыша",
+      "status": "integrated_as_library"
+    }
+  ]
+}

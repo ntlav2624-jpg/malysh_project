@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 13,
+  "total_pending": 11,
   "strategies": {
     "certify_process_adapter": 0,
     "build_api_adapter": 0,
     "integrate_as_observer": 0,
     "analyze_as_composite_workflow": 0,
-    "register_as_library": 2,
+    "register_as_library": 0,
     "integrate_as_diagnostic": 5,
     "keep_as_infrastructure": 4,
     "integrate_as_memory_provider": 2
@@ -59,7 +59,17 @@
       "has_main": false,
       "classes": [],
       "functions": [],
-      "status": "pending"
+      "status": "integrated_as_library",
+      "integration_evidence": {
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write_on_import": false,
+        "state_commit_on_import": false
+      }
     },
     {
       "id": "test_geometry.py",
@@ -383,7 +393,17 @@
       "has_main": false,
       "classes": [],
       "functions": [],
-      "status": "pending"
+      "status": "integrated_as_library",
+      "integration_evidence": {
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write_on_import": false,
+        "state_commit_on_import": false
+      }
     },
     {
       "id": "deep_history.py",
@@ -458,5 +478,5 @@
       "status": "pending"
     }
   ],
-  "total_integrated": 8
+  "total_integrated": 10
 }

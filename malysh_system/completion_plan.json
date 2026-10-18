@@ -5,8 +5,8 @@
   "current": {
     "total": 52,
     "production": 3,
-    "adapted": 36,
-    "discovered": 13
+    "adapted": 38,
+    "discovered": 11
   },
   "runtime_guard": {
     "generation": 5,
@@ -15,13 +15,13 @@
     "active_cycle": null
   },
   "queue": {
-    "pending": 13,
+    "pending": 11,
     "strategies": {
       "analyze_as_composite_workflow": 0,
+      "register_as_library": 0,
       "integrate_as_diagnostic": 5,
       "integrate_as_memory_provider": 2,
-      "keep_as_infrastructure": 4,
-      "register_as_library": 2
+      "keep_as_infrastructure": 4
     }
   },
   "integrity": {
@@ -164,7 +164,13 @@
         "role": "support",
         "category": "dynamics.chaos",
         "strategy": "register_as_library",
-        "priority": 50
+        "priority": 50,
+        "status": "integrated_as_library",
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "compare_streams.py",
@@ -172,7 +178,13 @@
         "role": "support",
         "category": "unclassified",
         "strategy": "register_as_library",
-        "priority": 0
+        "priority": 0,
+        "status": "integrated_as_library",
+        "passive_import": true,
+        "callable_api": true,
+        "legacy_cli_preserved": true,
+        "automatic_execution": false,
+        "decision_authority": false
       }
     ],
     "phase_6_diagnostics": [
@@ -272,7 +284,7 @@
   },
   "phase_status": {
     "phase_4_workflows": "complete",
-    "phase_5_libraries": "pending",
+    "phase_5_libraries": "complete",
     "phase_6_diagnostics": "pending",
     "phase_7_infrastructure": "pending",
     "phase_8_memory": "pending"
