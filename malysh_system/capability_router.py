@@ -25,6 +25,82 @@ KEYWORDS = {
     ],
 }
 
+
+KEYWORDS.update({
+    "analysis.cuneiform": [
+        "шумер",
+        "шумерск",
+        "клинопис",
+        "табличк",
+        "cuneiform",
+        "аккад",
+        "перевод",
+        "морфолог",
+    ],
+    "geometry.phase": [
+        "фаз",
+        "phase",
+        "связь фаз",
+        "сопряж",
+        "entanglement",
+    ],
+    "engine.apsu": [
+        "apsu",
+        "апсу",
+        "энергет",
+        "энерги",
+        "симуляц",
+    ],
+    "engine": [
+        "ядро",
+        "организм",
+        "систем",
+        "общий анализ",
+        "энергет",
+        "мощност",
+        "импульс",
+        "meso",
+        "enki",
+    ],
+    "physics.navier": [
+        "поток",
+        "жидк",
+        "navier",
+        "устойчив",
+        "спектр",
+        "вязк",
+        "гидродинами",
+        "вихр",
+        "blowup",
+    ],
+    "analysis.batch": [
+        "batch",
+        "пакет",
+        "поток данных",
+        "серия данных",
+    ],
+    "prediction": [
+        "прогноз",
+        "prediction",
+        "transition",
+        "переход",
+        "tube",
+        "траектор",
+    ],
+    "diagnostic.stress": [
+        "стресс",
+        "stress",
+        "taylor",
+        "диагност",
+        "предельн",
+    ],
+    "physics.legacy": [
+        "legacy",
+        "физическ",
+        "старая физика",
+    ],
+})
+
 OPS = {
     ast.Add: operator.add,
     ast.Sub: operator.sub,
