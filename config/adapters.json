@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "enabled_in_production": false,
+  "default_timeout_seconds": 30,
+  "adapters": [
+    {
+      "id": "chaos_handler",
+      "name": "Chaos and Uncertainty Handler",
+      "path": "malysh_chaos.py",
+      "category": "dynamics.chaos",
+      "capabilities": [
+        "chaos_analysis",
+        "uncertainty_estimation",
+        "lyapunov_horizon"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 79
+    },
+    {
+      "id": "chaos_bypass",
+      "name": "Lyapunov Bypass Engine",
+      "path": "malysh_chaos_bypass.py",
+      "category": "dynamics.chaos",
+      "capabilities": [
+        "chaos_bypass",
+        "attractor_fallback",
+        "strategy_evaluation"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 78
+    },
+    {
+      "id": "bony_paraproduct",
+      "name": "Bony Paraproduct Engine",
+      "path": "malysh_bony_paraproduct_engine.py",
+      "category": "math.bony",
+      "capabilities": [
+        "bony_decomposition",
+        "clebsch_gluing",
+        "nonlinear_bounds"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 77
+    },
+    {
+      "id": "weighted_bony",
+      "name": "Weighted Bony Closure",
+      "path": "malysh_weighted_bony_closure.py",
+      "category": "math.bony",
+      "capabilities": [
+        "weighted_tail_bound",
+        "dynamic_cutoff",
+        "closure_stability"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 76
+    },
+    {
+      "id": "navier_continuum",
+      "name": "Navier Continuum Closure",
+      "path": "malysh_navier_continuum_closure.py",
+      "category": "physics.navier",
+      "capabilities": [
+        "continuum_closure",
+        "partition_residuals",
+        "littlewood_paley"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 75
+    },
+    {
+      "id": "navier_dynamic",
+      "name": "Navier Dynamic Engine",
+      "path": "malysh_navier_dynamic.py",
+      "category": "physics.navier",
+      "capabilities": [
+        "dynamic_evolution",
+        "flow_step",
+        "stability_analysis"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 74
+    },
+    {
+      "id": "navier_spectral",
+      "name": "Navier Spectral Engine",
+      "path": "malysh_navier_spectral.py",
+      "category": "physics.navier",
+      "capabilities": [
+        "spectral_majorant",
+        "helicity_dissipation",
+        "spectral_stability"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 73
+    },
+    {
+      "id": "plasma_vortex",
+      "name": "Plasma Vortex Engine",
+      "path": "malysh_plasma_vortex.py",
+      "category": "physics.plasma",
+      "capabilities": [
+        "plasma_evolution",
+        "vortex_dynamics",
+        "field_stability"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 72
+    },
+    {
+      "id": "astrophysical_turbulence",
+      "name": "Astrophysical Turbulence Solver",
+      "path": "astrophysical_turbulence.py",
+      "category": "physics.turbulence",
+      "capabilities": [
+        "turbulence_simulation",
+        "accretion_flow",
+        "energy_transport"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 71
+    }
+  ]
+}
