@@ -91,8 +91,18 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "resonance_pipeline"
+      "status": "integrated_as_experience",
+      "experience_family": "resonance_pipeline",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_maglev_flywheel.py",
@@ -138,8 +148,18 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "energy_dynamics"
+      "status": "integrated_as_experience",
+      "experience_family": "energy_dynamics",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_origin_of_life.py",
@@ -213,8 +233,18 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "biogenesis"
+      "status": "integrated_as_experience",
+      "experience_family": "biogenesis",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_pipeline.py",
@@ -290,8 +320,18 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "resonance_pipeline"
+      "status": "integrated_as_experience",
+      "experience_family": "resonance_pipeline",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_processor.py",
@@ -367,8 +407,18 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "resonance_pipeline"
+      "status": "integrated_as_experience",
+      "experience_family": "resonance_pipeline",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_reflected_pipeline.py",
@@ -444,8 +494,18 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "resonance_pipeline"
+      "status": "integrated_as_experience",
+      "experience_family": "resonance_pipeline",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_full_translation.py",
@@ -476,8 +536,18 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "cuneiform_translation"
+      "status": "integrated_as_experience",
+      "experience_family": "cuneiform_translation",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_malysh.py",
@@ -538,8 +608,21 @@
       "decision_authority": false,
       "state_write": false,
       "state_commit": false,
-      "status": "analyzed_unintegrated",
-      "experience_family": "resonance_pipeline"
+      "status": "integrated_as_experience",
+      "experience_family": "resonance_pipeline",
+      "integration": {
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     }
-  ]
+  ],
+  "integration_status": "phase_4_complete",
+  "integrated": 8,
+  "pending": 0
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 21,
+  "total_pending": 13,
   "strategies": {
     "certify_process_adapter": 0,
     "build_api_adapter": 0,
     "integrate_as_observer": 0,
-    "analyze_as_composite_workflow": 8,
+    "analyze_as_composite_workflow": 0,
     "register_as_library": 2,
     "integrate_as_diagnostic": 5,
     "keep_as_infrastructure": 4,
@@ -36,7 +36,18 @@
         "generate_hexagon_vertices",
         "generate_pentagon_vertices"
       ],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "flush_chaos.py",
@@ -141,7 +152,18 @@
         "__init__",
         "simulate"
       ],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_origin_of_life.py",
@@ -163,7 +185,18 @@
         "run_simulation",
         "simulate_geological_phase"
       ],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_pipeline.py",
@@ -188,7 +221,18 @@
         "generate_pentagon_vertices",
         "generate_spiral_trajectory"
       ],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_processor.py",
@@ -210,7 +254,18 @@
         "generate_pentagon_vertices",
         "process_stream"
       ],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_reflected_pipeline.py",
@@ -234,7 +289,18 @@
         "generate_hexagon_vertices",
         "generate_pentagon_vertices"
       ],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "malysh_system::inventory.py",
@@ -262,7 +328,18 @@
       "has_main": true,
       "classes": [],
       "functions": [],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "run_malysh.py",
@@ -283,7 +360,18 @@
         "generate_pentagon_vertices",
         "generate_spiral_trajectory"
       ],
-      "status": "pending"
+      "status": "integrated_as_experience",
+      "integration_evidence": {
+        "workflow_registry": true,
+        "semantic_recall": true,
+        "malysh_experience": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false,
+        "state_write": false,
+        "state_commit": false
+      }
     },
     {
       "id": "compare_streams.py",
@@ -369,5 +457,6 @@
       "functions": [],
       "status": "pending"
     }
-  ]
+  ],
+  "total_integrated": 8
 }

@@ -5,8 +5,8 @@
   "current": {
     "total": 52,
     "production": 3,
-    "adapted": 28,
-    "discovered": 21
+    "adapted": 36,
+    "discovered": 13
   },
   "runtime_guard": {
     "generation": 5,
@@ -15,9 +15,9 @@
     "active_cycle": null
   },
   "queue": {
-    "pending": 21,
+    "pending": 13,
     "strategies": {
-      "analyze_as_composite_workflow": 8,
+      "analyze_as_composite_workflow": 0,
       "integrate_as_diagnostic": 5,
       "integrate_as_memory_provider": 2,
       "keep_as_infrastructure": 4,
@@ -42,7 +42,14 @@
         "role": "launcher",
         "category": "adaptation",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 80
+        "priority": 80,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "run_maglev_flywheel.py",
@@ -50,7 +57,14 @@
         "role": "launcher",
         "category": "launcher",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 30
+        "priority": 30,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "run_origin_of_life.py",
@@ -58,7 +72,14 @@
         "role": "launcher",
         "category": "launcher",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 30
+        "priority": 30,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "run_pipeline.py",
@@ -66,7 +87,14 @@
         "role": "launcher",
         "category": "launcher",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 30
+        "priority": 30,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "run_processor.py",
@@ -74,7 +102,14 @@
         "role": "launcher",
         "category": "launcher",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 30
+        "priority": 30,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "run_reflected_pipeline.py",
@@ -82,7 +117,14 @@
         "role": "launcher",
         "category": "launcher",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 30
+        "priority": 30,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "run_full_translation.py",
@@ -90,7 +132,14 @@
         "role": "launcher",
         "category": "launcher",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 20
+        "priority": 20,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       },
       {
         "id": "run_malysh.py",
@@ -98,7 +147,14 @@
         "role": "launcher",
         "category": "launcher",
         "strategy": "analyze_as_composite_workflow",
-        "priority": 10
+        "priority": 10,
+        "status": "integrated_as_experience",
+        "semantic_recall": true,
+        "experience_connected": true,
+        "human_possible": true,
+        "cross_layer_visible": true,
+        "automatic_execution": false,
+        "decision_authority": false
       }
     ],
     "phase_5_libraries": [
@@ -213,5 +269,12 @@
         "priority": 0
       }
     ]
+  },
+  "phase_status": {
+    "phase_4_workflows": "complete",
+    "phase_5_libraries": "pending",
+    "phase_6_diagnostics": "pending",
+    "phase_7_infrastructure": "pending",
+    "phase_8_memory": "pending"
   }
 }
