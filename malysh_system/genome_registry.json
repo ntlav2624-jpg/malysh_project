@@ -4,8 +4,8 @@
   "summary": {
     "total": 52,
     "production": 3,
-    "adapted": 9,
-    "discovered": 40,
+    "adapted": 21,
+    "discovered": 28,
     "broken": 0
   },
   "modules": [
@@ -35,7 +35,7 @@
       "category": "unclassified",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -75,7 +75,7 @@
       "category": "unclassified",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -195,7 +195,7 @@
       "category": "unclassified",
       "role": "functional_organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [],
@@ -212,7 +212,7 @@
       "category": "unclassified",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -281,7 +281,7 @@
       "category": "engine.apsu",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -367,7 +367,7 @@
       "category": "analysis.cuneiform",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -421,7 +421,7 @@
       "category": "unclassified",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -536,7 +536,7 @@
       "category": "unclassified",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -577,7 +577,7 @@
       "category": "engine",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -754,7 +754,7 @@
       "category": "engine",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -774,7 +774,7 @@
       "category": "physics.navier",
       "role": "organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -794,7 +794,7 @@
       "category": "geometry.phase",
       "role": "functional_organ",
       "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [],

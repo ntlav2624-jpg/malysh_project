@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 40,
+  "total_pending": 28,
   "strategies": {
-    "certify_process_adapter": 15,
+    "certify_process_adapter": 3,
     "build_api_adapter": 1,
     "integrate_as_observer": 3,
     "analyze_as_composite_workflow": 8,
@@ -50,116 +50,6 @@
       "status": "pending"
     },
     {
-      "id": "malysh_apsu_engine.py",
-      "path": "malysh_apsu_engine.py",
-      "category": "engine.apsu",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 180,
-      "has_main": true,
-      "classes": [
-        "ApsuMalyshComplex"
-      ],
-      "functions": [
-        "__init__",
-        "run_full_simulation"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "malysh_cuneiform_engine.py",
-      "path": "malysh_cuneiform_engine.py",
-      "category": "analysis.cuneiform",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 180,
-      "has_main": true,
-      "classes": [
-        "MalyshCuneiformEngine567"
-      ],
-      "functions": [
-        "__init__",
-        "_build_topological_field",
-        "clean_token",
-        "evaluate_topological_tension",
-        "load_corpus_from_text",
-        "restore_gap",
-        "translate_tablet"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "malysh_pro_engine.py",
-      "path": "malysh_pro_engine.py",
-      "category": "engine",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 180,
-      "has_main": true,
-      "classes": [
-        "MalyshProCuneiformEngine"
-      ],
-      "functions": [
-        "__init__",
-        "_build_topological_field",
-        "clean_token",
-        "evaluate_topological_tension",
-        "load_corpus_from_text",
-        "parse_morphology",
-        "restore_gap",
-        "translate_and_analyze"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "meso_power_engine.py",
-      "path": "meso_power_engine.py",
-      "category": "engine",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 180,
-      "has_main": true,
-      "classes": [
-        "MesoScaleSolver"
-      ],
-      "functions": [
-        "__init__",
-        "simulate_power_surge"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "navier_stokes_engine.py",
-      "path": "navier_stokes_engine.py",
-      "category": "physics.navier",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 180,
-      "has_main": true,
-      "classes": [
-        "NavierStokesMalyshSolver"
-      ],
-      "functions": [
-        "__init__",
-        "simulate_blow_up_prevention"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "phase_coupling.py",
-      "path": "phase_coupling.py",
-      "category": "geometry.phase",
-      "role": "functional_organ",
-      "strategy": "certify_process_adapter",
-      "priority": 170,
-      "has_main": true,
-      "classes": [],
-      "functions": [
-        "simulate_phase_entanglement"
-      ],
-      "status": "pending"
-    },
-    {
       "id": "malysh_engine.py",
       "path": "malysh_engine.py",
       "category": "engine",
@@ -175,107 +65,6 @@
         "_load_state",
         "predict_next_strategy",
         "process_array"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "batch_process_ten.py",
-      "path": "batch_process_ten.py",
-      "category": "unclassified",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 130,
-      "has_main": true,
-      "classes": [
-        "BatchTenEngine"
-      ],
-      "functions": [
-        "__init__",
-        "process_batch"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "core::euro_tube_constructor.py",
-      "path": "core/euro_tube_constructor.py",
-      "category": "unclassified",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 130,
-      "has_main": true,
-      "classes": [
-        "DualTubeConstructor"
-      ],
-      "functions": [
-        "__init__",
-        "_build_transitions",
-        "calculate_path_strength",
-        "construct_prediction"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "enki_micro_v3.1.py",
-      "path": "enki_micro_v3.1.py",
-      "category": "unclassified",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 130,
-      "has_main": true,
-      "classes": [
-        "MicroEnkiSystem"
-      ],
-      "functions": [
-        "__init__",
-        "process_flow"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "malysh_extreme_stress_test.py",
-      "path": "malysh_extreme_stress_test.py",
-      "category": "unclassified",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 130,
-      "has_main": true,
-      "classes": [
-        "ExtremeStressTestEngine"
-      ],
-      "functions": [
-        "__init__",
-        "run_taylor_green_stress_simulation"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "malysh_physical_legacy.py",
-      "path": "malysh_physical_legacy.py",
-      "category": "unclassified",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 130,
-      "has_main": true,
-      "classes": [
-        "MalyshPhysicalEngine"
-      ],
-      "functions": [
-        "__init__",
-        "apply_real_physics"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "demo.py",
-      "path": "demo.py",
-      "category": "unclassified",
-      "role": "functional_organ",
-      "strategy": "certify_process_adapter",
-      "priority": 120,
-      "has_main": true,
-      "classes": [],
-      "functions": [
-        "run_layer7_demo"
       ],
       "status": "pending"
     },

@@ -128,6 +128,180 @@
       "certified": true,
       "production_enabled": false,
       "priority": 71
+    },
+    {
+      "id": "apsu_engine",
+      "name": "APSU Engine",
+      "path": "malysh_apsu_engine.py",
+      "category": "engine.apsu",
+      "capabilities": [
+        "apsu",
+        "simulation",
+        "energy"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 70
+    },
+    {
+      "id": "cuneiform_engine",
+      "name": "Cuneiform Engine",
+      "path": "malysh_cuneiform_engine.py",
+      "category": "analysis.cuneiform",
+      "capabilities": [
+        "cuneiform",
+        "sumerian",
+        "tablet",
+        "translation"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 69
+    },
+    {
+      "id": "pro_cuneiform",
+      "name": "Pro Cuneiform Engine",
+      "path": "malysh_pro_engine.py",
+      "category": "analysis.cuneiform",
+      "capabilities": [
+        "cuneiform",
+        "translation",
+        "morphology",
+        "topology"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 68
+    },
+    {
+      "id": "meso_power",
+      "name": "Meso Power Engine",
+      "path": "meso_power_engine.py",
+      "category": "engine",
+      "capabilities": [
+        "power",
+        "energy",
+        "surge",
+        "mesoscale"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 67
+    },
+    {
+      "id": "navier_stokes",
+      "name": "Navier Stokes Engine",
+      "path": "navier_stokes_engine.py",
+      "category": "physics.navier",
+      "capabilities": [
+        "navier",
+        "flow",
+        "stability",
+        "blowup"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 66
+    },
+    {
+      "id": "phase_coupling",
+      "name": "Phase Coupling",
+      "path": "phase_coupling.py",
+      "category": "geometry.phase",
+      "capabilities": [
+        "phase",
+        "coupling",
+        "entanglement"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 65
+    },
+    {
+      "id": "batch_ten",
+      "name": "Batch Ten Engine",
+      "path": "batch_process_ten.py",
+      "category": "analysis.batch",
+      "capabilities": [
+        "batch",
+        "stream",
+        "analysis"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 64
+    },
+    {
+      "id": "euro_tube",
+      "name": "Euro Tube Constructor",
+      "path": "core/euro_tube_constructor.py",
+      "category": "prediction",
+      "capabilities": [
+        "tube",
+        "transition",
+        "path",
+        "prediction"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 63
+    },
+    {
+      "id": "enki_micro",
+      "name": "Micro Enki",
+      "path": "enki_micro_v3.1.py",
+      "category": "engine",
+      "capabilities": [
+        "enki",
+        "flow",
+        "micro"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 62
+    },
+    {
+      "id": "stress_test",
+      "name": "Extreme Stress Engine",
+      "path": "malysh_extreme_stress_test.py",
+      "category": "diagnostic.stress",
+      "capabilities": [
+        "stress",
+        "taylor_green",
+        "stability",
+        "diagnostic"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 61
+    },
+    {
+      "id": "physical_legacy",
+      "name": "Physical Legacy Engine",
+      "path": "malysh_physical_legacy.py",
+      "category": "physics.legacy",
+      "capabilities": [
+        "physics",
+        "legacy",
+        "physical"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 60
+    },
+    {
+      "id": "layer7_demo",
+      "name": "Layer 7 Demo Engine",
+      "path": "demo.py",
+      "category": "adaptation",
+      "capabilities": [
+        "layer7",
+        "simulation",
+        "demo"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 59
     }
   ]
 }
