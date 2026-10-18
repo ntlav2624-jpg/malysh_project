@@ -244,6 +244,7 @@ class Orchestrator:
         return {
             "command": command.to_dict(),
             "executed": execute,
+            "checkpoint": checkpoint,
             "organism_generation": state.get(
                 "generation"
             ),
