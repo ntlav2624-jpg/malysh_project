@@ -5,6 +5,7 @@ from typing import Any
 
 from malysh_system.capability_router import route
 from malysh_system.legacy_memory import recall as recall_legacy_memory
+from malysh_system.experience import build_experience
 from malysh_system.human_layer import (
     build_human_thought,
     human_summary,
@@ -489,12 +490,20 @@ def run(
         observation_context
     )
 
+    experience = build_experience(
+        text=text,
+        conscious=conscious,
+        subconscious=subconscious_result,
+        observations=observations,
+    )
+
     human = build_human_thought(
         text=text,
         conscious=conscious,
         subconscious=subconscious_result,
         joint=combined,
         observations=observations,
+        experience=experience.to_dict(),
     )
 
     print("=" * 72)
@@ -529,6 +538,7 @@ def run(
         "subconscious": subconscious_result,
         "joint": combined,
         "human": human.to_dict(),
+        "experience": experience.to_dict(),
         "observations": observations,
         "execution": execution,
     }

@@ -286,6 +286,7 @@ def build_human_thought(
     subconscious: dict[str, Any],
     joint: dict[str, Any],
     observations: list[dict[str, Any]],
+    experience: dict[str, Any] | None = None,
 ) -> HumanThought:
     selected = list(
         conscious.get(
@@ -442,15 +443,60 @@ def build_human_thought(
                 )
             )
 
-    legacy_memory = subconscious.get(
-        "legacy_memory",
-        {},
+    experience = experience or {}
+
+    experience_signals = list(
+        experience.get(
+            "signals",
+            [],
+        )
     )
 
-    recalled_memories = legacy_memory.get(
-        "recalled",
-        [],
-    )
+    recalled_memories = []
+
+    for signal in experience_signals:
+        signal_status = signal.get(
+            "status",
+            "",
+        )
+
+        if signal_status not in {
+            "recovered",
+            "historical",
+            "named_unresolved",
+        }:
+            continue
+
+        recalled_memories.append(
+            {
+                "id": signal.get(
+                    "source_id",
+                    "unknown_memory",
+                ),
+                "title": (
+                    signal.get(
+                        "statement",
+                        "Неизвестное воспоминание",
+                    )
+                ),
+                "kind": signal.get(
+                    "family",
+                    "legacy_logic",
+                ),
+                "status": signal_status,
+                "score": (
+                    float(
+                        signal.get(
+                            "strength",
+                            0.0,
+                        )
+                    )
+                    * 100.0
+                ),
+                "paths": [],
+                "meaning_invented": False,
+            }
+        )
 
     for memory in recalled_memories[:5]:
         status = memory.get(
