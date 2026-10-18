@@ -12,3 +12,5 @@ runtime/
 runtime/organ_logs/
 runtime/results/
 runtime/command_bus.jsonl
+runtime/certification/
+runtime/certification/latest.json
