@@ -1,16 +1,27 @@
 from __future__ import annotations
 
-import sys
+import argparse
+from typing import Any
 
 from malysh_system.capability_router import route
-from malysh_system.orchestrator import Orchestrator, synthesize
+from malysh_system.orchestrator import (
+    Orchestrator,
+    synthesize,
+)
+from malysh_system.protocols import Command, OrganResult
+from malysh_system.routed_executor import (
+    execute_selected,
+    load_state,
+)
+from malysh_system.transaction import OrganismTransaction
 
 
-def consciousness(text: str) -> dict:
+def consciousness(text: str) -> dict[str, Any]:
     """
-    Сознание:
-    быстрый целевой семантический анализ запроса.
-    На этом уровне органы только выбираются.
+    Сознательный контур.
+
+    Выполняет быстрый семантический разбор и формирует
+    целевой список органов. Сам состояние не изменяет.
     """
     routing = route(text)
 
@@ -20,6 +31,7 @@ def consciousness(text: str) -> dict:
             "intent": routing["intent"],
             "selected": ["builtin_arithmetic"],
             "answer": str(routing["result"]),
+            "routing": routing,
         }
 
     return {
@@ -27,17 +39,17 @@ def consciousness(text: str) -> dict:
         "intent": routing["intent"],
         "selected": list(routing["selected"]),
         "answer": None,
+        "routing": routing,
     }
 
 
-def subconscious(text: str) -> dict:
+def subconscious(text: str) -> dict[str, Any]:
     """
-    Подсознание:
-    сохраняет прежний оркестрационный контур Малыша.
+    Подсознательный контур.
 
-    Арифметический рефлекс наблюдается без построения
-    плана всего организма. Семантические запросы
-    анализируются прежним контуром в режиме PLAN.
+    Сохраняет прежний независимый Orchestrator, но всегда
+    работает в PLAN. Поэтому подсознание анализирует запрос,
+    не запускает органы и не делает собственный commit.
     """
     independent_routing = route(text)
 
@@ -46,6 +58,7 @@ def subconscious(text: str) -> dict:
             "plan": None,
             "mode": "reflex_observer",
             "selected": [],
+            "categories": [],
             "text": (
                 "Режим         : REFLEX OBSERVER\n"
                 "Выбрано       : 0\n"
@@ -65,54 +78,172 @@ def subconscious(text: str) -> dict:
         execute=False,
     )
 
+    categories = sorted(
+        {
+            item.get("data", {}).get(
+                "category",
+                "unclassified",
+            )
+            for item in plan.get("results", [])
+        }
+    )
+
+    selected_names = [
+        item.get("organ", "unknown")
+        for item in plan.get("results", [])
+    ]
+
     return {
         "plan": plan,
         "mode": "plan",
-        "selected": [],
+        "selected": selected_names,
+        "categories": categories,
         "text": synthesize(plan),
     }
 
 
 def joint(
-    conscious: dict,
-    subconscious_result: dict,
-) -> dict:
+    conscious: dict[str, Any],
+    subconscious_result: dict[str, Any],
+) -> dict[str, Any]:
     """
-    Совместный вывод:
-    синтез двух независимых ветвей.
-    """
-    selected = conscious.get("selected", [])
+    Совместный контур.
 
+    Сознание предоставляет точные ID адаптеров.
+    Подсознание предоставляет независимую проверку контуров.
+
+    В первой исполнительной версии право запуска получают
+    только ID, явно выбранные сознательным Semantic Router.
+    Это не позволяет старому fallback разбудить весь организм.
+    """
     if conscious["mode"] == "reflex":
-        summary = (
-            "Сознание решило запрос рефлекторно. "
-            "Подсознательный контур сохранён отдельно."
+        return {
+            "mode": "reflex_consensus",
+            "execute": False,
+            "selected": [],
+            "summary": (
+                "Сознание вычислило арифметический результат. "
+                "Подсознание подтвердило рефлекторный режим. "
+                "Специализированные органы не требуются."
+            ),
+        }
+
+    selected = list(
+        dict.fromkeys(
+            conscious.get("selected", [])
         )
-    else:
-        summary = (
-            "Сознание выбрало "
-            f"{len(selected)} специализированных органов. "
-            "Подсознание независимо построило свой план."
-        )
+    )
+
+    categories = subconscious_result.get(
+        "categories",
+        [],
+    )
 
     return {
-        "summary": summary,
-        "conscious_organs": selected,
+        "mode": "semantic_consensus",
+        "execute": bool(selected),
+        "selected": selected,
+        "subconscious_categories": categories,
+        "summary": (
+            "Сознание выполнило точный выбор органов. "
+            "Подсознание независимо проверило смысловые "
+            "контуры. Совместный контур разрешил запуск "
+            f"{len(selected)} органов."
+        ),
     }
 
 
-def print_report(
+def execute_joint(
     text: str,
-    conscious: dict,
-    subconscious_result: dict,
-    combined: dict,
-) -> None:
-    print("=" * 72)
-    print("МАЛЫШ: ДВОЙНОЙ РАЗУМ")
-    print("=" * 72)
-    print("Запрос:", text)
+    combined: dict[str, Any],
+    execute: bool,
+) -> dict[str, Any]:
+    """
+    Выполнение совместного решения.
 
-    print()
+    Здесь находится единственная транзакция Dual Mind:
+      begin
+      parallel execute_selected
+      one commit
+
+    При execute=False возвращается PLAN без мутации state.
+    """
+    selected = combined.get("selected", [])
+
+    if not execute:
+        return {
+            "executed": False,
+            "results": [],
+            "state": load_state(),
+            "checkpoint": None,
+        }
+
+    if not combined.get("execute"):
+        return {
+            "executed": False,
+            "results": [],
+            "state": load_state(),
+            "checkpoint": None,
+        }
+
+    if not selected:
+        return {
+            "executed": False,
+            "results": [],
+            "state": load_state(),
+            "checkpoint": None,
+        }
+
+    command = Command(
+        text=text,
+        mode="dual_mind",
+    )
+
+    context = load_state()
+    transaction = OrganismTransaction()
+    transaction.begin(command)
+
+    try:
+        results = execute_selected(
+            command=command,
+            selected=selected,
+            context=context,
+        )
+
+        state, checkpoint = transaction.commit(
+            command,
+            results,
+        )
+
+    except BaseException as error:
+        transaction.abort(command, error)
+        raise
+
+    return {
+        "executed": True,
+        "results": results,
+        "state": state,
+        "checkpoint": checkpoint,
+    }
+
+
+def result_counts(
+    results: list[OrganResult],
+) -> tuple[int, int]:
+    successful = sum(
+        1
+        for result in results
+        if result.status == "ok"
+    )
+
+    failed = len(results) - successful
+    return successful, failed
+
+
+def print_consciousness(
+    conscious: dict[str, Any],
+    execution: dict[str, Any],
+) -> None:
     print("=== СОЗНАНИЕ ===")
     print("Intent :", conscious["intent"])
     print("Режим  :", conscious["mode"])
@@ -124,32 +255,105 @@ def print_report(
     if conscious.get("answer") is not None:
         print("Ответ  :", conscious["answer"])
 
-    print()
+    results = execution.get("results", [])
+
+    if results:
+        successful, failed = result_counts(results)
+
+        print("Исполнено:", len(results))
+        print("Успешно  :", successful)
+        print("Ошибок   :", failed)
+
+        for result in results:
+            duration = result.data.get(
+                "duration_seconds",
+                0,
+            )
+
+            print(
+                f"[{result.status.upper():11}] "
+                f"{result.organ:<28} "
+                f"{duration:>8.3f} s"
+            )
+
+            if result.error:
+                print("  error:", result.error)
+
+
+def print_subconscious(
+    subconscious_result: dict[str, Any],
+) -> None:
     print("=== ПОДСОЗНАНИЕ ===")
     print(subconscious_result["text"])
 
-    print()
+
+def print_joint(
+    combined: dict[str, Any],
+    execution: dict[str, Any],
+) -> None:
     print("=== СОВМЕСТНЫЙ ===")
+    print("Режим  :", combined["mode"])
     print(combined["summary"])
+
     print(
-        "Органы сознания:",
-        ", ".join(combined["conscious_organs"]) or "нет",
+        "Итоговые органы:",
+        ", ".join(combined["selected"]) or "нет",
     )
 
-    print()
-    print("STATE_COMMIT: не выполнялся")
-    print("=" * 72)
+    categories = combined.get(
+        "subconscious_categories",
+        [],
+    )
 
-
-def main() -> None:
-    text = " ".join(sys.argv[1:]).strip()
-
-    if not text:
-        raise SystemExit(
-            'Использование: python -m '
-            'malysh_system.dual_mind "запрос"'
+    if categories:
+        print(
+            "Контуры подсознания:",
+            ", ".join(categories),
         )
 
+    if execution["executed"]:
+        state = execution["state"]
+
+        print("STATE_COMMIT : выполнен один раз")
+        print(
+            "generation   :",
+            state.get("generation"),
+        )
+        print(
+            "virtual_time :",
+            state.get("virtual_time"),
+        )
+        print(
+            "status       :",
+            state.get("status"),
+        )
+        print(
+            "active_cycle :",
+            state.get("active_cycle"),
+        )
+        print(
+            "checkpoint   :",
+            execution["checkpoint"],
+        )
+    else:
+        print("STATE_COMMIT : не выполнялся")
+
+
+def run(
+    text: str,
+    execute: bool = False,
+) -> dict[str, Any]:
+    """
+    Полный цикл двойного разума.
+
+    Всегда возвращает три логических результата:
+      consciousness
+      subconscious
+      joint
+
+    Физическая мутация state допускается только
+    внутри execute_joint().
+    """
     conscious = consciousness(text)
     subconscious_result = subconscious(text)
 
@@ -158,11 +362,76 @@ def main() -> None:
         subconscious_result,
     )
 
-    print_report(
-        text,
+    execution = execute_joint(
+        text=text,
+        combined=combined,
+        execute=execute,
+    )
+
+    print("=" * 72)
+    print("МАЛЫШ: ДВОЙНОЙ РАЗУМ")
+    print("=" * 72)
+    print("Запрос:", text)
+    print()
+
+    print_consciousness(
         conscious,
+        execution,
+    )
+
+    print()
+    print_subconscious(
         subconscious_result,
+    )
+
+    print()
+    print_joint(
         combined,
+        execution,
+    )
+
+    print("=" * 72)
+
+    return {
+        "consciousness": conscious,
+        "subconscious": subconscious_result,
+        "joint": combined,
+        "execution": execution,
+    }
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="malysh-dual-mind",
+        description=(
+            "Сознание, подсознание и совместный "
+            "контур Малыша"
+        ),
+    )
+
+    parser.add_argument(
+        "text",
+        help="Запрос Малышу",
+    )
+
+    parser.add_argument(
+        "--execute",
+        action="store_true",
+        help=(
+            "Выполнить совместно выбранные органы "
+            "с одним STATE_COMMIT"
+        ),
+    )
+
+    return parser
+
+
+def main() -> None:
+    arguments = build_parser().parse_args()
+
+    run(
+        text=arguments.text,
+        execute=arguments.execute,
     )
 
 
