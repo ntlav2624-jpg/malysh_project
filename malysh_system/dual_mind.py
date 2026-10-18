@@ -4,6 +4,10 @@ import argparse
 from typing import Any
 
 from malysh_system.capability_router import route
+from malysh_system.cross_layer_observer import (
+    cross_layer_summary,
+    observe_cross_layers,
+)
 from malysh_system.legacy_memory import recall as recall_legacy_memory
 from malysh_system.experience import build_experience
 from malysh_system.human_layer import (
@@ -506,6 +510,15 @@ def run(
         experience=experience.to_dict(),
     )
 
+    cross_layer = observe_cross_layers(
+        consciousness=conscious,
+        subconscious=subconscious_result,
+        joint=combined,
+        experience=experience.to_dict(),
+        human=human.to_dict(),
+        observations=observations,
+    )
+
     print("=" * 72)
     print("МАЛЫШ: ДВОЙНОЙ РАЗУМ")
     print("=" * 72)
@@ -531,6 +544,13 @@ def run(
     print()
     print(human_summary(human))
 
+    print()
+    print(
+        cross_layer_summary(
+            cross_layer
+        )
+    )
+
     print("=" * 72)
 
     return {
@@ -539,6 +559,7 @@ def run(
         "joint": combined,
         "human": human.to_dict(),
         "experience": experience.to_dict(),
+        "cross_layer": cross_layer.to_dict(),
         "observations": observations,
         "execution": execution,
     }
