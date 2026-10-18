@@ -6,6 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from malysh_system.adapters.process_adapter import build_adapters
+from malysh_system.adapters.native_engine_adapter import build_native_adapters
 from malysh_system.capability_router import route
 from malysh_system.executor import OrganExecutor
 from malysh_system.protocols import Command, OrganResult
@@ -42,6 +43,11 @@ def execute_selected(
         for adapter in build_adapters()
     }
 
+    native_adapter_objects = {
+        adapter.organ_id: adapter
+        for adapter in build_native_adapters()
+    }
+
     def run_one(organ_id: str) -> OrganResult:
         if organ_id in production_specs:
             return production.execute_one(
@@ -52,6 +58,15 @@ def execute_selected(
 
         if organ_id in adapter_objects:
             return adapter_objects[organ_id].invoke(
+                command=command,
+                context=context,
+                dry_run=False,
+            )
+
+        if organ_id in native_adapter_objects:
+            return native_adapter_objects[
+                organ_id
+            ].invoke(
                 command=command,
                 context=context,
                 dry_run=False,

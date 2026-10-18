@@ -4,8 +4,8 @@
   "summary": {
     "total": 52,
     "production": 3,
-    "adapted": 24,
-    "discovered": 25,
+    "adapted": 25,
+    "discovered": 24,
     "broken": 0
   },
   "modules": [
@@ -394,10 +394,10 @@
     {
       "id": "malysh_engine.py",
       "path": "malysh_engine.py",
-      "category": "engine",
-      "role": "organ",
-      "execution_policy": "adapter_required",
-      "integration": "discovered",
+      "category": "memory.sequence_skill",
+      "role": "cognitive_skill",
+      "execution_policy": "semantic_recall",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": false,
       "classes": [
@@ -415,7 +415,11 @@
         "json",
         "math",
         "os"
-      ]
+      ],
+      "adapter_id": "native_malysh_engine",
+      "recall_policy": "on_semantic_match",
+      "global_director": false,
+      "persistent_write": false
     },
     {
       "id": "malysh_extreme_stress_test.py",

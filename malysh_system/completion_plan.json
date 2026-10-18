@@ -5,8 +5,8 @@
   "current": {
     "total": 52,
     "production": 3,
-    "adapted": 24,
-    "discovered": 25
+    "adapted": 25,
+    "discovered": 24
   },
   "runtime_guard": {
     "generation": 5,
@@ -15,10 +15,9 @@
     "active_cycle": null
   },
   "queue": {
-    "pending": 25,
+    "pending": 24,
     "strategies": {
       "analyze_as_composite_workflow": 8,
-      "build_api_adapter": 1,
       "integrate_as_diagnostic": 5,
       "integrate_as_memory_provider": 2,
       "integrate_as_observer": 3,
@@ -35,16 +34,7 @@
   },
   "phases": {
     "phase_1_organs": [],
-    "phase_2_api": [
-      {
-        "id": "malysh_engine.py",
-        "path": "malysh_engine.py",
-        "role": "organ",
-        "category": "engine",
-        "strategy": "build_api_adapter",
-        "priority": 160
-      }
-    ],
+    "phase_2_api": [],
     "phase_3_observers": [
       {
         "id": "malysh_vortex_visualization.py",

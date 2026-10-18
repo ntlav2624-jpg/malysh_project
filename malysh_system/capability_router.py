@@ -123,6 +123,44 @@ KEYWORDS.update({
     ],
 })
 
+
+# PHASE2_NATIVE_ENGINE_KEYWORDS
+KEYWORDS.update({
+    "engine.memory": [
+        "старое ядро",
+        "нативное ядро",
+        "malysh engine",
+        "малыш engine",
+        "обработай массив",
+        "числовой поток",
+        "ряд данных",
+        "следующая стратегия",
+        "стратегия потока",
+        "forecast 10",
+        "прогноз 10",
+    ],
+})
+
+
+# RECALLED_SEQUENCE_SKILL
+KEYWORDS.update({
+    "memory.sequence_skill": [
+        "обработай массив",
+        "проанализируй массив",
+        "числовой ряд",
+        "числовой поток",
+        "ряд данных",
+        "последовательност",
+        "следующая стратегия",
+        "стратегия потока",
+        "forecast 10",
+        "прогноз 10",
+        "старый малыш",
+        "прежний малыш",
+        "malysh engine",
+    ],
+})
+
 OPS = {
     ast.Add: operator.add,
     ast.Sub: operator.sub,
@@ -140,6 +178,19 @@ def load(path: Path) -> dict:
     if not path.exists():
         return {}
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+
+
+def recalled_skills() -> list:
+    return [
+        {
+            "id": "native_malysh_engine",
+            "source": "recalled_skill",
+            "category": "memory.sequence_skill",
+            "available": True,
+        }
+    ]
 
 
 def organs() -> list:
@@ -162,6 +213,8 @@ def organs() -> list:
             "category": item.get("category", "unclassified"),
             "available": item.get("certified", False),
         })
+
+    result.extend(recalled_skills())
 
     return result
 

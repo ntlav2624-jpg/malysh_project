@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 25,
+  "total_pending": 24,
   "strategies": {
     "certify_process_adapter": 0,
-    "build_api_adapter": 1,
+    "build_api_adapter": 0,
     "integrate_as_observer": 3,
     "analyze_as_composite_workflow": 8,
     "register_as_library": 2,
@@ -13,25 +13,6 @@
     "integrate_as_memory_provider": 2
   },
   "queue": [
-    {
-      "id": "malysh_engine.py",
-      "path": "malysh_engine.py",
-      "category": "engine",
-      "role": "organ",
-      "strategy": "build_api_adapter",
-      "priority": 160,
-      "has_main": false,
-      "classes": [
-        "MalyshEngine"
-      ],
-      "functions": [
-        "__init__",
-        "_load_state",
-        "predict_next_strategy",
-        "process_array"
-      ],
-      "status": "pending"
-    },
     {
       "id": "malysh_vortex_visualization.py",
       "path": "malysh_vortex_visualization.py",
