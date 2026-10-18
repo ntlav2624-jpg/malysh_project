@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "system_name": "Malysh Unified System",
+  "strict_mode": false,
+  "continue_on_module_error": true,
+  "modules": [
+    {
+      "name": "generation7",
+      "enabled": true,
+      "command": ["python", "malysh_master.py"]
+    },
+    {
+      "name": "grand_unified",
+      "enabled": true,
+      "command": ["python", "core/malysh_master_engine.py"]
+    },
+    {
+      "name": "navier_resonance",
+      "enabled": true,
+      "command": ["python", "run_malysh_all.py"]
+    }
+  ]
+}

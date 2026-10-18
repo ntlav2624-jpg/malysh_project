@@ -1,0 +1,11 @@
+runtime/logs/
+runtime/locks/
+runtime/checkpoints/
+runtime/state.json
+runtime/malysh.wal.jsonl
+
+# Malysh unified runtime
+__pycache__/
+*.py[cod]
+runtime/
+*.log
