@@ -7,6 +7,7 @@ from typing import Any
 from malysh_system.executor import OrganExecutor
 from malysh_system.protocols import Command, OrganResult
 from malysh_system.registry import load_organs
+from malysh_system.transaction import OrganismTransaction
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,6 +62,7 @@ class Orchestrator:
         self.context = SharedContext()
         self.bus = CommandBus()
         self.organs = load_organs()
+        self.transaction = OrganismTransaction()
 
     def select_organs(
         self,
@@ -185,20 +187,38 @@ class Orchestrator:
             },
         )
 
+        checkpoint = None
+
         if execute:
             executor = OrganExecutor()
+            self.transaction.begin(command)
 
-            results = executor.execute(
-                command=command,
-                selected_inventory=selected,
-                context=state,
-                all_organs=all_organs,
-            )
+            try:
+                results = executor.execute(
+                    command=command,
+                    selected_inventory=selected,
+                    context=state,
+                    all_organs=all_organs,
+                )
+
+                state, checkpoint = self.transaction.commit(
+                    command,
+                    results,
+                )
+
+            except BaseException as error:
+                self.transaction.abort(
+                    command,
+                    error,
+                )
+                raise
 
             self.bus.publish(
                 "EXECUTION_COMPLETED",
                 {
                     "command_id": command.command_id,
+                    "generation": state.get("generation"),
+                    "checkpoint": checkpoint,
                     "results": [
                         {
                             "organ": result.organ,
@@ -282,6 +302,7 @@ def synthesize(plan: dict[str, Any]) -> str:
         f"Исполнено     : {plan.get('executed_organs', 0)}",
         f"Успешно       : {successful}",
         f"Ошибок        : {failed}",
+        f"Checkpoint    : {plan.get('checkpoint')}",
         f"Контуры       : {', '.join(categories)}",
         "-" * 68,
     ]
