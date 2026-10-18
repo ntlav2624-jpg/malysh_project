@@ -1,0 +1,871 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Legacy Implant Scan",
+  "pending": 21,
+  "components": [
+    {
+      "id": "run_adaptive_pipeline.py",
+      "path": "run_adaptive_pipeline.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "adaptation",
+      "priority": 80,
+      "exists": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_adaptive_operator_7",
+        "_is_inside_polygon",
+        "_phase_detector",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "imports": [
+        "math"
+      ],
+      "calls": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine",
+        "_adaptive_operator_7",
+        "_is_inside_polygon",
+        "_phase_detector",
+        "_standard_step",
+        "append",
+        "atan2",
+        "cos",
+        "execute_stream",
+        "exp",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "len",
+        "max",
+        "min",
+        "print",
+        "range",
+        "set",
+        "sin"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "adaptive",
+        "phase",
+        "resonance"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "flush_chaos.py",
+      "path": "flush_chaos.py",
+      "strategy": "register_as_library",
+      "category": "dynamics.chaos",
+      "priority": 50,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ],
+      "calls": [
+        "MalyshEngine",
+        "enumerate",
+        "print",
+        "process_array"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [],
+      "parse_error": null
+    },
+    {
+      "id": "test_geometry.py",
+      "path": "test_geometry.py",
+      "strategy": "integrate_as_diagnostic",
+      "category": "geometry",
+      "priority": 50,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ],
+      "calls": [
+        "MalyshEngine",
+        "print",
+        "process_array"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "резонанс"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "test_predict.py",
+      "path": "test_predict.py",
+      "strategy": "integrate_as_diagnostic",
+      "category": "prediction",
+      "priority": 50,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ],
+      "calls": [
+        "MalyshEngine",
+        "print",
+        "process_array"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "predict"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "test_resonance.py",
+      "path": "test_resonance.py",
+      "strategy": "integrate_as_diagnostic",
+      "category": "resonance",
+      "priority": 50,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "json",
+        "malysh_engine"
+      ],
+      "calls": [
+        "MalyshEngine",
+        "print",
+        "process_array"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "resonance",
+        "резонанс"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "malysh_system::supervisor.py",
+      "path": "malysh_system/supervisor.py",
+      "strategy": "keep_as_infrastructure",
+      "category": "unclassified",
+      "priority": 30,
+      "exists": true,
+      "classes": [
+        "MalyshSupervisor",
+        "ProcessModule",
+        "StateStore",
+        "WAL"
+      ],
+      "functions": [
+        "__init__",
+        "acquire_lock",
+        "append",
+        "atomic_write_json",
+        "build_parser",
+        "checkpoint",
+        "execute",
+        "initial_state",
+        "inspect",
+        "latest_checkpoint",
+        "load",
+        "load_json",
+        "main",
+        "read_valid_events",
+        "recover",
+        "release_lock",
+        "run_cycle",
+        "save",
+        "state_hash",
+        "status",
+        "unlock",
+        "utc_now"
+      ],
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "typing",
+        "uuid"
+      ],
+      "calls": [
+        "ArgumentParser",
+        "MalyshSupervisor",
+        "Path",
+        "ProcessModule",
+        "RuntimeError",
+        "StateStore",
+        "WAL",
+        "acquire_lock",
+        "add_argument",
+        "append",
+        "atomic_write_json",
+        "bool",
+        "build_parser",
+        "checkpoint",
+        "dump",
+        "dumps",
+        "encode",
+        "enumerate",
+        "execute",
+        "exists",
+        "fdopen",
+        "fileno",
+        "flush",
+        "fsync",
+        "get",
+        "getpid",
+        "glob",
+        "hexdigest",
+        "initial_state",
+        "inspect",
+        "int",
+        "isoformat",
+        "latest_checkpoint",
+        "len",
+        "load",
+        "load_json",
+        "loads",
+        "main",
+        "mkdir",
+        "mkstemp",
+        "monotonic",
+        "now",
+        "open",
+        "parse_args",
+        "print",
+        "read_valid_events",
+        "recover",
+        "relative_to",
+        "release_lock",
+        "replace",
+        "resolve",
+        "round",
+        "run",
+        "run_cycle",
+        "save",
+        "sha256",
+        "sorted",
+        "state_hash",
+        "status",
+        "str",
+        "strip",
+        "time",
+        "type",
+        "unlink",
+        "unlock",
+        "upper",
+        "utc_now",
+        "uuid4",
+        "write",
+        "write_text"
+      ],
+      "reads": [
+        "load",
+        "open"
+      ],
+      "writes": [
+        "dump",
+        "mkdir",
+        "replace",
+        "unlink",
+        "write_text"
+      ],
+      "keywords": [],
+      "parse_error": null
+    },
+    {
+      "id": "run_maglev_flywheel.py",
+      "path": "run_maglev_flywheel.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "launcher",
+      "priority": 30,
+      "exists": true,
+      "classes": [
+        "MaglevFlywheelSystem"
+      ],
+      "functions": [
+        "__init__",
+        "simulate"
+      ],
+      "imports": [
+        "math"
+      ],
+      "calls": [
+        "MaglevFlywheelSystem",
+        "append",
+        "cos",
+        "exp",
+        "print",
+        "range",
+        "simulate"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "history",
+        "резонанс"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "run_origin_of_life.py",
+      "path": "run_origin_of_life.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "launcher",
+      "priority": 30,
+      "exists": true,
+      "classes": [
+        "BiogenesisSimulator",
+        "MalyshBiogenesisEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "run_simulation",
+        "simulate_geological_phase"
+      ],
+      "imports": [
+        "math",
+        "random"
+      ],
+      "calls": [
+        "BiogenesisSimulator",
+        "MalyshBiogenesisEngine",
+        "_is_inside",
+        "append",
+        "cos",
+        "exp",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "len",
+        "max",
+        "min",
+        "print",
+        "range",
+        "run_simulation",
+        "set",
+        "simulate_geological_phase",
+        "sin",
+        "uniform"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "history",
+        "phase",
+        "resonance",
+        "резонанс"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "run_pipeline.py",
+      "path": "run_pipeline.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "launcher",
+      "priority": 30,
+      "exists": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "compute_n7_nodes",
+        "execute_stream",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "imports": [
+        "math"
+      ],
+      "calls": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "append",
+        "compute_n7_nodes",
+        "cos",
+        "enumerate",
+        "execute_stream",
+        "exp",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory",
+        "len",
+        "print",
+        "range",
+        "set",
+        "sin"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "resonance"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "run_processor.py",
+      "path": "run_processor.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "launcher",
+      "priority": 30,
+      "exists": true,
+      "classes": [
+        "MalyshDataProcessor",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "process_stream"
+      ],
+      "imports": [
+        "math"
+      ],
+      "calls": [
+        "MalyshDataProcessor",
+        "MalyshResonanceEngine",
+        "_is_inside_polygon",
+        "append",
+        "chr",
+        "cos",
+        "degrees",
+        "exp",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "int",
+        "isinstance",
+        "join",
+        "len",
+        "ord",
+        "print",
+        "process_stream",
+        "range",
+        "round",
+        "set",
+        "sin",
+        "str"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "resonance",
+        "резонанс"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "run_reflected_pipeline.py",
+      "path": "run_reflected_pipeline.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "launcher",
+      "priority": 30,
+      "exists": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "imports": [
+        "math"
+      ],
+      "calls": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "append",
+        "cos",
+        "execute_stream",
+        "exp",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "len",
+        "max",
+        "min",
+        "print",
+        "range",
+        "set",
+        "sin"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "resonance",
+        "резонанс"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "malysh_system::inventory.py",
+      "path": "malysh_system/inventory.py",
+      "strategy": "keep_as_infrastructure",
+      "category": "unclassified",
+      "priority": 20,
+      "exists": true,
+      "classes": [],
+      "functions": [
+        "category_for",
+        "inspect_python",
+        "main"
+      ],
+      "imports": [
+        "ast",
+        "json",
+        "pathlib"
+      ],
+      "calls": [
+        "Path",
+        "any",
+        "append",
+        "category_for",
+        "dumps",
+        "extend",
+        "inspect_python",
+        "isinstance",
+        "items",
+        "len",
+        "lower",
+        "main",
+        "parse",
+        "print",
+        "read_text",
+        "relative_to",
+        "resolve",
+        "rglob",
+        "set",
+        "setdefault",
+        "sorted",
+        "startswith",
+        "str",
+        "sum",
+        "type",
+        "unparse",
+        "walk",
+        "write_text"
+      ],
+      "reads": [
+        "read_text"
+      ],
+      "writes": [
+        "write_text"
+      ],
+      "keywords": [
+        "adaptive",
+        "chaos",
+        "geometry",
+        "memory",
+        "phase",
+        "predict",
+        "resonance"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "run_full_translation.py",
+      "path": "run_full_translation.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "launcher",
+      "priority": 20,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_pro_engine"
+      ],
+      "calls": [
+        "MalyshProCuneiformEngine",
+        "load_corpus_from_text",
+        "translate_and_analyze"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [],
+      "parse_error": null
+    },
+    {
+      "id": "run_malysh.py",
+      "path": "run_malysh.py",
+      "strategy": "analyze_as_composite_workflow",
+      "category": "launcher",
+      "priority": 10,
+      "exists": true,
+      "classes": [
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "compute_n7_nodes",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "imports": [
+        "math"
+      ],
+      "calls": [
+        "MalyshResonanceEngine",
+        "_is_inside_polygon",
+        "append",
+        "compute_n7_nodes",
+        "cos",
+        "enumerate",
+        "exp",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory",
+        "len",
+        "print",
+        "range",
+        "set",
+        "sin"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "resonance"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "compare_streams.py",
+      "path": "compare_streams.py",
+      "strategy": "register_as_library",
+      "category": "unclassified",
+      "priority": 0,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "json",
+        "malysh_engine"
+      ],
+      "calls": [
+        "MalyshEngine",
+        "items",
+        "print",
+        "process_array"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [
+        "memory"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "deep_history.py",
+      "path": "deep_history.py",
+      "strategy": "integrate_as_memory_provider",
+      "category": "unclassified",
+      "priority": 0,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "glob",
+        "json",
+        "os"
+      ],
+      "calls": [
+        "append",
+        "exit",
+        "get",
+        "glob",
+        "items",
+        "join",
+        "len",
+        "load",
+        "open",
+        "print",
+        "sorted"
+      ],
+      "reads": [
+        "load",
+        "open"
+      ],
+      "writes": [],
+      "keywords": [
+        "history",
+        "memory",
+        "passport",
+        "resonance",
+        "резонанс"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "generate_passport.py",
+      "path": "generate_passport.py",
+      "strategy": "integrate_as_memory_provider",
+      "category": "unclassified",
+      "priority": 0,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "datetime",
+        "glob",
+        "json",
+        "os"
+      ],
+      "calls": [
+        "append",
+        "exit",
+        "get",
+        "glob",
+        "items",
+        "join",
+        "len",
+        "load",
+        "now",
+        "open",
+        "print",
+        "sorted",
+        "strftime",
+        "write"
+      ],
+      "reads": [
+        "load",
+        "open"
+      ],
+      "writes": [],
+      "keywords": [
+        "history",
+        "memory",
+        "passport",
+        "phase",
+        "resonance",
+        "резонанс",
+        "рой"
+      ],
+      "parse_error": null
+    },
+    {
+      "id": "malysh_system::__init__.py",
+      "path": "malysh_system/__init__.py",
+      "strategy": "keep_as_infrastructure",
+      "category": "unclassified",
+      "priority": 0,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [],
+      "calls": [],
+      "reads": [],
+      "writes": [],
+      "keywords": [],
+      "parse_error": null
+    },
+    {
+      "id": "malysh_system::modules::__init__.py",
+      "path": "malysh_system/modules/__init__.py",
+      "strategy": "keep_as_infrastructure",
+      "category": "unclassified",
+      "priority": 0,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [],
+      "calls": [],
+      "reads": [],
+      "writes": [],
+      "keywords": [],
+      "parse_error": null
+    },
+    {
+      "id": "test_class.py",
+      "path": "test_class.py",
+      "strategy": "integrate_as_diagnostic",
+      "category": "utility",
+      "priority": 0,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "json",
+        "malysh_engine"
+      ],
+      "calls": [
+        "MalyshEngine",
+        "items",
+        "print",
+        "process_array"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [],
+      "parse_error": null
+    },
+    {
+      "id": "test_meta.py",
+      "path": "test_meta.py",
+      "strategy": "integrate_as_diagnostic",
+      "category": "utility",
+      "priority": 0,
+      "exists": true,
+      "classes": [],
+      "functions": [],
+      "imports": [
+        "malysh_engine"
+      ],
+      "calls": [
+        "MalyshEngine",
+        "print",
+        "process_array"
+      ],
+      "reads": [],
+      "writes": [],
+      "keywords": [],
+      "parse_error": null
+    }
+  ]
+}
