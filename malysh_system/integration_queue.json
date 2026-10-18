@@ -1,0 +1,694 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Integration Queue",
+  "total_pending": 40,
+  "strategies": {
+    "certify_process_adapter": 15,
+    "build_api_adapter": 1,
+    "integrate_as_observer": 3,
+    "analyze_as_composite_workflow": 8,
+    "register_as_library": 2,
+    "integrate_as_diagnostic": 5,
+    "keep_as_infrastructure": 4,
+    "integrate_as_memory_provider": 2
+  },
+  "queue": [
+    {
+      "id": "core::malysh_firmware_compiler.py",
+      "path": "core/malysh_firmware_compiler.py",
+      "category": "logic.firmware",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 180,
+      "has_main": true,
+      "classes": [
+        "FirmwareCompiler"
+      ],
+      "functions": [
+        "__init__",
+        "compile_firmware",
+        "decode_signal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "core::malysh_toroidal_geometry.py",
+      "path": "core/malysh_toroidal_geometry.py",
+      "category": "geometry.toroidal",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 180,
+      "has_main": true,
+      "classes": [
+        "ToroidalTubeGeometry"
+      ],
+      "functions": [
+        "__init__",
+        "compute_geometry",
+        "decode_signal"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_apsu_engine.py",
+      "path": "malysh_apsu_engine.py",
+      "category": "engine.apsu",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 180,
+      "has_main": true,
+      "classes": [
+        "ApsuMalyshComplex"
+      ],
+      "functions": [
+        "__init__",
+        "run_full_simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_cuneiform_engine.py",
+      "path": "malysh_cuneiform_engine.py",
+      "category": "analysis.cuneiform",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 180,
+      "has_main": true,
+      "classes": [
+        "MalyshCuneiformEngine567"
+      ],
+      "functions": [
+        "__init__",
+        "_build_topological_field",
+        "clean_token",
+        "evaluate_topological_tension",
+        "load_corpus_from_text",
+        "restore_gap",
+        "translate_tablet"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_pro_engine.py",
+      "path": "malysh_pro_engine.py",
+      "category": "engine",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 180,
+      "has_main": true,
+      "classes": [
+        "MalyshProCuneiformEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_build_topological_field",
+        "clean_token",
+        "evaluate_topological_tension",
+        "load_corpus_from_text",
+        "parse_morphology",
+        "restore_gap",
+        "translate_and_analyze"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "meso_power_engine.py",
+      "path": "meso_power_engine.py",
+      "category": "engine",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 180,
+      "has_main": true,
+      "classes": [
+        "MesoScaleSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_power_surge"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "navier_stokes_engine.py",
+      "path": "navier_stokes_engine.py",
+      "category": "physics.navier",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 180,
+      "has_main": true,
+      "classes": [
+        "NavierStokesMalyshSolver"
+      ],
+      "functions": [
+        "__init__",
+        "simulate_blow_up_prevention"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "phase_coupling.py",
+      "path": "phase_coupling.py",
+      "category": "geometry.phase",
+      "role": "functional_organ",
+      "strategy": "certify_process_adapter",
+      "priority": 170,
+      "has_main": true,
+      "classes": [],
+      "functions": [
+        "simulate_phase_entanglement"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_engine.py",
+      "path": "malysh_engine.py",
+      "category": "engine",
+      "role": "organ",
+      "strategy": "build_api_adapter",
+      "priority": 160,
+      "has_main": false,
+      "classes": [
+        "MalyshEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_load_state",
+        "predict_next_strategy",
+        "process_array"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "batch_process_ten.py",
+      "path": "batch_process_ten.py",
+      "category": "unclassified",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 130,
+      "has_main": true,
+      "classes": [
+        "BatchTenEngine"
+      ],
+      "functions": [
+        "__init__",
+        "process_batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "core::euro_tube_constructor.py",
+      "path": "core/euro_tube_constructor.py",
+      "category": "unclassified",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 130,
+      "has_main": true,
+      "classes": [
+        "DualTubeConstructor"
+      ],
+      "functions": [
+        "__init__",
+        "_build_transitions",
+        "calculate_path_strength",
+        "construct_prediction"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "enki_micro_v3.1.py",
+      "path": "enki_micro_v3.1.py",
+      "category": "unclassified",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 130,
+      "has_main": true,
+      "classes": [
+        "MicroEnkiSystem"
+      ],
+      "functions": [
+        "__init__",
+        "process_flow"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_extreme_stress_test.py",
+      "path": "malysh_extreme_stress_test.py",
+      "category": "unclassified",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 130,
+      "has_main": true,
+      "classes": [
+        "ExtremeStressTestEngine"
+      ],
+      "functions": [
+        "__init__",
+        "run_taylor_green_stress_simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_physical_legacy.py",
+      "path": "malysh_physical_legacy.py",
+      "category": "unclassified",
+      "role": "organ",
+      "strategy": "certify_process_adapter",
+      "priority": 130,
+      "has_main": true,
+      "classes": [
+        "MalyshPhysicalEngine"
+      ],
+      "functions": [
+        "__init__",
+        "apply_real_physics"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "demo.py",
+      "path": "demo.py",
+      "category": "unclassified",
+      "role": "functional_organ",
+      "strategy": "certify_process_adapter",
+      "priority": 120,
+      "has_main": true,
+      "classes": [],
+      "functions": [
+        "run_layer7_demo"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_vortex_visualization.py",
+      "path": "malysh_vortex_visualization.py",
+      "category": "physics.vortex",
+      "role": "visualizer",
+      "strategy": "integrate_as_observer",
+      "priority": 80,
+      "has_main": true,
+      "classes": [
+        "MalyshVortexVisualizer"
+      ],
+      "functions": [
+        "__init__",
+        "compute_clebsch_potentials",
+        "compute_vorticity_field",
+        "render_3d_vortex_plot"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "run_adaptive_pipeline.py",
+      "path": "run_adaptive_pipeline.py",
+      "category": "adaptation",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 80,
+      "has_main": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_adaptive_operator_7",
+        "_is_inside_polygon",
+        "_phase_detector",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "flush_chaos.py",
+      "path": "flush_chaos.py",
+      "category": "dynamics.chaos",
+      "role": "support",
+      "strategy": "register_as_library",
+      "priority": 50,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "plot_phase.py",
+      "path": "plot_phase.py",
+      "category": "geometry.phase",
+      "role": "visualizer",
+      "strategy": "integrate_as_observer",
+      "priority": 50,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "test_geometry.py",
+      "path": "test_geometry.py",
+      "category": "geometry",
+      "role": "immune_test",
+      "strategy": "integrate_as_diagnostic",
+      "priority": 50,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "test_predict.py",
+      "path": "test_predict.py",
+      "category": "prediction",
+      "role": "immune_test",
+      "strategy": "integrate_as_diagnostic",
+      "priority": 50,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "test_resonance.py",
+      "path": "test_resonance.py",
+      "category": "resonance",
+      "role": "immune_test",
+      "strategy": "integrate_as_diagnostic",
+      "priority": 50,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_system::supervisor.py",
+      "path": "malysh_system/supervisor.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "strategy": "keep_as_infrastructure",
+      "priority": 30,
+      "has_main": true,
+      "classes": [
+        "MalyshSupervisor",
+        "ProcessModule",
+        "StateStore",
+        "WAL"
+      ],
+      "functions": [
+        "__init__",
+        "acquire_lock",
+        "append",
+        "atomic_write_json",
+        "build_parser",
+        "checkpoint",
+        "execute",
+        "initial_state",
+        "inspect",
+        "latest_checkpoint",
+        "load",
+        "load_json",
+        "main",
+        "read_valid_events",
+        "recover",
+        "release_lock",
+        "run_cycle",
+        "save",
+        "state_hash",
+        "status",
+        "unlock",
+        "utc_now"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "run_maglev_flywheel.py",
+      "path": "run_maglev_flywheel.py",
+      "category": "launcher",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 30,
+      "has_main": true,
+      "classes": [
+        "MaglevFlywheelSystem"
+      ],
+      "functions": [
+        "__init__",
+        "simulate"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "run_origin_of_life.py",
+      "path": "run_origin_of_life.py",
+      "category": "launcher",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 30,
+      "has_main": true,
+      "classes": [
+        "BiogenesisSimulator",
+        "MalyshBiogenesisEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "run_simulation",
+        "simulate_geological_phase"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "run_pipeline.py",
+      "path": "run_pipeline.py",
+      "category": "launcher",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 30,
+      "has_main": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "compute_n7_nodes",
+        "execute_stream",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "run_processor.py",
+      "path": "run_processor.py",
+      "category": "launcher",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 30,
+      "has_main": true,
+      "classes": [
+        "MalyshDataProcessor",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "process_stream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "run_reflected_pipeline.py",
+      "path": "run_reflected_pipeline.py",
+      "category": "launcher",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 30,
+      "has_main": true,
+      "classes": [
+        "MalyshDataPipeline",
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "_operator_7",
+        "_standard_step",
+        "execute_stream",
+        "generate_bounded_trajectory",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "malysh.py",
+      "path": "malysh.py",
+      "category": "unclassified",
+      "role": "support",
+      "strategy": "certify_process_adapter",
+      "priority": 20,
+      "has_main": true,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_system::inventory.py",
+      "path": "malysh_system/inventory.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "strategy": "keep_as_infrastructure",
+      "priority": 20,
+      "has_main": true,
+      "classes": [],
+      "functions": [
+        "category_for",
+        "inspect_python",
+        "main"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "run_full_translation.py",
+      "path": "run_full_translation.py",
+      "category": "launcher",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 20,
+      "has_main": true,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "run_malysh.py",
+      "path": "run_malysh.py",
+      "category": "launcher",
+      "role": "launcher",
+      "strategy": "analyze_as_composite_workflow",
+      "priority": 10,
+      "has_main": false,
+      "classes": [
+        "MalyshResonanceEngine"
+      ],
+      "functions": [
+        "__init__",
+        "_is_inside_polygon",
+        "compute_n7_nodes",
+        "generate_hexagon_vertices",
+        "generate_pentagon_vertices",
+        "generate_spiral_trajectory"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "compare_streams.py",
+      "path": "compare_streams.py",
+      "category": "unclassified",
+      "role": "support",
+      "strategy": "register_as_library",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "deep_history.py",
+      "path": "deep_history.py",
+      "category": "unclassified",
+      "role": "memory",
+      "strategy": "integrate_as_memory_provider",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "generate_passport.py",
+      "path": "generate_passport.py",
+      "category": "unclassified",
+      "role": "memory",
+      "strategy": "integrate_as_memory_provider",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_system::__init__.py",
+      "path": "malysh_system/__init__.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "strategy": "keep_as_infrastructure",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "malysh_system::modules::__init__.py",
+      "path": "malysh_system/modules/__init__.py",
+      "category": "unclassified",
+      "role": "nervous_system",
+      "strategy": "keep_as_infrastructure",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "test_class.py",
+      "path": "test_class.py",
+      "category": "utility",
+      "role": "immune_test",
+      "strategy": "integrate_as_diagnostic",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "test_meta.py",
+      "path": "test_meta.py",
+      "category": "utility",
+      "role": "immune_test",
+      "strategy": "integrate_as_diagnostic",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    },
+    {
+      "id": "visualize_vault.py",
+      "path": "visualize_vault.py",
+      "category": "utility",
+      "role": "visualizer",
+      "strategy": "integrate_as_observer",
+      "priority": 0,
+      "has_main": false,
+      "classes": [],
+      "functions": [],
+      "status": "pending"
+    }
+  ]
+}
