@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 2,
+  "total_pending": 0,
   "strategies": {
     "certify_process_adapter": 0,
     "build_api_adapter": 0,
@@ -10,7 +10,7 @@
     "register_as_library": 0,
     "integrate_as_diagnostic": 0,
     "keep_as_infrastructure": 0,
-    "integrate_as_memory_provider": 2
+    "integrate_as_memory_provider": 0
   },
   "queue": [
     {
@@ -469,7 +469,23 @@
       "has_main": false,
       "classes": [],
       "functions": [],
-      "status": "pending"
+      "status": "integrated_as_memory_provider",
+      "integration_evidence": {
+        "passive_import": true,
+        "shared_provider": "malysh_system/passport_memory.py",
+        "legacy_memory_connected": true,
+        "semantic_recall": true,
+        "morphology_supported": true,
+        "empty_history_supported": true,
+        "broken_passports_reported": true,
+        "explicit_export_only": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "influence_on_answer": false,
+        "decision_authority": false,
+        "state_write_on_import": false,
+        "state_commit_on_import": false
+      }
     },
     {
       "id": "generate_passport.py",
@@ -481,7 +497,23 @@
       "has_main": false,
       "classes": [],
       "functions": [],
-      "status": "pending"
+      "status": "integrated_as_memory_provider",
+      "integration_evidence": {
+        "passive_import": true,
+        "shared_provider": "malysh_system/passport_memory.py",
+        "legacy_memory_connected": true,
+        "semantic_recall": true,
+        "morphology_supported": true,
+        "empty_history_supported": true,
+        "broken_passports_reported": true,
+        "explicit_export_only": true,
+        "subject": "Malysh",
+        "automatic_execution": false,
+        "influence_on_answer": false,
+        "decision_authority": false,
+        "state_write_on_import": false,
+        "state_commit_on_import": false
+      }
     },
     {
       "id": "malysh_system::__init__.py",
@@ -574,5 +606,6 @@
       }
     }
   ],
-  "total_integrated": 19
+  "total_integrated": 21,
+  "integration_status": "complete"
 }

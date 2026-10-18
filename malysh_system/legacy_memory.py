@@ -9,6 +9,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from malysh_system.passport_memory import passport_evidence as unified_passport_evidence
+
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -144,6 +146,15 @@ MANDATORY_MEMORIES = {
         "aliases": [
             "passport",
             "паспорт",
+            "паспорта",
+            "паспорту",
+            "паспортом",
+            "паспортная",
+            "паспортную",
+            "паспортной",
+            "паспортная память",
+            "паспортную память",
+            "паспортной памяти",
             "memory_vault",
             "deep_history",
         ],
@@ -539,49 +550,13 @@ def git_history_evidence(
     return evidence
 
 def passport_evidence() -> dict[str, Any]:
-    vault = ROOT / "memory_vault"
-
-    passports = sorted(
-        vault.glob("passport_*.json")
-    ) if vault.exists() else []
-
-    modes = set()
-    sources = set()
-    classes = set()
-
-    for path in passports:
-        try:
-            data = json.loads(
-                path.read_text(
-                    encoding="utf-8"
-                )
-            )
-        except Exception:
-            continue
-
-        mode = data.get("mode")
-        source = data.get("source")
-        signal_class = data.get(
-            "signal_class"
-        )
-
-        if mode:
-            modes.add(str(mode))
-
-        if source:
-            sources.add(str(source))
-
-        if signal_class:
-            classes.add(
-                str(signal_class)
-            )
-
-    return {
-        "passport_count": len(passports),
-        "modes": sorted(modes),
-        "sources": sorted(sources),
-        "signal_classes": sorted(classes),
-    }
+    """
+    Passport memory is provided by the unified
+    passive provider.
+    """
+    return unified_passport_evidence(
+        ROOT / "memory_vault"
+    )
 
 
 def build_registry() -> dict[str, Any]:
@@ -751,10 +726,30 @@ def recall(
     ranked = []
 
     for memory in registry["memories"]:
-        aliases = [
+        stored_aliases = [
             str(alias)
             for alias in memory["aliases"]
         ]
+
+        canonical_aliases = [
+            str(alias)
+            for alias in MANDATORY_MEMORIES.get(
+                memory["id"],
+                {},
+            ).get(
+                "aliases",
+                [],
+            )
+        ]
+
+        aliases = list(
+            dict.fromkeys(
+                [
+                    *stored_aliases,
+                    *canonical_aliases,
+                ]
+            )
+        )
 
         exact_aliases = sorted(
             {

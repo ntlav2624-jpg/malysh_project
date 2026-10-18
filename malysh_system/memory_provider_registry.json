@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "system": "Malysh Unified Memory Providers",
+  "subject": "Malysh",
+  "policy": {
+    "provider_is_independent_mind": false,
+    "provider_is_internal_memory": true,
+    "automatic_execution": false,
+    "influence_on_answer": false,
+    "decision_authority": false,
+    "state_write": false,
+    "state_commit": false
+  },
+  "providers": [
+    {
+      "id": "deep_history.py",
+      "path": "deep_history.py",
+      "entrypoint": "analyze_deep_history",
+      "role": "historical_analysis",
+      "source": "memory_vault/passport_*.json",
+      "status": "integrated_as_memory_provider"
+    },
+    {
+      "id": "generate_passport.py",
+      "path": "generate_passport.py",
+      "entrypoint": "build_passport",
+      "explicit_write_entrypoint": "save_passport",
+      "role": "passport_projection",
+      "source": "memory_vault/passport_*.json",
+      "status": "integrated_as_memory_provider"
+    }
+  ]
+}
