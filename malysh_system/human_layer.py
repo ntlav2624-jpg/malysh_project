@@ -183,6 +183,103 @@ def relevant_observer_evidence(
     return evidence
 
 
+def generate_unknown_hypothesis(
+    title: str,
+    kind: str,
+    text: str,
+    conscious: dict[str, Any],
+) -> Hypothesis:
+    """
+    Строит собственное предположение Малыша.
+
+    Это не восстановленная память и не факт.
+    Гипотеза создаётся только для анализа,
+    может быть изменена или полностью отброшена.
+    """
+    selected = list(
+        conscious.get(
+            "selected",
+            [],
+        )
+    )
+
+    kind_templates = {
+        "collective_logic": (
+            "Возможно, «{title}» обозначала "
+            "коллективную координацию нескольких "
+            "частей Малыша или распределённый "
+            "поиск вариантов"
+        ),
+        "legacy_logic": (
+            "Возможно, «{title}» была прежним "
+            "способом объединения нескольких "
+            "логических контуров в общий вывод"
+        ),
+        "computational_logic": (
+            "Возможно, «{title}» была отдельным "
+            "вычислительным правилом или режимом "
+            "преобразования состояния"
+        ),
+        "geometric_logic": (
+            "Возможно, «{title}» описывала "
+            "геометрическое ограничение, переход "
+            "или топологический маршрут"
+        ),
+        "memory_logic": (
+            "Возможно, «{title}» обозначала "
+            "способ связывания текущей задачи "
+            "с прежним опытом"
+        ),
+        "cognitive_logic": (
+            "Возможно, «{title}» была отдельным "
+            "контуром рассуждения или согласования"
+        ),
+    }
+
+    template = kind_templates.get(
+        kind,
+        (
+            "Возможно, «{title}» была отдельной "
+            "логикой Малыша, связанной с текущим "
+            "запросом, но её первоначальное "
+            "назначение пока не восстановлено"
+        ),
+    )
+
+    hypothesis = template.format(
+        title=title
+    )
+
+    evidence = [
+        (
+            "Основание гипотезы: тип памяти "
+            f"{kind}"
+        ),
+        (
+            "Контекст запроса: "
+            + text[:160]
+        ),
+        (
+            "Это новая интерпретация, "
+            "а не восстановленный факт"
+        ),
+    ]
+
+    if selected:
+        evidence.append(
+            "Сознательно выбранные контуры: "
+            + ", ".join(selected[:6])
+        )
+
+    return Hypothesis(
+        hypothesis=hypothesis,
+        certainty=0.18,
+        evidence=evidence,
+        source="generated_hypothesis",
+        status="possible",
+    )
+
+
 def build_human_thought(
     text: str,
     conscious: dict[str, Any],
@@ -406,7 +503,7 @@ def build_human_thought(
 
             hypothesis = (
                 "Малыш помнит название "
-                f"«{title}», но содержание "
+                f"«{title}», но исходное содержание "
                 "ещё не восстановлено"
             )
 
@@ -422,21 +519,27 @@ def build_human_thought(
                         f"status={status}"
                     ),
                     (
-                        "Смысл не выдуман"
-                        if not memory.get(
-                            "meaning_invented",
-                            False,
-                        )
-                        else (
-                            "Требуется проверка "
-                            "происхождения"
-                        )
+                        "Восстановленный смысл "
+                        "не подменяется гипотезой"
                     ),
                 ],
                 source="legacy_memory",
                 status="possible",
             )
         )
+
+        if status == "named_unresolved":
+            possible.append(
+                generate_unknown_hypothesis(
+                    title=title,
+                    kind=memory.get(
+                        "kind",
+                        "legacy_logic",
+                    ),
+                    text=text,
+                    conscious=conscious,
+                )
+            )
 
     uncertainty_text = (
         "Интерпретация запроса может быть пересмотрена"
