@@ -4,6 +4,11 @@ import argparse
 from typing import Any
 
 from malysh_system.capability_router import route
+from malysh_system.human_layer import (
+    build_human_thought,
+    human_summary,
+)
+from malysh_system.observers import observe_all
 from malysh_system.orchestrator import (
     Orchestrator,
     synthesize,
@@ -45,11 +50,12 @@ def consciousness(text: str) -> dict[str, Any]:
 
 def subconscious(text: str) -> dict[str, Any]:
     """
-    Подсознательный контур.
+    Независимый подсознательный анализ.
 
-    Сохраняет прежний независимый Orchestrator, но всегда
-    работает в PLAN. Поэтому подсознание анализирует запрос,
-    не запускает органы и не делает собственный commit.
+    Если старый Orchestrator не нашёл точного контура
+    и выбрал весь организм, такой fallback отмечается
+    как неопределённость, а не как список из 48
+    альтернативных мыслей.
     """
     independent_routing = route(text)
 
@@ -59,6 +65,7 @@ def subconscious(text: str) -> dict[str, Any]:
             "mode": "reflex_observer",
             "selected": [],
             "categories": [],
+            "broad_fallback": False,
             "text": (
                 "Режим         : REFLEX OBSERVER\n"
                 "Выбрано       : 0\n"
@@ -78,19 +85,69 @@ def subconscious(text: str) -> dict[str, Any]:
         execute=False,
     )
 
+    results = plan.get(
+        "results",
+        [],
+    )
+
+    inventory_size = len(
+        orchestrator.organs
+    )
+
+    selected_count = int(
+        plan.get(
+            "selected_organs",
+            0,
+        )
+        or 0
+    )
+
+    broad_fallback = bool(
+        inventory_size
+        and selected_count >= inventory_size
+    )
+
+    if broad_fallback:
+        return {
+            "plan": plan,
+            "mode": "broad_fallback_suppressed",
+            "selected": [],
+            "categories": [],
+            "broad_fallback": True,
+            "text": (
+                "=" * 68
+                + "\nМАЛЫШ: ПОДСОЗНАТЕЛЬНЫЙ КОНТУР\n"
+                + "=" * 68
+                + "\nКоманда       : "
+                + text
+                + "\nРежим         : UNCERTAIN"
+                + "\nШирокий план  : "
+                + str(selected_count)
+                + "\nИсполнено     : 0"
+                + "\nСтатус        : полный fallback подавлен"
+                + "\nВывод         : точная подсознательная "
+                + "альтернатива не найдена"
+                + "\n"
+                + "=" * 68
+            ),
+        }
+
     categories = sorted(
         {
             item.get("data", {}).get(
                 "category",
                 "unclassified",
             )
-            for item in plan.get("results", [])
+            for item in results
         }
     )
 
     selected_names = [
-        item.get("organ", "unknown")
-        for item in plan.get("results", [])
+        item.get(
+            "organ",
+            "unknown",
+        )
+        for item in results
     ]
 
     return {
@@ -98,9 +155,9 @@ def subconscious(text: str) -> dict[str, Any]:
         "mode": "plan",
         "selected": selected_names,
         "categories": categories,
+        "broad_fallback": False,
         "text": synthesize(plan),
     }
-
 
 def joint(
     conscious: dict[str, Any],
@@ -368,6 +425,23 @@ def run(
         execute=execute,
     )
 
+    observation_context = execution.get(
+        "state",
+        load_state(),
+    )
+
+    observations = observe_all(
+        observation_context
+    )
+
+    human = build_human_thought(
+        text=text,
+        conscious=conscious,
+        subconscious=subconscious_result,
+        joint=combined,
+        observations=observations,
+    )
+
     print("=" * 72)
     print("МАЛЫШ: ДВОЙНОЙ РАЗУМ")
     print("=" * 72)
@@ -390,12 +464,17 @@ def run(
         execution,
     )
 
+    print()
+    print(human_summary(human))
+
     print("=" * 72)
 
     return {
         "consciousness": conscious,
         "subconscious": subconscious_result,
         "joint": combined,
+        "human": human.to_dict(),
+        "observations": observations,
         "execution": execution,
     }
 
