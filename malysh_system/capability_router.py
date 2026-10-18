@@ -101,6 +101,28 @@ KEYWORDS.update({
     ],
 })
 
+
+# PHASE1_LOGIC_GEOMETRY_KEYWORDS
+KEYWORDS.update({
+    "logic.firmware": [
+        "firmware",
+        "прошив",
+        "компилятор",
+        "pam-4",
+        "pam4",
+        "четверич",
+        "сигнал",
+    ],
+    "geometry.toroidal": [
+        "тороид",
+        "toroid",
+        "xyzt",
+        "геометрия трубы",
+        "тороидальная геометрия",
+        "резонансный путь",
+    ],
+})
+
 OPS = {
     ast.Add: operator.add,
     ast.Sub: operator.sub,

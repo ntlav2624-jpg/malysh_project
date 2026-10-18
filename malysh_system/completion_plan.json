@@ -5,8 +5,8 @@
   "current": {
     "total": 52,
     "production": 3,
-    "adapted": 21,
-    "discovered": 28
+    "adapted": 24,
+    "discovered": 25
   },
   "runtime_guard": {
     "generation": 5,
@@ -15,11 +15,10 @@
     "active_cycle": null
   },
   "queue": {
-    "pending": 28,
+    "pending": 25,
     "strategies": {
       "analyze_as_composite_workflow": 8,
       "build_api_adapter": 1,
-      "certify_process_adapter": 3,
       "integrate_as_diagnostic": 5,
       "integrate_as_memory_provider": 2,
       "integrate_as_observer": 3,
@@ -35,32 +34,7 @@
     "stale_queue_entries": []
   },
   "phases": {
-    "phase_1_organs": [
-      {
-        "id": "core::malysh_firmware_compiler.py",
-        "path": "core/malysh_firmware_compiler.py",
-        "role": "organ",
-        "category": "logic.firmware",
-        "strategy": "certify_process_adapter",
-        "priority": 180
-      },
-      {
-        "id": "core::malysh_toroidal_geometry.py",
-        "path": "core/malysh_toroidal_geometry.py",
-        "role": "organ",
-        "category": "geometry.toroidal",
-        "strategy": "certify_process_adapter",
-        "priority": 180
-      },
-      {
-        "id": "malysh.py",
-        "path": "malysh.py",
-        "role": "support",
-        "category": "unclassified",
-        "strategy": "certify_process_adapter",
-        "priority": 20
-      }
-    ],
+    "phase_1_organs": [],
     "phase_2_api": [
       {
         "id": "malysh_engine.py",

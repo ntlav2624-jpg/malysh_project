@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "system": "Malysh Integration Queue",
-  "total_pending": 28,
+  "total_pending": 25,
   "strategies": {
-    "certify_process_adapter": 3,
+    "certify_process_adapter": 0,
     "build_api_adapter": 1,
     "integrate_as_observer": 3,
     "analyze_as_composite_workflow": 8,
@@ -13,42 +13,6 @@
     "integrate_as_memory_provider": 2
   },
   "queue": [
-    {
-      "id": "core::malysh_firmware_compiler.py",
-      "path": "core/malysh_firmware_compiler.py",
-      "category": "logic.firmware",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 180,
-      "has_main": true,
-      "classes": [
-        "FirmwareCompiler"
-      ],
-      "functions": [
-        "__init__",
-        "compile_firmware",
-        "decode_signal"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "core::malysh_toroidal_geometry.py",
-      "path": "core/malysh_toroidal_geometry.py",
-      "category": "geometry.toroidal",
-      "role": "organ",
-      "strategy": "certify_process_adapter",
-      "priority": 180,
-      "has_main": true,
-      "classes": [
-        "ToroidalTubeGeometry"
-      ],
-      "functions": [
-        "__init__",
-        "compute_geometry",
-        "decode_signal"
-      ],
-      "status": "pending"
-    },
     {
       "id": "malysh_engine.py",
       "path": "malysh_engine.py",
@@ -320,18 +284,6 @@
         "generate_hexagon_vertices",
         "generate_pentagon_vertices"
       ],
-      "status": "pending"
-    },
-    {
-      "id": "malysh.py",
-      "path": "malysh.py",
-      "category": "unclassified",
-      "role": "support",
-      "strategy": "certify_process_adapter",
-      "priority": 20,
-      "has_main": true,
-      "classes": [],
-      "functions": [],
       "status": "pending"
     },
     {

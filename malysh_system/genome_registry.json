@@ -4,8 +4,8 @@
   "summary": {
     "total": 52,
     "production": 3,
-    "adapted": 21,
-    "discovered": 28,
+    "adapted": 24,
+    "discovered": 25,
     "broken": 0
   },
   "modules": [
@@ -97,8 +97,8 @@
       "path": "core/malysh_firmware_compiler.py",
       "category": "logic.firmware",
       "role": "organ",
-      "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "execution_policy": "process_adapter",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -111,7 +111,8 @@
       ],
       "imports": [
         "json"
-      ]
+      ],
+      "adapter_id": "firmware_compiler"
     },
     {
       "id": "core::malysh_master_engine.py",
@@ -155,8 +156,8 @@
       "path": "core/malysh_toroidal_geometry.py",
       "category": "geometry.toroidal",
       "role": "organ",
-      "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "execution_policy": "process_adapter",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [
@@ -170,7 +171,8 @@
       "imports": [
         "json",
         "math"
-      ]
+      ],
+      "adapter_id": "toroidal_geometry"
     },
     {
       "id": "deep_history.py",
@@ -264,9 +266,9 @@
       "id": "malysh.py",
       "path": "malysh.py",
       "category": "unclassified",
-      "role": "support",
-      "execution_policy": "process_candidate",
-      "integration": "discovered",
+      "role": "nervous_system",
+      "execution_policy": "infrastructure",
+      "integration": "adapted",
       "syntax_ok": true,
       "has_main": true,
       "classes": [],

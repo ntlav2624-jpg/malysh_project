@@ -4,6 +4,36 @@
   "default_timeout_seconds": 30,
   "adapters": [
     {
+      "id": "firmware_compiler",
+      "name": "Malysh Firmware Compiler",
+      "path": "malysh_system/adapters/firmware_entry.py",
+      "category": "logic.firmware",
+      "capabilities": [
+        "firmware",
+        "quaternary_logic",
+        "pam4",
+        "signal_decode"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 82
+    },
+    {
+      "id": "toroidal_geometry",
+      "name": "Malysh Toroidal Geometry",
+      "path": "malysh_system/adapters/toroidal_entry.py",
+      "category": "geometry.toroidal",
+      "capabilities": [
+        "toroidal_geometry",
+        "xyzt",
+        "tube_geometry",
+        "resonance_path"
+      ],
+      "certified": true,
+      "production_enabled": false,
+      "priority": 81
+    },
+    {
       "id": "chaos_handler",
       "name": "Chaos and Uncertainty Handler",
       "path": "malysh_chaos.py",
