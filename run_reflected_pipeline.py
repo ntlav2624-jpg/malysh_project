@@ -1,5 +1,7 @@
 import math
 
+from n7_interface import classify_n7_interface
+
 class MalyshResonanceEngine:
     def __init__(self, R6=12.0, R5=4.5, theta_0=0.0, a=0.05, k=0.08):
         self.R6 = R6
@@ -40,41 +42,64 @@ class MalyshResonanceEngine:
                 return False
         return True
 
-    def generate_bounded_trajectory(self, phi_0=0.0, d_phi=0.05, n_max=300):
-        """Генерирует спираль с отражением от стенки шестиугольника"""
-        v6 = self.generate_hexagon_vertices()
-        v5 = self.generate_pentagon_vertices()
-        
+    def generate_bounded_trajectory(
+        self,
+        phi_0=0.0,
+        d_phi=0.05,
+        n_max=300,
+        interface_tolerance=None,
+    ):
+        """
+        Генерирует отражённую траекторию.
+
+        N7 является интерфейсом R5 <-> R6,
+        а не внутренней областью R5.
+        """
+        vertices_6 = self.generate_hexagon_vertices()
+        vertices_5 = self.generate_pentagon_vertices()
+
         trajectory = []
-        n7_nodes = []
-        
-        x, y = 0.0, 0.0
-        vx, vy = math.cos(phi_0), math.sin(phi_0)
-        
+
         for n in range(n_max + 1):
             phi_n = phi_0 + n * d_phi
-            r_n = self.a * math.exp(self.k * phi_n)
-            
-            # Базовая точка спирали
-            xn = r_n * math.cos(phi_n)
-            yn = r_n * math.sin(phi_n)
-            
-            # Проверка на выход за шестиугольник (стенку)
-            if not self._is_inside_polygon((xn, yn), v6):
-                # Эффект отражения: инвертируем вектор и смещаем внутрь к центру
+            radius = self.a * math.exp(
+                self.k * phi_n
+            )
+
+            xn = radius * math.cos(phi_n)
+            yn = radius * math.sin(phi_n)
+
+            if not self._is_inside_polygon(
+                (xn, yn),
+                vertices_6,
+            ):
                 xn *= 0.85
                 yn *= 0.85
-            
-            trajectory.append((n, (xn, yn)))
-            
-            # Проверка попадания во внутренний пятиугольник (N7)
-            if self._is_inside_polygon((xn, yn), v5):
-                n7_nodes.append(n)
-                
+
+            trajectory.append(
+                (n, (xn, yn))
+            )
+
+        interface = classify_n7_interface(
+            trajectory=trajectory,
+            vertices_5=vertices_5,
+            vertices_6=vertices_6,
+            tolerance=interface_tolerance,
+        )
+
         return {
-            "n7_indices": n7_nodes,
-            "trajectory": trajectory
+            "n7_indices": interface["indices"],
+            "n7_nodes": interface["nodes"],
+            "n7_mode": interface["mode"],
+            "n7_tolerance": interface["tolerance"],
+            "n7_minimum_score": (
+                interface["minimum_score"]
+            ),
+            "n7_forward": interface["forward"],
+            "n7_reverse": interface["reverse"],
+            "trajectory": trajectory,
         }
+
 
 class MalyshDataPipeline:
     def __init__(self, n7_nodes, trajectory):

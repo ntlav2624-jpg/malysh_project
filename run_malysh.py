@@ -1,5 +1,7 @@
 import math
 
+from n7_interface import classify_n7_interface
+
 class MalyshResonanceEngine:
     def __init__(self, R6=10.0, R5=5.0, theta_0=0.0, a=0.1, k=0.05):
         self.R6 = R6
@@ -50,25 +52,59 @@ class MalyshResonanceEngine:
             trajectory.append((xn, yn))
         return trajectory
 
-    def compute_n7_nodes(self, phi_0=0.0, d_phi=0.1, n_max=300):
-        v6 = self.generate_hexagon_vertices()
-        v5 = self.generate_pentagon_vertices()
-        spiral = self.generate_spiral_trajectory(phi_0, d_phi, n_max)
+    def compute_n7_nodes(
+        self,
+        phi_0=0.0,
+        d_phi=0.1,
+        n_max=300,
+        interface_tolerance=None,
+    ):
+        """
+        Вычисляет N7 как интерфейс R5 <-> R6.
 
-        n7_nodes = []
-        valid_points = []
+        R5 является пятиугольной структурой.
+        R6 является шестиугольной структурой.
+        N7 является оператором перехода.
+        """
+        vertices_6 = self.generate_hexagon_vertices()
+        vertices_5 = self.generate_pentagon_vertices()
 
-        for n, pt in enumerate(spiral):
-            if self._is_inside_polygon(pt, v6):
-                valid_points.append((n, pt))
-                if self._is_inside_polygon(pt, v5):
-                    n7_nodes.append(n)
+        spiral = self.generate_spiral_trajectory(
+            phi_0,
+            d_phi,
+            n_max,
+        )
+
+        valid_points = [
+            (index, point)
+            for index, point in enumerate(spiral)
+            if self._is_inside_polygon(
+                point,
+                vertices_6,
+            )
+        ]
+
+        interface = classify_n7_interface(
+            trajectory=valid_points,
+            vertices_5=vertices_5,
+            vertices_6=vertices_6,
+            tolerance=interface_tolerance,
+        )
 
         return {
-            "n7_indices": n7_nodes,
+            "n7_indices": interface["indices"],
+            "n7_nodes": interface["nodes"],
+            "n7_mode": interface["mode"],
+            "n7_tolerance": interface["tolerance"],
+            "n7_minimum_score": (
+                interface["minimum_score"]
+            ),
+            "n7_forward": interface["forward"],
+            "n7_reverse": interface["reverse"],
             "valid_trajectory": valid_points,
-            "total_checked": len(spiral)
+            "total_checked": len(spiral),
         }
+
 
 # --- Инициализация и запуск цикла ---
 engine = MalyshResonanceEngine(R6=12.0, R5=4.5, theta_0=0.5, a=0.05, k=0.08)
