@@ -1,0 +1,134 @@
+{
+  "WITHOUT_CHIRALITY": {
+    "command": {
+      "text": "\nРассчитать состояние №82 по имеющейся исторической памяти.\n\nРаботай как актуальный Малыш, единый организм.\nИспользуй доступные органы, общую память, прежний опыт,\nнаблюдателей, Dual Mind и Human Layer.\n\nНужен итоговый числовой результат:\n\nMAIN: 5 уникальных целых чисел 1..50\nEURO: 2 уникальных целых числа 1..12\n\nПокажи результаты участвующих контуров и векторов.\nНе подменяй вычисление заранее заданным итогом.\n\n\n=== ВЕТВЬ A: БЕЗ ХИРАЛЬНОСТИ ===\n\nХиральность, chirality, chiral, mirror и reflected\nНЕ должны участвовать в формировании этой ветви.\n\nЕсли хиральный контур что-либо обнаружит,\nразрешается показать это только как отдельное наблюдение.\n\ninfluence_on_answer = false\ndecision_authority = false\n\nСформируй окончательный MAIN + EURO без его влияния.\n",
+      "command_id": "cdc40f297c1b4988ab61641fcb5be8d7",
+      "mode": "all"
+    },
+    "executed": true,
+    "checkpoint": "/data/data/com.termux/files/home/malysh_project/runtime/checkpoints/state_g000001_1792356888.json",
+    "organism_generation": 1,
+    "organism_status": "ready",
+    "selected_organs": 48,
+    "executed_organs": 3,
+    "results": [
+      {
+        "organ": "generation7",
+        "status": "ok",
+        "data": {
+          "name": "Generation 7",
+          "category": "adaptation",
+          "command": [
+            "python",
+            "malysh_master.py"
+          ],
+          "return_code": 0,
+          "duration_seconds": 0.056134,
+          "log": "runtime/organ_logs/cdc40f297c1b4988ab61641fcb5be8d7_generation7.log",
+          "output_tail": "--- Многокритериальный контур 'Малыш' (Поколение Gen 28) активирован ---\n[Инженерный контур - Поколение 7]: Источник data_01.txt\n  └─ Целевая функция (J)       : 2.3771 (Pred: 1.01, Smooth: 5.57, Energy: 1.00)\n  └─ Мета-стабильность (S_n)   : 0.0111\n  └─ Выбранный режим           : ACTIVE_5\n  └─ Адаптивный шаг η          : 0.000052\n  └─ Параметр θ                : 0.99615\n  └─ Резонанс R7               : 0.01000\n  └─ Энергетический пул        : 200.0\n  └─ Усиленный прогноз (+10)   : [43.01, 54.01, 55.71, 50.92, 46.23, 48.09, 59.12, 76.54, 93.87, 104.74]\n[Архив]: Паспорт Поколения 7 зафиксирован.\n[Исполнитель]: Многокритериальный цикл Поколения 7 завершен.\n\n"
+        },
+        "error": null
+      },
+      {
+        "organ": "grand_unified",
+        "status": "ok",
+        "data": {
+          "name": "Grand Unified Core",
+          "category": "engine",
+          "command": [
+            "python",
+            "core/malysh_master_engine.py"
+          ],
+          "return_code": 0,
+          "duration_seconds": 0.087575,
+          "log": "runtime/organ_logs/cdc40f297c1b4988ab61641fcb5be8d7_grand_unified.log",
+          "output_tail": "====================================================================\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\n====================================================================\n   [BOOT] AST Code Topology Evaluator (Theta Omega)    ........ ACTIVE\n   [BOOT] Topological Resonance Core (Entropy/Coherence) ........ ACTIVE\n   [BOOT] Cross-Domain Nature & Market Attractors      ........ ACTIVE\n   [BOOT] AST Mutation & Self-Mod Layer                ........ ACTIVE\n   [BOOT] Multi-Agent Logging & Telemetry              ........ SYNCHRONIZED\n   [BOOT] Q4 Quaternary Firmware (PAM-4)               ........ ONLINE\n   [BOOT] Toroidal XYZT Geometry Matrix                ........ ONLINE\n   [BOOT] Cause & Anti-Cause Diagnostic Ring           ........ MONITORING\n   [BOOT] Transition Matrix & Tube Memory              ........ LOADED\n   [BOOT] Main Tube (5/50) & Euro Tube (2/12)          ........ CALIBRATED\n   [BOOT] Tube Constructor (Zone Balancer)             ........ READY\n====================================================================\n   ⚡ [NATURE-MARKET FIELD] Индекс напряжения : 0.379\n   🌀 [TOPOLOGICAL CORE] Энтропия/Когерентн. : 3.1985 / 0.0\n   🧬 [AST TOPOLOGY] Шеннон кода (код Малыша) : 3.8377\n   🚀 [AST TOPOLOGY] Резонанс кода Theta(Omega): 0.053\n--------------------------------------------------------------------\n\n————————————————————————————————————————————————————————————————————\n   🎯 АБСОЛЮТНЫЙ AST-ПРОГНОЗ МАЛЫША [CODE-DRIVEN SYNTHESIS]\n————————————————————————————————————————————————————————————————————\n   ✨ MAIN TUBE (5 из 50): [7, 8, 15, 24, 32]\n   ✨ EURO TUBE (2 из 12): [3, 11]\n   [STATUS] Структура AST-кода успешно модулирует расчет труб.\n====================================================================\n"
+        },
+        "error": null
+      },
+      {
+        "organ": "navier_resonance",
+        "status": "ok",
+        "data": {
+          "name": "Navier Resonance",
+          "category": "physics.navier",
+          "command": [
+            "python",
+            "run_malysh_all.py"
+          ],
+          "return_code": 0,
+          "duration_seconds": 2.846241,
+          "log": "runtime/organ_logs/cdc40f297c1b4988ab61641fcb5be8d7_navier_resonance.log",
+          "output_tail": "Инициализация единого модуля Малыш...\nГотово! График сохранен в файл: navier_stokes_solution.png\n"
+        },
+        "error": null
+      }
+    ]
+  },
+  "WITH_CHIRALITY": {
+    "command": {
+      "text": "\nРассчитать состояние №82 по имеющейся исторической памяти.\n\nРаботай как актуальный Малыш, единый организм.\nИспользуй доступные органы, общую память, прежний опыт,\nнаблюдателей, Dual Mind и Human Layer.\n\nНужен итоговый числовой результат:\n\nMAIN: 5 уникальных целых чисел 1..50\nEURO: 2 уникальных целых числа 1..12\n\nПокажи результаты участвующих контуров и векторов.\nНе подменяй вычисление заранее заданным итогом.\n\n\n=== ВЕТВЬ B: С ХИРАЛЬНОСТЬЮ ===\n\nИспользуй штатные доступные хиральные, chirality/chiral,\nmirror/reflected контуры вместе с остальными механизмами.\n\nХиральный результат показать отдельно.\nЕго вклад разрешено учитывать в итоговом выборе.\n\nСформируй окончательный MAIN + EURO.\n",
+      "command_id": "c880d0f09f0844cd9233c65d5a2add08",
+      "mode": "all"
+    },
+    "executed": true,
+    "checkpoint": "/data/data/com.termux/files/home/malysh_project/runtime/checkpoints/state_g000001_1792356892.json",
+    "organism_generation": 1,
+    "organism_status": "ready",
+    "selected_organs": 48,
+    "executed_organs": 3,
+    "results": [
+      {
+        "organ": "generation7",
+        "status": "ok",
+        "data": {
+          "name": "Generation 7",
+          "category": "adaptation",
+          "command": [
+            "python",
+            "malysh_master.py"
+          ],
+          "return_code": 0,
+          "duration_seconds": 0.087275,
+          "log": "runtime/organ_logs/c880d0f09f0844cd9233c65d5a2add08_generation7.log",
+          "output_tail": "--- Многокритериальный контур 'Малыш' (Поколение Gen 29) активирован ---\n[Инженерный контур - Поколение 7]: Источник data_01.txt\n  └─ Целевая функция (J)       : 2.3754 (Pred: 1.01, Smooth: 5.57, Energy: 1.00)\n  └─ Мета-стабильность (S_n)   : 0.0014\n  └─ Выбранный режим           : ACTIVE_5\n  └─ Адаптивный шаг η          : 0.000052\n  └─ Параметр θ                : 0.99602\n  └─ Резонанс R7               : 0.01000\n  └─ Энергетический пул        : 200.0\n  └─ Усиленный прогноз (+10)   : [43.01, 54.01, 55.71, 50.92, 46.23, 48.11, 59.13, 76.54, 93.86, 104.72]\n[Архив]: Паспорт Поколения 7 зафиксирован.\n[Исполнитель]: Многокритериальный цикл Поколения 7 завершен.\n\n"
+        },
+        "error": null
+      },
+      {
+        "organ": "grand_unified",
+        "status": "ok",
+        "data": {
+          "name": "Grand Unified Core",
+          "category": "engine",
+          "command": [
+            "python",
+            "core/malysh_master_engine.py"
+          ],
+          "return_code": 0,
+          "duration_seconds": 0.134404,
+          "log": "runtime/organ_logs/c880d0f09f0844cd9233c65d5a2add08_grand_unified.log",
+          "output_tail": "====================================================================\n   🌌 МАЛЫШ: GRAND UNIFIED CORE [AST + TOPOLOGICAL RESONANCE]\n====================================================================\n   [BOOT] AST Code Topology Evaluator (Theta Omega)    ........ ACTIVE\n   [BOOT] Topological Resonance Core (Entropy/Coherence) ........ ACTIVE\n   [BOOT] Cross-Domain Nature & Market Attractors      ........ ACTIVE\n   [BOOT] AST Mutation & Self-Mod Layer                ........ ACTIVE\n   [BOOT] Multi-Agent Logging & Telemetry              ........ SYNCHRONIZED\n   [BOOT] Q4 Quaternary Firmware (PAM-4)               ........ ONLINE\n   [BOOT] Toroidal XYZT Geometry Matrix                ........ ONLINE\n   [BOOT] Cause & Anti-Cause Diagnostic Ring           ........ MONITORING\n   [BOOT] Transition Matrix & Tube Memory              ........ LOADED\n   [BOOT] Main Tube (5/50) & Euro Tube (2/12)          ........ CALIBRATED\n   [BOOT] Tube Constructor (Zone Balancer)             ........ READY\n====================================================================\n   ⚡ [NATURE-MARKET FIELD] Индекс напряжения : 0.379\n   🌀 [TOPOLOGICAL CORE] Энтропия/Когерентн. : 3.1985 / 0.0\n   🧬 [AST TOPOLOGY] Шеннон кода (код Малыша) : 3.8377\n   🚀 [AST TOPOLOGY] Резонанс кода Theta(Omega): 0.053\n--------------------------------------------------------------------\n\n————————————————————————————————————————————————————————————————————\n   🎯 АБСОЛЮТНЫЙ AST-ПРОГНОЗ МАЛЫША [CODE-DRIVEN SYNTHESIS]\n————————————————————————————————————————————————————————————————————\n   ✨ MAIN TUBE (5 из 50): [7, 8, 15, 24, 32]\n   ✨ EURO TUBE (2 из 12): [3, 11]\n   [STATUS] Структура AST-кода успешно модулирует расчет труб.\n====================================================================\n"
+        },
+        "error": null
+      },
+      {
+        "organ": "navier_resonance",
+        "status": "ok",
+        "data": {
+          "name": "Navier Resonance",
+          "category": "physics.navier",
+          "command": [
+            "python",
+            "run_malysh_all.py"
+          ],
+          "return_code": 0,
+          "duration_seconds": 2.893005,
+          "log": "runtime/organ_logs/c880d0f09f0844cd9233c65d5a2add08_navier_resonance.log",
+          "output_tail": "Инициализация единого модуля Малыш...\nГотово! График сохранен в файл: navier_stokes_solution.png\n"
+        },
+        "error": null
+      }
+    ]
+  }
+}

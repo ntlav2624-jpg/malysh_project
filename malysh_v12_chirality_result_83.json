@@ -1,0 +1,4048 @@
+{
+  "target_state": 83,
+  "historical_states": 82,
+  "total_values": 574,
+  "vectors": [
+    {
+      "id": 1,
+      "name": "V1  EWMA Frequency",
+      "source": {
+        "main": [
+          38,
+          12,
+          45,
+          5,
+          17
+        ],
+        "euro": [
+          2,
+          4
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          7,
+          13,
+          15,
+          25,
+          31
+        ],
+        "euro": [
+          5,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 38,
+            "output": 31,
+            "final_state": 2.4000255421074508e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 12,
+            "output": 15,
+            "final_state": 7.580798985444046e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 45,
+            "output": 25,
+            "final_state": 2.8420878307590468e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 2,
+            "output": 9,
+            "final_state": 1.2656234332784932e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 4,
+            "output": 5,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          15,
+          16,
+          36,
+          37,
+          50
+        ],
+        "euro": [
+          7,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 38,
+            "output": 37,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 12,
+            "output": 15,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 45,
+            "output": 16,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 2,
+            "output": 7,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 4,
+            "output": 9,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          16,
+          36,
+          37,
+          50
+        ],
+        "removed": [
+          7,
+          13,
+          25,
+          31
+        ],
+        "common": [
+          15
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "V2  Кластерный резонанс",
+      "source": {
+        "main": [
+          33,
+          34,
+          5,
+          4,
+          46
+        ],
+        "euro": [
+          3,
+          5
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          5,
+          7,
+          9,
+          27,
+          45
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 33,
+            "output": 5,
+            "final_state": 2.084266764499168e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 34,
+            "output": 45,
+            "final_state": 2.147418520020824e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 4,
+            "output": 27,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 46,
+            "output": 9,
+            "final_state": 2.9052395862806942e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 3,
+            "output": 1,
+            "final_state": 1.8971409884950508e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 1,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          2,
+          13,
+          36,
+          39,
+          49
+        ],
+        "euro": [
+          8,
+          10
+        ],
+        "main_diagnostics": [
+          {
+            "input": 33,
+            "output": 2,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 34,
+            "output": 49,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 4,
+            "output": 39,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 46,
+            "output": 13,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 3,
+            "output": 8,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          2,
+          13,
+          36,
+          39,
+          49
+        ],
+        "removed": [
+          5,
+          7,
+          9,
+          27,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 3,
+      "name": "V3  Модульная гармоника",
+      "source": {
+        "main": [
+          17,
+          4,
+          25,
+          45,
+          5
+        ],
+        "euro": [
+          4,
+          6
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          7,
+          13,
+          25,
+          27,
+          29
+        ],
+        "euro": [
+          5,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 4,
+            "output": 27,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 25,
+            "output": 29,
+            "final_state": 1.5790527203259244e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 45,
+            "output": 25,
+            "final_state": 2.8420878307590468e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 4,
+            "output": 5,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 6,
+            "output": 9,
+            "final_state": 3.791693654144715e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          16,
+          26,
+          36,
+          39,
+          50
+        ],
+        "euro": [
+          9,
+          11
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 4,
+            "output": 39,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 25,
+            "output": 26,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 45,
+            "output": 16,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 4,
+            "output": 9,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 6,
+            "output": 11,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          16,
+          26,
+          36,
+          39,
+          50
+        ],
+        "removed": [
+          7,
+          13,
+          25,
+          27,
+          29
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 4,
+      "name": "V4  Interval Acceleration",
+      "source": {
+        "main": [
+          18,
+          20,
+          19,
+          2,
+          16
+        ],
+        "euro": [
+          5,
+          7
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          19,
+          20,
+          21,
+          27,
+          45
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 18,
+            "output": 27,
+            "final_state": 1.136990431674339e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 20,
+            "output": 19,
+            "final_state": 1.263293942717648e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 19,
+            "output": 45,
+            "final_state": 1.200142187195994e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 2,
+            "output": 19,
+            "final_state": 1.2656234332784932e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 16,
+            "output": 21,
+            "final_state": 1.0106869206310278e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 5,
+            "output": 1,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 7,
+            "output": 1,
+            "final_state": 4.423211209361273e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          3,
+          41,
+          44,
+          45,
+          47
+        ],
+        "euro": [
+          10,
+          12
+        ],
+        "main_diagnostics": [
+          {
+            "input": 18,
+            "output": 47,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 20,
+            "output": 41,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 19,
+            "output": 44,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 2,
+            "output": 45,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 16,
+            "output": 3,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 5,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 7,
+            "output": 12,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          3,
+          41,
+          44,
+          47
+        ],
+        "removed": [
+          19,
+          20,
+          21,
+          27
+        ],
+        "common": [
+          45
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "V5  Markov Transitions",
+      "source": {
+        "main": [
+          47,
+          21,
+          17,
+          39,
+          45
+        ],
+        "euro": [
+          6,
+          8
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          1,
+          13,
+          25,
+          27,
+          45
+        ],
+        "euro": [
+          9,
+          10
+        ],
+        "main_diagnostics": [
+          {
+            "input": 47,
+            "output": 45,
+            "final_state": 2.9683913418023507e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 21,
+            "output": 1,
+            "final_state": 1.3264456982393051e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 39,
+            "output": 27,
+            "final_state": 2.4631772976291052e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 45,
+            "output": 25,
+            "final_state": 2.8420878307590468e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 6,
+            "output": 9,
+            "final_state": 3.791693654144715e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 8,
+            "output": 9,
+            "final_state": 5.054728764577817e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          10,
+          16,
+          34,
+          38,
+          50
+        ],
+        "euro": [
+          1,
+          11
+        ],
+        "main_diagnostics": [
+          {
+            "input": 47,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 21,
+            "output": 38,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 39,
+            "output": 34,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 45,
+            "output": 16,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 6,
+            "output": 11,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 8,
+            "output": 1,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          10,
+          16,
+          34,
+          38,
+          50
+        ],
+        "removed": [
+          1,
+          13,
+          25,
+          27,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 6,
+      "name": "V6  Пространственная матрица",
+      "source": {
+        "main": [
+          17,
+          30,
+          16,
+          37,
+          34
+        ],
+        "euro": [
+          7,
+          9
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          9,
+          13,
+          21,
+          33,
+          45
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 30,
+            "output": 33,
+            "final_state": 1.894811497934202e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 16,
+            "output": 21,
+            "final_state": 1.0106869206310278e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 37,
+            "output": 9,
+            "final_state": 2.336873786585792e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 34,
+            "output": 45,
+            "final_state": 2.147418520020824e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 7,
+            "output": 1,
+            "final_state": 4.423211209361273e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 9,
+            "output": 1,
+            "final_state": 5.686246319794391e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          3,
+          11,
+          40,
+          49,
+          50
+        ],
+        "euro": [
+          2,
+          12
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 30,
+            "output": 11,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 16,
+            "output": 3,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 37,
+            "output": 40,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 34,
+            "output": 49,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 7,
+            "output": 12,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 9,
+            "output": 2,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          3,
+          11,
+          40,
+          49,
+          50
+        ],
+        "removed": [
+          9,
+          13,
+          21,
+          33,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 7,
+      "name": "V7  Кватернарная логика",
+      "source": {
+        "main": [
+          17,
+          5,
+          25,
+          45,
+          4
+        ],
+        "euro": [
+          8,
+          10
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          7,
+          13,
+          25,
+          27,
+          29
+        ],
+        "euro": [
+          9,
+          10
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 25,
+            "output": 29,
+            "final_state": 1.5790527203259244e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 45,
+            "output": 25,
+            "final_state": 2.8420878307590468e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 4,
+            "output": 27,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 8,
+            "output": 9,
+            "final_state": 5.054728764577817e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 10,
+            "output": 9,
+            "final_state": 6.317763875010935e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          16,
+          26,
+          36,
+          39,
+          50
+        ],
+        "euro": [
+          1,
+          3
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 25,
+            "output": 26,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 45,
+            "output": 16,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 4,
+            "output": 39,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 8,
+            "output": 1,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 10,
+            "output": 3,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          16,
+          26,
+          36,
+          39,
+          50
+        ],
+        "removed": [
+          7,
+          13,
+          25,
+          27,
+          29
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 8,
+      "name": "V8  Простые числа",
+      "source": {
+        "main": [
+          17,
+          43,
+          37,
+          47,
+          23
+        ],
+        "euro": [
+          9,
+          11
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          9,
+          13,
+          14,
+          15,
+          45
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 43,
+            "output": 13,
+            "final_state": 2.715784319715723e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 37,
+            "output": 9,
+            "final_state": 2.336873786585792e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 47,
+            "output": 45,
+            "final_state": 2.9683913418023507e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 23,
+            "output": 15,
+            "final_state": 1.4527492092826147e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 9,
+            "output": 1,
+            "final_state": 5.686246319794391e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 11,
+            "output": 1,
+            "final_state": 6.949281430227501e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          10,
+          22,
+          32,
+          40,
+          50
+        ],
+        "euro": [
+          2,
+          4
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 43,
+            "output": 22,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 37,
+            "output": 40,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 47,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 23,
+            "output": 32,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 9,
+            "output": 2,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 11,
+            "output": 4,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          10,
+          22,
+          32,
+          40,
+          50
+        ],
+        "removed": [
+          9,
+          13,
+          14,
+          15,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 9,
+      "name": "V9  Series Momentum",
+      "source": {
+        "main": [
+          17,
+          35,
+          5,
+          34,
+          25
+        ],
+        "euro": [
+          10,
+          12
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          7,
+          13,
+          19,
+          29,
+          45
+        ],
+        "euro": [
+          1,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 35,
+            "output": 19,
+            "final_state": 2.2105702755424825e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 34,
+            "output": 45,
+            "final_state": 2.147418520020824e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 25,
+            "output": 29,
+            "final_state": 1.5790527203259244e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 10,
+            "output": 9,
+            "final_state": 6.317763875010935e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 12,
+            "output": 1,
+            "final_state": 7.580798985444046e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          26,
+          36,
+          46,
+          49,
+          50
+        ],
+        "euro": [
+          3,
+          5
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 35,
+            "output": 46,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 34,
+            "output": 49,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 25,
+            "output": 26,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 10,
+            "output": 3,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 12,
+            "output": 5,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          26,
+          36,
+          46,
+          49,
+          50
+        ],
+        "removed": [
+          7,
+          13,
+          19,
+          29,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 10,
+      "name": "V10 Anti-Cause",
+      "source": {
+        "main": [
+          44,
+          8,
+          1,
+          13,
+          3
+        ],
+        "euro": [
+          11,
+          1
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          31,
+          32,
+          37,
+          45,
+          49
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 44,
+            "output": 31,
+            "final_state": 2.7789360752373827e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 8,
+            "output": 45,
+            "final_state": 5.054728764577817e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 1,
+            "output": 37,
+            "final_state": 6.341058780619395e+83,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 13,
+            "output": 31,
+            "final_state": 8.212316540660601e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 3,
+            "output": 49,
+            "final_state": 1.8971409884950508e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 11,
+            "output": 1,
+            "final_state": 6.949281430227501e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 1,
+            "output": 1,
+            "final_state": 6.341058780619395e+83,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          12,
+          19,
+          27,
+          42,
+          48
+        ],
+        "euro": [
+          4,
+          6
+        ],
+        "main_diagnostics": [
+          {
+            "input": 44,
+            "output": 19,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 8,
+            "output": 27,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 1,
+            "output": 48,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 13,
+            "output": 12,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 3,
+            "output": 42,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 11,
+            "output": 4,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 1,
+            "output": 6,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          12,
+          19,
+          27,
+          42,
+          48
+        ],
+        "removed": [
+          31,
+          32,
+          37,
+          45,
+          49
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 11,
+      "name": "V11 Геометрия трубы",
+      "source": {
+        "main": [
+          17,
+          50,
+          39,
+          21,
+          1
+        ],
+        "euro": [
+          12,
+          2
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          1,
+          5,
+          13,
+          27,
+          37
+        ],
+        "euro": [
+          1,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 50,
+            "output": 5,
+            "final_state": 3.1578466083673194e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 39,
+            "output": 27,
+            "final_state": 2.4631772976291052e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 21,
+            "output": 1,
+            "final_state": 1.3264456982393051e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 1,
+            "output": 37,
+            "final_state": 6.341058780619395e+83,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 12,
+            "output": 1,
+            "final_state": 7.580798985444046e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 2,
+            "output": 9,
+            "final_state": 1.2656234332784932e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          1,
+          34,
+          38,
+          48,
+          50
+        ],
+        "euro": [
+          5,
+          7
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 50,
+            "output": 1,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 39,
+            "output": 34,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 21,
+            "output": 38,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 1,
+            "output": 48,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 12,
+            "output": 5,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 2,
+            "output": 7,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          34,
+          38,
+          48,
+          50
+        ],
+        "removed": [
+          5,
+          13,
+          27,
+          37
+        ],
+        "common": [
+          1
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "V12 Similarity Matching",
+      "source": {
+        "main": [
+          17,
+          37,
+          33,
+          43,
+          47
+        ],
+        "euro": [
+          1,
+          3
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          5,
+          9,
+          13,
+          14,
+          45
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 37,
+            "output": 9,
+            "final_state": 2.336873786585792e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 33,
+            "output": 5,
+            "final_state": 2.084266764499168e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 43,
+            "output": 13,
+            "final_state": 2.715784319715723e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 47,
+            "output": 45,
+            "final_state": 2.9683913418023507e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 1,
+            "output": 1,
+            "final_state": 6.341058780619395e+83,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 3,
+            "output": 1,
+            "final_state": 1.8971409884950508e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          2,
+          10,
+          22,
+          40,
+          50
+        ],
+        "euro": [
+          6,
+          8
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 37,
+            "output": 40,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 33,
+            "output": 2,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 43,
+            "output": 22,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 47,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 1,
+            "output": 6,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 3,
+            "output": 8,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          2,
+          10,
+          22,
+          40,
+          50
+        ],
+        "removed": [
+          5,
+          9,
+          13,
+          14,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 13,
+      "name": "V13 Causal Recovery",
+      "source": {
+        "main": [
+          17,
+          37,
+          23,
+          47,
+          16
+        ],
+        "euro": [
+          2,
+          4
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          9,
+          13,
+          15,
+          21,
+          45
+        ],
+        "euro": [
+          5,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 37,
+            "output": 9,
+            "final_state": 2.336873786585792e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 23,
+            "output": 15,
+            "final_state": 1.4527492092826147e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 47,
+            "output": 45,
+            "final_state": 2.9683913418023507e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 16,
+            "output": 21,
+            "final_state": 1.0106869206310278e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 2,
+            "output": 9,
+            "final_state": 1.2656234332784932e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 4,
+            "output": 5,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          3,
+          10,
+          32,
+          40,
+          50
+        ],
+        "euro": [
+          7,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 37,
+            "output": 40,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 23,
+            "output": 32,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 47,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 16,
+            "output": 3,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 2,
+            "output": 7,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 4,
+            "output": 9,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          3,
+          10,
+          32,
+          40,
+          50
+        ],
+        "removed": [
+          9,
+          13,
+          15,
+          21,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 14,
+      "name": "V14 Энтропийный хаос",
+      "source": {
+        "main": [
+          17,
+          35,
+          6,
+          45,
+          34
+        ],
+        "euro": [
+          3,
+          5
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          9,
+          13,
+          19,
+          25,
+          45
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 35,
+            "output": 19,
+            "final_state": 2.2105702755424825e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 6,
+            "output": 9,
+            "final_state": 3.791693654144715e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 45,
+            "output": 25,
+            "final_state": 2.8420878307590468e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 34,
+            "output": 45,
+            "final_state": 2.147418520020824e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 3,
+            "output": 1,
+            "final_state": 1.8971409884950508e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 1,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          16,
+          33,
+          46,
+          49,
+          50
+        ],
+        "euro": [
+          8,
+          10
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 35,
+            "output": 46,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 6,
+            "output": 33,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 45,
+            "output": 16,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 34,
+            "output": 49,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 3,
+            "output": 8,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          16,
+          33,
+          46,
+          49,
+          50
+        ],
+        "removed": [
+          9,
+          13,
+          19,
+          25,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 15,
+      "name": "V15 Historical Accuracy",
+      "source": {
+        "main": [
+          17,
+          37,
+          47,
+          23,
+          43
+        ],
+        "euro": [
+          4,
+          6
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          9,
+          13,
+          14,
+          15,
+          45
+        ],
+        "euro": [
+          5,
+          9
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 37,
+            "output": 9,
+            "final_state": 2.336873786585792e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 47,
+            "output": 45,
+            "final_state": 2.9683913418023507e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 23,
+            "output": 15,
+            "final_state": 1.4527492092826147e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 43,
+            "output": 13,
+            "final_state": 2.715784319715723e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 4,
+            "output": 5,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 6,
+            "output": 9,
+            "final_state": 3.791693654144715e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          10,
+          22,
+          32,
+          40,
+          50
+        ],
+        "euro": [
+          9,
+          11
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 37,
+            "output": 40,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 47,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 23,
+            "output": 32,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 43,
+            "output": 22,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 4,
+            "output": 9,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 6,
+            "output": 11,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          10,
+          22,
+          32,
+          40,
+          50
+        ],
+        "removed": [
+          9,
+          13,
+          14,
+          15,
+          45
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 16,
+      "name": "V16 Node Survival Index",
+      "source": {
+        "main": [
+          17,
+          35,
+          25,
+          45,
+          5
+        ],
+        "euro": [
+          5,
+          7
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          7,
+          13,
+          19,
+          25,
+          29
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 35,
+            "output": 19,
+            "final_state": 2.2105702755424825e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 25,
+            "output": 29,
+            "final_state": 1.5790527203259244e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 45,
+            "output": 25,
+            "final_state": 2.8420878307590468e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 5,
+            "output": 1,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 7,
+            "output": 1,
+            "final_state": 4.423211209361273e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          16,
+          26,
+          36,
+          46,
+          50
+        ],
+        "euro": [
+          10,
+          12
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 35,
+            "output": 46,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 25,
+            "output": 26,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 45,
+            "output": 16,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 5,
+            "output": 10,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 7,
+            "output": 12,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          16,
+          26,
+          36,
+          46,
+          50
+        ],
+        "removed": [
+          7,
+          13,
+          19,
+          25,
+          29
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 17,
+      "name": "V17 Full Tube Drift",
+      "source": {
+        "main": [
+          4,
+          17,
+          35,
+          5,
+          6
+        ],
+        "euro": [
+          6,
+          8
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          7,
+          9,
+          13,
+          19,
+          27
+        ],
+        "euro": [
+          9,
+          10
+        ],
+        "main_diagnostics": [
+          {
+            "input": 4,
+            "output": 27,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 35,
+            "output": 19,
+            "final_state": 2.2105702755424825e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 6,
+            "output": 9,
+            "final_state": 3.791693654144715e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 6,
+            "output": 9,
+            "final_state": 3.791693654144715e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 8,
+            "output": 9,
+            "final_state": 5.054728764577817e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          33,
+          36,
+          39,
+          46,
+          50
+        ],
+        "euro": [
+          1,
+          11
+        ],
+        "main_diagnostics": [
+          {
+            "input": 4,
+            "output": 39,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 35,
+            "output": 46,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 6,
+            "output": 33,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 6,
+            "output": 11,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 8,
+            "output": 1,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          33,
+          36,
+          39,
+          46,
+          50
+        ],
+        "removed": [
+          7,
+          9,
+          13,
+          19,
+          27
+        ],
+        "common": []
+      }
+    },
+    {
+      "id": 18,
+      "name": "V18 Camp Accuracy",
+      "source": {
+        "main": [
+          17,
+          5,
+          25,
+          43,
+          4
+        ],
+        "euro": [
+          7,
+          9
+        ]
+      },
+      "without_chirality": {
+        "main": [
+          7,
+          13,
+          14,
+          27,
+          29
+        ],
+        "euro": [
+          1,
+          2
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 13,
+            "final_state": 1.0738386761526832e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 5,
+            "output": 7,
+            "final_state": 3.160176098928158e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 25,
+            "output": 29,
+            "final_state": 1.5790527203259244e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 43,
+            "output": 13,
+            "final_state": 2.715784319715723e+85,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 4,
+            "output": 27,
+            "final_state": 2.528658543711606e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 7,
+            "output": 1,
+            "final_state": 4.423211209361273e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          },
+          {
+            "input": 9,
+            "output": 1,
+            "final_state": 5.686246319794391e+84,
+            "mode": "RESONANCE_O7",
+            "step": 400,
+            "point": [
+              0.1010621841987871,
+              0.2260923714275734
+            ]
+          }
+        ]
+      },
+      "with_chirality": {
+        "main": [
+          22,
+          26,
+          36,
+          39,
+          50
+        ],
+        "euro": [
+          2,
+          12
+        ],
+        "main_diagnostics": [
+          {
+            "input": 17,
+            "output": 50,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 5,
+            "output": 36,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 25,
+            "output": 26,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 43,
+            "output": 22,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 4,
+            "output": 39,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ],
+        "euro_diagnostics": [
+          {
+            "input": 7,
+            "output": 12,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          },
+          {
+            "input": 9,
+            "output": 2,
+            "final_state": 1000.0,
+            "mode": "RESONANCE_O7",
+            "step": 350,
+            "point": [
+              0.0501666284975173,
+              -0.22303989962700632
+            ]
+          }
+        ]
+      },
+      "delta": {
+        "added": [
+          22,
+          26,
+          36,
+          39,
+          50
+        ],
+        "removed": [
+          7,
+          13,
+          14,
+          27,
+          29
+        ],
+        "common": []
+      }
+    }
+  ],
+  "final": {
+    "without_chirality": {
+      "main": [
+        7,
+        9,
+        13,
+        27,
+        45
+      ],
+      "euro": [
+        1,
+        9
+      ]
+    },
+    "with_chirality": {
+      "main": [
+        16,
+        26,
+        36,
+        39,
+        50
+      ],
+      "euro": [
+        9,
+        10
+      ]
+    },
+    "delta": {
+      "added": [
+        16,
+        26,
+        36,
+        39,
+        50
+      ],
+      "removed": [
+        7,
+        9,
+        13,
+        27,
+        45
+      ],
+      "common": []
+    }
+  }
+}
