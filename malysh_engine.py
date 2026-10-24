@@ -164,6 +164,12 @@ class MalyshEngine:
             "mode": mode,
             "predicted_strategy": predicted_strat,
             "applied_strategy": actual_strategy,
+
+            # Backward-compatible aliases used by historical
+            # Malysh diagnostics. Existing fields remain intact.
+            "strategy": actual_strategy,
+            "meta_metric_M": round(S_n, 4),
+
             "signal_class": signal_class,
             "confidence": round(confidence, 5),
             "K_metric": round(K, 4),

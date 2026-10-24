@@ -874,12 +874,16 @@ def render(report, records, history):
         )
 
         for number in ordered:
+            direct_count = direct_zones[zone][number]
+            chiral_count = chiral_zones[zone][number]
+            total = combined[number]
+
             print(
                 f"   {number:2d}: "
-                f"БЕЗ={direct_zones2d} | "
-                f"С={chiral_zones2d} | "
-                f"Σ={combined2d} | "
-                f"{'█' * combined[number]}"
+                f"БЕЗ={direct_count:2d} | "
+                f"С={chiral_count:2d} | "
+                f"Σ={total:2d} | "
+                f"{'█' * total}"
             )
 
     heading(
