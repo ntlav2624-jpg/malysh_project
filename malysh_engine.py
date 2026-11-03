@@ -4,6 +4,11 @@ import os
 from datetime import datetime
 import math
 
+try:
+    from malysh_system.full_reflections import FullReflections
+except Exception:
+    FullReflections = None
+
 class MalyshEngine:
     def __init__(self, vault_dir="memory_vault"):
         self.vault_dir = vault_dir
@@ -11,6 +16,44 @@ class MalyshEngine:
             os.makedirs(self.vault_dir)
         
         self._load_state()
+        self.full_reflections = (
+            FullReflections()
+            if FullReflections is not None
+            else None
+        )
+
+    def attach_reflection_legacy(self, hook):
+        """
+        Attach REAL callable legacy experience
+        such as historical 567/KMBP bridge.
+        """
+        if self.full_reflections is not None:
+            self.full_reflections.legacy_hook = hook
+
+    def run_reflections(self, data, old_result):
+        if self.full_reflections is None:
+            return {
+                "name": "Размышления",
+                "as_before": {
+                    "status": "AS_BEFORE",
+                    "result": old_result,
+                    "preserved": True
+                },
+                "as_now": {
+                    "status": "UNAVAILABLE"
+                }
+            }
+
+        return self.full_reflections.think(
+            data,
+            old_result,
+            unresolved=(
+                "Возможно small-zero, geometry, "
+                "clock/code, history and information "
+                "explain additional structure; "
+                "hypothesis is revisable."
+            )
+        )
 
     def _load_state(self):
         files = sorted(glob.glob(os.path.join(self.vault_dir, "passport_*.json")))
@@ -186,6 +229,11 @@ class MalyshEngine:
             "energy": round(self.energy, 1),
             "forecast_10": [round(x, 2) for x in forecast_10]
         }
+
+        passport["reflections"] = self.run_reflections(
+            data,
+            dict(passport)
+        )
         
         filename = os.path.join(self.vault_dir, f"passport_{datetime.now().strftime('%Y%m%d_%H%M%S_%f')}.json")
         with open(filename, "w") as f:
