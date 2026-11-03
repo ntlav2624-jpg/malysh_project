@@ -1056,9 +1056,110 @@ class FullReflections:
                 "is demonstrated"
             )
 
+        # ---------------------------------------------
+        # TWO EQUAL VOICES
+        # ---------------------------------------------
+
+        voice_a = {
+            "name": "VOICE_A_BEFORE",
+            "role": "historical_reasoning",
+            "rights": "equal",
+            "result": old_result,
+            "digest": digest(old_result),
+        }
+
+        voice_b = {
+            "name": "VOICE_B_NOW",
+            "role": "experimental_reasoning",
+            "rights": "equal",
+            "result": modern_result,
+            "digest": digest(modern_result),
+        }
+
+        # ---------------------------------------------
+        # DEBATE
+        # ---------------------------------------------
+
+        contradictions = []
+
+        shared_patterns = [
+            "both voices receive the same input",
+            "both results are preserved",
+            "neither voice has permanent priority",
+            "neither observer may silently overwrite the other",
+        ]
+
+        unresolved_items = []
+
+        tests_needed = []
+
+        # Functional disagreement is preserved,
+        # not automatically resolved.
+
+        if write_read["mvp_pass"]:
+            contradictions.append(
+                "VOICE_B passes WRITE-EVOLVE-READ, "
+                "while VOICE_A uses historical criteria."
+            )
+        else:
+            contradictions.append(
+                "VOICE_B does not yet pass "
+                "WRITE-EVOLVE-READ. "
+                "This does NOT grant VOICE_A priority."
+            )
+
+            tests_needed.append(
+                "Find why WRITE-EVOLVE-READ "
+                "is below the MVP threshold "
+                "without tuning the answer to the test."
+            )
+
+        if legacy.get("called") is False:
+
+            contradictions.append(
+                "Real 567/KMBP callable is not yet "
+                "attached to VOICE_B."
+            )
+
+            tests_needed.append(
+                "Attach real legacy 567/KMBP "
+                "and verify input -> computation "
+                "-> output -> invariant."
+            )
+
+        if modern_result.get("possible"):
+
+            unresolved_items.append(
+                modern_result[
+                    "possible"
+                ]
+            )
+
+        # ---------------------------------------------
+        # DETERMINE ONLY THE STATE OF THE DEBATE
+        # NEVER A WINNER
+        # ---------------------------------------------
+
+        if (
+            stable(old_result)
+            ==
+            stable(modern_result)
+        ):
+            debate_state = "AGREEMENT"
+
+        elif contradictions:
+            debate_state = "DISAGREEMENT"
+
+        else:
+            debate_state = "COMPLEMENTARY"
+
+        # ---------------------------------------------
+        # FINAL REFLECTION OBJECT
+        # ---------------------------------------------
+
         result = {
             "schema":
-                "malysh.reflections.v1",
+                "malysh.reflections.v2",
 
             "name":
                 "Размышления",
@@ -1068,45 +1169,132 @@ class FullReflections:
                     timezone.utc
                 ).isoformat(),
 
-            "as_before": {
-                "status":
-                    "AS_BEFORE",
-                "result":
-                    old_result,
-                "preserved":
+            "voice_a":
+                voice_a,
+
+            "voice_b":
+                voice_b,
+
+            "debate": {
+                "state":
+                    debate_state,
+
+                "equal_rights":
                     True,
-                "digest":
-                    digest(
-                        old_result
+
+                "winner":
+                    None,
+
+                "contradictions":
+                    contradictions,
+
+                "shared_patterns":
+                    shared_patterns,
+
+                "unresolved":
+                    unresolved_items,
+
+                "tests_needed":
+                    tests_needed,
+
+                "rule":
+                    (
+                        "DISAGREEMENT is a valid result. "
+                        "No voice becomes primary "
+                        "because it won previous tests."
                     ),
             },
 
-            "as_now": {
-                "status":
-                    "AS_NOW",
-                "result":
-                    modern_result,
-            },
+            # Human Layer:
+            # possibilities survive beside logical results.
+            "human_layer": {
+                "logical_voice":
+                    "voice_a",
 
-            "cross_layer": {
-                "old_new_equal":
-                    stable(
-                        old_result
-                    )
-                    ==
-                    stable(
-                        modern_result
-                    ),
+                "possible_voice":
+                    "voice_b",
 
-                "observers_change_execution":
+                "both_preserved":
+                    True,
+
+                "possible_may_be_wrong":
+                    True,
+
+                "logical_may_be_wrong":
+                    True,
+
+                "forced_binary_finality":
                     False,
             },
 
-            "joint_choice": {
-                "selected":
-                    selected,
-                "reason":
-                    reason,
+            # Cross-layer observers can compare results,
+            # but cannot directly change execution.
+            "cross_layer": {
+                "compare":
+                    True,
+
+                "search_patterns":
+                    True,
+
+                "observer_outputs_separate":
+                    True,
+
+                "observer_changes_execution":
+                    False,
+            },
+
+            # No automatic winner.
+            # If an external action eventually requires
+            # one concrete choice, it must be decided
+            # by functional evidence / invariant,
+            # not by permanent authority of A or B.
+            "execution_gate": {
+                "automatic_winner_forbidden":
+                    True,
+
+                "requires_external_invariant":
+                    True,
+
+                "requires_functional_test":
+                    True,
+
+                "current_decision":
+                    None,
+            },
+
+            # Backward-compatible views.
+            "compatibility": {
+                "as_before": {
+                    "status":
+                        "AS_BEFORE",
+
+                    "result":
+                        old_result,
+
+                    "preserved":
+                        True,
+                },
+
+                "as_now": {
+                    "status":
+                        "AS_NOW",
+
+                    "result":
+                        modern_result,
+                },
+
+                "joint_choice": {
+                    "selected":
+                        None,
+
+                    "reason":
+                        (
+                            "VOICE_A and VOICE_B "
+                            "are equal. "
+                            "Their disagreement "
+                            "must be preserved."
+                        ),
+                },
             },
         }
 
@@ -1115,8 +1303,8 @@ class FullReflections:
             {
                 "input_digest":
                     digest(data),
-                "selected":
-                    selected,
+                "debate_state":
+                    debate_state,
                 "mvp_pass":
                     write_read[
                         "mvp_pass"
