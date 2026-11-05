@@ -31,6 +31,7 @@ from typing import Any, Iterable
 from malysh_system.full_reflections import FullReflections
 from malysh_system.kmbp import integrate_kmbp
 from malysh_system.protocols import OrganResult
+from malysh_system.swarm_omni import integrate_swarm_omni
 from malysh_system.thought_cycle import observe_o345
 from malysh_system.unified_mind import (
     MindState,
@@ -351,6 +352,41 @@ class MalyshThinkingCycle:
             cross_layer_observation,
         )
 
+        # Swarm and Omni are provisional observational organs.
+        # Both execute only after the existing thought context
+        # has been formed.
+        swarm_result, omni_result = integrate_swarm_omni(
+            self.mind
+        )
+
+        cross_layer_observation[
+            "layers_seen"
+        ].extend(
+            [
+                "Swarm",
+                "Omni",
+            ]
+        )
+
+        cross_layer_observation[
+            "swarm_invariant_ok"
+        ] = swarm_result.data[
+            "invariant_ok"
+        ]
+
+        cross_layer_observation[
+            "omni_invariant_ok"
+        ] = omni_result.data[
+            "invariant_ok"
+        ]
+
+        # Refresh the stored cross-layer pattern so the observer's
+        # final record includes Swarm and Omni visibility.
+        self.mind.reflect(
+            "KMBP_FULL_REFLECTIONS_PATTERN",
+            cross_layer_observation,
+        )
+
         # O345 may establish canonical state when explicitly
         # supplied with its scalar input. Later organs must preserve it.
         if (
@@ -392,6 +428,16 @@ class MalyshThinkingCycle:
             "kmbp":
                 deepcopy(
                     kmbp_organ_result.to_dict()
+                ),
+
+            "swarm":
+                deepcopy(
+                    swarm_result.to_dict()
+                ),
+
+            "omni":
+                deepcopy(
+                    omni_result.to_dict()
                 ),
 
             "reflections":
@@ -543,6 +589,78 @@ class MalyshThinkingCycle:
                             "state_commit"
                         ]
                         is False
+                    ),
+
+                "swarm_verified":
+                    (
+                        swarm_result.status
+                        ==
+                        "ok"
+                        and
+                        swarm_result.data[
+                            "invariant_ok"
+                        ]
+                    ),
+
+                "omni_verified":
+                    (
+                        omni_result.status
+                        ==
+                        "ok"
+                        and
+                        omni_result.data[
+                            "invariant_ok"
+                        ]
+                    ),
+
+                "swarm_observed":
+                    (
+                        "Swarm"
+                        in
+                        snapshot["observations"]
+                    ),
+
+                "omni_observed":
+                    (
+                        "Omni"
+                        in
+                        snapshot["observations"]
+                    ),
+
+                "swarm_omni_no_winner":
+                    (
+                        swarm_result.data[
+                            "collective_state"
+                        ][
+                            "winner"
+                        ]
+                        is None
+                        and
+                        omni_result.data[
+                            "context_state"
+                        ][
+                            "winner"
+                        ]
+                        is None
+                    ),
+
+                "swarm_omni_honest_provenance":
+                    (
+                        swarm_result.data[
+                            "provenance"
+                        ][
+                            "historical_identity"
+                        ]
+                        ==
+                        "named_unresolved"
+                        and
+                        omni_result.data[
+                            "provenance"
+                        ][
+                            "historical_identity"
+                        ]
+                        ==
+                        "named_unresolved"
                     ),
 
                 "v1_reflection_contract":
