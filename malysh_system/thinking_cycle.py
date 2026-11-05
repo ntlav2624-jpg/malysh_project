@@ -30,6 +30,9 @@ from typing import Any, Iterable
 
 from malysh_system.full_reflections import FullReflections
 from malysh_system.kmbp import integrate_kmbp
+from malysh_system.interlayer_observers import (
+    integrate_interlayer_pass,
+)
 from malysh_system.protocols import OrganResult
 from malysh_system.swarm_omni import integrate_swarm_omni
 from malysh_system.thought_cycle import observe_o345
@@ -387,6 +390,12 @@ class MalyshThinkingCycle:
             cross_layer_observation,
         )
 
+        # Every active layer now observes the same frozen results
+        # of all peer layers. Outputs remain separate reflections.
+        interlayer_result = integrate_interlayer_pass(
+            self.mind
+        )
+
         # O345 may establish canonical state when explicitly
         # supplied with its scalar input. Later organs must preserve it.
         if (
@@ -438,6 +447,11 @@ class MalyshThinkingCycle:
             "omni":
                 deepcopy(
                     omni_result.to_dict()
+                ),
+
+            "interlayer":
+                deepcopy(
+                    interlayer_result.to_dict()
                 ),
 
             "reflections":
@@ -662,6 +676,47 @@ class MalyshThinkingCycle:
                         ==
                         "named_unresolved"
                     ),
+
+                "interlayer_verified":
+                    (
+                        interlayer_result.status
+                        ==
+                        "ok"
+                        and
+                        interlayer_result.data[
+                            "invariant_ok"
+                        ]
+                    ),
+
+                "interlayer_same_snapshot":
+                    interlayer_result.data[
+                        "same_snapshot_for_all"
+                    ]
+                    is True,
+
+                "interlayer_results_separate":
+                    interlayer_result.data[
+                        "results_stored_separately"
+                    ]
+                    is True,
+
+                "interlayer_no_winner":
+                    interlayer_result.data[
+                        "winner"
+                    ]
+                    is None,
+
+                "interlayer_no_execution":
+                    interlayer_result.data[
+                        "affects_execution"
+                    ]
+                    is False,
+
+                "interlayer_no_main_answer_change":
+                    interlayer_result.data[
+                        "affects_main_answer"
+                    ]
+                    is False,
 
                 "v1_reflection_contract":
                     all(
