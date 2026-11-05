@@ -33,6 +33,9 @@ from malysh_system.kmbp import integrate_kmbp
 from malysh_system.interlayer_observers import (
     integrate_interlayer_pass,
 )
+from malysh_system.joint_choice import (
+    integrate_joint_choice,
+)
 from malysh_system.protocols import OrganResult
 from malysh_system.swarm_omni import integrate_swarm_omni
 from malysh_system.thought_cycle import observe_o345
@@ -396,6 +399,13 @@ class MalyshThinkingCycle:
             self.mind
         )
 
+        # JointChoice structures a thought-level deliberation.
+        # It cannot execute, commit, or overwrite either branch.
+        joint_choice_result = integrate_joint_choice(
+            self.mind,
+            interlayer_result.data,
+        )
+
         # O345 may establish canonical state when explicitly
         # supplied with its scalar input. Later organs must preserve it.
         if (
@@ -452,6 +462,11 @@ class MalyshThinkingCycle:
             "interlayer":
                 deepcopy(
                     interlayer_result.to_dict()
+                ),
+
+            "joint_choice":
+                deepcopy(
+                    joint_choice_result.to_dict()
                 ),
 
             "reflections":
@@ -715,6 +730,74 @@ class MalyshThinkingCycle:
                 "interlayer_no_main_answer_change":
                     interlayer_result.data[
                         "affects_main_answer"
+                    ]
+                    is False,
+
+                "joint_choice_verified":
+                    (
+                        joint_choice_result.status
+                        ==
+                        "ok"
+                        and
+                        joint_choice_result.data[
+                            "invariant_ok"
+                        ]
+                    ),
+
+                "joint_choice_main_preserved":
+                    joint_choice_result.data[
+                        "deliberation"
+                    ][
+                        "main_preserved"
+                    ]
+                    is True,
+
+                "joint_choice_possible_preserved":
+                    joint_choice_result.data[
+                        "deliberation"
+                    ][
+                        "possible_preserved"
+                    ]
+                    is True,
+
+                "joint_choice_no_voting":
+                    (
+                        joint_choice_result.data[
+                            "deliberation"
+                        ][
+                            "majority_vote_used"
+                        ]
+                        is False
+                        and
+                        joint_choice_result.data[
+                            "deliberation"
+                        ][
+                            "vote_count_used"
+                        ]
+                        is False
+                    ),
+
+                "joint_choice_no_winner":
+                    joint_choice_result.data[
+                        "deliberation"
+                    ][
+                        "winner"
+                    ]
+                    is None,
+
+                "joint_choice_no_execution":
+                    joint_choice_result.data[
+                        "deliberation"
+                    ][
+                        "execution_authorized"
+                    ]
+                    is False,
+
+                "joint_choice_no_transaction":
+                    joint_choice_result.data[
+                        "deliberation"
+                    ][
+                        "transaction_authorized"
                     ]
                     is False,
 
