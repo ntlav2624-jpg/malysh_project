@@ -32,6 +32,9 @@ from malysh_system.full_reflections import FullReflections
 from malysh_system.historical_swarm_omni import (
     integrate_historical_swarm_omni,
 )
+from malysh_system.historical_hive_cortex import (
+    integrate_historical_hive_cortex,
+)
 from malysh_system.historical_topology import (
     integrate_historical_topology,
 )
@@ -97,6 +100,8 @@ class MalyshThinkingCycle:
         historical_pool_size: int = 49,
         topology_normal: Any = None,
         topology_observed: Any = None,
+        hive_target: Any = None,
+        hive_signal: Any = None,
     ) -> dict[str, Any]:
         """
         Execute a complete internal thinking cycle.
@@ -563,9 +568,80 @@ class MalyshThinkingCycle:
                 cross_layer_observation,
             )
 
+        # Historical Hive Cortex is optional and requires a complete
+        # explicit input pair. No target or signal is inferred from
+        # KMBP, Swarm, Omni, O345, topology or ordinary cycle input.
+        hive_requested = (
+            hive_target is not None
+            or
+            hive_signal is not None
+        )
+
+        if (
+            hive_target is None
+            and
+            hive_signal is None
+        ):
+            historical_hive_cortex_result = None
+
+        elif (
+            hive_target is None
+            or
+            hive_signal is None
+        ):
+            raise ValueError(
+                "hive_target and hive_signal "
+                "must be supplied together"
+            )
+
+        else:
+            historical_hive_cortex_result = (
+                integrate_historical_hive_cortex(
+                    self.mind,
+                    hive_target,
+                    hive_signal,
+                )
+            )
+
+            if (
+                historical_hive_cortex_result.status
+                !=
+                "ok"
+            ):
+                raise RuntimeError(
+                    historical_hive_cortex_result.error
+                    or
+                    "HistoricalHiveCortex failed"
+                )
+
+            if (
+                historical_hive_cortex_result.data[
+                    "invariant_ok"
+                ]
+                is not True
+            ):
+                raise RuntimeError(
+                    "HistoricalHiveCortex invariant failed"
+                )
+
+            cross_layer_observation[
+                "layers_seen"
+            ].append(
+                "HistoricalHiveCortex"
+            )
+
+            cross_layer_observation[
+                "historical_hive_cortex_invariant_ok"
+            ] = True
+
+            self.mind.reflect(
+                "KMBP_FULL_REFLECTIONS_PATTERN",
+                cross_layer_observation,
+            )
+
         # Every active layer now observes the same frozen results
-        # of all peer layers. Historical heritage and topology,
-        # when explicitly supplied, are present in this snapshot.
+        # of all peer layers. Explicit historical organs are already
+        # present in this immutable pre-InterLayer snapshot.
         interlayer_result = integrate_interlayer_pass(
             self.mind
         )
@@ -654,6 +730,16 @@ class MalyshThinkingCycle:
                         historical_topology_result.to_dict()
                     )
                     if historical_topology_result
+                    is not None
+                    else None
+                ),
+
+            "historical_hive_cortex":
+                (
+                    deepcopy(
+                        historical_hive_cortex_result.to_dict()
+                    )
+                    if historical_hive_cortex_result
                     is not None
                     else None
                 ),
@@ -1095,6 +1181,143 @@ class MalyshThinkingCycle:
                         canonical_after_o345
                     ),
 
+                "hive_cortex_contract_valid":
+                    (
+                        (
+                            hive_target is None
+                            and
+                            hive_signal is None
+                            and
+                            historical_hive_cortex_result
+                            is None
+                        )
+                        or
+                        (
+                            hive_target is not None
+                            and
+                            hive_signal is not None
+                            and
+                            historical_hive_cortex_result
+                            is not None
+                        )
+                    ),
+
+                "historical_hive_cortex_verified":
+                    (
+                        not hive_requested
+                        or
+                        (
+                            historical_hive_cortex_result
+                            is not None
+                            and
+                            historical_hive_cortex_result.status
+                            ==
+                            "ok"
+                            and
+                            historical_hive_cortex_result.data[
+                                "invariant_ok"
+                            ]
+                            is True
+                        )
+                    ),
+
+                "historical_hive_cortex_observed":
+                    (
+                        not hive_requested
+                        or
+                        "HistoricalHiveCortex"
+                        in
+                        snapshot["observations"]
+                    ),
+
+                "historical_hive_cortex_reflected":
+                    (
+                        not hive_requested
+                        or
+                        "HistoricalHiveCortex"
+                        in
+                        snapshot["reflections"]
+                    ),
+
+                "historical_hive_cortex_visible_to_interlayer":
+                    (
+                        not hive_requested
+                        or
+                        "HistoricalHiveCortex"
+                        in
+                        interlayer_result.data[
+                            "frozen_layer_names"
+                        ]
+                    ),
+
+                "historical_hive_cortex_no_authority":
+                    (
+                        not hive_requested
+                        or
+                        (
+                            historical_hive_cortex_result.data[
+                                "decision_authority"
+                            ]
+                            is False
+                            and
+                            historical_hive_cortex_result.data[
+                                "automatic_execution"
+                            ]
+                            is False
+                            and
+                            historical_hive_cortex_result.data[
+                                "canonical_write"
+                            ]
+                            is False
+                            and
+                            historical_hive_cortex_result.data[
+                                "state_commit"
+                            ]
+                            is False
+                            and
+                            historical_hive_cortex_result.data[
+                                "transaction_authorized"
+                            ]
+                            is False
+                            and
+                            historical_hive_cortex_result.data[
+                                "external_control"
+                            ]
+                            is False
+                        )
+                    ),
+
+                "historical_hive_cortex_no_side_effects":
+                    (
+                        not hive_requested
+                        or
+                        (
+                            historical_hive_cortex_result.data[
+                                "filesystem_write"
+                            ]
+                            is False
+                            and
+                            historical_hive_cortex_result.data[
+                                "log_append"
+                            ]
+                            is False
+                            and
+                            historical_hive_cortex_result.data[
+                                "timestamp_generated"
+                            ]
+                            is False
+                        )
+                    ),
+
+                "historical_hive_cortex_canonical_preserved":
+                    (
+                        not hive_requested
+                        or
+                        self.mind.canonical
+                        ==
+                        canonical_after_o345
+                    ),
+
                 "interlayer_verified":
                     (
                         interlayer_result.status
@@ -1242,6 +1465,8 @@ def run_thinking_cycle(
     historical_pool_size: int = 49,
     topology_normal: Any = None,
     topology_observed: Any = None,
+    hive_target: Any = None,
+    hive_signal: Any = None,
 ) -> dict[str, Any]:
     """
     Convenience entry point for one integrated thinking cycle.
@@ -1262,6 +1487,8 @@ def run_thinking_cycle(
         historical_pool_size=historical_pool_size,
         topology_normal=topology_normal,
         topology_observed=topology_observed,
+        hive_target=hive_target,
+        hive_signal=hive_signal,
     )
 
     if not all(

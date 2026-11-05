@@ -152,6 +152,8 @@ class OperationalLifecycle:
         historical_pool_size: int = 49,
         topology_normal: Any = None,
         topology_observed: Any = None,
+        hive_target: Any = None,
+        hive_signal: Any = None,
         source: str = "operational-lifecycle",
     ) -> dict[str, Any]:
         """
@@ -176,6 +178,8 @@ class OperationalLifecycle:
             historical_pool_size=historical_pool_size,
             topology_normal=topology_normal,
             topology_observed=topology_observed,
+            hive_target=hive_target,
+            hive_signal=hive_signal,
         )
 
         failed_cycle_invariants = [
@@ -285,6 +289,12 @@ class OperationalLifecycle:
             topology_observed is not None
         )
 
+        hive_requested = (
+            hive_target is not None
+            or
+            hive_signal is not None
+        )
+
         historical_visible = (
             not historical_requested
             or
@@ -356,6 +366,46 @@ class OperationalLifecycle:
             )
         )
 
+        hive_visible = (
+            not hive_requested
+            or
+            "HistoricalHiveCortex"
+            in
+            after_cycle["observations"]
+        )
+
+        hive_visible_to_interlayer = (
+            not hive_requested
+            or
+            "HistoricalHiveCortex"
+            in
+            frozen_layers
+        )
+
+        hive_survived_recovery = (
+            not hive_requested
+            or
+            (
+                "HistoricalHiveCortex"
+                in
+                recovered_snapshot[
+                    "observations"
+                ]
+                and
+                recovered_snapshot[
+                    "observations"
+                ][
+                    "HistoricalHiveCortex"
+                ]
+                ==
+                after_cycle[
+                    "observations"
+                ][
+                    "HistoricalHiveCortex"
+                ]
+            )
+        )
+
         invariants = {
             "one_subject":
                 recovered.subject == "Malysh",
@@ -412,6 +462,60 @@ class OperationalLifecycle:
                     ]
                     ==
                     after_cycle["canonical"]
+                ),
+
+            "hive_cortex_visibility":
+                hive_visible,
+
+            "hive_cortex_interlayer_visibility":
+                hive_visible_to_interlayer,
+
+            "hive_cortex_survived_recovery":
+                hive_survived_recovery,
+
+            "hive_cortex_canonical_preserved":
+                (
+                    not hive_requested
+                    or
+                    recovered_snapshot[
+                        "canonical"
+                    ]
+                    ==
+                    after_cycle["canonical"]
+                ),
+
+            "hive_cortex_no_authority":
+                (
+                    not hive_requested
+                    or
+                    (
+                        cycle[
+                            "historical_hive_cortex"
+                        ][
+                            "data"
+                        ][
+                            "decision_authority"
+                        ]
+                        is False
+                        and
+                        cycle[
+                            "historical_hive_cortex"
+                        ][
+                            "data"
+                        ][
+                            "canonical_write"
+                        ]
+                        is False
+                        and
+                        cycle[
+                            "historical_hive_cortex"
+                        ][
+                            "data"
+                        ][
+                            "state_commit"
+                        ]
+                        is False
+                    )
                 ),
 
             "joint_choice_no_winner":
@@ -514,6 +618,20 @@ class OperationalLifecycle:
                         ]
                     )
                     if topology_requested
+                    else None
+                ),
+
+            "hive_cortex_requested":
+                hive_requested,
+
+            "historical_hive_cortex":
+                (
+                    deepcopy(
+                        cycle[
+                            "historical_hive_cortex"
+                        ]
+                    )
+                    if hive_requested
                     else None
                 ),
 

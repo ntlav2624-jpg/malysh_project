@@ -38,6 +38,7 @@ DEFAULT_LAYERS = (
     "HistoricalSwarm",
     "HistoricalOmni",
     "HistoricalTopology",
+    "HistoricalHiveCortex",
 )
 
 
