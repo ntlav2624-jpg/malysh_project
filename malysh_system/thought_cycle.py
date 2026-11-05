@@ -20,6 +20,10 @@ from malysh_system.cross_layer_observer import (
     observe_cross_layers,
 )
 
+from malysh_system.legacy_567_adapter import (
+    observe_567,
+)
+
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -103,6 +107,7 @@ def build_thought_cycle(
     joint: dict[str, Any] | None = None,
     experience: dict[str, Any] | None = None,
     observations: list[dict[str, Any]] | None = None,
+    legacy_567_input: list[str] | None = None,
 ) -> MindState:
     """
     One passive thought cycle of ONE Malysh.
@@ -185,6 +190,18 @@ def build_thought_cycle(
         o345_result,
     )
 
+    legacy_567_result = None
+
+    if legacy_567_input is not None:
+        legacy_567_result = observe_567(
+            legacy_567_input
+        )
+
+        mind.reflect(
+            "567",
+            legacy_567_result,
+        )
+
     # Publish O3/O4/O5 to the common observation interface.
 
     o345_observations = []
@@ -216,6 +233,18 @@ def build_thought_cycle(
         external_observations
         + o345_observations
     )
+
+    if legacy_567_result is not None:
+        combined_observations.append(
+            {
+                "observer": "567",
+                "source": "legacy_567",
+                "result": deepcopy(
+                    legacy_567_result
+                ),
+                "decision_authority": False,
+            }
+        )
 
     # --------------------------------------------------------
     # Experience
