@@ -39,6 +39,7 @@ DEFAULT_LAYERS = (
     "HistoricalOmni",
     "HistoricalTopology",
     "HistoricalHiveCortex",
+    "HistoricalCortexPrime",
 )
 
 

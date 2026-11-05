@@ -154,6 +154,8 @@ class OperationalLifecycle:
         topology_observed: Any = None,
         hive_target: Any = None,
         hive_signal: Any = None,
+        cortex_prime_signals: Any = None,
+        cortex_prime_vector: Any = None,
         source: str = "operational-lifecycle",
     ) -> dict[str, Any]:
         """
@@ -180,6 +182,8 @@ class OperationalLifecycle:
             topology_observed=topology_observed,
             hive_target=hive_target,
             hive_signal=hive_signal,
+            cortex_prime_signals=cortex_prime_signals,
+            cortex_prime_vector=cortex_prime_vector,
         )
 
         failed_cycle_invariants = [
@@ -295,6 +299,12 @@ class OperationalLifecycle:
             hive_signal is not None
         )
 
+        cortex_prime_requested = (
+            cortex_prime_signals is not None
+            or
+            cortex_prime_vector is not None
+        )
+
         historical_visible = (
             not historical_requested
             or
@@ -406,6 +416,46 @@ class OperationalLifecycle:
             )
         )
 
+        cortex_prime_visible = (
+            not cortex_prime_requested
+            or
+            "HistoricalCortexPrime"
+            in
+            after_cycle["observations"]
+        )
+
+        cortex_prime_visible_to_interlayer = (
+            not cortex_prime_requested
+            or
+            "HistoricalCortexPrime"
+            in
+            frozen_layers
+        )
+
+        cortex_prime_survived_recovery = (
+            not cortex_prime_requested
+            or
+            (
+                "HistoricalCortexPrime"
+                in
+                recovered_snapshot[
+                    "observations"
+                ]
+                and
+                recovered_snapshot[
+                    "observations"
+                ][
+                    "HistoricalCortexPrime"
+                ]
+                ==
+                after_cycle[
+                    "observations"
+                ][
+                    "HistoricalCortexPrime"
+                ]
+            )
+        )
+
         invariants = {
             "one_subject":
                 recovered.subject == "Malysh",
@@ -513,6 +563,69 @@ class OperationalLifecycle:
                             "data"
                         ][
                             "state_commit"
+                        ]
+                        is False
+                    )
+                ),
+
+            "cortex_prime_visibility":
+                cortex_prime_visible,
+
+            "cortex_prime_interlayer_visibility":
+                cortex_prime_visible_to_interlayer,
+
+            "cortex_prime_survived_recovery":
+                cortex_prime_survived_recovery,
+
+            "cortex_prime_canonical_preserved":
+                (
+                    not cortex_prime_requested
+                    or
+                    recovered_snapshot[
+                        "canonical"
+                    ]
+                    ==
+                    after_cycle["canonical"]
+                ),
+
+            "cortex_prime_no_authority":
+                (
+                    not cortex_prime_requested
+                    or
+                    (
+                        cycle[
+                            "historical_cortex_prime"
+                        ][
+                            "data"
+                        ][
+                            "decision_authority"
+                        ]
+                        is False
+                        and
+                        cycle[
+                            "historical_cortex_prime"
+                        ][
+                            "data"
+                        ][
+                            "canonical_write"
+                        ]
+                        is False
+                        and
+                        cycle[
+                            "historical_cortex_prime"
+                        ][
+                            "data"
+                        ][
+                            "state_commit"
+                        ]
+                        is False
+                        and
+                        cycle[
+                            "historical_cortex_prime"
+                        ][
+                            "data"
+                        ][
+                            "wall_clock_selection"
                         ]
                         is False
                     )
@@ -632,6 +745,20 @@ class OperationalLifecycle:
                         ]
                     )
                     if hive_requested
+                    else None
+                ),
+
+            "cortex_prime_requested":
+                cortex_prime_requested,
+
+            "historical_cortex_prime":
+                (
+                    deepcopy(
+                        cycle[
+                            "historical_cortex_prime"
+                        ]
+                    )
+                    if cortex_prime_requested
                     else None
                 ),
 

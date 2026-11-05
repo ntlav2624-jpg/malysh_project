@@ -35,6 +35,9 @@ from malysh_system.historical_swarm_omni import (
 from malysh_system.historical_hive_cortex import (
     integrate_historical_hive_cortex,
 )
+from malysh_system.historical_cortex_prime import (
+    integrate_historical_cortex_prime,
+)
 from malysh_system.historical_topology import (
     integrate_historical_topology,
 )
@@ -102,6 +105,8 @@ class MalyshThinkingCycle:
         topology_observed: Any = None,
         hive_target: Any = None,
         hive_signal: Any = None,
+        cortex_prime_signals: Any = None,
+        cortex_prime_vector: Any = None,
     ) -> dict[str, Any]:
         """
         Execute a complete internal thinking cycle.
@@ -639,6 +644,77 @@ class MalyshThinkingCycle:
                 cross_layer_observation,
             )
 
+        # Historical Cortex Prime is optional and requires explicit
+        # signals together with an explicit historical drive vector.
+        # The cycle never uses wall-clock time to choose a vector.
+        cortex_prime_requested = (
+            cortex_prime_signals is not None
+            or
+            cortex_prime_vector is not None
+        )
+
+        if (
+            cortex_prime_signals is None
+            and
+            cortex_prime_vector is None
+        ):
+            historical_cortex_prime_result = None
+
+        elif (
+            cortex_prime_signals is None
+            or
+            cortex_prime_vector is None
+        ):
+            raise ValueError(
+                "cortex_prime_signals and cortex_prime_vector "
+                "must be supplied together"
+            )
+
+        else:
+            historical_cortex_prime_result = (
+                integrate_historical_cortex_prime(
+                    self.mind,
+                    cortex_prime_signals,
+                    cortex_prime_vector,
+                )
+            )
+
+            if (
+                historical_cortex_prime_result.status
+                !=
+                "ok"
+            ):
+                raise RuntimeError(
+                    historical_cortex_prime_result.error
+                    or
+                    "HistoricalCortexPrime failed"
+                )
+
+            if (
+                historical_cortex_prime_result.data[
+                    "invariant_ok"
+                ]
+                is not True
+            ):
+                raise RuntimeError(
+                    "HistoricalCortexPrime invariant failed"
+                )
+
+            cross_layer_observation[
+                "layers_seen"
+            ].append(
+                "HistoricalCortexPrime"
+            )
+
+            cross_layer_observation[
+                "historical_cortex_prime_invariant_ok"
+            ] = True
+
+            self.mind.reflect(
+                "KMBP_FULL_REFLECTIONS_PATTERN",
+                cross_layer_observation,
+            )
+
         # Every active layer now observes the same frozen results
         # of all peer layers. Explicit historical organs are already
         # present in this immutable pre-InterLayer snapshot.
@@ -740,6 +816,16 @@ class MalyshThinkingCycle:
                         historical_hive_cortex_result.to_dict()
                     )
                     if historical_hive_cortex_result
+                    is not None
+                    else None
+                ),
+
+            "historical_cortex_prime":
+                (
+                    deepcopy(
+                        historical_cortex_prime_result.to_dict()
+                    )
+                    if historical_cortex_prime_result
                     is not None
                     else None
                 ),
@@ -1318,6 +1404,163 @@ class MalyshThinkingCycle:
                         canonical_after_o345
                     ),
 
+                "cortex_prime_contract_valid":
+                    (
+                        (
+                            cortex_prime_signals is None
+                            and
+                            cortex_prime_vector is None
+                            and
+                            historical_cortex_prime_result
+                            is None
+                        )
+                        or
+                        (
+                            cortex_prime_signals is not None
+                            and
+                            cortex_prime_vector is not None
+                            and
+                            historical_cortex_prime_result
+                            is not None
+                        )
+                    ),
+
+                "historical_cortex_prime_verified":
+                    (
+                        not cortex_prime_requested
+                        or
+                        (
+                            historical_cortex_prime_result
+                            is not None
+                            and
+                            historical_cortex_prime_result.status
+                            ==
+                            "ok"
+                            and
+                            historical_cortex_prime_result.data[
+                                "invariant_ok"
+                            ]
+                            is True
+                        )
+                    ),
+
+                "historical_cortex_prime_observed":
+                    (
+                        not cortex_prime_requested
+                        or
+                        "HistoricalCortexPrime"
+                        in
+                        snapshot["observations"]
+                    ),
+
+                "historical_cortex_prime_reflected":
+                    (
+                        not cortex_prime_requested
+                        or
+                        "HistoricalCortexPrime"
+                        in
+                        snapshot["reflections"]
+                    ),
+
+                "historical_cortex_prime_visible_to_interlayer":
+                    (
+                        not cortex_prime_requested
+                        or
+                        "HistoricalCortexPrime"
+                        in
+                        interlayer_result.data[
+                            "frozen_layer_names"
+                        ]
+                    ),
+
+                "historical_cortex_prime_explicit_vector":
+                    (
+                        not cortex_prime_requested
+                        or
+                        (
+                            historical_cortex_prime_result.data[
+                                "drive"
+                            ][
+                                "selection_mode"
+                            ]
+                            ==
+                            "explicit_only"
+                            and
+                            historical_cortex_prime_result.data[
+                                "wall_clock_selection"
+                            ]
+                            is False
+                        )
+                    ),
+
+                "historical_cortex_prime_no_authority":
+                    (
+                        not cortex_prime_requested
+                        or
+                        (
+                            historical_cortex_prime_result.data[
+                                "decision_authority"
+                            ]
+                            is False
+                            and
+                            historical_cortex_prime_result.data[
+                                "automatic_execution"
+                            ]
+                            is False
+                            and
+                            historical_cortex_prime_result.data[
+                                "external_control"
+                            ]
+                            is False
+                            and
+                            historical_cortex_prime_result.data[
+                                "canonical_write"
+                            ]
+                            is False
+                            and
+                            historical_cortex_prime_result.data[
+                                "state_commit"
+                            ]
+                            is False
+                            and
+                            historical_cortex_prime_result.data[
+                                "transaction_authorized"
+                            ]
+                            is False
+                        )
+                    ),
+
+                "historical_cortex_prime_no_side_effects":
+                    (
+                        not cortex_prime_requested
+                        or
+                        (
+                            historical_cortex_prime_result.data[
+                                "filesystem_write"
+                            ]
+                            is False
+                            and
+                            historical_cortex_prime_result.data[
+                                "log_append"
+                            ]
+                            is False
+                            and
+                            historical_cortex_prime_result.data[
+                                "timestamp_generated"
+                            ]
+                            is False
+                        )
+                    ),
+
+                "historical_cortex_prime_canonical_preserved":
+                    (
+                        not cortex_prime_requested
+                        or
+                        self.mind.canonical
+                        ==
+                        canonical_after_o345
+                    ),
+
                 "interlayer_verified":
                     (
                         interlayer_result.status
@@ -1467,6 +1710,8 @@ def run_thinking_cycle(
     topology_observed: Any = None,
     hive_target: Any = None,
     hive_signal: Any = None,
+    cortex_prime_signals: Any = None,
+    cortex_prime_vector: Any = None,
 ) -> dict[str, Any]:
     """
     Convenience entry point for one integrated thinking cycle.
@@ -1489,6 +1734,8 @@ def run_thinking_cycle(
         topology_observed=topology_observed,
         hive_target=hive_target,
         hive_signal=hive_signal,
+        cortex_prime_signals=cortex_prime_signals,
+        cortex_prime_vector=cortex_prime_vector,
     )
 
     if not all(
