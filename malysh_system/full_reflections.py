@@ -1298,6 +1298,26 @@ class FullReflections:
             },
         }
 
+        # ---------------------------------------------
+        # V1 TOP-LEVEL COMPATIBILITY
+        #
+        # V2 keeps the equal-voice architecture while the
+        # historically established V1 access paths remain
+        # callable.  No branch is recomputed here.
+        # ---------------------------------------------
+
+        result["as_before"] = result[
+            "compatibility"
+        ]["as_before"]
+
+        result["as_now"] = result[
+            "compatibility"
+        ]["as_now"]
+
+        result["joint_choice"] = result[
+            "compatibility"
+        ]["joint_choice"]
+
         self.wal.append(
             "REFLECTION",
             {
