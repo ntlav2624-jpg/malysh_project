@@ -170,6 +170,49 @@ def observe_567(
             right,
         )
 
+        candidate_tensions = []
+
+        for candidate in engine.sign_frequencies.keys():
+            candidate_tension = float(
+                engine.evaluate_topological_tension(
+                    [
+                        left,
+                        candidate,
+                        right,
+                    ]
+                )
+            )
+
+            candidate_tensions.append(
+                {
+                    "candidate":
+                        candidate,
+
+                    "tension":
+                        candidate_tension,
+                }
+            )
+
+        minimum_tension = min(
+            item["tension"]
+            for item in candidate_tensions
+        )
+
+        equal_minima = [
+            item["candidate"]
+            for item in candidate_tensions
+            if abs(
+                item["tension"]
+                - minimum_tension
+            ) < 1e-12
+        ]
+
+        alternatives = [
+            item
+            for item in equal_minima
+            if item != restored
+        ]
+
         if restored is None:
             raise RuntimeError(
                 "567 did not restore the gap"
@@ -229,6 +272,15 @@ def observe_567(
 
                 "topological_tension":
                     tension,
+
+                "minimum_tension":
+                    minimum_tension,
+
+                "equal_minima":
+                    equal_minima,
+
+                "alternatives":
+                    alternatives,
             },
 
             "evidence": {

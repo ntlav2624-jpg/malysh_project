@@ -270,6 +270,53 @@ def build_thought_cycle(
 
     human_dict = human.to_dict()
 
+    if legacy_567_result is not None:
+
+        alternatives = (
+            legacy_567_result.get(
+                "output",
+                {},
+            ).get(
+                "alternatives",
+                [],
+            )
+        )
+
+        for alternative in alternatives:
+
+            human_dict.setdefault(
+                "possible",
+                [],
+            ).append(
+                {
+                    "hypothesis": (
+                        "567: равноминимальная "
+                        "альтернатива "
+                        + str(alternative)
+                    ),
+
+                    "certainty":
+                        0.5,
+
+                    "evidence": [
+                        (
+                            "567 equal minimum "
+                            "topological tension"
+                        ),
+                        (
+                            "historical main result "
+                            "preserved separately"
+                        ),
+                    ],
+
+                    "source":
+                        "legacy_567_equal_minimum",
+
+                    "status":
+                        "possible",
+                }
+            )
+
     mind.set_human(
         human_dict
     )
