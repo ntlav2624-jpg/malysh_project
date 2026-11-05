@@ -32,6 +32,9 @@ from malysh_system.full_reflections import FullReflections
 from malysh_system.historical_swarm_omni import (
     integrate_historical_swarm_omni,
 )
+from malysh_system.historical_topology import (
+    integrate_historical_topology,
+)
 from malysh_system.kmbp import integrate_kmbp
 from malysh_system.interlayer_observers import (
     integrate_interlayer_pass,
@@ -92,6 +95,8 @@ class MalyshThinkingCycle:
         historical_history: Any = None,
         historical_candidate: Any = None,
         historical_pool_size: int = 49,
+        topology_normal: Any = None,
+        topology_observed: Any = None,
     ) -> dict[str, Any]:
         """
         Execute a complete internal thinking cycle.
@@ -487,9 +492,80 @@ class MalyshThinkingCycle:
                 cross_layer_observation,
             )
 
+        # Historical topology is optional and requires an explicit,
+        # complete two-state contract. No topology input is inferred
+        # from O345 or from the ordinary numeric sequence.
+        topology_requested = (
+            topology_normal is not None
+            or
+            topology_observed is not None
+        )
+
+        if (
+            topology_normal is None
+            and
+            topology_observed is None
+        ):
+            historical_topology_result = None
+
+        elif (
+            topology_normal is None
+            or
+            topology_observed is None
+        ):
+            raise ValueError(
+                "topology_normal and topology_observed "
+                "must be supplied together"
+            )
+
+        else:
+            historical_topology_result = (
+                integrate_historical_topology(
+                    self.mind,
+                    topology_normal,
+                    topology_observed,
+                )
+            )
+
+            if (
+                historical_topology_result.status
+                !=
+                "ok"
+            ):
+                raise RuntimeError(
+                    historical_topology_result.error
+                    or
+                    "HistoricalTopology failed"
+                )
+
+            if (
+                historical_topology_result.data[
+                    "invariant_ok"
+                ]
+                is not True
+            ):
+                raise RuntimeError(
+                    "HistoricalTopology invariant failed"
+                )
+
+            cross_layer_observation[
+                "layers_seen"
+            ].append(
+                "HistoricalTopology"
+            )
+
+            cross_layer_observation[
+                "historical_topology_invariant_ok"
+            ] = True
+
+            self.mind.reflect(
+                "KMBP_FULL_REFLECTIONS_PATTERN",
+                cross_layer_observation,
+            )
+
         # Every active layer now observes the same frozen results
-        # of all peer layers. Historical heritage, when explicitly
-        # supplied, is already present in this frozen snapshot.
+        # of all peer layers. Historical heritage and topology,
+        # when explicitly supplied, are present in this snapshot.
         interlayer_result = integrate_interlayer_pass(
             self.mind
         )
@@ -569,6 +645,16 @@ class MalyshThinkingCycle:
                         historical_omni_result.to_dict()
                     )
                     if historical_omni_result is not None
+                    else None
+                ),
+
+            "historical_topology":
+                (
+                    deepcopy(
+                        historical_topology_result.to_dict()
+                    )
+                    if historical_topology_result
+                    is not None
                     else None
                 ),
 
@@ -904,6 +990,111 @@ class MalyshThinkingCycle:
                         )
                     ),
 
+                "topology_contract_valid":
+                    (
+                        (
+                            topology_normal is None
+                            and
+                            topology_observed is None
+                            and
+                            historical_topology_result
+                            is None
+                        )
+                        or
+                        (
+                            topology_normal is not None
+                            and
+                            topology_observed is not None
+                            and
+                            historical_topology_result
+                            is not None
+                        )
+                    ),
+
+                "historical_topology_verified":
+                    (
+                        not topology_requested
+                        or
+                        (
+                            historical_topology_result
+                            is not None
+                            and
+                            historical_topology_result.status
+                            ==
+                            "ok"
+                            and
+                            historical_topology_result.data[
+                                "invariant_ok"
+                            ]
+                            is True
+                        )
+                    ),
+
+                "historical_topology_observed":
+                    (
+                        not topology_requested
+                        or
+                        "HistoricalTopology"
+                        in
+                        snapshot["observations"]
+                    ),
+
+                "historical_topology_reflected":
+                    (
+                        not topology_requested
+                        or
+                        "HistoricalTopology"
+                        in
+                        snapshot["reflections"]
+                    ),
+
+                "historical_topology_visible_to_interlayer":
+                    (
+                        not topology_requested
+                        or
+                        "HistoricalTopology"
+                        in
+                        interlayer_result.data[
+                            "frozen_layer_names"
+                        ]
+                    ),
+
+                "historical_topology_no_authority":
+                    (
+                        not topology_requested
+                        or
+                        (
+                            historical_topology_result.data[
+                                "decision_authority"
+                            ]
+                            is False
+                            and
+                            historical_topology_result.data[
+                                "automatic_execution"
+                            ]
+                            is False
+                            and
+                            historical_topology_result.data[
+                                "canonical_write"
+                            ]
+                            is False
+                            and
+                            historical_topology_result.data[
+                                "state_commit"
+                            ]
+                            is False
+                        )
+                    ),
+
+                "historical_topology_is_projection":
+                    (
+                        not topology_requested
+                        or
+                        self.mind.canonical
+                        ==
+                        canonical_after_o345
+                    ),
+
                 "interlayer_verified":
                     (
                         interlayer_result.status
@@ -1049,6 +1240,8 @@ def run_thinking_cycle(
     historical_history: Any = None,
     historical_candidate: Any = None,
     historical_pool_size: int = 49,
+    topology_normal: Any = None,
+    topology_observed: Any = None,
 ) -> dict[str, Any]:
     """
     Convenience entry point for one integrated thinking cycle.
@@ -1067,6 +1260,8 @@ def run_thinking_cycle(
         historical_history=historical_history,
         historical_candidate=historical_candidate,
         historical_pool_size=historical_pool_size,
+        topology_normal=topology_normal,
+        topology_observed=topology_observed,
     )
 
     if not all(

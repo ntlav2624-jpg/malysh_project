@@ -37,6 +37,7 @@ DEFAULT_LAYERS = (
     "Omni",
     "HistoricalSwarm",
     "HistoricalOmni",
+    "HistoricalTopology",
 )
 
 

@@ -150,6 +150,8 @@ class OperationalLifecycle:
         historical_history: Any = None,
         historical_candidate: Any = None,
         historical_pool_size: int = 49,
+        topology_normal: Any = None,
+        topology_observed: Any = None,
         source: str = "operational-lifecycle",
     ) -> dict[str, Any]:
         """
@@ -172,6 +174,8 @@ class OperationalLifecycle:
             historical_history=historical_history,
             historical_candidate=historical_candidate,
             historical_pool_size=historical_pool_size,
+            topology_normal=topology_normal,
+            topology_observed=topology_observed,
         )
 
         failed_cycle_invariants = [
@@ -275,6 +279,12 @@ class OperationalLifecycle:
             historical_candidate is not None
         )
 
+        topology_requested = (
+            topology_normal is not None
+            or
+            topology_observed is not None
+        )
+
         historical_visible = (
             not historical_requested
             or
@@ -304,6 +314,46 @@ class OperationalLifecycle:
                 "HistoricalSwarm",
                 "HistoricalOmni",
             }.issubset(frozen_layers)
+        )
+
+        topology_visible = (
+            not topology_requested
+            or
+            "HistoricalTopology"
+            in
+            after_cycle["observations"]
+        )
+
+        topology_visible_to_interlayer = (
+            not topology_requested
+            or
+            "HistoricalTopology"
+            in
+            frozen_layers
+        )
+
+        topology_survived_recovery = (
+            not topology_requested
+            or
+            (
+                "HistoricalTopology"
+                in
+                recovered_snapshot[
+                    "observations"
+                ]
+                and
+                recovered_snapshot[
+                    "observations"
+                ][
+                    "HistoricalTopology"
+                ]
+                ==
+                after_cycle[
+                    "observations"
+                ][
+                    "HistoricalTopology"
+                ]
+            )
         )
 
         invariants = {
@@ -343,6 +393,26 @@ class OperationalLifecycle:
 
             "historical_interlayer_visibility":
                 historical_visible_to_interlayer,
+
+            "topology_visibility":
+                topology_visible,
+
+            "topology_interlayer_visibility":
+                topology_visible_to_interlayer,
+
+            "topology_survived_recovery":
+                topology_survived_recovery,
+
+            "topology_did_not_replace_canonical":
+                (
+                    not topology_requested
+                    or
+                    recovered_snapshot[
+                        "canonical"
+                    ]
+                    ==
+                    after_cycle["canonical"]
+                ),
 
             "joint_choice_no_winner":
                 (
@@ -432,6 +502,20 @@ class OperationalLifecycle:
 
             "historical_requested":
                 historical_requested,
+
+            "topology_requested":
+                topology_requested,
+
+            "historical_topology":
+                (
+                    deepcopy(
+                        cycle[
+                            "historical_topology"
+                        ]
+                    )
+                    if topology_requested
+                    else None
+                ),
 
             "frozen_layer_names":
                 sorted(frozen_layers),
