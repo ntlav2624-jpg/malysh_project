@@ -35,6 +35,8 @@ DEFAULT_LAYERS = (
     "HumanLayer",
     "Swarm",
     "Omni",
+    "HistoricalSwarm",
+    "HistoricalOmni",
 )
 
 

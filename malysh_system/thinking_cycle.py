@@ -29,6 +29,9 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from malysh_system.full_reflections import FullReflections
+from malysh_system.historical_swarm_omni import (
+    integrate_historical_swarm_omni,
+)
 from malysh_system.kmbp import integrate_kmbp
 from malysh_system.interlayer_observers import (
     integrate_interlayer_pass,
@@ -86,6 +89,9 @@ class MalyshThinkingCycle:
         old_result: Any,
         unresolved: Any = None,
         o345_n: int | None = None,
+        historical_history: Any = None,
+        historical_candidate: Any = None,
+        historical_pool_size: int = 49,
     ) -> dict[str, Any]:
         """
         Execute a complete internal thinking cycle.
@@ -393,8 +399,97 @@ class MalyshThinkingCycle:
             cross_layer_observation,
         )
 
+        # Historical Swarm/Omni heritage is optional.
+        #
+        # Historical Omni requires an explicit historical input
+        # contract. The thinking cycle never invents history or
+        # candidate values.
+        historical_requested = (
+            historical_history is not None
+            or
+            historical_candidate is not None
+        )
+
+        if (
+            historical_history is None
+            and
+            historical_candidate is None
+        ):
+            historical_swarm_result = None
+            historical_omni_result = None
+
+        elif (
+            historical_history is None
+            or
+            historical_candidate is None
+        ):
+            raise ValueError(
+                "historical_history and historical_candidate "
+                "must be supplied together"
+            )
+
+        else:
+            historical_swarm_result, historical_omni_result = (
+                integrate_historical_swarm_omni(
+                    self.mind,
+                    historical_history,
+                    historical_candidate,
+                    historical_pool_size,
+                )
+            )
+
+            if (
+                historical_swarm_result.status
+                !=
+                "ok"
+            ):
+                raise RuntimeError(
+                    historical_swarm_result.error
+                    or
+                    "HistoricalSwarm failed"
+                )
+
+            if (
+                historical_omni_result.status
+                !=
+                "ok"
+            ):
+                raise RuntimeError(
+                    historical_omni_result.error
+                    or
+                    "HistoricalOmni failed"
+                )
+
+            if not (
+                historical_swarm_result.data[
+                    "invariant_ok"
+                ]
+                and
+                historical_omni_result.data[
+                    "invariant_ok"
+                ]
+            ):
+                raise RuntimeError(
+                    "historical heritage invariant failed"
+                )
+
+            cross_layer_observation[
+                "layers_seen"
+            ].extend(
+                [
+                    "HistoricalSwarm",
+                    "HistoricalOmni",
+                ]
+            )
+
+            self.mind.reflect(
+                "KMBP_FULL_REFLECTIONS_PATTERN",
+                cross_layer_observation,
+            )
+
         # Every active layer now observes the same frozen results
-        # of all peer layers. Outputs remain separate reflections.
+        # of all peer layers. Historical heritage, when explicitly
+        # supplied, is already present in this frozen snapshot.
         interlayer_result = integrate_interlayer_pass(
             self.mind
         )
@@ -457,6 +552,24 @@ class MalyshThinkingCycle:
             "omni":
                 deepcopy(
                     omni_result.to_dict()
+                ),
+
+            "historical_swarm":
+                (
+                    deepcopy(
+                        historical_swarm_result.to_dict()
+                    )
+                    if historical_swarm_result is not None
+                    else None
+                ),
+
+            "historical_omni":
+                (
+                    deepcopy(
+                        historical_omni_result.to_dict()
+                    )
+                    if historical_omni_result is not None
+                    else None
                 ),
 
             "interlayer":
@@ -692,6 +805,105 @@ class MalyshThinkingCycle:
                         "named_unresolved"
                     ),
 
+                "historical_contract_valid":
+                    (
+                        (
+                            historical_history is None
+                            and
+                            historical_candidate is None
+                            and
+                            historical_swarm_result is None
+                            and
+                            historical_omni_result is None
+                        )
+                        or
+                        (
+                            historical_history is not None
+                            and
+                            historical_candidate is not None
+                            and
+                            historical_swarm_result is not None
+                            and
+                            historical_omni_result is not None
+                        )
+                    ),
+
+                "historical_heritage_verified":
+                    (
+                        not historical_requested
+                        or
+                        (
+                            historical_swarm_result is not None
+                            and
+                            historical_omni_result is not None
+                            and
+                            historical_swarm_result.status == "ok"
+                            and
+                            historical_omni_result.status == "ok"
+                            and
+                            historical_swarm_result.data[
+                                "invariant_ok"
+                            ]
+                            is True
+                            and
+                            historical_omni_result.data[
+                                "invariant_ok"
+                            ]
+                            is True
+                        )
+                    ),
+
+                "historical_no_winner":
+                    (
+                        not historical_requested
+                        or
+                        historical_omni_result.data[
+                            "winner"
+                        ]
+                        is None
+                    ),
+
+                "historical_no_mutation":
+                    (
+                        not historical_requested
+                        or
+                        (
+                            historical_omni_result.data[
+                                "randomness_used"
+                            ]
+                            is False
+                            and
+                            historical_omni_result.data[
+                                "weight_mutation"
+                            ]
+                            is False
+                            and
+                            historical_omni_result.data[
+                                "error_memory_mutation"
+                            ]
+                            is False
+                        )
+                    ),
+
+                "historical_visible_to_interlayer":
+                    (
+                        not historical_requested
+                        or
+                        (
+                            "HistoricalSwarm"
+                            in
+                            interlayer_result.data[
+                                "frozen_layer_names"
+                            ]
+                            and
+                            "HistoricalOmni"
+                            in
+                            interlayer_result.data[
+                                "frozen_layer_names"
+                            ]
+                        )
+                    ),
+
                 "interlayer_verified":
                     (
                         interlayer_result.status
@@ -834,6 +1046,9 @@ def run_thinking_cycle(
     root: str | Path | None = None,
     mind: MindState | None = None,
     o345_n: int | None = None,
+    historical_history: Any = None,
+    historical_candidate: Any = None,
+    historical_pool_size: int = 49,
 ) -> dict[str, Any]:
     """
     Convenience entry point for one integrated thinking cycle.
@@ -849,6 +1064,9 @@ def run_thinking_cycle(
         old_result=old_result,
         unresolved=unresolved,
         o345_n=o345_n,
+        historical_history=historical_history,
+        historical_candidate=historical_candidate,
+        historical_pool_size=historical_pool_size,
     )
 
     if not all(
