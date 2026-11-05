@@ -31,7 +31,11 @@ from typing import Any, Iterable
 from malysh_system.full_reflections import FullReflections
 from malysh_system.kmbp import integrate_kmbp
 from malysh_system.protocols import OrganResult
-from malysh_system.unified_mind import MindState
+from malysh_system.thought_cycle import observe_o345
+from malysh_system.unified_mind import (
+    MindState,
+    merge_o345,
+)
 
 
 class MalyshThinkingCycle:
@@ -74,6 +78,7 @@ class MalyshThinkingCycle:
         data: Iterable[int],
         old_result: Any,
         unresolved: Any = None,
+        o345_n: int | None = None,
     ) -> dict[str, Any]:
         """
         Execute a complete internal thinking cycle.
@@ -86,9 +91,56 @@ class MalyshThinkingCycle:
         No KMBP result is recomputed elsewhere in this cycle.
         """
 
+        data_values = list(data)
+
+        if not data_values:
+            raise ValueError(
+                "thinking-cycle input must not be empty"
+            )
+
         canonical_before = deepcopy(
             self.mind.canonical
         )
+
+        # O345 has its own established scalar input contract.
+        #
+        # We intentionally do NOT infer o345_n from data_values.
+        # If no scalar state is supplied, O345 remains unexecuted
+        # in this cycle rather than receiving an invented mapping.
+        o345_result = None
+        canonical_after_o345 = deepcopy(
+            canonical_before
+        )
+
+        if o345_n is not None:
+            o345_result = observe_o345(
+                o345_n
+            )
+
+            if not o345_result.get(
+                "invariant_ok"
+            ):
+                raise RuntimeError(
+                    "O345 invariant failed"
+                )
+
+            merge_o345(
+                self.mind,
+                o345_result,
+            )
+
+            canonical_after_o345 = deepcopy(
+                self.mind.canonical
+            )
+
+            if (
+                canonical_after_o345
+                !=
+                o345_result["canonical"]
+            ):
+                raise RuntimeError(
+                    "O345 canonical merge mismatch"
+                )
 
         kmbp_call_count = 0
         kmbp_organ_result: OrganResult | None = None
@@ -163,7 +215,7 @@ class MalyshThinkingCycle:
         )
 
         reflection_result = reflections.think(
-            data,
+            data_values,
             old_result,
             unresolved,
         )
@@ -229,11 +281,33 @@ class MalyshThinkingCycle:
         # Cross-layer comparison is stored separately.
         # It cannot directly modify execution.
         cross_layer_observation = {
-            "layers_seen": [
-                "KMBP",
-                "FullReflections",
-                "HumanLayer",
-            ],
+            "layers_seen": (
+                (
+                    [
+                        "O345",
+                        "O3",
+                        "O4",
+                        "O5",
+                    ]
+                    if o345_result is not None
+                    else []
+                )
+                + [
+                    "KMBP",
+                    "FullReflections",
+                    "HumanLayer",
+                ]
+            ),
+
+            "o345_executed":
+                o345_result is not None,
+
+            "o345_invariant_ok":
+                (
+                    o345_result["invariant_ok"]
+                    if o345_result is not None
+                    else None
+                ),
 
             "kmbp_invariant_ok":
                 kmbp_organ_result.data[
@@ -277,11 +351,15 @@ class MalyshThinkingCycle:
             cross_layer_observation,
         )
 
-        # The cycle must not allow KMBP or reflections to overwrite
-        # the canonical state.
-        if self.mind.canonical != canonical_before:
+        # O345 may establish canonical state when explicitly
+        # supplied with its scalar input. Later organs must preserve it.
+        if (
+            self.mind.canonical
+            !=
+            canonical_after_o345
+        ):
             raise RuntimeError(
-                "thinking cycle modified canonical state"
+                "an organ overwrote canonical state after O345"
             )
 
         if not self.mind.invariant():
@@ -299,7 +377,17 @@ class MalyshThinkingCycle:
                 snapshot["subject"],
 
             "input":
-                list(data),
+                deepcopy(
+                    data_values
+                ),
+
+            "o345_n":
+                o345_n,
+
+            "o345":
+                deepcopy(
+                    o345_result
+                ),
 
             "kmbp":
                 deepcopy(
@@ -369,10 +457,67 @@ class MalyshThinkingCycle:
                         snapshot["reflections"]
                     ),
 
-                "canonical_unchanged":
-                    snapshot["canonical"]
-                    ==
-                    canonical_before,
+                "o345_contract_valid":
+                    (
+                        o345_result is None
+                        or
+                        (
+                            o345_result[
+                                "invariant_ok"
+                            ]
+                            is True
+                        )
+                    ),
+
+                "o345_observers_present":
+                    (
+                        o345_result is None
+                        or
+                        all(
+                            name
+                            in
+                            snapshot["observations"]
+                            for name in (
+                                "O3",
+                                "O4",
+                                "O5",
+                            )
+                        )
+                    ),
+
+                "o345_reflection_present":
+                    (
+                        o345_result is None
+                        or
+                        "O345"
+                        in
+                        snapshot["reflections"]
+                    ),
+
+                "canonical_transition_valid":
+                    (
+                        (
+                            snapshot["canonical"]
+                            ==
+                            canonical_before
+                        )
+                        if o345_result is None
+                        else
+                        (
+                            snapshot["canonical"]
+                            ==
+                            o345_result[
+                                "canonical"
+                            ]
+                        )
+                    ),
+
+                "canonical_preserved_after_o345":
+                    (
+                        snapshot["canonical"]
+                        ==
+                        canonical_after_o345
+                    ),
 
                 "no_decision_authority":
                     (
@@ -432,6 +577,7 @@ def run_thinking_cycle(
     unresolved: Any = None,
     root: str | Path | None = None,
     mind: MindState | None = None,
+    o345_n: int | None = None,
 ) -> dict[str, Any]:
     """
     Convenience entry point for one integrated thinking cycle.
@@ -446,6 +592,7 @@ def run_thinking_cycle(
         data=data,
         old_result=old_result,
         unresolved=unresolved,
+        o345_n=o345_n,
     )
 
     if not all(
