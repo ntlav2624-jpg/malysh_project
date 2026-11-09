@@ -1,0 +1,25 @@
+{
+  "experiment_id": "20261109_215237",
+  "experiment": "navier_cloud_blind",
+  "description": "Independent Fourier-triad state-network experiment for incompressible 3D Navier-Stokes",
+  "branch": "full-reflections-20261103_175809",
+  "git_head_before_commit": "c28c3be5ea18b4f0070b064013d05588ccefc86c",
+  "python_version": "3.13.13",
+  "platform": "Android-15-aarch64-64bit-ELF",
+  "parameters": {
+    "N": 12,
+    "seed": 7,
+    "nu": 0.03,
+    "dt": 0.002,
+    "steps": 500,
+    "diag_every": 100
+  },
+  "blind_assumptions": {
+    "predefined_geometry": false,
+    "special_role_of_7": false,
+    "ring_hypothesis": false,
+    "spiral_hypothesis": false,
+    "plate_hypothesis": false,
+    "cloud_hypothesis": false
+  }
+}

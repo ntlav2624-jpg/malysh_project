@@ -1,0 +1,245 @@
+{
+  "experiment": "Navier-Stokes triadic state-network",
+  "assumptions": {
+    "predefined_geometry": false,
+    "special_role_of_7": false,
+    "ring_hypothesis": false,
+    "spiral_hypothesis": false,
+    "plate_hypothesis": false,
+    "cloud_hypothesis": false
+  },
+  "parameters": {
+    "N": 12,
+    "seed": 7,
+    "nu": 0.03,
+    "dt": 0.002,
+    "steps": 500,
+    "diag_every": 100,
+    "output": "experiments/navier_cloud/20261109_215237/result.json"
+  },
+  "active_modes": 728,
+  "snapshots": [
+    {
+      "energy": 1.0000000000000002,
+      "spectral_center": 3.0755886172349927,
+      "spectral_width": 0.5566461095040054,
+      "nonlinear_energy_sum": -0.00018381781219901916,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9858064510454186,
+          "nonlinear_flux": -0.010855348297070078,
+          "viscous_dissipation": 0.5838403768344933,
+          "flux_to_dissipation": -0.018593007143367448
+        },
+        "2.5": {
+          "energy_fraction": 0.777074627601142,
+          "nonlinear_flux": -0.033860604134970884,
+          "viscous_dissipation": 0.5172378931002258,
+          "flux_to_dissipation": -0.06546427589057106
+        },
+        "3.0": {
+          "energy_fraction": 0.6873762532813933,
+          "nonlinear_flux": -0.01696344962289573,
+          "viscous_dissipation": 0.47418267342674636,
+          "flux_to_dissipation": -0.03577408153762141
+        }
+      },
+      "network": {
+        "triads": 224796,
+        "all_edges": 224796,
+        "selected_edges": 23083,
+        "coverage": 0.8000029884106061,
+        "selected_nodes": 448,
+        "largest_scc": 432,
+        "cyclic_components": 1
+      },
+      "step": 0,
+      "time": 0.0
+    },
+    {
+      "energy": 0.8882831171523791,
+      "spectral_center": 3.111495884740155,
+      "spectral_width": 0.6787634412141108,
+      "nonlinear_energy_sum": 0.0004896077795286113,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9799509837800505,
+          "nonlinear_flux": -0.02800159319739573,
+          "viscous_dissipation": 0.537692300454499,
+          "flux_to_dissipation": -0.05207735571762256
+        },
+        "2.5": {
+          "energy_fraction": 0.7579367656438197,
+          "nonlinear_flux": -0.019123913224195703,
+          "viscous_dissipation": 0.4752609575291329,
+          "flux_to_dissipation": -0.040238763401943094
+        },
+        "3.0": {
+          "energy_fraction": 0.6759752132698978,
+          "nonlinear_flux": 0.04402701771682283,
+          "viscous_dissipation": 0.4403145271790424,
+          "flux_to_dissipation": 0.09998992765214942
+        }
+      },
+      "network": {
+        "triads": 224796,
+        "all_edges": 224796,
+        "selected_edges": 41907,
+        "coverage": 0.8000012038196153,
+        "selected_nodes": 694,
+        "largest_scc": 648,
+        "cyclic_components": 1
+      },
+      "step": 100,
+      "time": 0.2
+    },
+    {
+      "energy": 0.7823297599773655,
+      "spectral_center": 3.2127996154584504,
+      "spectral_width": 0.8601905291914954,
+      "nonlinear_energy_sum": -2.5728642894295994e-05,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9698823434524187,
+          "nonlinear_flux": -0.03349417581778478,
+          "viscous_dissipation": 0.515574835206321,
+          "flux_to_dissipation": -0.06496472195812504
+        },
+        "2.5": {
+          "energy_fraction": 0.7391117907264498,
+          "nonlinear_flux": 0.0039227203053026904,
+          "viscous_dissipation": 0.4588806802447288,
+          "flux_to_dissipation": 0.008548453822921109
+        },
+        "3.0": {
+          "energy_fraction": 0.6699929324486003,
+          "nonlinear_flux": 0.06122090928428084,
+          "viscous_dissipation": 0.4329252851376474,
+          "flux_to_dissipation": 0.14141218216167675
+        }
+      },
+      "network": {
+        "triads": 224796,
+        "all_edges": 224796,
+        "selected_edges": 57821,
+        "coverage": 0.8000027364472406,
+        "selected_nodes": 710,
+        "largest_scc": 698,
+        "cyclic_components": 1
+      },
+      "step": 200,
+      "time": 0.4
+    },
+    {
+      "energy": 0.6815411938909697,
+      "spectral_center": 3.3047686838064423,
+      "spectral_width": 0.9933455832570501,
+      "nonlinear_energy_sum": 0.0015754557403621777,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9573570190096209,
+          "nonlinear_flux": -0.026932212771307834,
+          "viscous_dissipation": 0.48256209621806534,
+          "flux_to_dissipation": -0.0558108748747175
+        },
+        "2.5": {
+          "energy_fraction": 0.722219716156835,
+          "nonlinear_flux": 0.02975510535142368,
+          "viscous_dissipation": 0.432600503801848,
+          "flux_to_dissipation": 0.06878194798647982
+        },
+        "3.0": {
+          "energy_fraction": 0.6627130355497953,
+          "nonlinear_flux": 0.06230008941282472,
+          "viscous_dissipation": 0.413133501812051,
+          "flux_to_dissipation": 0.15079892852932375
+        }
+      },
+      "network": {
+        "triads": 224796,
+        "all_edges": 224796,
+        "selected_edges": 66045,
+        "coverage": 0.8000004010122961,
+        "selected_nodes": 724,
+        "largest_scc": 720,
+        "cyclic_components": 1
+      },
+      "step": 300,
+      "time": 0.6
+    },
+    {
+      "energy": 0.5892248203695793,
+      "spectral_center": 3.3632780501620108,
+      "spectral_width": 1.080393142517234,
+      "nonlinear_energy_sum": 0.005049749844548854,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9440125153719969,
+          "nonlinear_flux": -0.014846943353447314,
+          "viscous_dissipation": 0.43634599114273165,
+          "flux_to_dissipation": -0.034025621077817536
+        },
+        "2.5": {
+          "energy_fraction": 0.7085063214245444,
+          "nonlinear_flux": 0.048208682681686744,
+          "viscous_dissipation": 0.3933234437186822,
+          "flux_to_dissipation": 0.1225675292219987
+        },
+        "3.0": {
+          "energy_fraction": 0.6530915699797021,
+          "nonlinear_flux": 0.06179210027134838,
+          "viscous_dissipation": 0.37765060517504434,
+          "flux_to_dissipation": 0.16362240500768482
+        }
+      },
+      "network": {
+        "triads": 224796,
+        "all_edges": 224796,
+        "selected_edges": 71193,
+        "coverage": 0.8000014592109638,
+        "selected_nodes": 726,
+        "largest_scc": 724,
+        "cyclic_components": 1
+      },
+      "step": 400,
+      "time": 0.8
+    },
+    {
+      "energy": 0.5073815870372861,
+      "spectral_center": 3.3904926899687986,
+      "spectral_width": 1.1386950545750356,
+      "nonlinear_energy_sum": 0.00713283946281134,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9306756897810664,
+          "nonlinear_flux": -0.004997684877064243,
+          "viscous_dissipation": 0.3844561784895658,
+          "flux_to_dissipation": -0.012999361583156038
+        },
+        "2.5": {
+          "energy_fraction": 0.6970348715261068,
+          "nonlinear_flux": 0.05322165795988672,
+          "viscous_dissipation": 0.3478201969968498,
+          "flux_to_dissipation": 0.1530148577322804
+        },
+        "3.0": {
+          "energy_fraction": 0.6418509642847552,
+          "nonlinear_flux": 0.058836127492128715,
+          "viscous_dissipation": 0.3343805337480328,
+          "flux_to_dissipation": 0.17595560014406747
+        }
+      },
+      "network": {
+        "triads": 224796,
+        "all_edges": 224796,
+        "selected_edges": 74434,
+        "coverage": 0.8000036226679952,
+        "selected_nodes": 728,
+        "largest_scc": 726,
+        "cyclic_components": 1
+      },
+      "step": 500,
+      "time": 1.0
+    }
+  ]
+}
