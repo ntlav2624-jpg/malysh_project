@@ -40,6 +40,7 @@ DEFAULT_LAYERS = (
     "HistoricalTopology",
     "HistoricalHiveCortex",
     "HistoricalCortexPrime",
+    "CognitiveFlow",
 )
 
 

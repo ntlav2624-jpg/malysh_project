@@ -28,6 +28,9 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any, Iterable
 
+from malysh_system.cognitive_organ_bridge import (
+    integrate_cognitive_organ_bridge,
+)
 from malysh_system.full_reflections import FullReflections
 from malysh_system.historical_swarm_omni import (
     integrate_historical_swarm_omni,
@@ -715,9 +718,49 @@ class MalyshThinkingCycle:
                 cross_layer_observation,
             )
 
-        # Every active layer now observes the same frozen results
-        # of all peer layers. Explicit historical organs are already
-        # present in this immutable pre-InterLayer snapshot.
+        # Existing Cognitive Flow receives real published outputs of
+        # the organs already active in this cycle. It does not execute
+        # organs or replace O345, Human Layer or JointChoice.
+        cognitive_flow_result = (
+            integrate_cognitive_organ_bridge(
+                self.mind
+            )
+        )
+
+        if cognitive_flow_result.status != "ok":
+            raise RuntimeError(
+                cognitive_flow_result.error
+                or
+                "CognitiveFlow bridge failed"
+            )
+
+        if (
+            cognitive_flow_result.data[
+                "invariant_ok"
+            ]
+            is not True
+        ):
+            raise RuntimeError(
+                "CognitiveFlow bridge invariant failed"
+            )
+
+        cross_layer_observation[
+            "layers_seen"
+        ].append(
+            "CognitiveFlow"
+        )
+
+        cross_layer_observation[
+            "cognitive_flow_invariant_ok"
+        ] = True
+
+        self.mind.reflect(
+            "KMBP_FULL_REFLECTIONS_PATTERN",
+            cross_layer_observation,
+        )
+
+        # All observers now receive one frozen snapshot containing
+        # the real organs and the one existing Cognitive Flow.
         interlayer_result = integrate_interlayer_pass(
             self.mind
         )
@@ -828,6 +871,11 @@ class MalyshThinkingCycle:
                     if historical_cortex_prime_result
                     is not None
                     else None
+                ),
+
+            "cognitive_flow":
+                deepcopy(
+                    cognitive_flow_result.to_dict()
                 ),
 
             "interlayer":
@@ -1556,6 +1604,94 @@ class MalyshThinkingCycle:
                     (
                         not cortex_prime_requested
                         or
+                        self.mind.canonical
+                        ==
+                        canonical_after_o345
+                    ),
+
+                "cognitive_flow_verified":
+                    (
+                        cognitive_flow_result.status
+                        ==
+                        "ok"
+                        and
+                        cognitive_flow_result.data[
+                            "invariant_ok"
+                        ]
+                        is True
+                    ),
+
+                "cognitive_flow_observed":
+                    (
+                        "CognitiveFlow"
+                        in
+                        snapshot["observations"]
+                    ),
+
+                "cognitive_flow_reflected":
+                    (
+                        "CognitiveFlow"
+                        in
+                        snapshot["reflections"]
+                    ),
+
+                "cognitive_flow_visible_to_interlayer":
+                    (
+                        "CognitiveFlow"
+                        in
+                        interlayer_result.data[
+                            "frozen_layer_names"
+                        ]
+                    ),
+
+                "cognitive_flow_uses_real_organs":
+                    (
+                        cognitive_flow_result.data[
+                            "source"
+                        ]
+                        ==
+                        "real_mind_state_organs"
+                        and
+                        cognitive_flow_result.data[
+                            "imported_state_count"
+                        ]
+                        >
+                        0
+                    ),
+
+                "cognitive_flow_no_second_controller":
+                    (
+                        cognitive_flow_result.data[
+                            "second_controller_created"
+                        ]
+                        is False
+                    ),
+
+                "cognitive_flow_no_authority":
+                    (
+                        cognitive_flow_result.data[
+                            "decision_authority"
+                        ]
+                        is False
+                        and
+                        cognitive_flow_result.data[
+                            "organ_execution"
+                        ]
+                        is False
+                        and
+                        cognitive_flow_result.data[
+                            "canonical_write"
+                        ]
+                        is False
+                        and
+                        cognitive_flow_result.data[
+                            "state_commit"
+                        ]
+                        is False
+                    ),
+
+                "cognitive_flow_canonical_preserved":
+                    (
                         self.mind.canonical
                         ==
                         canonical_after_o345
