@@ -1,0 +1,46 @@
+{
+  "schema": "malysh.cognitive_flow.v1",
+  "enabled": true,
+  "subject_count": 1,
+  "model": {
+    "K": "typed thought states",
+    "R": "typed relations",
+    "W": "sign confidence evidence priority",
+    "J": "realized thought flow",
+    "A": "active states",
+    "rho": "normalized measured attention",
+    "Phi": "append-only history",
+    "O": "independent observers"
+  },
+  "branches": [
+    "primary",
+    "possible",
+    "negative",
+    "unresolved"
+  ],
+  "organs": [
+    "O3",
+    "O4",
+    "O5",
+    "O345",
+    "HumanLayer",
+    "Swarm",
+    "Omni",
+    "567",
+    "KMBP",
+    "Base4",
+    "Legacy",
+    "Executor"
+  ],
+  "hard_invariants": [
+    "one unified Malysh",
+    "attention nonnegative",
+    "attention normalized",
+    "relations reference existing states",
+    "negative results preserved",
+    "observer cannot directly execute",
+    "execution requires invariant gate",
+    "append-only thought history",
+    "legacy never deleted"
+  ]
+}
