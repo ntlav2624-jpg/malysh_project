@@ -1,0 +1,784 @@
+{
+  "schema": "malysh.photon1e6c.v1",
+  "created_utc": "2026-11-10T20:30:22.465168+00:00",
+  "input_frequency_Hz": 500000000000000.0,
+  "input_energy_J": 3.313035075e-19,
+  "input_momentum": 1.1051095471521168e-27,
+  "maximum_beta": 1000000.0,
+  "formal_maximum_velocity_m_s": 299792458000000.0,
+  "results": [
+    {
+      "beta": 1.0,
+      "velocity_m_s": 299792458.0,
+      "status": "standard_photon",
+      "worldline": "null",
+      "rest_mass": 0.0,
+      "frequency_Hz": 500000000000000.0,
+      "energy_J": 3.313035075e-19,
+      "momentum_kg_m_s": 1.1051095471521168e-27,
+      "E_over_pc": 1.0,
+      "energy_momentum_invariant": 0.0,
+      "interval_factor": 0.0,
+      "standard_physics": true,
+      "O3": {
+        "observer": "O3",
+        "geometry": "null",
+        "causal_status": "standard_photon"
+      },
+      "O4": {
+        "observer": "O4",
+        "E_equals_pc": true,
+        "mass_shell": "massless",
+        "internal_clock": "not_defined_as_massive_rest_clock"
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "consistent"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "standard_photon",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "null",
+          "causal_status": "standard_photon"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "E_equals_pc": true,
+          "mass_shell": "massless",
+          "internal_clock": "not_defined_as_massive_rest_clock"
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "consistent"
+        }
+      },
+      "human_layer": {
+        "primary": "standard photon travels at c",
+        "possible": "energy may change through frequency without changing vacuum speed",
+        "negative": "no need for superluminal hypothesis",
+        "unresolved": null
+      }
+    },
+    {
+      "beta": 1.000001,
+      "velocity_m_s": 299792757.792458,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -2.0000009999243673e-06,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051084420436749e-27,
+        "E_over_pc": 1.000001,
+        "invariant": 2.1952369882780662e-43,
+        "effective_mass_squared": 2.7176817623365404e-77,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 1.000001,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 0.0014142139158997012,
+      "reciprocal_spacelike_scale": 707.1066044232887,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 1.01,
+      "velocity_m_s": 302790382.58,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -0.020100000000000007,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.0941678684674425e-27,
+        "E_over_pc": 1.01,
+        "invariant": 2.162745302464663e-39,
+        "effective_mass_squared": 2.6774573754324557e-73,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 1.0099999999999998,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 0.14177446878757827,
+      "reciprocal_spacelike_scale": 7.053456158585982,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 1.1,
+      "velocity_m_s": 329771703.8,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -0.2100000000000002,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.0046450428655607e-27,
+        "E_over_pc": 1.1,
+        "invariant": 1.904960574973434e-38,
+        "effective_mass_squared": 2.3583224226903657e-72,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 1.1,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 0.4582575694955842,
+      "reciprocal_spacelike_scale": 2.1821789023599227,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 2.0,
+      "velocity_m_s": 599584916.0,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -3.0,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 5.525547735760584e-28,
+        "E_over_pc": 2.0,
+        "invariant": 8.232151056135191e-38,
+        "effective_mass_squared": 1.0191321898054788e-71,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 2.0,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 1.7320508075688772,
+      "reciprocal_spacelike_scale": 0.5773502691896258,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 10.0,
+      "velocity_m_s": 2997924580.0,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -99.0,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-28,
+        "E_over_pc": 10.0,
+        "invariant": 1.0866439394098452e-37,
+        "effective_mass_squared": 1.345254490543232e-71,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 10.0,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 9.9498743710662,
+      "reciprocal_spacelike_scale": 0.10050378152592121,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 100.0,
+      "velocity_m_s": 29979245800.0,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -9999.0,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521169e-29,
+        "E_over_pc": 100.0,
+        "invariant": 1.0975103788039436e-37,
+        "effective_mass_squared": 1.3587070354486642e-71,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 100.0,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 99.99499987499375,
+      "reciprocal_spacelike_scale": 0.010000500037503125,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 1000.0,
+      "velocity_m_s": 299792458000.0,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -999999.0,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521169e-30,
+        "E_over_pc": 1000.0,
+        "invariant": 1.0976190431978846e-37,
+        "effective_mass_squared": 1.3588415608977186e-71,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 999.9999999999999,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 999.999499999875,
+      "reciprocal_spacelike_scale": 0.0010000005000003751,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 10000.0,
+      "velocity_m_s": 2997924580000.0,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -99999999.0,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-31,
+        "E_over_pc": 10000.000000000002,
+        "invariant": 1.097620129841824e-37,
+        "effective_mass_squared": 1.3588429061522093e-71,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 10000.0,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 9999.99995,
+      "reciprocal_spacelike_scale": 0.0001000000005,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 100000.0,
+      "velocity_m_s": 29979245800000.0,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -9999999999.0,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-32,
+        "E_over_pc": 99999.99999999999,
+        "invariant": 1.0976201407082634e-37,
+        "effective_mass_squared": 1.358842919604754e-71,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 100000.0,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 99999.999995,
+      "reciprocal_spacelike_scale": 1.00000000005e-05,
+      "scale_product": 1.0,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    },
+    {
+      "beta": 1000000.0,
+      "velocity_m_s": 299792458000000.0,
+      "status": "hypothesis_only",
+      "standard_physics": false,
+      "worldline_if_interpreted_as_velocity": "spacelike",
+      "interval_factor": -999999999999.0,
+      "hypothesis_A_keep_E_and_use_p_E_over_v": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521169e-33,
+        "E_over_pc": 1000000.0,
+        "invariant": 1.0976201408169278e-37,
+        "effective_mass_squared": 1.3588429197392796e-71,
+        "photon_E_equals_pc_preserved": false
+      },
+      "hypothesis_B_keep_E_equals_pc": {
+        "energy_J": 3.313035075e-19,
+        "momentum": 1.1051095471521168e-27,
+        "invariant": 0.0,
+        "E_equals_pc": true,
+        "pv_over_E": 999999.9999999999,
+        "transport_relation_preserved": false
+      },
+      "spacelike_scale": 999999.9999995,
+      "reciprocal_spacelike_scale": 1.0000000000005e-06,
+      "scale_product": 0.9999999999999999,
+      "physical_status": "unresolved_not_established",
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causal_status": "not_standard_photon_kinematics"
+      },
+      "O4": {
+        "observer": "O4",
+        "hypothesis_A_E_pc_preserved": false,
+        "hypothesis_B_transport_preserved": false,
+        "simultaneously_preserved": false
+      },
+      "O5": {
+        "observer": "O5",
+        "known_photon_definition": "not_preserved",
+        "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+      },
+      "O345": {
+        "observer": "O345",
+        "consensus": "requires_changed_physics",
+        "geometry": {
+          "observer": "O3",
+          "geometry": "spacelike",
+          "causal_status": "not_standard_photon_kinematics"
+        },
+        "energy_momentum": {
+          "observer": "O4",
+          "hypothesis_A_E_pc_preserved": false,
+          "hypothesis_B_transport_preserved": false,
+          "simultaneously_preserved": false
+        },
+        "definition_check": {
+          "observer": "O5",
+          "known_photon_definition": "not_preserved",
+          "reason": "beta > 1 cannot preserve all tested standard photon relations simultaneously"
+        }
+      },
+      "human_layer": {
+        "primary": "beta > 1 is not a standard photon state",
+        "possible": "a new object or modified dispersion relation could be hypothesized",
+        "negative": "do not call the mathematical continuation an experimentally established photon",
+        "unresolved": "whether any consistent new physics can realize the proposed state"
+      }
+    }
+  ],
+  "patterns": {
+    "standard_photon": {
+      "v": "c",
+      "E": "h*f",
+      "p": "E/c",
+      "mass_shell": "E^2-p^2*c^2=0"
+    },
+    "discovered_superluminal_pattern": {
+      "chi": "1/sqrt(beta^2-1)",
+      "xi": "sqrt(beta^2-1)",
+      "identity": "chi*xi=1",
+      "physical_status": "mathematical_only"
+    },
+    "conflict_pattern": {
+      "statement": "For beta>1, keeping p=E/v breaks E=pc; keeping E=pc breaks E=pv.",
+      "interpretation": "At least one standard relation must be modified.",
+      "physical_status": "hypothesis_not_established"
+    }
+  }
+}

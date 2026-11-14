@@ -1,0 +1,868 @@
+{
+  "schema": "malysh.bullet100c.v3",
+  "created_utc": "2026-11-10T20:15:26.136299+00:00",
+  "bullet": {
+    "mass_kg": 0.008,
+    "length_m": 0.015,
+    "diameter_m": 0.009,
+    "temperature_K": 293.15
+  },
+  "medium": {
+    "name": "thin_hydrogen_test",
+    "density_m3": 1000000.0,
+    "cross_section_m2": 1e-20,
+    "particle_mass_kg": 1.67262192595e-27
+  },
+  "counter_model_note": "Synthetic characteristic times; exploratory, not material-specific proof",
+  "results": [
+    {
+      "beta": 0.0,
+      "velocity_m_s": 0.0,
+      "branch": "known_physics",
+      "status": "valid",
+      "worldline": "timelike",
+      "continued": true,
+      "gamma": 1.0,
+      "proper_time_rate": 1.0,
+      "energy_J": 719004142989454.1,
+      "momentum_kg_m_s": 0.0,
+      "invariant_relative_error": 0.0,
+      "interaction_rate_per_proper_s": 0.0,
+      "single_hit_energy_J": 0.0,
+      "single_hit_energy_eV": 0.0,
+      "internal_counters": {
+        "electronic": {
+          "tau_s": 1e-16,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 0.0,
+          "load": "resolved",
+          "damage_index": 0.0,
+          "binding_scale_crossed_per_hit": false
+        },
+        "atomic": {
+          "tau_s": 1e-15,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 0.0,
+          "load": "resolved",
+          "damage_index": 0.0,
+          "binding_scale_crossed_per_hit": false
+        },
+        "lattice": {
+          "tau_s": 1e-12,
+          "binding_scale_eV": 3.0,
+          "external_events_per_tick": 0.0,
+          "load": "resolved",
+          "damage_index": 0.0,
+          "binding_scale_crossed_per_hit": false
+        },
+        "thermal_local": {
+          "tau_s": 1e-09,
+          "binding_scale_eV": 0.025,
+          "external_events_per_tick": 0.0,
+          "load": "resolved",
+          "damage_index": 0.0,
+          "binding_scale_crossed_per_hit": false
+        },
+        "nuclear": {
+          "tau_s": 1e-22,
+          "binding_scale_eV": 1000000.0,
+          "external_events_per_tick": 0.0,
+          "load": "resolved",
+          "damage_index": 0.0,
+          "binding_scale_crossed_per_hit": false
+        }
+      },
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "counter_load_max": 0.0,
+        "all_counters_resolve_events": true
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate_per_proper_s": 0.0,
+        "single_hit_energy_eV": 0.0
+      },
+      "O345": "known_physics_consistent",
+      "human_layer": {
+        "primary": "known physics result",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 0.1,
+      "velocity_m_s": 29979245.8,
+      "branch": "known_physics",
+      "status": "valid",
+      "worldline": "timelike",
+      "continued": true,
+      "gamma": 1.005037815259212,
+      "proper_time_rate": 0.99498743710662,
+      "energy_J": 722626353032443.2,
+      "momentum_kg_m_s": 241042.20561560732,
+      "invariant_relative_error": 5.444738247832946e-16,
+      "interaction_rate_per_proper_s": 3.0130275701950905e-07,
+      "single_hit_energy_J": 7.573234922874592e-13,
+      "single_hit_energy_eV": 4726841.449414493,
+      "internal_counters": {
+        "electronic": {
+          "tau_s": 1e-16,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 3.0130275701950903e-23,
+          "load": "resolved",
+          "damage_index": 1.4242103607026786e-17,
+          "binding_scale_crossed_per_hit": true
+        },
+        "atomic": {
+          "tau_s": 1e-15,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 3.013027570195091e-22,
+          "load": "resolved",
+          "damage_index": 1.424210360702679e-16,
+          "binding_scale_crossed_per_hit": true
+        },
+        "lattice": {
+          "tau_s": 1e-12,
+          "binding_scale_eV": 3.0,
+          "external_events_per_tick": 3.0130275701950904e-19,
+          "load": "resolved",
+          "damage_index": 4.74736786900893e-13,
+          "binding_scale_crossed_per_hit": true
+        },
+        "thermal_local": {
+          "tau_s": 1e-09,
+          "binding_scale_eV": 0.025,
+          "external_events_per_tick": 3.0130275701950904e-16,
+          "load": "resolved",
+          "damage_index": 5.696841442810715e-08,
+          "binding_scale_crossed_per_hit": true
+        },
+        "nuclear": {
+          "tau_s": 1e-22,
+          "binding_scale_eV": 1000000.0,
+          "external_events_per_tick": 3.013027570195091e-29,
+          "load": "resolved",
+          "damage_index": 1.424210360702679e-28,
+          "binding_scale_crossed_per_hit": true
+        }
+      },
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "counter_load_max": 3.0130275701950904e-16,
+        "all_counters_resolve_events": true
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate_per_proper_s": 3.0130275701950905e-07,
+        "single_hit_energy_eV": 4726841.449414493
+      },
+      "O345": "known_physics_consistent",
+      "human_layer": {
+        "primary": "known physics result",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 0.5,
+      "velocity_m_s": 149896229.0,
+      "branch": "known_physics",
+      "status": "valid",
+      "worldline": "timelike",
+      "continued": true,
+      "gamma": 1.1547005383792517,
+      "proper_time_rate": 0.8660254037844385,
+      "energy_J": 830234471006835.2,
+      "momentum_kg_m_s": 1384682.050618557,
+      "invariant_relative_error": 5.444738247832946e-16,
+      "interaction_rate_per_proper_s": 1.7308525632731959e-06,
+      "single_hit_energy_J": 2.3255785684060258e-11,
+      "single_hit_energy_eV": 145151197.3807768,
+      "internal_counters": {
+        "electronic": {
+          "tau_s": 1e-16,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 1.7308525632731958e-22,
+          "load": "resolved",
+          "damage_index": 2.512353220486911e-15,
+          "binding_scale_crossed_per_hit": true
+        },
+        "atomic": {
+          "tau_s": 1e-15,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 1.730852563273196e-21,
+          "load": "resolved",
+          "damage_index": 2.5123532204869114e-14,
+          "binding_scale_crossed_per_hit": true
+        },
+        "lattice": {
+          "tau_s": 1e-12,
+          "binding_scale_eV": 3.0,
+          "external_events_per_tick": 1.7308525632731959e-18,
+          "load": "resolved",
+          "damage_index": 8.374510734956369e-11,
+          "binding_scale_crossed_per_hit": true
+        },
+        "thermal_local": {
+          "tau_s": 1e-09,
+          "binding_scale_eV": 0.025,
+          "external_events_per_tick": 1.730852563273196e-15,
+          "load": "resolved",
+          "damage_index": 1.0049412881947644e-05,
+          "binding_scale_crossed_per_hit": true
+        },
+        "nuclear": {
+          "tau_s": 1e-22,
+          "binding_scale_eV": 1000000.0,
+          "external_events_per_tick": 1.730852563273196e-28,
+          "load": "resolved",
+          "damage_index": 2.5123532204869112e-26,
+          "binding_scale_crossed_per_hit": true
+        }
+      },
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "counter_load_max": 1.730852563273196e-15,
+        "all_counters_resolve_events": true
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate_per_proper_s": 1.7308525632731959e-06,
+        "single_hit_energy_eV": 145151197.3807768
+      },
+      "O345": "known_physics_consistent",
+      "human_layer": {
+        "primary": "known physics result",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 0.9,
+      "velocity_m_s": 269813212.2,
+      "branch": "known_physics",
+      "status": "valid",
+      "worldline": "timelike",
+      "continued": true,
+      "gamma": 2.294157338705618,
+      "proper_time_rate": 0.4358898943540673,
+      "energy_J": 1649508631198999.5,
+      "momentum_kg_m_s": 4951951.686786929,
+      "invariant_relative_error": 5.444738247832946e-16,
+      "interaction_rate_per_proper_s": 6.18993960848366e-06,
+      "single_hit_energy_J": 1.9454777614677113e-10,
+      "single_hit_energy_eV": 1214271710.2362332,
+      "internal_counters": {
+        "electronic": {
+          "tau_s": 1e-16,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 6.18993960848366e-22,
+          "load": "resolved",
+          "damage_index": 7.516268554652455e-14,
+          "binding_scale_crossed_per_hit": true
+        },
+        "atomic": {
+          "tau_s": 1e-15,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 6.1899396084836606e-21,
+          "load": "resolved",
+          "damage_index": 7.516268554652454e-13,
+          "binding_scale_crossed_per_hit": true
+        },
+        "lattice": {
+          "tau_s": 1e-12,
+          "binding_scale_eV": 3.0,
+          "external_events_per_tick": 6.189939608483661e-18,
+          "load": "resolved",
+          "damage_index": 2.505422851550818e-09,
+          "binding_scale_crossed_per_hit": true
+        },
+        "thermal_local": {
+          "tau_s": 1e-09,
+          "binding_scale_eV": 0.025,
+          "external_events_per_tick": 6.189939608483661e-15,
+          "load": "resolved",
+          "damage_index": 0.0003006507421860982,
+          "binding_scale_crossed_per_hit": true
+        },
+        "nuclear": {
+          "tau_s": 1e-22,
+          "binding_scale_eV": 1000000.0,
+          "external_events_per_tick": 6.189939608483661e-28,
+          "load": "resolved",
+          "damage_index": 7.516268554652455e-25,
+          "binding_scale_crossed_per_hit": true
+        }
+      },
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "counter_load_max": 6.189939608483661e-15,
+        "all_counters_resolve_events": true
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate_per_proper_s": 6.18993960848366e-06,
+        "single_hit_energy_eV": 1214271710.2362332
+      },
+      "O345": "known_physics_consistent",
+      "human_layer": {
+        "primary": "known physics result",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 0.99,
+      "velocity_m_s": 296794533.42,
+      "branch": "known_physics",
+      "status": "valid",
+      "worldline": "timelike",
+      "continued": true,
+      "gamma": 7.088812050083354,
+      "proper_time_rate": 0.14106735979665894,
+      "energy_J": 5096885232883497.0,
+      "momentum_kg_m_s": 16831365.319252502,
+      "invariant_relative_error": 1.0889476495665893e-15,
+      "interaction_rate_per_proper_s": 2.1039206649065626e-05,
+      "single_hit_energy_J": 9.153174875198324e-10,
+      "single_hit_energy_eV": 5712962404.3676605,
+      "internal_counters": {
+        "electronic": {
+          "tau_s": 1e-16,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 2.1039206649065628e-21,
+          "load": "resolved",
+          "damage_index": 1.2019619660383404e-12,
+          "binding_scale_crossed_per_hit": true
+        },
+        "atomic": {
+          "tau_s": 1e-15,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 2.1039206649065628e-20,
+          "load": "resolved",
+          "damage_index": 1.2019619660383405e-11,
+          "binding_scale_crossed_per_hit": true
+        },
+        "lattice": {
+          "tau_s": 1e-12,
+          "binding_scale_eV": 3.0,
+          "external_events_per_tick": 2.1039206649065627e-17,
+          "load": "resolved",
+          "damage_index": 4.006539886794468e-08,
+          "binding_scale_crossed_per_hit": true
+        },
+        "thermal_local": {
+          "tau_s": 1e-09,
+          "binding_scale_eV": 0.025,
+          "external_events_per_tick": 2.1039206649065626e-14,
+          "load": "resolved",
+          "damage_index": 0.004807847864153361,
+          "binding_scale_crossed_per_hit": true
+        },
+        "nuclear": {
+          "tau_s": 1e-22,
+          "binding_scale_eV": 1000000.0,
+          "external_events_per_tick": 2.1039206649065627e-27,
+          "load": "resolved",
+          "damage_index": 1.2019619660383403e-23,
+          "binding_scale_crossed_per_hit": true
+        }
+      },
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "counter_load_max": 2.1039206649065626e-14,
+        "all_counters_resolve_events": true
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate_per_proper_s": 2.1039206649065626e-05,
+        "single_hit_energy_eV": 5712962404.3676605
+      },
+      "O345": "known_physics_consistent",
+      "human_layer": {
+        "primary": "known physics result",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 0.999,
+      "velocity_m_s": 299492665.542,
+      "branch": "known_physics",
+      "status": "valid",
+      "worldline": "timelike",
+      "continued": true,
+      "gamma": 22.36627204212937,
+      "proper_time_rate": 0.04471017781221601,
+      "energy_J": 1.6081442261520216e+16,
+      "momentum_kg_m_s": 53588275.4570787,
+      "invariant_relative_error": 1.1216160790535869e-13,
+      "interaction_rate_per_proper_s": 6.698534432134837e-05,
+      "single_hit_energy_J": 3.211943854138077e-09,
+      "single_hit_energy_eV": 20047376712.261284,
+      "internal_counters": {
+        "electronic": {
+          "tau_s": 1e-16,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 6.698534432134836e-21,
+          "load": "resolved",
+          "damage_index": 1.3428804318106028e-11,
+          "binding_scale_crossed_per_hit": true
+        },
+        "atomic": {
+          "tau_s": 1e-15,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 6.698534432134838e-20,
+          "load": "resolved",
+          "damage_index": 1.342880431810603e-10,
+          "binding_scale_crossed_per_hit": true
+        },
+        "lattice": {
+          "tau_s": 1e-12,
+          "binding_scale_eV": 3.0,
+          "external_events_per_tick": 6.698534432134837e-17,
+          "load": "resolved",
+          "damage_index": 4.476268106035343e-07,
+          "binding_scale_crossed_per_hit": true
+        },
+        "thermal_local": {
+          "tau_s": 1e-09,
+          "binding_scale_eV": 0.025,
+          "external_events_per_tick": 6.698534432134838e-14,
+          "load": "resolved",
+          "damage_index": 0.05371521727242411,
+          "binding_scale_crossed_per_hit": true
+        },
+        "nuclear": {
+          "tau_s": 1e-22,
+          "binding_scale_eV": 1000000.0,
+          "external_events_per_tick": 6.698534432134836e-27,
+          "load": "resolved",
+          "damage_index": 1.3428804318106028e-22,
+          "binding_scale_crossed_per_hit": true
+        }
+      },
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "counter_load_max": 6.698534432134838e-14,
+        "all_counters_resolve_events": true
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate_per_proper_s": 6.698534432134837e-05,
+        "single_hit_energy_eV": 20047376712.261284
+      },
+      "O345": "known_physics_consistent",
+      "human_layer": {
+        "primary": "known physics result",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 0.9999,
+      "velocity_m_s": 299762478.7542,
+      "branch": "known_physics",
+      "status": "valid",
+      "worldline": "timelike",
+      "continued": true,
+      "gamma": 70.71244595191452,
+      "proper_time_rate": 0.014141782065918275,
+      "energy_J": 5.084254160034439e+16,
+      "momentum_kg_m_s": 169575504.61854634,
+      "invariant_relative_error": 2.722369123916473e-14,
+      "interaction_rate_per_proper_s": 0.0002119693807731829,
+      "single_hit_energy_J": 1.0479715969668497e-08,
+      "single_hit_energy_eV": 65409242322.4573,
+      "internal_counters": {
+        "electronic": {
+          "tau_s": 1e-16,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 2.1196938077318288e-20,
+          "load": "resolved",
+          "damage_index": 1.3864756591934341e-10,
+          "binding_scale_crossed_per_hit": true
+        },
+        "atomic": {
+          "tau_s": 1e-15,
+          "binding_scale_eV": 10.0,
+          "external_events_per_tick": 2.1196938077318292e-19,
+          "load": "resolved",
+          "damage_index": 1.3864756591934342e-09,
+          "binding_scale_crossed_per_hit": true
+        },
+        "lattice": {
+          "tau_s": 1e-12,
+          "binding_scale_eV": 3.0,
+          "external_events_per_tick": 2.119693807731829e-16,
+          "load": "resolved",
+          "damage_index": 4.621585530644781e-06,
+          "binding_scale_crossed_per_hit": true
+        },
+        "thermal_local": {
+          "tau_s": 1e-09,
+          "binding_scale_eV": 0.025,
+          "external_events_per_tick": 2.119693807731829e-13,
+          "load": "resolved",
+          "damage_index": 0.5545902636773736,
+          "binding_scale_crossed_per_hit": true
+        },
+        "nuclear": {
+          "tau_s": 1e-22,
+          "binding_scale_eV": 1000000.0,
+          "external_events_per_tick": 2.119693807731829e-26,
+          "load": "resolved",
+          "damage_index": 1.3864756591934343e-21,
+          "binding_scale_crossed_per_hit": true
+        }
+      },
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "counter_load_max": 2.119693807731829e-13,
+        "all_counters_resolve_events": true
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate_per_proper_s": 0.0002119693807731829,
+        "single_hit_energy_eV": 65409242322.4573
+      },
+      "O345": "known_physics_consistent",
+      "human_layer": {
+        "primary": "known physics result",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 1.0,
+      "velocity_m_s": 299792458.0,
+      "branch": "known_physics",
+      "status": "massive_object_light_limit",
+      "worldline": "null_boundary",
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "null",
+        "causality": "unresolved"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "external_interaction": "undefined"
+      },
+      "O345": "known_model_domain_boundary",
+      "human_layer": {
+        "primary": "known massive branch stops",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 1.01,
+      "velocity_m_s": 302790382.58,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike",
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "unresolved"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "external_interaction": "undefined"
+      },
+      "O345": "known_model_domain_boundary",
+      "human_layer": {
+        "primary": "known massive branch stops",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 1.1,
+      "velocity_m_s": 329771703.8,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike",
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "unresolved"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "external_interaction": "undefined"
+      },
+      "O345": "known_model_domain_boundary",
+      "human_layer": {
+        "primary": "known massive branch stops",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 2.0,
+      "velocity_m_s": 599584916.0,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike",
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "unresolved"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "external_interaction": "undefined"
+      },
+      "O345": "known_model_domain_boundary",
+      "human_layer": {
+        "primary": "known massive branch stops",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 10.0,
+      "velocity_m_s": 2997924580.0,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike",
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "unresolved"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "external_interaction": "undefined"
+      },
+      "O345": "known_model_domain_boundary",
+      "human_layer": {
+        "primary": "known massive branch stops",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    },
+    {
+      "beta": 100.0,
+      "velocity_m_s": 29979245800.0,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike",
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "unresolved"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "external_interaction": "undefined"
+      },
+      "O345": "known_model_domain_boundary",
+      "human_layer": {
+        "primary": "known massive branch stops",
+        "possible": "test hypotheses separately",
+        "negative": "do not relabel formal continuation as established physics",
+        "unresolved": "composite matter at or above c"
+      }
+    }
+  ],
+  "discovered_formulas": [
+    {
+      "name": "superluminal_real_scale",
+      "expression": "1/sqrt(beta**2-1)",
+      "reason": "Real mathematical scale for beta > 1; physical meaning unresolved",
+      "status": "candidate_math_valid",
+      "physical_status": "unresolved_not_established",
+      "fingerprint": "6a3768e2761cbb8a6557af7f852e14d40e824b169878ac97cd5b84606cc734d9",
+      "tests": [
+        {
+          "beta": 1.01,
+          "value": 7.053456158585982,
+          "valid": true
+        },
+        {
+          "beta": 1.1,
+          "value": 2.1821789023599227,
+          "valid": true
+        },
+        {
+          "beta": 2.0,
+          "value": 0.5773502691896258,
+          "valid": true
+        },
+        {
+          "beta": 10.0,
+          "value": 0.10050378152592121,
+          "valid": true
+        },
+        {
+          "beta": 100.0,
+          "value": 0.010000500037503125,
+          "valid": true
+        }
+      ]
+    },
+    {
+      "name": "spacelike_scale",
+      "expression": "sqrt(beta**2-1)",
+      "reason": "Spacelike mathematical scale; not ordinary proper time",
+      "status": "candidate_math_valid",
+      "physical_status": "unresolved_not_established",
+      "fingerprint": "141041da3bc64a8381b6a4ba4e4311aefc69d035b0d8ecd2cd3f466f0e77d9bb",
+      "tests": [
+        {
+          "beta": 1.01,
+          "value": 0.14177446878757827,
+          "valid": true
+        },
+        {
+          "beta": 1.1,
+          "value": 0.4582575694955842,
+          "valid": true
+        },
+        {
+          "beta": 2.0,
+          "value": 1.7320508075688772,
+          "valid": true
+        },
+        {
+          "beta": 10.0,
+          "value": 9.9498743710662,
+          "valid": true
+        },
+        {
+          "beta": 100.0,
+          "value": 99.99499987499375,
+          "valid": true
+        }
+      ]
+    }
+  ],
+  "cross_formula_pattern": {
+    "pattern": "chi_times_xi_equals_one",
+    "status": "mathematical_identity_on_test_domain",
+    "physical_meaning": "unresolved",
+    "tests": [
+      {
+        "beta": 1.01,
+        "chi": 7.053456158585982,
+        "xi": 0.14177446878757827,
+        "chi_times_xi": 1.0,
+        "error_from_one": 0.0
+      },
+      {
+        "beta": 1.1,
+        "chi": 2.1821789023599227,
+        "xi": 0.4582575694955842,
+        "chi_times_xi": 1.0,
+        "error_from_one": 0.0
+      },
+      {
+        "beta": 2.0,
+        "chi": 0.5773502691896258,
+        "xi": 1.7320508075688772,
+        "chi_times_xi": 1.0,
+        "error_from_one": 0.0
+      },
+      {
+        "beta": 10.0,
+        "chi": 0.10050378152592121,
+        "xi": 9.9498743710662,
+        "chi_times_xi": 1.0,
+        "error_from_one": 0.0
+      },
+      {
+        "beta": 100.0,
+        "chi": 0.010000500037503125,
+        "xi": 99.99499987499375,
+        "chi_times_xi": 1.0,
+        "error_from_one": 0.0
+      }
+    ]
+  }
+}

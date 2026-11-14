@@ -1,0 +1,2 @@
+{"name": "chi", "expression": "1/sqrt(beta**2-1)", "fingerprint": "6a3768e2761cbb8a6557af7f852e14d40e824b169878ac97cd5b84606cc734d9", "status": "candidate_math_valid"}
+{"name": "xi", "expression": "sqrt(beta**2-1)", "fingerprint": "141041da3bc64a8381b6a4ba4e4311aefc69d035b0d8ecd2cd3f466f0e77d9bb", "status": "candidate_math_valid"}

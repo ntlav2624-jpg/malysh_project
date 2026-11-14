@@ -1,0 +1,36 @@
+{
+    "generation": 32,
+    "timestamp": "2026-10-25T01:46:31.908324",
+    "source": "Smooth_Wave_3",
+    "mode": "ACTIVE_5",
+    "predicted_strategy": "ADAPTIVE_STRATEGY",
+    "applied_strategy": "ADAPTIVE_STRATEGY",
+    "strategy": "ADAPTIVE_STRATEGY",
+    "meta_metric_M": 0.0001,
+    "signal_class": "harmonic",
+    "confidence": 0.39086,
+    "K_metric": 2.4032,
+    "J": {
+        "pred": 0.5307,
+        "smooth": 1.7363,
+        "energy": 1.0,
+        "total": 0.9393
+    },
+    "S_n": 0.0001,
+    "theta": 0.99591,
+    "eta": 4.7e-05,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        80.53,
+        83.96,
+        84.48,
+        82.99,
+        81.53,
+        82.13,
+        85.58,
+        91.01,
+        96.41,
+        99.79
+    ]
+}

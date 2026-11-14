@@ -1,0 +1,920 @@
+{
+  "schema": "malysh.bullet100c.v2",
+  "created_utc": "2026-11-10T20:08:05.594228+00:00",
+  "bullet": {
+    "mass_kg": 0.008,
+    "length_m": 0.015,
+    "diameter_m": 0.009,
+    "temperature_K": 293.15
+  },
+  "medium": {
+    "name": "thin_hydrogen_test",
+    "density_m3": 1000000.0,
+    "cross_section_m2": 1e-20,
+    "particle_mass_kg": 1.67262192595e-27
+  },
+  "results": [
+    {
+      "beta": 0.0,
+      "velocity_m_s": 0.0,
+      "branch": "known_physics",
+      "status": "valid",
+      "continued": true,
+      "worldline": "timelike",
+      "gamma": 1.0,
+      "proper_time_rate": 1.0,
+      "energy_J": 719004142989454.1,
+      "momentum_kg_m_s": 0.0,
+      "invariant_error": 0.0,
+      "interaction_rate_per_proper_s": 0.0,
+      "collision_energy_J": 0.0,
+      "collision_energy_eV": 0.0,
+      "atomic_scale_crossed": false,
+      "nuclear_scale_crossed": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "collision_energy_eV": 0.0,
+        "structure_regime": "atomic_binding_not_crossed_by_scale_test"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": 0.0,
+        "external_interaction": "calculated"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_physics_consistent",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "timelike",
+            "causality": "standard"
+          },
+          "internal": {
+            "observer": "O4",
+            "collision_energy_eV": 0.0,
+            "structure_regime": "atomic_binding_not_crossed_by_scale_test"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": 0.0,
+            "external_interaction": "calculated"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Standard relativistic calculation valid",
+        "possible": "Internal/external interaction may produce structural changes",
+        "negative": "Velocity alone is not treated as automatic destruction",
+        "unresolved": "Detailed many-body response requires deeper model"
+      }
+    },
+    {
+      "beta": 0.1,
+      "velocity_m_s": 29979245.8,
+      "branch": "known_physics",
+      "status": "valid",
+      "continued": true,
+      "worldline": "timelike",
+      "gamma": 1.005037815259212,
+      "proper_time_rate": 0.99498743710662,
+      "energy_J": 722626353032443.1,
+      "momentum_kg_m_s": 241042.20561560732,
+      "invariant_error": 1.3611845619582366e-16,
+      "interaction_rate_per_proper_s": 3.0130275701950905e-07,
+      "collision_energy_J": 7.573234922874592e-13,
+      "collision_energy_eV": 4726841.449414493,
+      "atomic_scale_crossed": true,
+      "nuclear_scale_crossed": true,
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "collision_energy_eV": 4726841.449414493,
+        "structure_regime": "nuclear_channels_may_be_relevant"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": 3.0130275701950905e-07,
+        "external_interaction": "calculated"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_physics_consistent",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "timelike",
+            "causality": "standard"
+          },
+          "internal": {
+            "observer": "O4",
+            "collision_energy_eV": 4726841.449414493,
+            "structure_regime": "nuclear_channels_may_be_relevant"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": 3.0130275701950905e-07,
+            "external_interaction": "calculated"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Standard relativistic calculation valid",
+        "possible": "Internal/external interaction may produce structural changes",
+        "negative": "Velocity alone is not treated as automatic destruction",
+        "unresolved": "Detailed many-body response requires deeper model"
+      }
+    },
+    {
+      "beta": 0.5,
+      "velocity_m_s": 149896229.0,
+      "branch": "known_physics",
+      "status": "valid",
+      "continued": true,
+      "worldline": "timelike",
+      "gamma": 1.1547005383792517,
+      "proper_time_rate": 0.8660254037844385,
+      "energy_J": 830234471006835.1,
+      "momentum_kg_m_s": 1384682.050618557,
+      "invariant_error": 0.0,
+      "interaction_rate_per_proper_s": 1.7308525632731959e-06,
+      "collision_energy_J": 2.3255785684060258e-11,
+      "collision_energy_eV": 145151197.3807768,
+      "atomic_scale_crossed": true,
+      "nuclear_scale_crossed": true,
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "collision_energy_eV": 145151197.3807768,
+        "structure_regime": "nuclear_channels_may_be_relevant"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": 1.7308525632731959e-06,
+        "external_interaction": "calculated"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_physics_consistent",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "timelike",
+            "causality": "standard"
+          },
+          "internal": {
+            "observer": "O4",
+            "collision_energy_eV": 145151197.3807768,
+            "structure_regime": "nuclear_channels_may_be_relevant"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": 1.7308525632731959e-06,
+            "external_interaction": "calculated"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Standard relativistic calculation valid",
+        "possible": "Internal/external interaction may produce structural changes",
+        "negative": "Velocity alone is not treated as automatic destruction",
+        "unresolved": "Detailed many-body response requires deeper model"
+      }
+    },
+    {
+      "beta": 0.9,
+      "velocity_m_s": 269813212.2,
+      "branch": "known_physics",
+      "status": "valid",
+      "continued": true,
+      "worldline": "timelike",
+      "gamma": 2.294157338705618,
+      "proper_time_rate": 0.4358898943540673,
+      "energy_J": 1649508631198999.5,
+      "momentum_kg_m_s": 4951951.686786929,
+      "invariant_error": 5.444738247832946e-16,
+      "interaction_rate_per_proper_s": 6.18993960848366e-06,
+      "collision_energy_J": 1.9454777614677113e-10,
+      "collision_energy_eV": 1214271710.2362332,
+      "atomic_scale_crossed": true,
+      "nuclear_scale_crossed": true,
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "collision_energy_eV": 1214271710.2362332,
+        "structure_regime": "nuclear_channels_may_be_relevant"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": 6.18993960848366e-06,
+        "external_interaction": "calculated"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_physics_consistent",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "timelike",
+            "causality": "standard"
+          },
+          "internal": {
+            "observer": "O4",
+            "collision_energy_eV": 1214271710.2362332,
+            "structure_regime": "nuclear_channels_may_be_relevant"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": 6.18993960848366e-06,
+            "external_interaction": "calculated"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Standard relativistic calculation valid",
+        "possible": "Internal/external interaction may produce structural changes",
+        "negative": "Velocity alone is not treated as automatic destruction",
+        "unresolved": "Detailed many-body response requires deeper model"
+      }
+    },
+    {
+      "beta": 0.99,
+      "velocity_m_s": 296794533.42,
+      "branch": "known_physics",
+      "status": "valid",
+      "continued": true,
+      "worldline": "timelike",
+      "gamma": 7.088812050083354,
+      "proper_time_rate": 0.14106735979665894,
+      "energy_J": 5096885232883497.0,
+      "momentum_kg_m_s": 16831365.319252502,
+      "invariant_error": 1.0889476495665893e-15,
+      "interaction_rate_per_proper_s": 2.1039206649065626e-05,
+      "collision_energy_J": 9.153174875198324e-10,
+      "collision_energy_eV": 5712962404.3676605,
+      "atomic_scale_crossed": true,
+      "nuclear_scale_crossed": true,
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "collision_energy_eV": 5712962404.3676605,
+        "structure_regime": "nuclear_channels_may_be_relevant"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": 2.1039206649065626e-05,
+        "external_interaction": "calculated"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_physics_consistent",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "timelike",
+            "causality": "standard"
+          },
+          "internal": {
+            "observer": "O4",
+            "collision_energy_eV": 5712962404.3676605,
+            "structure_regime": "nuclear_channels_may_be_relevant"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": 2.1039206649065626e-05,
+            "external_interaction": "calculated"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Standard relativistic calculation valid",
+        "possible": "Internal/external interaction may produce structural changes",
+        "negative": "Velocity alone is not treated as automatic destruction",
+        "unresolved": "Detailed many-body response requires deeper model"
+      }
+    },
+    {
+      "beta": 0.999,
+      "velocity_m_s": 299492665.542,
+      "branch": "known_physics",
+      "status": "valid",
+      "continued": true,
+      "worldline": "timelike",
+      "gamma": 22.36627204212937,
+      "proper_time_rate": 0.04471017781221601,
+      "energy_J": 1.6081442261520216e+16,
+      "momentum_kg_m_s": 53588275.4570787,
+      "invariant_error": 1.1216160790535869e-13,
+      "interaction_rate_per_proper_s": 6.698534432134837e-05,
+      "collision_energy_J": 3.211943854138077e-09,
+      "collision_energy_eV": 20047376712.261284,
+      "atomic_scale_crossed": true,
+      "nuclear_scale_crossed": true,
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "collision_energy_eV": 20047376712.261284,
+        "structure_regime": "nuclear_channels_may_be_relevant"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": 6.698534432134837e-05,
+        "external_interaction": "calculated"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_physics_consistent",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "timelike",
+            "causality": "standard"
+          },
+          "internal": {
+            "observer": "O4",
+            "collision_energy_eV": 20047376712.261284,
+            "structure_regime": "nuclear_channels_may_be_relevant"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": 6.698534432134837e-05,
+            "external_interaction": "calculated"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Standard relativistic calculation valid",
+        "possible": "Internal/external interaction may produce structural changes",
+        "negative": "Velocity alone is not treated as automatic destruction",
+        "unresolved": "Detailed many-body response requires deeper model"
+      }
+    },
+    {
+      "beta": 0.9999,
+      "velocity_m_s": 299762478.7542,
+      "branch": "known_physics",
+      "status": "valid",
+      "continued": true,
+      "worldline": "timelike",
+      "gamma": 70.71244595191452,
+      "proper_time_rate": 0.014141782065918275,
+      "energy_J": 5.084254160034439e+16,
+      "momentum_kg_m_s": 169575504.61854634,
+      "invariant_error": 2.722369123916473e-14,
+      "interaction_rate_per_proper_s": 0.0002119693807731829,
+      "collision_energy_J": 1.0479715969668497e-08,
+      "collision_energy_eV": 65409242322.4573,
+      "atomic_scale_crossed": true,
+      "nuclear_scale_crossed": true,
+      "O3": {
+        "observer": "O3",
+        "geometry": "timelike",
+        "causality": "standard"
+      },
+      "O4": {
+        "observer": "O4",
+        "collision_energy_eV": 65409242322.4573,
+        "structure_regime": "nuclear_channels_may_be_relevant"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": 0.0002119693807731829,
+        "external_interaction": "calculated"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_physics_consistent",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "timelike",
+            "causality": "standard"
+          },
+          "internal": {
+            "observer": "O4",
+            "collision_energy_eV": 65409242322.4573,
+            "structure_regime": "nuclear_channels_may_be_relevant"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": 0.0002119693807731829,
+            "external_interaction": "calculated"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Standard relativistic calculation valid",
+        "possible": "Internal/external interaction may produce structural changes",
+        "negative": "Velocity alone is not treated as automatic destruction",
+        "unresolved": "Detailed many-body response requires deeper model"
+      }
+    },
+    {
+      "beta": 1.0,
+      "velocity_m_s": 299792458.0,
+      "branch": "known_physics",
+      "status": "massive_object_light_limit",
+      "worldline": "null_boundary",
+      "gamma": null,
+      "proper_time_rate": null,
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "light_boundary",
+        "causality": "requires_new_interpretation"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": null,
+        "external_interaction": "undefined"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_model_domain_boundary",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "light_boundary",
+            "causality": "requires_new_interpretation"
+          },
+          "internal": {
+            "observer": "O4",
+            "internal_structure": "undefined_under_current_model"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": null,
+            "external_interaction": "undefined"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Known massive-particle branch does not continue normally above c",
+        "possible": "A different mathematical structure may describe an effective or hypothetical superluminal regime",
+        "negative": "Do not label formal continuation as experimentally established physics",
+        "unresolved": "Whether composite atomic matter can have a consistent >c state"
+      },
+      "formal_superluminal": {
+        "beta": 1.0,
+        "branch": "formal_hypothesis",
+        "status": "singular"
+      }
+    },
+    {
+      "beta": 1.01,
+      "velocity_m_s": 302790382.58,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike_candidate",
+      "gamma": null,
+      "proper_time_rate": null,
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "requires_new_interpretation"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": null,
+        "external_interaction": "undefined"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_model_domain_boundary",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "spacelike",
+            "causality": "requires_new_interpretation"
+          },
+          "internal": {
+            "observer": "O4",
+            "internal_structure": "undefined_under_current_model"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": null,
+            "external_interaction": "undefined"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Known massive-particle branch does not continue normally above c",
+        "possible": "A different mathematical structure may describe an effective or hypothetical superluminal regime",
+        "negative": "Do not label formal continuation as experimentally established physics",
+        "unresolved": "Whether composite atomic matter can have a consistent >c state"
+      },
+      "formal_superluminal": {
+        "beta": 1.01,
+        "branch": "formal_hypothesis",
+        "status": "not_established_physics",
+        "gamma_real": 0.0,
+        "gamma_imag": -7.053456158585982,
+        "ordinary_proper_time": "undefined",
+        "ordinary_massive_rest_frame": "undefined"
+      }
+    },
+    {
+      "beta": 1.1,
+      "velocity_m_s": 329771703.8,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike_candidate",
+      "gamma": null,
+      "proper_time_rate": null,
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "requires_new_interpretation"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": null,
+        "external_interaction": "undefined"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_model_domain_boundary",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "spacelike",
+            "causality": "requires_new_interpretation"
+          },
+          "internal": {
+            "observer": "O4",
+            "internal_structure": "undefined_under_current_model"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": null,
+            "external_interaction": "undefined"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Known massive-particle branch does not continue normally above c",
+        "possible": "A different mathematical structure may describe an effective or hypothetical superluminal regime",
+        "negative": "Do not label formal continuation as experimentally established physics",
+        "unresolved": "Whether composite atomic matter can have a consistent >c state"
+      },
+      "formal_superluminal": {
+        "beta": 1.1,
+        "branch": "formal_hypothesis",
+        "status": "not_established_physics",
+        "gamma_real": 0.0,
+        "gamma_imag": -2.1821789023599227,
+        "ordinary_proper_time": "undefined",
+        "ordinary_massive_rest_frame": "undefined"
+      }
+    },
+    {
+      "beta": 2.0,
+      "velocity_m_s": 599584916.0,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike_candidate",
+      "gamma": null,
+      "proper_time_rate": null,
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "requires_new_interpretation"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": null,
+        "external_interaction": "undefined"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_model_domain_boundary",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "spacelike",
+            "causality": "requires_new_interpretation"
+          },
+          "internal": {
+            "observer": "O4",
+            "internal_structure": "undefined_under_current_model"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": null,
+            "external_interaction": "undefined"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Known massive-particle branch does not continue normally above c",
+        "possible": "A different mathematical structure may describe an effective or hypothetical superluminal regime",
+        "negative": "Do not label formal continuation as experimentally established physics",
+        "unresolved": "Whether composite atomic matter can have a consistent >c state"
+      },
+      "formal_superluminal": {
+        "beta": 2.0,
+        "branch": "formal_hypothesis",
+        "status": "not_established_physics",
+        "gamma_real": 0.0,
+        "gamma_imag": -0.5773502691896258,
+        "ordinary_proper_time": "undefined",
+        "ordinary_massive_rest_frame": "undefined"
+      }
+    },
+    {
+      "beta": 10.0,
+      "velocity_m_s": 2997924580.0,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike_candidate",
+      "gamma": null,
+      "proper_time_rate": null,
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "requires_new_interpretation"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": null,
+        "external_interaction": "undefined"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_model_domain_boundary",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "spacelike",
+            "causality": "requires_new_interpretation"
+          },
+          "internal": {
+            "observer": "O4",
+            "internal_structure": "undefined_under_current_model"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": null,
+            "external_interaction": "undefined"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Known massive-particle branch does not continue normally above c",
+        "possible": "A different mathematical structure may describe an effective or hypothetical superluminal regime",
+        "negative": "Do not label formal continuation as experimentally established physics",
+        "unresolved": "Whether composite atomic matter can have a consistent >c state"
+      },
+      "formal_superluminal": {
+        "beta": 10.0,
+        "branch": "formal_hypothesis",
+        "status": "not_established_physics",
+        "gamma_real": 0.0,
+        "gamma_imag": -0.10050378152592121,
+        "ordinary_proper_time": "undefined",
+        "ordinary_massive_rest_frame": "undefined"
+      }
+    },
+    {
+      "beta": 100.0,
+      "velocity_m_s": 29979245800.0,
+      "branch": "known_physics",
+      "status": "outside_known_massive_particle_dynamics",
+      "worldline": "spacelike_candidate",
+      "gamma": null,
+      "proper_time_rate": null,
+      "continued": false,
+      "O3": {
+        "observer": "O3",
+        "geometry": "spacelike",
+        "causality": "requires_new_interpretation"
+      },
+      "O4": {
+        "observer": "O4",
+        "internal_structure": "undefined_under_current_model"
+      },
+      "O5": {
+        "observer": "O5",
+        "medium": "thin_hydrogen_test",
+        "interaction_rate": null,
+        "external_interaction": "undefined"
+      },
+      "O345": {
+        "observer": "O345",
+        "state": "known_model_domain_boundary",
+        "cross_layer_pattern": {
+          "geometry": {
+            "observer": "O3",
+            "geometry": "spacelike",
+            "causality": "requires_new_interpretation"
+          },
+          "internal": {
+            "observer": "O4",
+            "internal_structure": "undefined_under_current_model"
+          },
+          "external": {
+            "observer": "O5",
+            "medium": "thin_hydrogen_test",
+            "interaction_rate": null,
+            "external_interaction": "undefined"
+          }
+        }
+      },
+      "human_layer": {
+        "primary": "Known massive-particle branch does not continue normally above c",
+        "possible": "A different mathematical structure may describe an effective or hypothetical superluminal regime",
+        "negative": "Do not label formal continuation as experimentally established physics",
+        "unresolved": "Whether composite atomic matter can have a consistent >c state"
+      },
+      "formal_superluminal": {
+        "beta": 100.0,
+        "branch": "formal_hypothesis",
+        "status": "not_established_physics",
+        "gamma_real": 0.0,
+        "gamma_imag": -0.010000500037503125,
+        "ordinary_proper_time": "undefined",
+        "ordinary_massive_rest_frame": "undefined"
+      }
+    }
+  ],
+  "discovered_formulas": [
+    {
+      "name": "superluminal_real_scale",
+      "expression": "1/sqrt(beta**2-1)",
+      "variables": [
+        "beta"
+      ],
+      "reason": "Real continuation scale for beta > 1; physical meaning unresolved",
+      "fingerprint": "198101c824edf560d19020db21365bef89dde9c60fe8f7835e9871e977dbe396",
+      "status": "hypothesis_failed_math",
+      "tests": [
+        {
+          "input": {
+            "beta": 1.01
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 1.1
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 2.0
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 10.0
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 100.0
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        }
+      ]
+    },
+    {
+      "name": "spacelike_scale",
+      "expression": "sqrt(beta**2-1)",
+      "variables": [
+        "beta"
+      ],
+      "reason": "Explore real spacelike interval scale without calling it ordinary proper time",
+      "fingerprint": "d89c62f8618735429364a999b21974ca1b4de59ab33a5379f2d09f6604f0aba2",
+      "status": "hypothesis_failed_math",
+      "tests": [
+        {
+          "input": {
+            "beta": 1.01
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 1.1
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 2.0
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 10.0
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        },
+        {
+          "input": {
+            "beta": 100.0
+          },
+          "result": null,
+          "valid": false,
+          "error": "can't multiply sequence by non-int of type 'dict'"
+        }
+      ]
+    }
+  ]
+}

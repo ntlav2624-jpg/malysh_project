@@ -1,0 +1,507 @@
+#!/usr/bin/env python3
+
+import argparse
+import json
+from collections import defaultdict
+from pathlib import Path
+
+import numpy as np
+
+
+def make_state(N=12, seed=7, viscosity=0.03):
+    rng = np.random.default_rng(seed)
+
+    freq = np.fft.fftfreq(N) * N
+    kx, ky, kz = np.meshgrid(freq, freq, freq, indexing="ij")
+
+    k2 = kx*kx + ky*ky + kz*kz
+    kmag = np.sqrt(k2)
+    nonzero = k2 > 0
+
+    cutoff = N // 3
+    active = (
+        (np.abs(kx) <= cutoff)
+        & (np.abs(ky) <= cutoff)
+        & (np.abs(kz) <= cutoff)
+        & nonzero
+    )
+
+    u = rng.normal(size=(3, N, N, N))
+
+    # Нормировка Fourier коэффициентов удобна для энергетических сумм.
+    uh = np.fft.fftn(u, axes=(1, 2, 3)) / N**3
+
+    # Начальное энергетическое распределение.
+    envelope = np.exp(-((kmag - 2.8) / 1.15)**2)
+    uh *= envelope
+
+    # Проекция Лере: k . u_hat = 0
+    dot = kx*uh[0] + ky*uh[1] + kz*uh[2]
+
+    for component, kval in enumerate((kx, ky, kz)):
+        uh[component, nonzero] -= (
+            kval[nonzero] * dot[nonzero] / k2[nonzero]
+        )
+        uh[component, ~nonzero] = 0
+
+    uh *= active
+
+    energy = 0.5 * np.sum(np.abs(uh)**2)
+
+    if energy <= 0:
+        raise RuntimeError("Начальная энергия равна нулю")
+
+    uh /= np.sqrt(energy)
+
+    modes = []
+
+    for i in range(N):
+        for j in range(N):
+            for k in range(N):
+                if active[i, j, k]:
+                    modes.append((
+                        int(kx[i, j, k]),
+                        int(ky[i, j, k]),
+                        int(kz[i, j, k]),
+                    ))
+
+    geometry = {
+        "kx": kx,
+        "ky": ky,
+        "kz": kz,
+        "k2": k2,
+        "kmag": kmag,
+        "nonzero": nonzero,
+        "active": active,
+        "modes": modes,
+        "N": N,
+    }
+
+    return uh, geometry, viscosity
+
+
+def nonlinear_rhs(uh, g, viscosity):
+    N = g["N"]
+
+    # Возвращаем физическое поле.
+    u = np.fft.ifftn(
+        uh * N**3,
+        axes=(1, 2, 3)
+    ).real
+
+    gradient = np.empty((3, 3, N, N, N))
+
+    for component in range(3):
+        for direction, kval in enumerate(
+            (g["kx"], g["ky"], g["kz"])
+        ):
+            gradient[component, direction] = np.fft.ifftn(
+                1j * kval * uh[component] * N**3
+            ).real
+
+    convection = np.zeros_like(u)
+
+    for component in range(3):
+        convection[component] = sum(
+            u[j] * gradient[component, j]
+            for j in range(3)
+        )
+
+    nh = (
+        -np.fft.fftn(convection, axes=(1, 2, 3))
+        / N**3
+    )
+
+    nh *= g["active"]
+
+    # Снова проекция Лере.
+    dot = (
+        g["kx"]*nh[0]
+        + g["ky"]*nh[1]
+        + g["kz"]*nh[2]
+    )
+
+    for component, kval in enumerate(
+        (g["kx"], g["ky"], g["kz"])
+    ):
+        nh[component, g["nonzero"]] -= (
+            kval[g["nonzero"]]
+            * dot[g["nonzero"]]
+            / g["k2"][g["nonzero"]]
+        )
+
+        nh[component, ~g["nonzero"]] = 0
+
+    rhs = nh - viscosity * g["k2"] * uh
+
+    return rhs, nh
+
+
+def idx(mode, N):
+    return tuple(int(v % N) for v in mode)
+
+
+def strongly_connected_sizes(nodes, directed_edges):
+    adjacency = defaultdict(list)
+    reverse = defaultdict(list)
+
+    for a, b in directed_edges:
+        adjacency[a].append(b)
+        reverse[b].append(a)
+
+    visited = set()
+    order = []
+
+    def dfs(v):
+        visited.add(v)
+
+        for w in adjacencyif w not in visited:
+                dfs(w)
+
+        order.append(v)
+
+    for node in nodes:
+        if node not in visited:
+            dfs(node)
+
+    visited.clear()
+    sizes = []
+
+    def reverse_dfs(v):
+        visited.add(v)
+        count = 1
+
+        for w in reverseif w not in visited:
+                count += reverse_dfs(w)
+
+        return count
+
+    for node in reversed(order):
+        if node not in visited:
+            sizes.append(reverse_dfs(node))
+
+    return sorted(sizes, reverse=True)
+
+
+def analyze_network(uh, g, coverage=0.80):
+    modes = g["modes"]
+    mode_set = set(modes)
+    N = g["N"]
+
+    absolute_edge = defaultdict(float)
+    signed_edge = defaultdict(float)
+
+    triad_count = 0
+
+    for p in modes:
+        up = uh[(slice(None),) + idx(p, N)]
+
+        for q in modes:
+            k = (
+                p[0] + q[0],
+                p[1] + q[1],
+                p[2] + q[2],
+            )
+
+            if k not in mode_set:
+                continue
+
+            uq = uh[(slice(None),) + idx(q, N)]
+            uk = uh[(slice(None),) + idx(k, N)]
+
+            # Точный вклад p,q -> k.
+            transfer = float(
+                np.real(
+                    np.vdot(
+                        uk,
+                        -1j * np.dot(q, up) * uq
+                    )
+                )
+            )
+
+            # Это графовая ПРОЕКЦИЯ триадного гиперграфа:
+            # пару (p,q,k) здесь сворачиваем в q -> k.
+            absolute_edge[(q, k)] += abs(transfer)
+            signed_edge[(q, k)] += transfer
+
+            triad_count += 1
+
+    ranked = sorted(
+        absolute_edge.items(),
+        key=lambda item: item[1],
+        reverse=True
+    )
+
+    total_activity = sum(v for _, v in ranked)
+
+    accumulated = 0.0
+    chosen = []
+
+    for edge, strength in ranked:
+        chosen.append((edge, strength))
+        accumulated += strength
+
+        if (
+            total_activity > 0
+            and accumulated >= coverage * total_activity
+        ):
+            break
+
+    nodes = set()
+    directed = []
+
+    for (a, b), strength in chosen:
+        nodes.add(a)
+        nodes.add(b)
+
+        signed = signed_edge[(a, b)]
+
+        if signed > 0:
+            directed.append((a, b))
+        elif signed < 0:
+            directed.append((b, a))
+
+    scc = strongly_connected_sizes(nodes, directed)
+
+    return {
+        "triads": triad_count,
+        "all_edges": len(absolute_edge),
+        "selected_edges": len(chosen),
+        "coverage": (
+            accumulated / total_activity
+            if total_activity > 0
+            else 0.0
+        ),
+        "selected_nodes": len(nodes),
+        "largest_scc": scc[0] if scc else 0,
+        "cyclic_components": sum(
+            1 for size in scc if size > 1
+        ),
+    }
+
+
+def diagnostics(uh, g, viscosity, graph=False):
+    _, nonlinear = nonlinear_rhs(uh, g, viscosity)
+
+    rho = 0.5 * np.sum(np.abs(uh)**2, axis=0)
+
+    transfer = np.real(
+        np.sum(np.conj(uh) * nonlinear, axis=0)
+    )
+
+    dissipation = (
+        2.0 * viscosity * g["k2"] * rho
+    )
+
+    total_energy = float(np.sum(rho))
+
+    spectral_center = float(
+        np.sum(g["kmag"] * rho) / total_energy
+    )
+
+    spectral_width = float(
+        np.sqrt(
+            np.sum(
+                (g["kmag"] - spectral_center)**2
+                * rho
+            )
+            / total_energy
+        )
+    )
+
+    tails = {}
+
+    for threshold in (2.0, 2.5, 3.0):
+        selector = (
+            (g["kmag"] >= threshold)
+            & g["active"]
+        )
+
+        energy_high = float(np.sum(rho[selector]))
+        influx = float(np.sum(transfer[selector]))
+        visc = float(np.sum(dissipation[selector]))
+
+        tails[str(threshold)] = {
+            "energy_fraction": (
+                energy_high / total_energy
+                if total_energy > 0
+                else 0.0
+            ),
+            "nonlinear_flux": influx,
+            "viscous_dissipation": visc,
+            "flux_to_dissipation": (
+                influx / visc if visc > 0 else None
+            ),
+        }
+
+    result = {
+        "energy": total_energy,
+        "spectral_center": spectral_center,
+        "spectral_width": spectral_width,
+        "nonlinear_energy_sum": float(
+            np.sum(transfer)
+        ),
+        "tails": tails,
+    }
+
+    if graph:
+        result["network"] = analyze_network(uh, g)
+
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description=(
+            "Малыш: независимый триадный анализ "
+            "энергетической сети Навье-Стокса"
+        )
+    )
+
+    parser.add_argument("--N", type=int, default=12)
+    parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--nu", type=float, default=0.03)
+    parser.add_argument("--dt", type=float, default=0.002)
+    parser.add_argument("--steps", type=int, default=500)
+    parser.add_argument(
+        "--diag-every",
+        type=int,
+        default=100
+    )
+    parser.add_argument(
+        "--output",
+        default="malysh_ns_cloud_result.json"
+    )
+
+    args = parser.parse_args()
+
+    uh, geometry, viscosity = make_state(
+        N=args.N,
+        seed=args.seed,
+        viscosity=args.nu,
+    )
+
+    report = {
+        "experiment": (
+            "Navier-Stokes triadic state-network"
+        ),
+        "assumptions": {
+            "predefined_geometry": False,
+            "special_role_of_7": False,
+            "ring_hypothesis": False,
+            "spiral_hypothesis": False,
+            "plate_hypothesis": False,
+            "cloud_hypothesis": False,
+        },
+        "parameters": vars(args),
+        "active_modes": len(geometry["modes"]),
+        "snapshots": [],
+    }
+
+    print("=" * 72)
+    print("МАЛЫШ: СЛЕПОЙ ТРИАДНЫЙ ЭКСПЕРИМЕНТ")
+    print("=" * 72)
+    print("Активных Fourier-состояний:",
+          len(geometry["modes"]))
+    print()
+
+    for step in range(args.steps + 1):
+
+        if (
+            step % args.diag_every == 0
+            or step == args.steps
+        ):
+            d = diagnostics(
+                uh,
+                geometry,
+                viscosity,
+                graph=True,
+            )
+
+            d["step"] = step
+            d["time"] = step * args.dt
+
+            report["snapshots"].append(d)
+
+            network = d["network"]
+
+            print(
+                f"t={d['time']:.3f} "
+                f"E={d['energy']:.8f} "
+                f"Kc={d['spectral_center']:.5f} "
+                f"sigma={d['spectral_width']:.5f}"
+            )
+
+            print(
+                "  nonlinear sum = "
+                f"{d['nonlinear_energy_sum']:+.3e}"
+            )
+
+            print(
+                "  graph: "
+                f"triads={network['triads']} "
+                f"edges={network['all_edges']} "
+                f"80% edges={network['selected_edges']} "
+                f"largest SCC={network['largest_scc']}"
+            )
+
+            for threshold, td in d["tails"].items():
+                ratio = td["flux_to_dissipation"]
+
+                if ratio is None:
+                    ratio_text = "n/a"
+                else:
+                    ratio_text = f"{ratio:+.5f}"
+
+                print(
+                    f"  |k|>={threshold}: "
+                    f"Efrac={td['energy_fraction']:.5f} "
+                    f"Phi={td['nonlinear_flux']:+.3e} "
+                    f"D={td['viscous_dissipation']:.3e} "
+                    f"Phi/D={ratio_text}"
+                )
+
+            print()
+
+        if step == args.steps:
+            break
+
+        # RK2 midpoint.
+        k1, _ = nonlinear_rhs(
+            uh,
+            geometry,
+            viscosity,
+        )
+
+        midpoint = uh + 0.5 * args.dt * k1
+
+        k2, _ = nonlinear_rhs(
+            midpoint,
+            geometry,
+            viscosity,
+        )
+
+        uh = (
+            uh + args.dt * k2
+        ) * geometry["active"]
+
+    output_path = Path(args.output)
+
+    output_path.write_text(
+        json.dumps(
+            report,
+            ensure_ascii=False,
+            indent=2
+        ),
+        encoding="utf-8",
+    )
+
+    print("=" * 72)
+    print("ГОТОВО")
+    print("Результат:", output_path)
+    print("=" * 72)
+
+
+if __name__ == "__main__":
+    main()
+

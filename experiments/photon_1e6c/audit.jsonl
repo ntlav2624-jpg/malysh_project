@@ -1,0 +1,11 @@
+{"utc": "2026-11-10T20:30:22.464234+00:00", "kind": "hypothesis_step", "beta": 1.000001, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464404+00:00", "kind": "hypothesis_step", "beta": 1.01, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464506+00:00", "kind": "hypothesis_step", "beta": 1.1, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464587+00:00", "kind": "hypothesis_step", "beta": 2.0, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464667+00:00", "kind": "hypothesis_step", "beta": 10.0, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464741+00:00", "kind": "hypothesis_step", "beta": 100.0, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464810+00:00", "kind": "hypothesis_step", "beta": 1000.0, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464878+00:00", "kind": "hypothesis_step", "beta": 10000.0, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.464970+00:00", "kind": "hypothesis_step", "beta": 100000.0, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.465038+00:00", "kind": "hypothesis_step", "beta": 1000000.0, "consensus": "requires_changed_physics"}
+{"utc": "2026-11-10T20:30:22.465770+00:00", "kind": "experiment_complete", "schema": "malysh.photon1e6c.v1", "states": 11, "maximum_beta": 1000000.0}

@@ -1,0 +1,4483 @@
+{
+  "experiment": "Trajectory as internal time",
+  "warning": "Diagnostic conservative triad-network model. Four-dimensional path lengths use a Euclidean diagnostic metric, not a relativistic Minkowski metric. Energy parcels are not individually identified; tracked objects are the energy center, maximum-energy coordinate, full state vector and fixed-node histories.",
+  "solver_modified": false,
+  "hypothesis": "Time parametrizes the trajectory; cumulative state change may act as an internal clock but is not assumed identical to coordinate time.",
+  "definitions": {
+    "event": "(kx,ky,kz,t,state)",
+    "trajectory": "t -> event",
+    "state_internal_time": "sum ||rho(t+1)-rho(t)||",
+    "center_path_time": "sum ||C(t+1)-C(t)||",
+    "peak_path_time": "sum ||Pmax(t+1)-Pmax(t)||"
+  },
+  "parameters": {
+    "steps": 40,
+    "reported_steps": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      20,
+      40
+    ],
+    "states": 1330
+  },
+  "results": [
+    {
+      "name": "axis_inner",
+      "initial_coordinate": [
+        1,
+        0,
+        0
+      ],
+      "full": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.9964075488833964,
+        "center_spatial_length": 0.9459478132454227,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.02686750004352,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.8250289214471005,
+        "time_vs_center_clock": 0.8702247209398257,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            0.05974651378983249,
+            2.1834755319219787e-33,
+            5.950334138511019e-35
+          ],
+          "effective_dimension": 1.0
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            140.04525018649338,
+            0.014496327296405556,
+            6.998867180872787e-31,
+            0.0
+          ],
+          "effective_dimension": 1.0002070234745093
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "variance": 0.06461043206096627,
+            "initial_energy": 1.0,
+            "final_energy": 0.004019284865484324,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              -5,
+              0,
+              0
+            ],
+            "variance": 4.418700269362991e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0007088276893097668,
+            "maximum_energy": 0.0007088276893097668,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -1,
+              0,
+              0
+            ],
+            "variance": 4.278683084959105e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.00075502333288072,
+            "maximum_energy": 0.00075502333288072,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              0,
+              -1
+            ],
+            "variance": 4.265279618134884e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006997590314508903,
+            "maximum_energy": 0.0006997590314508903,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              -1,
+              0
+            ],
+            "variance": 4.265279618134884e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006997590314508903,
+            "maximum_energy": 0.0006997590314508903,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              1,
+              0
+            ],
+            "variance": 4.265279618134884e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006997590314508903,
+            "maximum_energy": 0.0006997590314508903,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              0,
+              1
+            ],
+            "variance": 4.265279618134884e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006997590314508903,
+            "maximum_energy": 0.0006997590314508903,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              -1,
+              -1
+            ],
+            "variance": 4.097014492906728e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006894184929714522,
+            "maximum_energy": 0.0006894184929714522,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              -1,
+              1
+            ],
+            "variance": 4.097014492906728e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006894184929714522,
+            "maximum_energy": 0.0006894184929714522,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              1,
+              1
+            ],
+            "variance": 4.097014492906728e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006894184929714522,
+            "maximum_energy": 0.0006894184929714522,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              1,
+              -1
+            ],
+            "variance": 4.097014492906726e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006894184929714521,
+            "maximum_energy": 0.0006894184929714521,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -5,
+              0,
+              2
+            ],
+            "variance": 4.0781803158200814e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0006882198764283704,
+            "maximum_energy": 0.0006882198764283704,
+            "maximum_time": 40
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              0.8888888888888887,
+              2.168404344971009e-18,
+              3.2526065174565133e-19
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.8667034584253129,
+            "support": 1330,
+            "entropy": 0.18727655847383876,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.1333492511131844,
+            "center_path_time": 0.11111111111111127,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              0.7917600673784633,
+              6.928051882182373e-17,
+              2.710505431213761e-18
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.7511889396230728,
+            "support": 1330,
+            "entropy": 0.3257445040388514,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.24890921950932293,
+            "center_path_time": 0.20823993262153673,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              0.5671259919189838,
+              3.2526065174565133e-18,
+              5.204170427930421e-18
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.4891557201673865,
+            "support": 1330,
+            "entropy": 0.6053419457890594,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.511044512440573,
+            "center_path_time": 0.43287400808101617,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              0.34193706621093717,
+              9.75781955236954e-17,
+              1.2576745200831851e-17
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.23947785678926878,
+            "support": 1330,
+            "entropy": 0.8350526847617957,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.7608177640091468,
+            "center_path_time": 0.6580629337890627,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              0.15226869764909223,
+              1.0018028073766061e-16,
+              1.3010426069826053e-18
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.057798388717007064,
+            "support": 1330,
+            "entropy": 0.9716458645937907,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.942567303127683,
+            "center_path_time": 0.8477313023509077,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              0.0540521867545774,
+              -3.426078865054194e-17,
+              7.806255641895632e-18
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.004019284865484324,
+            "support": 1330,
+            "entropy": 0.9992491360276777,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.9964075488833964,
+            "center_path_time": 0.9459478132454227,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "fractured": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.9638371017206528,
+        "center_spatial_length": 0.8391241899328541,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.01494108102131,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.9207232320191068,
+        "time_vs_center_clock": 0.9300051475440618,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 0.9999999999999999,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            0.054296055406272956,
+            1.6305131071920055e-33,
+            1.0469341526738696e-34
+          ],
+          "effective_dimension": 1.0
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            140.04696363786908,
+            0.0073324175371900285,
+            2.5559367553926558e-33,
+            0.0
+          ],
+          "effective_dimension": 1.0001047136949868
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "variance": 0.07151277261372749,
+            "initial_energy": 1.0,
+            "final_energy": 0.03664190968049782,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              1,
+              3,
+              3
+            ],
+            "variance": 1.2728534420086912e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012834948038532702,
+            "maximum_energy": 0.0012834948038532702,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              1,
+              3,
+              -3
+            ],
+            "variance": 1.2728534420086912e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012834948038532702,
+            "maximum_energy": 0.0012834948038532702,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              1,
+              -3,
+              3
+            ],
+            "variance": 1.2728534420086904e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.00128349480385327,
+            "maximum_energy": 0.00128349480385327,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              1,
+              -3,
+              -3
+            ],
+            "variance": 1.2728534420086901e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.00128349480385327,
+            "maximum_energy": 0.00128349480385327,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -1,
+              -3,
+              3
+            ],
+            "variance": 1.264609580980228e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012793746607315769,
+            "maximum_energy": 0.0012793746607315769,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -1,
+              -3,
+              -3
+            ],
+            "variance": 1.264609580980228e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012793746607315769,
+            "maximum_energy": 0.0012793746607315769,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -1,
+              3,
+              -3
+            ],
+            "variance": 1.264609580980228e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012793746607315769,
+            "maximum_energy": 0.0012793746607315769,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -1,
+              3,
+              3
+            ],
+            "variance": 1.264609580980228e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012793746607315769,
+            "maximum_energy": 0.0012793746607315769,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              1,
+              5,
+              -3
+            ],
+            "variance": 1.2251171563093558e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012581099607819489,
+            "maximum_energy": 0.0012581099607819489,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              1,
+              5,
+              3
+            ],
+            "variance": 1.225117156309355e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012581099607819487,
+            "maximum_energy": 0.0012581099607819487,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              1,
+              -3,
+              5
+            ],
+            "variance": 1.225117156309355e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0012581099607819487,
+            "maximum_energy": 0.0012581099607819487,
+            "maximum_time": 40
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              0.9334069168506267,
+              1.4094628242311558e-18,
+              -5.963111948670274e-19
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.9201250919793965,
+            "support": 1088,
+            "entropy": 0.11537977422222667,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.07991776375248479,
+            "center_path_time": 0.06659308314937329,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              0.8720177951367735,
+              1.5829351718288365e-17,
+              -1.8431436932253575e-18
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.8466370329219909,
+            "support": 1330,
+            "entropy": 0.20691438511470564,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.15344490393770654,
+            "center_path_time": 0.12798220486322653,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              0.7150895729308827,
+              -1.3010426069826053e-18,
+              5.854691731421724e-18
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.6595876404925471,
+            "support": 1330,
+            "entropy": 0.41695549881269,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.34059197616366854,
+            "center_path_time": 0.2849104270691173,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              0.5248100079738088,
+              9.974659986866641e-18,
+              1.3010426069826053e-17
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.435178138349752,
+            "support": 1330,
+            "entropy": 0.6408714036006236,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.5651140810599897,
+            "center_path_time": 0.47518999202619117,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              0.31060644677612154,
+              -7.632783294297951e-17,
+              1.3010426069826053e-17
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.18970969933607174,
+            "support": 1330,
+            "entropy": 0.8547189958888255,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.8106962188545698,
+            "center_path_time": 0.6893935532238786,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              0.16087581006714632,
+              8.326672684688674e-17,
+              2.688821387764051e-17
+            ],
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.03664190968049782,
+            "support": 1330,
+            "entropy": 0.9654654120205959,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.9638371017206528,
+            "center_path_time": 0.8391241899328541,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "comparison": {
+        "final_state_distance_L2": 0.0350673014295112,
+        "maximum_state_distance_L2": 0.19697646905244648,
+        "time_of_maximum_state_distance": 9,
+        "final_center_distance": 0.10682362331256892,
+        "maximum_center_distance": 0.18352179937728397,
+        "final_peak_distance": 0.0,
+        "maximum_peak_distance": 0.0,
+        "same_peak_times": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "reported_comparison": [
+          {
+            "time": 0,
+            "state_distance_L2": 0.0,
+            "center_distance": 0.0,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 1,
+            "state_distance_L2": 0.05346454004196853,
+            "center_distance": 0.04451802796173798,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 2,
+            "state_distance_L2": 0.09552959773688328,
+            "center_distance": 0.0802577277583102,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 5,
+            "state_distance_L2": 0.17061143137754217,
+            "center_distance": 0.14796358101189888,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 10,
+            "state_distance_L2": 0.1960186854257448,
+            "center_distance": 0.18287294176287167,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 20,
+            "state_distance_L2": 0.13257284445182352,
+            "center_distance": 0.1583377491270293,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 40,
+            "state_distance_L2": 0.0350673014295112,
+            "center_distance": 0.10682362331256892,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "axis_outer",
+      "initial_coordinate": [
+        5,
+        0,
+        0
+      ],
+      "full": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.9639935750568719,
+        "center_spatial_length": 4.573554367911862,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.40681453883486,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.9206975822580888,
+        "time_vs_center_clock": 0.9416718266951711,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0000000000000002,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            1.6496749380763738,
+            1.4010619376843341e-33,
+            6.23847028184597e-35
+          ],
+          "effective_dimension": 1.0
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            141.46477690209196,
+            0.18489803598444768,
+            8.003218281827432e-34,
+            0.0
+          ],
+          "effective_dimension": 1.002614046042696
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "variance": 0.07154414545927634,
+            "initial_energy": 1.0,
+            "final_energy": 0.03640684741002672,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              0,
+              -5,
+              -5
+            ],
+            "variance": 6.245854712777781e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.000907875711146056,
+            "maximum_energy": 0.000941406017698059,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              5,
+              5
+            ],
+            "variance": 6.24585471277778e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.000907875711146056,
+            "maximum_energy": 0.000941406017698059,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              5,
+              -5
+            ],
+            "variance": 6.24585471277778e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0009078757111460559,
+            "maximum_energy": 0.000941406017698059,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              -5,
+              5
+            ],
+            "variance": 6.24585471277778e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0009078757111460559,
+            "maximum_energy": 0.000941406017698059,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              -4,
+              -5
+            ],
+            "variance": 5.7586142667166417e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008773356422331781,
+            "maximum_energy": 0.000912191674132005,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              5,
+              -4
+            ],
+            "variance": 5.7586142667166417e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008773356422331781,
+            "maximum_energy": 0.000912191674132005,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              5,
+              4
+            ],
+            "variance": 5.7586142667166417e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008773356422331781,
+            "maximum_energy": 0.000912191674132005,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              -5,
+              -4
+            ],
+            "variance": 5.758614266716641e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008773356422331781,
+            "maximum_energy": 0.0009121916741320049,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              -5,
+              4
+            ],
+            "variance": 5.758614266716641e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008773356422331781,
+            "maximum_energy": 0.0009121916741320049,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              4,
+              5
+            ],
+            "variance": 5.758614266716641e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008773356422331782,
+            "maximum_energy": 0.000912191674132005,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              0,
+              4,
+              -5
+            ],
+            "variance": 5.758614266716641e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008773356422331782,
+            "maximum_energy": 0.000912191674132005,
+            "maximum_time": 27
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              4.667034584253138,
+              1.4094628242311558e-18,
+              -1.6263032587282567e-19
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.9200883002207504,
+            "support": 1329,
+            "entropy": 0.11778083653885839,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.07994641742427507,
+            "center_path_time": 0.33296541574686156,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              4.35761893971512,
+              -3.859759734048396e-17,
+              -8.023096076392733e-18
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.8465680301004774,
+            "support": 1330,
+            "entropy": 0.21148423293098617,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.1534980380161347,
+            "center_path_time": 0.6423810602848796,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              3.5540662677794472,
+              -4.96564594998361e-17,
+              -8.673617379884035e-18
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.6594445818881534,
+            "support": 1330,
+            "entropy": 0.42694900718805107,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.34069874408773637,
+            "center_path_time": 1.4459337322205528,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              2.5479242515166822,
+              -7.068998164605489e-17,
+              -1.1709383462843448e-17
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.4349646403340344,
+            "support": 1330,
+            "entropy": 0.6569562308731552,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.5652668626591257,
+            "center_path_time": 2.4520757484833178,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              1.3471656337482245,
+              -4.9439619065339e-17,
+              -8.673617379884035e-19
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.18945417532801787,
+            "support": 1330,
+            "entropy": 0.8757067098976591,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.8108711277033003,
+            "center_path_time": 3.652834366251775,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              0.42644563208813624,
+              -3.729655473350135e-17,
+              6.071532165918825e-18
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.03640684741002672,
+            "support": 1330,
+            "entropy": 0.9846243198882619,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.9639935750568719,
+            "center_path_time": 4.573554367911862,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "fractured": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.9227811385199506,
+        "center_spatial_length": 3.859592948979931,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.26043124338806,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.949242370321954,
+        "time_vs_center_clock": 0.9582392061390398,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            1.2061981898927518,
+            1.4443911904298801e-33,
+            6.403616942271603e-35
+          ],
+          "effective_dimension": 1.0
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            141.10833293439686,
+            0.09786525549589223,
+            1.3225422718887521e-34,
+            0.0
+          ],
+          "effective_dimension": 1.0013870932550455
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "variance": 0.06870425732692717,
+            "initial_energy": 1.0,
+            "final_energy": 0.0776666608106844,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              0,
+              3,
+              3
+            ],
+            "variance": 1.6804562752769874e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0014397794552166673,
+            "maximum_energy": 0.0014397794552166673,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              3,
+              -3
+            ],
+            "variance": 1.6804562752769874e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0014397794552166673,
+            "maximum_energy": 0.0014397794552166673,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              -3,
+              -3
+            ],
+            "variance": 1.6804562752769874e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0014397794552166673,
+            "maximum_energy": 0.0014397794552166673,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              -3,
+              3
+            ],
+            "variance": 1.6804562752769874e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0014397794552166673,
+            "maximum_energy": 0.0014397794552166673,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              -3,
+              5
+            ],
+            "variance": 1.4503935831180117e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013368346033961727,
+            "maximum_energy": 0.001337085228460715,
+            "maximum_time": 39
+          },
+          {
+            "coordinate": [
+              0,
+              -5,
+              -3
+            ],
+            "variance": 1.4503935831180117e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013368346033961727,
+            "maximum_energy": 0.001337085228460715,
+            "maximum_time": 39
+          },
+          {
+            "coordinate": [
+              0,
+              5,
+              3
+            ],
+            "variance": 1.4503935831180117e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013368346033961727,
+            "maximum_energy": 0.001337085228460715,
+            "maximum_time": 39
+          },
+          {
+            "coordinate": [
+              0,
+              5,
+              -3
+            ],
+            "variance": 1.4503935831180117e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013368346033961727,
+            "maximum_energy": 0.001337085228460715,
+            "maximum_time": 39
+          },
+          {
+            "coordinate": [
+              0,
+              -5,
+              3
+            ],
+            "variance": 1.4503935831180117e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013368346033961727,
+            "maximum_energy": 0.001337085228460715,
+            "maximum_time": 39
+          },
+          {
+            "coordinate": [
+              0,
+              3,
+              -5
+            ],
+            "variance": 1.4503935831180117e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013368346033961727,
+            "maximum_energy": 0.001337085228460715,
+            "maximum_time": 39
+          },
+          {
+            "coordinate": [
+              0,
+              -3,
+              -5
+            ],
+            "variance": 1.4503935831180117e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013368346033961727,
+            "maximum_energy": 0.001337085228460715,
+            "maximum_time": 39
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              4.7560706401766115,
+              1.4094628242311558e-18,
+              -1.0842021724855044e-19
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.937895511405445,
+            "support": 1087,
+            "entropy": 0.09192655219351153,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.06213861185870329,
+            "center_path_time": 0.24392935982338848,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              4.526581287587031,
+              4.336808689942018e-19,
+              -3.469446951953614e-18
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.8796522298946169,
+            "support": 1330,
+            "entropy": 0.16671134417902142,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.12041346654345281,
+            "center_path_time": 0.4734187124129692,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              3.9161633686484048,
+              -9.324138683375338e-18,
+              -8.239936510889834e-18
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.7257624574635883,
+            "support": 1330,
+            "entropy": 0.34592721699485035,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.2743844794141346,
+            "center_path_time": 1.0838366313515952,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              3.114873444003291,
+              -8.370040771588094e-17,
+              8.673617379884035e-19
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.5268117139134117,
+            "support": 1330,
+            "entropy": 0.5540762397236663,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.47343479829398194,
+            "center_path_time": 1.8851265559967092,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              2.0749673423215382,
+              -7.806255641895632e-18,
+              8.673617379884035e-19
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.2777633622899206,
+            "support": 1330,
+            "entropy": 0.7857120383570323,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.7225968034711644,
+            "center_path_time": 2.9250326576784618,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              1.1404070510200681,
+              3.8163916471489756e-17,
+              1.734723475976807e-17
+            ],
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.0776666608106844,
+            "support": 1330,
+            "entropy": 0.9445592760495163,
+            "geometry_class": "isotropic-volume",
+            "state_internal_time": 0.9227811385199506,
+            "center_path_time": 3.859592948979931,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "comparison": {
+        "final_state_distance_L2": 0.04244516855716867,
+        "maximum_state_distance_L2": 0.09614787694898345,
+        "time_of_maximum_state_distance": 14,
+        "final_center_distance": 0.7139614189319319,
+        "maximum_center_distance": 0.7468818881695234,
+        "final_peak_distance": 0.0,
+        "maximum_peak_distance": 0.0,
+        "same_peak_times": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "reported_comparison": [
+          {
+            "time": 0,
+            "state_distance_L2": 0.0,
+            "center_distance": 0.0,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 1,
+            "state_distance_L2": 0.01782559757181735,
+            "center_distance": 0.08903605592347308,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 2,
+            "state_distance_L2": 0.03312037240992218,
+            "center_distance": 0.16896234787191045,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 5,
+            "state_distance_L2": 0.06640574349189073,
+            "center_distance": 0.3620971008689575,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 10,
+            "state_distance_L2": 0.09202374661312578,
+            "center_distance": 0.5669491924866086,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 20,
+            "state_distance_L2": 0.08870835898412335,
+            "center_distance": 0.7278017085733137,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 40,
+            "state_distance_L2": 0.04244516855716867,
+            "center_distance": 0.7139614189319319,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "plane_diagonal",
+      "initial_coordinate": [
+        3,
+        3,
+        0
+      ],
+      "full": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.9600269494053445,
+        "center_spatial_length": 3.862782096115068,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.28541411402432,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.9248015217776583,
+        "time_vs_center_clock": 0.9448684817867349,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            1.1840926771336289,
+            6.632504231710996e-35,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            141.0580824060366,
+            0.12601027109707283,
+            1.0316591390342464e-14,
+            0.0
+          ],
+          "effective_dimension": 1.0017866423304296
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "variance": 0.07143339456514108,
+            "initial_energy": 1.0,
+            "final_energy": 0.040422639775691376,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              2,
+              2,
+              5
+            ],
+            "variance": 6.52189419740278e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0009225558431235171,
+            "maximum_energy": 0.0009580839875935742,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              2,
+              2,
+              -5
+            ],
+            "variance": 6.521894197402778e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0009225558431235172,
+            "maximum_energy": 0.0009580839875935743,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              -2,
+              -2,
+              -5
+            ],
+            "variance": 6.216170191376413e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0009041378280160326,
+            "maximum_energy": 0.0009403474259475649,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              -2,
+              -2,
+              5
+            ],
+            "variance": 6.216170191376412e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0009041378280160326,
+            "maximum_energy": 0.0009403474259475649,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              2,
+              -2,
+              -5
+            ],
+            "variance": 6.137900856754682e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008984184090000948,
+            "maximum_energy": 0.0009359920296337645,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              2,
+              -2,
+              5
+            ],
+            "variance": 6.137900856754682e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008984184090000948,
+            "maximum_energy": 0.0009359920296337645,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              -2,
+              2,
+              5
+            ],
+            "variance": 6.137900856754682e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008984184090000946,
+            "maximum_energy": 0.0009359920296337644,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              -2,
+              2,
+              -5
+            ],
+            "variance": 6.137900856754682e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008984184090000946,
+            "maximum_energy": 0.0009359920296337644,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              2,
+              2,
+              -4
+            ],
+            "variance": 6.045194465943648e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008941499820565186,
+            "maximum_energy": 0.0009300581333414759,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              2,
+              2,
+              4
+            ],
+            "variance": 6.045194465943648e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008941499820565186,
+            "maximum_energy": 0.0009300581333414759,
+            "maximum_time": 27
+          },
+          {
+            "coordinate": [
+              1,
+              2,
+              5
+            ],
+            "variance": 5.957051048701435e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0008891532383543124,
+            "maximum_energy": 0.0009245700887235195,
+            "maximum_time": 27
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              2.806291390728496,
+              2.8062913907284828,
+              -1.8973538018496328e-18
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9225165562913906,
+            "support": 1131,
+            "entropy": 0.11267589188678832,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.07752366661133815,
+            "center_path_time": 0.2739453423802009,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              2.625838623333068,
+              2.625838623333066,
+              -2.710505431213761e-18
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.8510430314676471,
+            "support": 1330,
+            "entropy": 0.20278347529831933,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.14903295124315383,
+            "center_path_time": 0.5291440933985647,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              2.1549460057798275,
+              2.154946005779825,
+              -4.119968255444917e-18
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.6681974565024894,
+            "support": 1330,
+            "entropy": 0.4119739902042946,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.33196417187838645,
+            "center_path_time": 1.195086819563725,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              1.559696343908745,
+              1.5596963439087457,
+              -4.7704895589362195e-18
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.4465947866697551,
+            "support": 1330,
+            "entropy": 0.639581494188582,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.5536599996205073,
+            "center_path_time": 2.0368969643798067,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              0.8374540270330013,
+              0.8374540270330024,
+              -1.3444106938820255e-17
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.19972521944989619,
+            "support": 1330,
+            "entropy": 0.8631404898957711,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.8006259641802757,
+            "center_path_time": 3.05830184422525,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              0.26860058559104993,
+              0.26860058559104966,
+              -8.673617379884035e-19
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.040422639775691376,
+            "support": 1330,
+            "entropy": 0.9811092440755952,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.9600269494053445,
+            "center_path_time": 3.862782096115068,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "fractured": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.2948126193479268,
+        "center_spatial_length": 0.827836556153001,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.0085740360718,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.9989191550413574,
+        "time_vs_center_clock": 0.9998944577043901,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            0.06021746979096032,
+            1.309335842901696e-17,
+            1.8983246575921924e-35
+          ],
+          "effective_dimension": 1.0000000000000004
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            140.06020476494515,
+            1.2704845711336889e-05,
+            2.903258700045923e-15,
+            2.1130855505881491e-22
+          ],
+          "effective_dimension": 1.0000001814197794
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "variance": 0.0075631440948142675,
+            "initial_energy": 1.0,
+            "final_energy": 0.705753283656662,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              -3
+            ],
+            "variance": 5.235408440011227e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0024470075940971185,
+            "maximum_energy": 0.0024470075940971185,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "variance": 5.235408440011227e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0024470075940971185,
+            "maximum_energy": 0.0024470075940971185,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              -5
+            ],
+            "variance": 5.153115900531895e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0024267760076022112,
+            "maximum_energy": 0.0024267760076022112,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              5
+            ],
+            "variance": 5.153115900531894e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0024267760076022112,
+            "maximum_energy": 0.0024267760076022112,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              -4
+            ],
+            "variance": 5.093264072670533e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0024124215709080965,
+            "maximum_energy": 0.0024124215709080965,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              4
+            ],
+            "variance": 5.093264072670533e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0024124215709080965,
+            "maximum_energy": 0.0024124215709080965,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              -2
+            ],
+            "variance": 5.035879148840022e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.002398524595652667,
+            "maximum_energy": 0.002398524595652667,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              2
+            ],
+            "variance": 5.035879148840018e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0023985245956526665,
+            "maximum_energy": 0.0023985245956526665,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              1
+            ],
+            "variance": 5.029712216206031e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0023969044343226894,
+            "maximum_energy": 0.0023969044343226894,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              -1
+            ],
+            "variance": 5.02971221620603e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0023969044343226894,
+            "maximum_energy": 0.0023969044343226894,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              3,
+              3
+            ],
+            "variance": 4.1018941128799277e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0021673082887179733,
+            "maximum_energy": 0.0021673082887179733,
+            "maximum_time": 40
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              2.984768211920532,
+              2.9847682119205308,
+              0.0
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.991317144959529,
+            "support": 185,
+            "entropy": 0.013131542799128478,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.008710871352245367,
+            "center_path_time": 0.021541001281177287,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              2.969544345304327,
+              2.969544345304323,
+              4.336808689942018e-19
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9827101691987735,
+            "support": 1330,
+            "entropy": 0.024648368256582606,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.01734434447200456,
+            "center_path_time": 0.0430707999215756,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              2.9239455561837864,
+              2.923945556183787,
+              -2.6020852139652106e-18
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9573378053866064,
+            "support": 1330,
+            "entropy": 0.05627348358284228,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.042788387019717,
+            "center_path_time": 0.10755722592363157,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              2.848326013058729,
+              2.848326013058736,
+              -4.336808689942018e-19
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9165064329023583,
+            "support": 1330,
+            "entropy": 0.10426489555851548,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.08371901254977444,
+            "center_path_time": 0.21449940939154027,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              2.699333904733896,
+              2.699333904733895,
+              8.673617379884035e-19
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.8400214462961575,
+            "support": 1330,
+            "entropy": 0.19031307937426434,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.16035321281988,
+            "center_path_time": 0.42520606967108593,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              2.4146311574300956,
+              2.4146311574300943,
+              -8.673617379884035e-18
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.705753283656662,
+            "support": 1330,
+            "entropy": 0.3354816993945783,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.2948126193479268,
+            "center_path_time": 0.827836556153001,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "comparison": {
+        "final_state_distance_L2": 0.6657608322718677,
+        "maximum_state_distance_L2": 0.6809684181631652,
+        "time_of_maximum_state_distance": 31,
+        "final_center_distance": 3.0349455399620666,
+        "maximum_center_distance": 3.0349455399620666,
+        "final_peak_distance": 0.0,
+        "maximum_peak_distance": 0.0,
+        "same_peak_times": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "reported_comparison": [
+          {
+            "time": 0,
+            "state_distance_L2": 0.0,
+            "center_distance": 0.0,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 1,
+            "state_distance_L2": 0.06883996622336094,
+            "center_distance": 0.2524043410990236,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 2,
+            "state_distance_L2": 0.13174149115357664,
+            "center_distance": 0.4860732934769891,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 5,
+            "state_distance_L2": 0.289298180828889,
+            "center_distance": 1.0875295936400933,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 10,
+            "state_distance_L2": 0.47015908428587644,
+            "center_distance": 1.8223975549882663,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 20,
+            "state_distance_L2": 0.6406328850771104,
+            "center_distance": 2.6330957745541634,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 40,
+            "state_distance_L2": 0.6657608322718677,
+            "center_distance": 3.0349455399620666,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "space_diagonal",
+      "initial_coordinate": [
+        3,
+        3,
+        3
+      ],
+      "full": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.9012759788183021,
+        "center_spatial_length": 4.4266223823198905,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.314267625730004,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.9576597076600727,
+        "time_vs_center_clock": 0.969659250353138,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0000000000000002,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            1.6362873533871145,
+            9.077935637412628e-17,
+            6.729000796631708e-17
+          ],
+          "effective_dimension": 1.0
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            141.53956493203395,
+            0.09672242135316937,
+            8.47927311190653e-17,
+            0.0
+          ],
+          "effective_dimension": 1.0013667185741622
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "variance": 0.0664324763303273,
+            "initial_energy": 1.0,
+            "final_energy": 0.09916541346460724,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "variance": 9.133026432752075e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010485102637860667,
+            "maximum_energy": 0.0010485102637860667,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              4,
+              5
+            ],
+            "variance": 8.864456202595146e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.001031958332442882,
+            "maximum_energy": 0.001031958332442882,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              4
+            ],
+            "variance": 8.864456202595138e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010319583324428817,
+            "maximum_energy": 0.0010319583324428817,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              5,
+              5
+            ],
+            "variance": 8.864456202595138e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010319583324428817,
+            "maximum_energy": 0.0010319583324428817,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              5,
+              5
+            ],
+            "variance": 8.634314085396626e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010175857182872338,
+            "maximum_energy": 0.0010175857182872338,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              3,
+              5
+            ],
+            "variance": 8.63431408539662e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010175857182872336,
+            "maximum_energy": 0.0010175857182872336,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              3
+            ],
+            "variance": 8.63431408539662e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010175857182872336,
+            "maximum_energy": 0.0010175857182872336,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              4,
+              5
+            ],
+            "variance": 8.58684463028316e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010146167569931054,
+            "maximum_energy": 0.0010146167569931054,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              5,
+              4
+            ],
+            "variance": 8.586844630283159e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010146167569931054,
+            "maximum_energy": 0.0010146167569931054,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              4,
+              4
+            ],
+            "variance": 8.586844630283159e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.0010146167569931054,
+            "maximum_energy": 0.0010146167569931054,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              5,
+              4
+            ],
+            "variance": 8.354395532518662e-08,
+            "initial_energy": 0.0,
+            "final_energy": 0.000999890535711363,
+            "maximum_energy": 0.000999890535711363,
+            "maximum_time": 40
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              2.8592715231788226,
+              2.859271523178813,
+              2.8592715231788115
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9437086092715231,
+            "support": 897,
+            "entropy": 0.08267850385049832,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.0563280022528765,
+            "center_path_time": 0.2437488719260704,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              2.725115498778752,
+              2.725115498778753,
+              2.725115498778753
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.8905900623808465,
+            "support": 1330,
+            "entropy": 0.15093166616685824,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.10947916291584064,
+            "center_path_time": 0.4761139223284294,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              2.3591552168022125,
+              2.359155216802212,
+              2.3591552168022134
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.7485319239235604,
+            "support": 1330,
+            "entropy": 0.3183166108467441,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.2516160450271,
+            "center_path_time": 1.1099757242640296,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              1.8551550758686577,
+              1.855155075868656,
+              1.855155075868656
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.5603741232469248,
+            "support": 1330,
+            "entropy": 0.5209825017434949,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.43986205303335213,
+            "center_path_time": 1.9829295753828236,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              1.1482867524012064,
+              1.1482867524012057,
+              1.148286752401205
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.314222972335453,
+            "support": 1330,
+            "entropy": 0.7611384170738646,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.6861118595680922,
+            "center_path_time": 3.2072614258894805,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              0.4442883759667889,
+              0.4442883759667891,
+              0.44428837596678866
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.09916541346460724,
+            "support": 1330,
+            "entropy": 0.9415779256128195,
+            "geometry_class": "anisotropic-volume",
+            "state_internal_time": 0.9012759788183021,
+            "center_path_time": 4.4266223823198905,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "fractured": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.07962359719848047,
+        "center_spatial_length": 0.2711039567907563,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.00092063954174,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.99992879297125,
+        "time_vs_center_clock": 0.9997920589352397,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            0.006480447252381114,
+            7.644358725093999e-19,
+            4.996452629452482e-19
+          ],
+          "effective_dimension": 1.0000000000000007
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            140.00647775255504,
+            2.694697318265881e-06,
+            1.6985645143400095e-14,
+            0.0
+          ],
+          "effective_dimension": 1.0000000384938954
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "variance": 0.000547860302539647,
+            "initial_energy": 1.0,
+            "final_energy": 0.92086708219757,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              3,
+              0,
+              3
+            ],
+            "variance": 5.235408440011229e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.002447007594097119,
+            "maximum_energy": 0.002447007594097119,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "variance": 5.235408440011229e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.002447007594097119,
+            "maximum_energy": 0.002447007594097119,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              3,
+              3
+            ],
+            "variance": 5.235408440011229e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.002447007594097119,
+            "maximum_energy": 0.002447007594097119,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              3,
+              0
+            ],
+            "variance": 2.102298785886301e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001570062430358398,
+            "maximum_energy": 0.001570062430358398,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              0,
+              0
+            ],
+            "variance": 2.1022987858863007e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0015700624303583981,
+            "maximum_energy": 0.0015700624303583981,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              0,
+              0,
+              3
+            ],
+            "variance": 2.1022987858863001e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0015700624303583977,
+            "maximum_energy": 0.0015700624303583977,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              3,
+              5
+            ],
+            "variance": 1.6149798162288568e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013580368713432354,
+            "maximum_energy": 0.0013580368713432354,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              5,
+              3
+            ],
+            "variance": 1.6149798162288568e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013580368713432354,
+            "maximum_energy": 0.0013580368713432354,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              3,
+              3
+            ],
+            "variance": 1.6149798162288565e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013580368713432354,
+            "maximum_energy": 0.0013580368713432354,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              -3,
+              -3,
+              2
+            ],
+            "variance": 1.5146814802379e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013156323798713767,
+            "maximum_energy": 0.0013156323798713767,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              2,
+              -3,
+              -3
+            ],
+            "variance": 1.5146814802379e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013156323798713767,
+            "maximum_energy": 0.0013156323798713767,
+            "maximum_time": 40
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              2.9964679911699785,
+              2.9964679911699785,
+              2.9964679911699785
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9979396615158205,
+            "support": 51,
+            "entropy": 0.003168210936145914,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.0020825565412928297,
+            "center_path_time": 0.006117618746379096,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              2.9929055445369825,
+              2.9929055445369834,
+              2.9929055445369848
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9958836600733886,
+            "support": 1330,
+            "entropy": 0.005986142011798935,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.004159810230861713,
+            "center_path_time": 0.012287957313979025,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              2.9820478644482318,
+              2.982047864448236,
+              2.9820478644482367
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9897415676982848,
+            "support": 1330,
+            "entropy": 0.01390808731411272,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.010360516541954143,
+            "center_path_time": 0.031094010880020714,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              2.9634491493528614,
+              2.963449149352855,
+              2.9634491493528556
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9795904725852882,
+            "support": 1330,
+            "entropy": 0.026465472421237007,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.020595261684966806,
+            "center_path_time": 0.06330793038071274,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              2.924759848904741,
+              2.9247598489047415,
+              2.9247598489047424
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9596050691484825,
+            "support": 1330,
+            "entropy": 0.05070459319600581,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.04071094427420103,
+            "center_path_time": 0.13031976446614657,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              2.8434780575684893,
+              2.8434780575684817,
+              2.8434780575684817
+            ],
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.92086708219757,
+            "support": 1330,
+            "entropy": 0.0973281995739934,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.07962359719848047,
+            "center_path_time": 0.2711039567907563,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "comparison": {
+        "final_state_distance_L2": 0.822066165237516,
+        "maximum_state_distance_L2": 0.822066165237516,
+        "time_of_maximum_state_distance": 40,
+        "final_center_distance": 4.1555184255291335,
+        "maximum_center_distance": 4.1555184255291335,
+        "final_peak_distance": 0.0,
+        "maximum_peak_distance": 0.0,
+        "same_peak_times": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "reported_comparison": [
+          {
+            "time": 0,
+            "state_distance_L2": 0.0,
+            "center_distance": 0.0,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 1,
+            "state_distance_L2": 0.05426738254502556,
+            "center_distance": 0.2376312531796913,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 2,
+            "state_distance_L2": 0.10536221786566358,
+            "center_distance": 0.4638259650144504,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 5,
+            "state_distance_L2": 0.241355532983103,
+            "center_distance": 1.078881713384009,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 10,
+            "state_distance_L2": 0.41944567858457693,
+            "center_distance": 1.9196216450021109,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 20,
+            "state_distance_L2": 0.6456923144261415,
+            "center_distance": 3.0769416614233336,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 40,
+            "state_distance_L2": 0.822066165237516,
+            "center_distance": 4.1555184255291335,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "corner",
+      "initial_coordinate": [
+        5,
+        5,
+        5
+      ],
+      "full": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.6156073390830903,
+        "center_spatial_length": 4.9745228541063815,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.32162352200067,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.9921306542266685,
+        "time_vs_center_clock": 0.9952609344260294,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            2.1676689952285244,
+            5.5231624574388276e-17,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            142.14748188063203,
+            0.020187114596445295,
+            1.4907465436068174e-14,
+            0.0
+          ],
+          "effective_dimension": 1.0002840305564649
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "variance": 0.032717376647762704,
+            "initial_energy": 1.0,
+            "final_energy": 0.3847812982757392,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              5,
+              4,
+              5
+            ],
+            "variance": 1.9143922086754062e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0014793839241177245,
+            "maximum_energy": 0.0014793839241177245,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              4
+            ],
+            "variance": 1.9143922086754062e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0014793839241177245,
+            "maximum_energy": 0.0014793839241177245,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              5,
+              5
+            ],
+            "variance": 1.9143922086754062e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0014793839241177245,
+            "maximum_energy": 0.0014793839241177245,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              3,
+              5
+            ],
+            "variance": 1.7004807903174604e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001397819298498992,
+            "maximum_energy": 0.001397819298498992,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              3,
+              5,
+              5
+            ],
+            "variance": 1.7004807903174596e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001397819298498992,
+            "maximum_energy": 0.001397819298498992,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              3
+            ],
+            "variance": 1.7004807903174593e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001397819298498992,
+            "maximum_energy": 0.001397819298498992,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              4,
+              4
+            ],
+            "variance": 1.6736691089111668e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001387347937951526,
+            "maximum_energy": 0.001387347937951526,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              4,
+              5
+            ],
+            "variance": 1.6736691089111663e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001387347937951526,
+            "maximum_energy": 0.001387347937951526,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              5,
+              4
+            ],
+            "variance": 1.6736691089111663e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001387347937951526,
+            "maximum_energy": 0.001387347937951526,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              2,
+              5
+            ],
+            "variance": 1.5129596805962053e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013223484097706962,
+            "maximum_energy": 0.0013223484097706962,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              2
+            ],
+            "variance": 1.5129596805962053e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0013223484097706962,
+            "maximum_energy": 0.0013223484097706962,
+            "maximum_time": 40
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              4.901582045621781,
+              4.901582045621781,
+              4.901582045621781
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9763796909492274,
+            "support": 429,
+            "entropy": 0.03525587259650688,
+            "geometry_class": "filament",
+            "state_internal_time": 0.02365094897680809,
+            "center_path_time": 0.17046489736007053,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              4.804527809317438,
+              4.804527809317438,
+              4.804527809317438
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9533187492859583,
+            "support": 1330,
+            "entropy": 0.06591226037897613,
+            "geometry_class": "filament",
+            "state_internal_time": 0.04673935824500389,
+            "center_path_time": 0.3385677657289888,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              4.521742368921508,
+              4.521742368921508,
+              4.521742368921508
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.88736065682016,
+            "support": 1330,
+            "entropy": 0.1480153841950371,
+            "geometry_class": "filament",
+            "state_internal_time": 0.11276463727877001,
+            "center_path_time": 0.8283665161354798,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              4.079009656285199,
+              4.0790096562852,
+              4.0790096562852
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.7874370073835733,
+            "support": 1330,
+            "entropy": 0.2655334884196354,
+            "geometry_class": "filament",
+            "state_internal_time": 0.2127655684411663,
+            "center_path_time": 1.5952020685943582,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              3.300416762428803,
+              3.3004167624288026,
+              3.3004167624288026
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.620141282244327,
+            "support": 1330,
+            "entropy": 0.45183222870706574,
+            "geometry_class": "filament",
+            "state_internal_time": 0.3801508736879248,
+            "center_path_time": 2.943764519165719,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              2.127957891091736,
+              2.1279578910917354,
+              2.127957891091736
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.3847812982757392,
+            "support": 1330,
+            "entropy": 0.6940888089509727,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.6156073390830903,
+            "center_path_time": 4.9745228541063815,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "fractured": {
+        "time_is_strictly_ordered": true,
+        "state_path_length": 0.39399940578163795,
+        "center_spatial_length": 2.5607048165885162,
+        "peak_spatial_length": 0.0,
+        "center_4d_length": 40.08251917769027,
+        "peak_4d_length": 40.0,
+        "time_vs_state_clock": 0.9977991061079,
+        "time_vs_center_clock": 0.9991746032367395,
+        "time_vs_peak_clock": 0.0,
+        "center_straightness": 1.0000000000000002,
+        "peak_straightness": 0.0,
+        "center_curve_geometry": {
+          "eigenvalues": [
+            0.5743772526192443,
+            9.110427566579425e-17,
+            0.0
+          ],
+          "effective_dimension": 1.0000000000000004
+        },
+        "peak_curve_geometry": {
+          "eigenvalues": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 0.0
+        },
+        "center_worldline_geometry": {
+          "eigenvalues": [
+            140.57343333193464,
+            0.0009439206846210619,
+            2.4097799549607917e-14,
+            0.0
+          ],
+          "effective_dimension": 1.0000134295743122
+        },
+        "peak_worldline_geometry": {
+          "eigenvalues": [
+            140.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "effective_dimension": 1.0
+        },
+        "unique_peak_positions": 1,
+        "repeated_peak_events": [
+          {
+            "spatial_position": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "times": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "event_count": 41
+          }
+        ],
+        "repeated_center_events": [],
+        "strongest_fixed_point_histories": [
+          {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "variance": 0.013503297203782386,
+            "initial_energy": 1.0,
+            "final_energy": 0.6064918389549538,
+            "maximum_energy": 1.0,
+            "maximum_time": 0
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              4
+            ],
+            "variance": 3.5996958180301887e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.002029811721158377,
+            "maximum_energy": 0.002029811721158377,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              5,
+              5
+            ],
+            "variance": 3.599695818030187e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.002029811721158377,
+            "maximum_energy": 0.002029811721158377,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              4,
+              5
+            ],
+            "variance": 3.599695818030187e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.002029811721158377,
+            "maximum_energy": 0.002029811721158377,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              5,
+              4
+            ],
+            "variance": 3.3895689028969835e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001971125590517485,
+            "maximum_energy": 0.001971125590517485,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              4,
+              5
+            ],
+            "variance": 3.3895689028969835e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001971125590517485,
+            "maximum_energy": 0.001971125590517485,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              4,
+              4
+            ],
+            "variance": 3.3895689028969835e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.001971125590517485,
+            "maximum_energy": 0.001971125590517485,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              1,
+              5,
+              5
+            ],
+            "variance": 3.2817253040744103e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0019392678323269122,
+            "maximum_energy": 0.0019392678323269122,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              5,
+              1
+            ],
+            "variance": 3.2817253040744103e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0019392678323269122,
+            "maximum_energy": 0.0019392678323269122,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              1,
+              5
+            ],
+            "variance": 3.2817253040744103e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0019392678323269122,
+            "maximum_energy": 0.0019392678323269122,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              4,
+              4,
+              4
+            ],
+            "variance": 3.1886521582518585e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0019130073673297064,
+            "maximum_energy": 0.0019130073673297064,
+            "maximum_time": 40
+          },
+          {
+            "coordinate": [
+              5,
+              4,
+              1
+            ],
+            "variance": 3.089301010539768e-07,
+            "initial_energy": 0.0,
+            "final_energy": 0.0018829992942933599,
+            "maximum_energy": 0.0018829992942933599,
+            "maximum_time": 40
+          }
+        ],
+        "reported_events": [
+          {
+            "time": 0,
+            "center": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 1.0,
+            "support": 1,
+            "entropy": -0.0,
+            "geometry_class": "point",
+            "state_internal_time": 0.0,
+            "center_path_time": 0.0,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 1,
+            "center": [
+              4.9575055187637975,
+              4.9575055187637975,
+              4.9575055187637975
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9875643855776306,
+            "support": 277,
+            "entropy": 0.018930560352514603,
+            "geometry_class": "filament",
+            "state_internal_time": 0.012460733715990189,
+            "center_path_time": 0.073602600542385,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 2,
+            "center": [
+              4.915287679606862,
+              4.915287679606862,
+              4.915287679606862
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.975284041040002,
+            "support": 1330,
+            "entropy": 0.035443648853668165,
+            "geometry_class": "filament",
+            "state_internal_time": 0.024764983823446704,
+            "center_path_time": 0.14672604294796876,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 5,
+            "center": [
+              4.790312346141733,
+              4.790312346141733,
+              4.790312346141733
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9393552498265121,
+            "support": 1330,
+            "entropy": 0.080295987680382,
+            "geometry_class": "filament",
+            "state_internal_time": 0.06075896715617834,
+            "center_path_time": 0.36318967020243426,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 10,
+            "center": [
+              4.587695078644256,
+              4.587695078644256,
+              4.587695078644256
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.8824021336503197,
+            "support": 1330,
+            "entropy": 0.14694338423691033,
+            "geometry_class": "filament",
+            "state_internal_time": 0.1178026674639914,
+            "center_path_time": 0.7141330719988397,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 20,
+            "center": [
+              4.204016758954228,
+              4.204016758954228,
+              4.204016758954228
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.7786814991815996,
+            "support": 1330,
+            "entropy": 0.2622578943216377,
+            "geometry_class": "filament",
+            "state_internal_time": 0.22165596727637382,
+            "center_path_time": 1.3786834154646224,
+            "peak_path_time": 0.0
+          },
+          {
+            "time": 40,
+            "center": [
+              3.521576384827449,
+              3.5215763848274486,
+              3.5215763848274486
+            ],
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.6064918389549538,
+            "support": 1330,
+            "entropy": 0.44475145205232963,
+            "geometry_class": "sheet-or-ring",
+            "state_internal_time": 0.39399940578163795,
+            "center_path_time": 2.5607048165885162,
+            "peak_path_time": 0.0
+          }
+        ]
+      },
+      "comparison": {
+        "final_state_distance_L2": 0.22197243474880493,
+        "maximum_state_distance_L2": 0.22197243474880493,
+        "time_of_maximum_state_distance": 40,
+        "final_center_distance": 2.4138180375178644,
+        "maximum_center_distance": 2.4138180375178644,
+        "final_peak_distance": 0.0,
+        "maximum_peak_distance": 0.0,
+        "same_peak_times": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "reported_comparison": [
+          {
+            "time": 0,
+            "state_distance_L2": 0.0,
+            "center_distance": 0.0,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 1,
+            "state_distance_L2": 0.011203075404366866,
+            "center_distance": 0.09686229681768554,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 2,
+            "state_distance_L2": 0.02199958636545036,
+            "center_distance": 0.19184172278102002,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 5,
+            "state_distance_L2": 0.0520654091018771,
+            "center_distance": 0.46517684593304576,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 10,
+            "state_distance_L2": 0.09507415498399976,
+            "center_distance": 0.8810689965955188,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 20,
+            "state_distance_L2": 0.15869715539216012,
+            "center_distance": 1.565081103701097,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          },
+          {
+            "time": 40,
+            "state_distance_L2": 0.22197243474880493,
+            "center_distance": 2.4138180375178644,
+            "peak_distance": 0.0,
+            "same_peak_coordinate": true
+          }
+        ]
+      }
+    }
+  ]
+}

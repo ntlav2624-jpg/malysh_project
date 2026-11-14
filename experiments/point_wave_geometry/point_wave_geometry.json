@@ -1,0 +1,5680 @@
+{
+  "experiment": "Five-layer point and wave geometry",
+  "warning": "The network dynamics is diagnostic, not a Navier-Stokes proof. The wave field uses amplitudes sqrt(rho) with all spectral phases fixed to zero. No physical dispersion law omega(k) is assumed.",
+  "solver_modified": false,
+  "construction": {
+    "X0": "spatial point geometry",
+    "X1": "relational network geometry",
+    "X2": "geometry generated in k-space",
+    "X3": "difference between observers",
+    "XW": "wave-direction and interference geometry in x-space"
+  },
+  "parameters": {
+    "wave_grid": 16,
+    "steps": 40,
+    "states": 1330,
+    "phase_convention": "all spectral phases zero"
+  },
+  "results": [
+    {
+      "name": "axis_inner",
+      "initial_coordinate": [
+        1,
+        0,
+        0
+      ],
+      "X0_spatial": {
+        "coordinate": [
+          1,
+          0,
+          0
+        ],
+        "radius": 1.0,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nonzero_components": 1,
+        "boundary_components": 0,
+        "position_class": "axis",
+        "boundary_class": "interior"
+      },
+      "X1_relational": {
+        "full_degree": 3624,
+        "fractured_degree": 2172,
+        "lost_degree": 1452,
+        "local_relation_loss": 0.4006622516556292
+      },
+      "snapshots": [
+        {
+          "step": 0,
+          "X0_spatial": {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "radius": 1.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 0,
+            "position_class": "axis",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 3624,
+            "fractured_degree": 2172,
+            "lost_degree": 1452,
+            "local_relation_loss": 0.4006622516556292
+          },
+          "X2_full_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "X3_observer_difference": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.1401849173675503e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999998,
+            "intensity_effective_dimension": 3.0000000000000004,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.2770170862992005,
+              3.2770170862992
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -2.356194490192345,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.1401849173675503e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999998,
+            "intensity_effective_dimension": 3.0000000000000004,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.2770170862992005,
+              3.2770170862992
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -2.356194490192345,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.0,
+            "wave_L2": 0.0,
+            "wave_Jensen_Shannon": 0.0,
+            "exact_equal_samples": 4096,
+            "near_equal_1e-12": 4096,
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "X0_spatial": {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "radius": 1.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 0,
+            "position_class": "axis",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 3624,
+            "fractured_degree": 2172,
+            "lost_degree": 1452,
+            "local_relation_loss": 0.4006622516556292
+          },
+          "X2_full_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.99390287294237,
+            "center": [
+              0.8888888888888887,
+              2.168404344971009e-18,
+              3.2526065174565133e-19
+            ],
+            "eigenvalues": [
+              1.3355408388520957,
+              1.3355408388520955,
+              1.2116425476248849
+            ],
+            "anisotropy": 0.09277012549739927,
+            "radial_center": 0.785923382243511,
+            "radial_width": 1.806944565439681,
+            "entropy": 0.18727655847383876,
+            "participation": 0.0010009195551060617,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.8667034584253129
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9820901519534218,
+            "center": [
+              0.9334069168506267,
+              1.4094628242311558e-18,
+              -5.963111948670274e-19
+            ],
+            "eigenvalues": [
+              0.8013245033112593,
+              0.8013245033112587,
+              0.6764336467807074
+            ],
+            "anisotropy": 0.15585553170341582,
+            "radial_center": 0.46756697119160173,
+            "radial_width": 1.4354315660643449,
+            "entropy": 0.11537977422222667,
+            "participation": 0.0008880779720362157,
+            "support_1e-12": 1088,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.9201250919793965
+          },
+          "X3_observer_difference": {
+            "L1": 0.10684326710816744,
+            "L2": 0.05346454004196853,
+            "Jensen_Shannon": 0.012434210179757654,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 603,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 9.486769009248164e-20
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              2.001766004415007,
+              1.3355408388520966,
+              1.3355408388520955
+            ],
+            "direction_effective_dimension": 2.882801111296229,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 3.4618149135374767,
+            "intensity_entropy": 0.9476616679057733,
+            "intensity_participation": 0.07701690427392656,
+            "intensity_effective_dimension": 2.9081665159291723,
+            "intensity_eigenvalues": [
+              4.892913905029435,
+              3.421415076900932,
+              3.416401865887953
+            ],
+            "local_peak_count": 16,
+            "occupied_fraction_above_2mean": 0.01171875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              1.5476821192052894,
+              0.8013245033112593,
+              0.8013245033112592
+            ],
+            "direction_effective_dimension": 2.6972195539591195,
+            "active_spectral_support": 1088,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.8202519822763366,
+            "intensity_entropy": 0.9743422206228806,
+            "intensity_participation": 0.23184012103006263,
+            "intensity_effective_dimension": 2.962840813811713,
+            "intensity_eigenvalues": [
+              4.26038138019693,
+              3.400781881034887,
+              3.3730650746024042
+            ],
+            "local_peak_count": 9,
+            "occupied_fraction_above_2mean": 0.013427734375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.15726649636784684,
+            "wave_L2": 0.026612441914389252,
+            "wave_Jensen_Shannon": 0.00995865318937479,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 3.3297626237380803e-07
+          },
+          "mass_full": 0.9999999999999998,
+          "mass_fractured": 0.9999999999999999
+        },
+        {
+          "step": 2,
+          "X0_spatial": {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "radius": 1.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 0,
+            "position_class": "axis",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 3624,
+            "fractured_degree": 2172,
+            "lost_degree": 1452,
+            "local_relation_loss": 0.4006622516556292
+          },
+          "X2_full_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.993399848432182,
+            "center": [
+              0.7917600673784633,
+              6.928051882182373e-17,
+              2.710505431213761e-18
+            ],
+            "eigenvalues": [
+              2.4928474140997703,
+              2.49284741409977,
+              2.2525158514616668
+            ],
+            "anisotropy": 0.09640845295173961,
+            "radial_center": 1.4421962643847568,
+            "radial_width": 2.271184848191768,
+            "entropy": 0.3257445040388514,
+            "participation": 0.0013323317921845384,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.7511889396230728
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9815638734266243,
+            "center": [
+              0.8720177951367735,
+              1.5829351718288365e-17,
+              -1.8431436932253575e-18
+            ],
+            "eigenvalues": [
+              1.5384339218390373,
+              1.5384339218390368,
+              1.2953270173764069
+            ],
+            "anisotropy": 0.1580223245285839,
+            "radial_center": 0.8876898095257926,
+            "radial_width": 1.8931987912310064,
+            "entropy": 0.20691438511470564,
+            "participation": 0.0010489109188750521,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.8466370329219909
+          },
+          "X3_observer_difference": {
+            "L1": 0.195559034393661,
+            "L2": 0.09552959773688323,
+            "Jensen_Shannon": 0.02317330671786491,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -1
+            ],
+            "minimum_difference": 3.2487204102042764e-08
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              2.8793998557568132,
+              2.4928474140997703,
+              2.49284741409977
+            ],
+            "direction_effective_dimension": 2.9855766166177418,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 6.1521631732177795,
+            "intensity_entropy": 0.8925810379687059,
+            "intensity_participation": 0.025740614289135558,
+            "intensity_effective_dimension": 2.8240873657717795,
+            "intensity_eigenvalues": [
+              5.798692586252285,
+              3.5396648332525564,
+              3.5195411769195424
+            ],
+            "local_peak_count": 24,
+            "occupied_fraction_above_2mean": 0.01904296875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              2.055742052411607,
+              1.5384339218390373,
+              1.5384339218390368
+            ],
+            "direction_effective_dimension": 2.940263692832973,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 3.325401083477259,
+            "intensity_entropy": 0.9452243361540156,
+            "intensity_participation": 0.08293048216514656,
+            "intensity_effective_dimension": 2.912172680928751,
+            "intensity_eigenvalues": [
+              4.928141448917147,
+              3.4992676049457305,
+              3.4432455125792325
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.016357421875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4095.9999999999995
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.25368544635695195,
+            "wave_L2": 0.04562136335955069,
+            "wave_Jensen_Shannon": 0.01856941546726281,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.8506844185042564e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "X0_spatial": {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "radius": 1.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 0,
+            "position_class": "axis",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 3624,
+            "fractured_degree": 2172,
+            "lost_degree": 1452,
+            "local_relation_loss": 0.4006622516556292
+          },
+          "X2_full_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.992601310492879,
+            "center": [
+              0.5671259919189838,
+              3.2526065174565133e-18,
+              5.204170427930421e-18
+            ],
+            "eigenvalues": [
+              5.1176186267590245,
+              5.1176186267590245,
+              4.596159787494059
+            ],
+            "anisotropy": 0.10189482204444833,
+            "radial_center": 2.8486304986131445,
+            "radial_width": 2.591659955199204,
+            "entropy": 0.6053419457890594,
+            "participation": 0.0031396627200891715,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.4891557201673865
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.980518318260829,
+            "center": [
+              0.7150895729308827,
+              -1.3010426069826053e-18,
+              5.854691731421724e-18
+            ],
+            "eigenvalues": [
+              3.4137930721119547,
+              3.413793072111952,
+              2.8599754104030297
+            ],
+            "anisotropy": 0.1622294175453065,
+            "radial_center": 1.9149193336963561,
+            "radial_width": 2.4537003688435224,
+            "entropy": 0.41695549881269,
+            "participation": 0.001727751541240881,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.6595876404925471
+          },
+          "X3_observer_difference": {
+            "L1": 0.3776847412239486,
+            "L2": 0.1706114313775421,
+            "Jensen_Shannon": 0.04740946105638574,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -1
+            ],
+            "minimum_difference": 6.465952554834476e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              5.1176186267590245,
+              5.1176186267590245,
+              4.917791678204146
+            ],
+            "direction_effective_dimension": 2.9989569396569347,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 12.067946202600442,
+            "intensity_entropy": 0.7482332362523308,
+            "intensity_participation": 0.006819639103040033,
+            "intensity_effective_dimension": 2.774417444480952,
+            "intensity_eigenvalues": [
+              6.62289991929076,
+              3.7955196558365345,
+              3.7411235221321353
+            ],
+            "local_peak_count": 16,
+            "occupied_fraction_above_2mean": 0.02734375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              3.4137930721119547,
+              3.413793072111954,
+              3.371328507717502
+            ],
+            "direction_effective_dimension": 2.999895988436489,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 7.0600545189663935,
+            "intensity_entropy": 0.8591312144542652,
+            "intensity_participation": 0.019667861037939813,
+            "intensity_effective_dimension": 2.823933302694333,
+            "intensity_eigenvalues": [
+              6.029595734284126,
+              3.733284153323308,
+              3.608926157789374
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.022216796875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4095.9999999999986
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.43819698941447177,
+            "wave_L2": 0.0809958232906417,
+            "wave_Jensen_Shannon": 0.039249929337558165,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.8016123164257044e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 0.9999999999999996
+        },
+        {
+          "step": 10,
+          "X0_spatial": {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "radius": 1.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 0,
+            "position_class": "axis",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 3624,
+            "fractured_degree": 2172,
+            "lost_degree": 1452,
+            "local_relation_loss": 0.4006622516556292
+          },
+          "X2_full_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9929961486081216,
+            "center": [
+              0.34193706621093717,
+              9.75781955236954e-17,
+              1.2576745200831851e-17
+            ],
+            "eigenvalues": [
+              7.617085753701778,
+              7.617085753701777,
+              6.861291659178019
+            ],
+            "anisotropy": 0.09922352445047045,
+            "radial_center": 4.089713975710693,
+            "radial_width": 2.3172619108461134,
+            "entropy": 0.8350526847617957,
+            "participation": 0.013008661935706862,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.23947785678926878
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9802489722315535,
+            "center": [
+              0.5248100079738088,
+              9.974659986866641e-18,
+              1.3010426069826053e-17
+            ],
+            "eigenvalues": [
+              5.661250710468111,
+              5.661250710468108,
+              4.736807110005804
+            ],
+            "anisotropy": 0.1632931745546855,
+            "radial_center": 3.072010788436898,
+            "radial_width": 2.5733360151113818,
+            "entropy": 0.6408714036006236,
+            "participation": 0.003963317120207762,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.435178138349752
+          },
+          "X3_observer_difference": {
+            "L1": 0.5048206053360931,
+            "L2": 0.19601868542574458,
+            "Jensen_Shannon": 0.06856324620764057,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              3
+            ],
+            "minimum_difference": 8.274553020949193e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              7.617085753701778,
+              7.617085753701777,
+              6.9782126164269656
+            ],
+            "direction_effective_dimension": 2.9950446742925334,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 17.53999369780353,
+            "intensity_entropy": 0.589020735026433,
+            "intensity_participation": 0.0032399012876675737,
+            "intensity_effective_dimension": 2.8847691156572304,
+            "intensity_eigenvalues": [
+              5.941522524367799,
+              4.016322998075269,
+              3.940571949274105
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.02734375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000002
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              5.661250710468112,
+              5.661250710468109,
+              5.012232654475275
+            ],
+            "direction_effective_dimension": 2.990557834194707,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 11.555298656067597,
+            "intensity_entropy": 0.7382591617550682,
+            "intensity_participation": 0.0074335665669617605,
+            "intensity_effective_dimension": 2.827575766745348,
+            "intensity_eigenvalues": [
+              6.351798315261409,
+              3.9844362061456424,
+              3.795054904632965
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.031982421875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.5315209648726558,
+            "wave_L2": 0.09800520292014242,
+            "wave_Jensen_Shannon": 0.05878187366008382,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.3924879099099326e-06
+          },
+          "mass_full": 1.0000000000000002,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "X0_spatial": {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "radius": 1.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 0,
+            "position_class": "axis",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 3624,
+            "fractured_degree": 2172,
+            "lost_degree": 1452,
+            "local_relation_loss": 0.4006622516556292
+          },
+          "X2_full_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9958765672720142,
+            "center": [
+              0.15226869764909223,
+              1.0018028073766061e-16,
+              1.3010426069826053e-18
+            ],
+            "eigenvalues": [
+              9.431636691959662,
+              9.43163669195966,
+              8.70834291762187
+            ],
+            "anisotropy": 0.07668804449967737,
+            "radial_center": 4.947785998351186,
+            "radial_width": 1.7581325365458569,
+            "entropy": 0.9716458645937907,
+            "participation": 0.18706802936634329,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.057798388717007064
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.982972769404582,
+            "center": [
+              0.31060644677612154,
+              -7.632783294297951e-17,
+              1.3010426069826053e-17
+            ],
+            "eigenvalues": [
+              8.11217032432328,
+              8.112170324323277,
+              6.877964254606317
+            ],
+            "anisotropy": 0.15214252417954766,
+            "radial_center": 4.256269823354334,
+            "radial_width": 2.2330409969492555,
+            "entropy": 0.8547189958888255,
+            "participation": 0.020519664662791797,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.18970969933607174
+          },
+          "X3_observer_difference": {
+            "L1": 0.5017120511202966,
+            "L2": 0.13257284445182355,
+            "Jensen_Shannon": 0.0735172939795437,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -4,
+              -5,
+              0
+            ],
+            "minimum_difference": 8.9755131951752e-08
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              9.431636691959662,
+              9.43163669195966,
+              8.731528673905622
+            ],
+            "direction_effective_dimension": 2.996142836519892,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 21.358907294890805,
+            "intensity_entropy": 0.45792118303585505,
+            "intensity_participation": 0.0021872126236219314,
+            "intensity_effective_dimension": 2.9899017151394705,
+            "intensity_eigenvalues": [
+              4.630571705454071,
+              4.13684185799102,
+              4.07440771000536
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.0263671875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              8.11217032432328,
+              8.112170324323277,
+              6.974440619385204
+            ],
+            "direction_effective_dimension": 2.985637997463719,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 16.623053251418657,
+            "intensity_entropy": 0.5842105157141583,
+            "intensity_participation": 0.0036058658861841636,
+            "intensity_effective_dimension": 2.933469512173055,
+            "intensity_eigenvalues": [
+              5.543175270493943,
+              4.199729285453303,
+              3.986136969255464
+            ],
+            "local_peak_count": 11,
+            "occupied_fraction_above_2mean": 0.034423828125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.45001668537381884,
+            "wave_L2": 0.08150223142290516,
+            "wave_Jensen_Shannon": 0.06334504082998518,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.2721592745145197e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "X0_spatial": {
+            "coordinate": [
+              1,
+              0,
+              0
+            ],
+            "radius": 1.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 0,
+            "position_class": "axis",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 3624,
+            "fractured_degree": 2172,
+            "lost_degree": 1452,
+            "local_relation_loss": 0.4006622516556292
+          },
+          "X2_full_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.999166522996493,
+            "center": [
+              0.0540521867545774,
+              -3.426078865054194e-17,
+              7.806255641895632e-18
+            ],
+            "eigenvalues": [
+              9.963577768125166,
+              9.963577768125164,
+              9.615337756446369
+            ],
+            "anisotropy": 0.034951301609032814,
+            "radial_center": 5.22193355045637,
+            "radial_width": 1.5079467123591432,
+            "entropy": 0.9992491360276777,
+            "participation": 0.9824709205603737,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.004019284865484324
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9907776188732247,
+            "center": [
+              0.16087581006714632,
+              8.326672684688674e-17,
+              2.688821387764051e-17
+            ],
+            "eigenvalues": [
+              9.623309180725684,
+              9.623309180725682,
+              8.532538310382867
+            ],
+            "anisotropy": 0.1133467552437678,
+            "radial_center": 4.979478053420268,
+            "radial_width": 1.7274128016603567,
+            "entropy": 0.9654654120205959,
+            "participation": 0.34098723402651837,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.03664190968049782
+          },
+          "X3_observer_difference": {
+            "L1": 0.4117518775157566,
+            "L2": 0.03506730142951122,
+            "Jensen_Shannon": 0.04913817235357546,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -4
+            ],
+            "minimum_difference": 7.536727573954037e-09
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              9.963577768125166,
+              9.963577768125164,
+              9.618259395339326
+            ],
+            "direction_effective_dimension": 2.9991806078490666,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 22.33879100461758,
+            "intensity_entropy": 0.4189242145660976,
+            "intensity_participation": 0.0019999136695347023,
+            "intensity_effective_dimension": 2.999878199309317,
+            "intensity_eigenvalues": [
+              4.165996440900096,
+              4.1172809174898735,
+              4.105091209868956
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.02783203125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              9.623309180725684,
+              9.623309180725682,
+              8.558419336647624
+            ],
+            "direction_effective_dimension": 2.991225113899435,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 20.119844701489356,
+            "intensity_entropy": 0.47068134714798227,
+            "intensity_participation": 0.002464218616602286,
+            "intensity_effective_dimension": 2.9949562223158446,
+            "intensity_eigenvalues": [
+              4.510672633668447,
+              4.2098015798615664,
+              4.094907258879298
+            ],
+            "local_peak_count": 11,
+            "occupied_fraction_above_2mean": 0.032470703125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000002
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.27011597394037995,
+            "wave_L2": 0.04648220387790499,
+            "wave_Jensen_Shannon": 0.03959732741139352,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 9.540241458966055e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "axis_outer",
+      "initial_coordinate": [
+        5,
+        0,
+        0
+      ],
+      "X0_spatial": {
+        "coordinate": [
+          5,
+          0,
+          0
+        ],
+        "radius": 5.0,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nonzero_components": 1,
+        "boundary_components": 1,
+        "position_class": "axis",
+        "boundary_class": "boundary"
+      },
+      "X1_relational": {
+        "full_degree": 2172,
+        "fractured_degree": 1688,
+        "lost_degree": 484,
+        "local_relation_loss": 0.22283609576427255
+      },
+      "snapshots": [
+        {
+          "step": 0,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "radius": 5.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 1,
+            "position_class": "axis",
+            "boundary_class": "boundary"
+          },
+          "X1_relational": {
+            "full_degree": 2172,
+            "fractured_degree": 1688,
+            "lost_degree": 484,
+            "local_relation_loss": 0.22283609576427255
+          },
+          "X2_full_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "X3_observer_difference": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              25.0,
+              0.0,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.1401849173675503e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999998,
+            "intensity_effective_dimension": 3.0000000000000004,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.2770170862992005,
+              3.2770170862992
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -2.356194490192345,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              25.0,
+              0.0,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.1401849173675503e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999998,
+            "intensity_effective_dimension": 3.0000000000000004,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.2770170862992005,
+              3.2770170862992
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -2.356194490192345,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.0,
+            "wave_L2": 0.0,
+            "wave_Jensen_Shannon": 0.0,
+            "exact_equal_samples": 4096,
+            "near_equal_1e-12": 4096,
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "radius": 5.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 1,
+            "position_class": "axis",
+            "boundary_class": "boundary"
+          },
+          "X1_relational": {
+            "full_degree": 2172,
+            "fractured_degree": 1688,
+            "lost_degree": 484,
+            "local_relation_loss": 0.22283609576427255
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.479811365639045,
+            "center": [
+              4.667034584253138,
+              1.4094628242311558e-18,
+              -1.6263032587282567e-19
+            ],
+            "eigenvalues": [
+              1.9527837743742,
+              0.801324503311259,
+              0.8013245033112582
+            ],
+            "anisotropy": 0.5896501631021309,
+            "radial_center": 0.8001205456641848,
+            "radial_width": 1.7074073601231685,
+            "entropy": 0.11778083653885839,
+            "participation": 0.0008881503582870727,
+            "support_1e-12": 1329,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.9200883002207504
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.529789005702498,
+            "center": [
+              4.7560706401766115,
+              1.4094628242311558e-18,
+              -1.0842021724855044e-19
+            ],
+            "eigenvalues": [
+              1.443221057555954,
+              0.623252391464312,
+              0.623252391464312
+            ],
+            "anisotropy": 0.5681518169366453,
+            "radial_center": 0.6076485132603451,
+            "radial_width": 1.5233151757981902,
+            "entropy": 0.09192655219351153,
+            "participation": 0.0008547465392524455,
+            "support_1e-12": 1087,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.937895511405445
+          },
+          "X3_observer_difference": {
+            "L1": 0.03561442236938931,
+            "L2": 0.01782559757181735,
+            "Jensen_Shannon": 0.0038847790001088527,
+            "exact_equal_coordinates": 1,
+            "near_equal_1e-12": 845,
+            "closest_coordinate": [
+              -5,
+              0,
+              0
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              23.73399558498891,
+              0.8013245033112595,
+              0.801324503311259
+            ],
+            "direction_effective_dimension": 1.1370183865629768,
+            "active_spectral_support": 1329,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 2.0833337252101076,
+            "intensity_entropy": 0.9742725450375852,
+            "intensity_participation": 0.1872561195984413,
+            "intensity_effective_dimension": 2.954442504366774,
+            "intensity_eigenvalues": [
+              4.336506747579304,
+              3.3675424993052596,
+              3.3621270427987144
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.0146484375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              24.06342899190576,
+              0.623252391464312,
+              0.623252391464312
+            ],
+            "direction_effective_dimension": 1.1048026441545642,
+            "active_spectral_support": 1087,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.41869700973134,
+            "intensity_entropy": 0.9824815219889541,
+            "intensity_participation": 0.3319280379351048,
+            "intensity_effective_dimension": 2.9744981416153675,
+            "intensity_eigenvalues": [
+              4.0745728194061535,
+              3.3815480318090847,
+              3.353037326679931
+            ],
+            "local_peak_count": 8,
+            "occupied_fraction_above_2mean": 0.01025390625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.0766305115357288,
+            "wave_L2": 0.011434121861007139,
+            "wave_Jensen_Shannon": 0.0032926164780038725,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 2.565609870752261e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "radius": 5.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 1,
+            "position_class": "axis",
+            "boundary_class": "boundary"
+          },
+          "X1_relational": {
+            "full_degree": 2172,
+            "fractured_degree": 1688,
+            "lost_degree": 484,
+            "local_relation_loss": 0.22283609576427255
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.523417441466917,
+            "center": [
+              4.35761893971512,
+              -3.859759734048396e-17,
+              -8.023096076392733e-18
+            ],
+            "eigenvalues": [
+              3.5859242429826663,
+              1.5384516517306759,
+              1.5384516517306754
+            ],
+            "anisotropy": 0.5709748596219544,
+            "radial_center": 1.4686524383404846,
+            "radial_width": 2.1227076015788353,
+            "entropy": 0.21148423293098617,
+            "participation": 0.001049089030529818,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.8465680301004774
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.564569080997593,
+            "center": [
+              4.526581287587031,
+              4.336808689942018e-19,
+              -3.469446951953614e-18
+            ],
+            "eigenvalues": [
+              2.69719145619218,
+              1.2076122202784052,
+              1.207612220278405
+            ],
+            "anisotropy": 0.5522704858396377,
+            "radial_center": 1.1367803892679542,
+            "radial_width": 1.9545194405082773,
+            "entropy": 0.16671134417902142,
+            "participation": 0.0009716670288879742,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.8796522298946169
+          },
+          "X3_observer_difference": {
+            "L1": 0.06830674526404257,
+            "L2": 0.03312037240992219,
+            "Jensen_Shannon": 0.007233972908038851,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -4,
+              -2
+            ],
+            "minimum_difference": 1.3536335042500878e-09
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              22.57476706674658,
+              1.5384516517306759,
+              1.5384516517306754
+            ],
+            "direction_effective_dimension": 1.2792910729004214,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 3.792146465533953,
+            "intensity_entropy": 0.9443149029916535,
+            "intensity_participation": 0.06501792134192366,
+            "intensity_effective_dimension": 2.8931429349519413,
+            "intensity_eigenvalues": [
+              5.057151703037695,
+              3.4361554437235737,
+              3.4359174695080115
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.0166015625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              23.187129609325144,
+              1.2076122202784059,
+              1.2076122202784052
+            ],
+            "direction_effective_dimension": 1.2125961532897436,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 2.623082682658576,
+            "intensity_entropy": 0.9614557034399172,
+            "intensity_participation": 0.12689449097058725,
+            "intensity_effective_dimension": 2.934449151904011,
+            "intensity_eigenvalues": [
+              4.652260072940348,
+              3.461001528910848,
+              3.4095788624791634
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.01708984375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.1199833016986849,
+            "wave_L2": 0.019683306902376775,
+            "wave_Jensen_Shannon": 0.005770642444566865,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 4.349218782535337e-09
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "radius": 5.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 1,
+            "position_class": "axis",
+            "boundary_class": "boundary"
+          },
+          "X1_relational": {
+            "full_degree": 2172,
+            "fractured_degree": 1688,
+            "lost_degree": 484,
+            "local_relation_loss": 0.22283609576427255
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.6417448331158897,
+            "center": [
+              3.5540662677794472,
+              -4.96564594998361e-17,
+              -8.673617379884035e-18
+            ],
+            "eigenvalues": [
+              7.019837383832148,
+              3.413936570304836,
+              3.413936570304834
+            ],
+            "anisotropy": 0.5136729836267009,
+            "radial_center": 2.8930725137267426,
+            "radial_width": 2.340479001136446,
+            "entropy": 0.42694900718805107,
+            "participation": 0.0017285995906947936,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.6594445818881534
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.6594677268308398,
+            "center": [
+              3.9161633686484048,
+              -9.324138683375338e-18,
+              -8.239936510889834e-18
+            ],
+            "eigenvalues": [
+              5.546132734481014,
+              2.7507725295743573,
+              2.7507725295743573
+            ],
+            "anisotropy": 0.504019708639057,
+            "radial_center": 2.354000652950874,
+            "radial_width": 2.3465631718614732,
+            "entropy": 0.34592721699485035,
+            "participation": 0.0014272266151084511,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.7257624574635883
+          },
+          "X3_observer_difference": {
+            "L1": 0.15070768428296472,
+            "L2": 0.06640574349189073,
+            "Jensen_Shannon": 0.01533221818132329,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              4,
+              -2
+            ],
+            "minimum_difference": 1.9545279388645835e-08
+          },
+          "XW_full_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              19.651224419599878,
+              3.413936570304836,
+              3.413936570304834
+            ],
+            "direction_effective_dimension": 1.7122733002511639,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 8.0330674052493,
+            "intensity_entropy": 0.8538577248885595,
+            "intensity_participation": 0.015260146134777974,
+            "intensity_effective_dimension": 2.7861356022309285,
+            "intensity_eigenvalues": [
+              6.243610672677001,
+              3.613851194150805,
+              3.600403178049209
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.0224609375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              20.88246826442465,
+              2.7507725295743573,
+              2.7507725295743573
+            ],
+            "direction_effective_dimension": 1.542773093232741,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 5.7369563982080605,
+            "intensity_entropy": 0.8957710658600764,
+            "intensity_participation": 0.029487505345146874,
+            "intensity_effective_dimension": 2.842756458806522,
+            "intensity_eigenvalues": [
+              5.755964183519941,
+              3.6564425132877147,
+              3.5486077998512817
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.02783203125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.21367507910285394,
+            "wave_L2": 0.038164452123381,
+            "wave_Jensen_Shannon": 0.011695604652873363,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 9.519471494716034e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 10,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "radius": 5.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 1,
+            "position_class": "axis",
+            "boundary_class": "boundary"
+          },
+          "X1_relational": {
+            "full_degree": 2172,
+            "fractured_degree": 1688,
+            "lost_degree": 484,
+            "local_relation_loss": 0.22283609576427255
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.792679306312022,
+            "center": [
+              2.5479242515166822,
+              -7.068998164605489e-17,
+              -1.1709383462843448e-17
+            ],
+            "eigenvalues": [
+              9.715312456990937,
+              5.661883746193516,
+              5.661883746193514
+            ],
+            "anisotropy": 0.41722062247011515,
+            "radial_center": 4.122511828974732,
+            "radial_width": 2.0109639900657954,
+            "entropy": 0.6569562308731552,
+            "participation": 0.00396866259582999,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.4349646403340344
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.7844217225160692,
+            "center": [
+              3.114873444003291,
+              -8.370040771588094e-17,
+              8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              8.228746701641539,
+              4.743235469849519,
+              4.743235469849516
+            ],
+            "anisotropy": 0.423577411988718,
+            "radial_center": 3.5700198397166374,
+            "radial_width": 2.2293891507249666,
+            "entropy": 0.5540762397236663,
+            "participation": 0.0027069073942996556,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.5268117139134117
+          },
+          "X3_observer_difference": {
+            "L1": 0.24553501927278892,
+            "L2": 0.09202374661312576,
+            "Jensen_Shannon": 0.024220638108450397,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              4,
+              -2
+            ],
+            "minimum_difference": 2.790855052109864e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              16.20723044845777,
+              5.661883746193516,
+              5.661883746193514
+            ],
+            "direction_effective_dimension": 2.3194102727958663,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 13.0447209346682,
+            "intensity_entropy": 0.7261001363171816,
+            "intensity_participation": 0.005842324623003568,
+            "intensity_effective_dimension": 2.7880604238149176,
+            "intensity_eigenvalues": [
+              6.557427759971312,
+              3.8090221092347734,
+              3.787230333498299
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.03076171875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4095.9999999999995
+          },
+          "XW_fractured_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              17.93118327379848,
+              4.743235469849519,
+              4.743235469849518
+            ],
+            "direction_effective_dimension": 2.0509652018130744,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 9.79790667104284,
+            "intensity_entropy": 0.7948676522312457,
+            "intensity_participation": 0.010309387275625746,
+            "intensity_effective_dimension": 2.80619887825089,
+            "intensity_eigenvalues": [
+              6.394125802382399,
+              3.87794423527218,
+              3.718195298995749
+            ],
+            "local_peak_count": 17,
+            "occupied_fraction_above_2mean": 0.03173828125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.2906372605871906,
+            "wave_L2": 0.053882287094620444,
+            "wave_Jensen_Shannon": 0.01801757404544964,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 6.143052257444369e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0000000000000002
+        },
+        {
+          "step": 20,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "radius": 5.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 1,
+            "position_class": "axis",
+            "boundary_class": "boundary"
+          },
+          "X1_relational": {
+            "full_degree": 2172,
+            "fractured_degree": 1688,
+            "lost_degree": 484,
+            "local_relation_loss": 0.22283609576427255
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.944020472919084,
+            "center": [
+              1.3471656337482245,
+              -4.9439619065339e-17,
+              -8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              10.746345797091873,
+              8.115839471561204,
+              8.115839471561204
+            ],
+            "anisotropy": 0.2447814703899185,
+            "radial_center": 4.949571863706575,
+            "radial_width": 1.5747263591553038,
+            "entropy": 0.8757067098976591,
+            "participation": 0.020652150700668646,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.18945417532801787
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9250651580906517,
+            "center": [
+              2.0749673423215382,
+              -7.806255641895632e-18,
+              8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              9.99772643727956,
+              7.229729506879973,
+              7.229729506879971
+            ],
+            "anisotropy": 0.2768626394975434,
+            "radial_center": 4.6001276797929025,
+            "radial_width": 1.8154918839374228,
+            "entropy": 0.7857120383570323,
+            "participation": 0.009680855226682876,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.2777633622899206
+          },
+          "X3_observer_difference": {
+            "L1": 0.33142342004339964,
+            "L2": 0.08870835898412333,
+            "Jensen_Shannon": 0.0317742398914152,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -1,
+              -5,
+              -5
+            ],
+            "minimum_difference": 5.3765445602973246e-08
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              12.56120104184413,
+              8.11583947156121,
+              8.115839471561204
+            ],
+            "direction_effective_dimension": 2.8634884496910495,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 18.457922889935286,
+            "intensity_entropy": 0.5640450765670727,
+            "intensity_participation": 0.002926587283116554,
+            "intensity_effective_dimension": 2.917199728579866,
+            "intensity_eigenvalues": [
+              5.605492845638647,
+              3.9948202593502704,
+              3.9805166715047426
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.02880859375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              14.303215908980473,
+              7.229729506879973,
+              7.229729506879971
+            ],
+            "direction_effective_dimension": 2.676279659045162,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 15.042456724846103,
+            "intensity_entropy": 0.6462418738049798,
+            "intensity_participation": 0.00439994623704365,
+            "intensity_effective_dimension": 2.8820582767999,
+            "intensity_eigenvalues": [
+              6.009929753819869,
+              4.0987263465258685,
+              3.9197752306143467
+            ],
+            "local_peak_count": 13,
+            "occupied_fraction_above_2mean": 0.0341796875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.3028181321558729,
+            "wave_L2": 0.0573044906080448,
+            "wave_Jensen_Shannon": 0.02235139585175095,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 6.859616923388371e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              0,
+              0
+            ],
+            "radius": 5.0,
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "nonzero_components": 1,
+            "boundary_components": 1,
+            "position_class": "axis",
+            "boundary_class": "boundary"
+          },
+          "X1_relational": {
+            "full_degree": 2172,
+            "fractured_degree": 1688,
+            "lost_degree": 484,
+            "local_relation_loss": 0.22283609576427255
+          },
+          "X2_full_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9974887216334754,
+            "center": [
+              0.42644563208813624,
+              -3.729655473350135e-17,
+              6.071532165918825e-18
+            ],
+            "eigenvalues": [
+              10.246064688543504,
+              9.641686439296107,
+              9.641686439296105
+            ],
+            "anisotropy": 0.05898637844080523,
+            "radial_center": 5.22664616221852,
+            "radial_width": 1.4871474244681084,
+            "entropy": 0.9846243198882619,
+            "participation": 0.3703147870449657,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.03640684741002672
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.992955924591495,
+            "center": [
+              1.1404070510200681,
+              3.8163916471489756e-17,
+              1.734723475976807e-17
+            ],
+            "eigenvalues": [
+              10.191848617350837,
+              9.210321044078102,
+              9.210321044078098
+            ],
+            "anisotropy": 0.09630515622080216,
+            "radial_center": 5.1074829282313505,
+            "radial_width": 1.5893737267654608,
+            "entropy": 0.9445592760495163,
+            "participation": 0.11049019459808325,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.0776666608106844
+          },
+          "X3_observer_difference": {
+            "L1": 0.3296816523850474,
+            "L2": 0.04244516855716867,
+            "Jensen_Shannon": 0.029432446963903725,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              0,
+              1
+            ],
+            "minimum_difference": 7.306669869155697e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              10.427920565670552,
+              9.641686439296107,
+              9.641686439296105
+            ],
+            "direction_effective_dimension": 2.9958043031735584,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 21.714414546602125,
+            "intensity_entropy": 0.4479099107030308,
+            "intensity_participation": 0.002116331352096861,
+            "intensity_effective_dimension": 2.996270662514362,
+            "intensity_eigenvalues": [
+              4.402345477878435,
+              4.088900159975259,
+              4.088166460265268
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.02783203125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              11.492376859367116,
+              9.210321044078102,
+              9.210321044078098
+            ],
+            "direction_effective_dimension": 2.965481081073261,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 19.571615115549385,
+            "intensity_entropy": 0.5034148007637176,
+            "intensity_participation": 0.0026038403849123638,
+            "intensity_effective_dimension": 2.984006143047223,
+            "intensity_eigenvalues": [
+              4.796328989645398,
+              4.1857377756022185,
+              4.070375065758357
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.0341796875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.20638363081121636,
+            "wave_L2": 0.037749821248778945,
+            "wave_Jensen_Shannon": 0.018673475821845774,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 4.3976079082971183e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "plane_diagonal",
+      "initial_coordinate": [
+        3,
+        3,
+        0
+      ],
+      "X0_spatial": {
+        "coordinate": [
+          3,
+          3,
+          0
+        ],
+        "radius": 4.242640687119285,
+        "direction": [
+          0.7071067811865476,
+          0.7071067811865476,
+          0.0
+        ],
+        "nonzero_components": 2,
+        "boundary_components": 0,
+        "position_class": "plane-diagonal",
+        "boundary_class": "interior"
+      },
+      "X1_relational": {
+        "full_degree": 2106,
+        "fractured_degree": 236,
+        "lost_degree": 1870,
+        "local_relation_loss": 0.8879392212725546
+      },
+      "snapshots": [
+        {
+          "step": 0,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "radius": 4.242640687119285,
+            "direction": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0.0
+            ],
+            "nonzero_components": 2,
+            "boundary_components": 0,
+            "position_class": "plane-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 2106,
+            "fractured_degree": 236,
+            "lost_degree": 1870,
+            "local_relation_loss": 0.8879392212725546
+          },
+          "X2_full_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "X3_observer_difference": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              18.0,
+              0.0,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.3306690738754696e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999996,
+            "intensity_effective_dimension": 2.999999999999999,
+            "intensity_eigenvalues": [
+              3.277017086299202,
+              3.2770170862992014,
+              3.2770170862992005
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -2.356194490192345,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              18.0,
+              0.0,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.3306690738754696e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999996,
+            "intensity_effective_dimension": 2.999999999999999,
+            "intensity_eigenvalues": [
+              3.277017086299202,
+              3.2770170862992014,
+              3.2770170862992005
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -2.356194490192345,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.0,
+            "wave_L2": 0.0,
+            "wave_Jensen_Shannon": 0.0,
+            "exact_equal_samples": 4096,
+            "near_equal_1e-12": 4096,
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "radius": 4.242640687119285,
+            "direction": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0.0
+            ],
+            "nonzero_components": 2,
+            "boundary_components": 0,
+            "position_class": "plane-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 2106,
+            "fractured_degree": 236,
+            "lost_degree": 1870,
+            "local_relation_loss": 0.8879392212725546
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.3231721097502045,
+            "center": [
+              2.806291390728496,
+              2.8062913907284828,
+              -1.8973538018496328e-18
+            ],
+            "eigenvalues": [
+              1.6103844129643459,
+              0.7770419426048575,
+              0.4079470198675487
+            ],
+            "anisotropy": 0.7466772426612025,
+            "radial_center": 0.6816860886187709,
+            "radial_width": 1.5266556429071994,
+            "entropy": 0.11267589188678832,
+            "participation": 0.000883480237129118,
+            "support_1e-12": 1131,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9225165562913906
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.5289121888027384,
+            "center": [
+              2.984768211920532,
+              2.9847682119205308,
+              0.0
+            ],
+            "eigenvalues": [
+              0.11833657393194255,
+              0.08903605592347315,
+              0.03440029433406917
+            ],
+            "anisotropy": 0.7093012482019854,
+            "radial_center": 0.06427539139271951,
+            "radial_width": 0.4874849723332993,
+            "entropy": 0.013131542799128478,
+            "participation": 0.0007651082921642556,
+            "support_1e-12": 185,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.991317144959529
+          },
+          "X3_observer_difference": {
+            "L1": 0.1376011773362768,
+            "L2": 0.06883996622336098,
+            "Jensen_Shannon": 0.023409597157325587,
+            "exact_equal_coordinates": 199,
+            "near_equal_1e-12": 295,
+            "closest_coordinate": [
+              -5,
+              3,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              17.3609271523179,
+              0.7770419426048575,
+              0.40794701986755383
+            ],
+            "direction_effective_dimension": 1.1382623045582434,
+            "active_spectral_support": 1131,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.8793349244046917,
+            "intensity_entropy": 0.9740373327677267,
+            "intensity_participation": 0.22065801394117274,
+            "intensity_effective_dimension": 2.973309159946489,
+            "intensity_eigenvalues": [
+              4.185540266036184,
+              3.507143033972156,
+              3.3921012036188456
+            ],
+            "local_peak_count": 13,
+            "occupied_fraction_above_2mean": 0.008056640625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              17.936019131714495,
+              0.08903605592347315,
+              0.03440029433407591
+            ],
+            "direction_effective_dimension": 1.0137827257034926,
+            "active_spectral_support": 185,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.17476039707619115,
+            "intensity_entropy": 0.9986162355779978,
+            "intensity_participation": 0.9703639248063771,
+            "intensity_effective_dimension": 2.999046475383085,
+            "intensity_eigenvalues": [
+              3.4110311913548745,
+              3.3067538239837933,
+              3.271105825436096
+            ],
+            "local_peak_count": 9,
+            "occupied_fraction_above_2mean": 0.007080078125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.19063539359924625,
+            "wave_L2": 0.028023862333311285,
+            "wave_Jensen_Shannon": 0.02260526056731698,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 7.029891744688376e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "radius": 4.242640687119285,
+            "direction": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0.0
+            ],
+            "nonzero_components": 2,
+            "boundary_components": 0,
+            "position_class": "plane-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 2106,
+            "fractured_degree": 236,
+            "lost_degree": 1870,
+            "local_relation_loss": 0.8879392212725546
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.36549181080726,
+            "center": [
+              2.625838623333068,
+              2.625838623333066,
+              -2.710505431213761e-18
+            ],
+            "eigenvalues": [
+              2.988365546950492,
+              1.4937138478331857,
+              0.8023629689730964
+            ],
+            "anisotropy": 0.7315044105658774,
+            "radial_center": 1.2602536973262328,
+            "radial_width": 1.9225511650232692,
+            "entropy": 0.20278347529831933,
+            "participation": 0.001038082208294746,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.8510430314676471
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.5327563876553976,
+            "center": [
+              2.969544345304327,
+              2.969544345304323,
+              4.336808689942018e-19
+            ],
+            "eigenvalues": [
+              0.23691523167799894,
+              0.17714348406854571,
+              0.06956973540796625
+            ],
+            "anisotropy": 0.7063517828076107,
+            "radial_center": 0.1278660876110203,
+            "radial_width": 0.6835778776361634,
+            "entropy": 0.024648368256582606,
+            "participation": 0.0007785681076444732,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9827101691987735
+          },
+          "X3_observer_difference": {
+            "L1": 0.26379969256275876,
+            "L2": 0.13174149115357675,
+            "Jensen_Shannon": 0.045646391895237295,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              2,
+              -3,
+              -1
+            ],
+            "minimum_difference": 3.248720410255776e-08
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              16.778422498525885,
+              1.4937138478331857,
+              0.802362968973101
+            ],
+            "direction_effective_dimension": 1.2793557276054197,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 3.502331638639637,
+            "intensity_entropy": 0.9434865226704193,
+            "intensity_participation": 0.07537881487536138,
+            "intensity_effective_dimension": 2.929049388733719,
+            "intensity_eigenvalues": [
+              4.865265104909381,
+              3.6468837420929185,
+              3.4659150998079546
+            ],
+            "local_peak_count": 15,
+            "occupied_fraction_above_2mean": 0.011474609375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4095.999999999999
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              17.87330246913581,
+              0.17714348406854571,
+              0.06956973540797161
+            ],
+            "direction_effective_dimension": 1.0276809149116144,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.28489674848200247,
+            "intensity_entropy": 0.996964291567545,
+            "intensity_participation": 0.9249272123919944,
+            "intensity_effective_dimension": 2.9978753549493016,
+            "intensity_eigenvalues": [
+              3.4924175682983383,
+              3.323609068536885,
+              3.286386229193812
+            ],
+            "local_peak_count": 9,
+            "occupied_fraction_above_2mean": 0.008056640625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.3189971260530631,
+            "wave_L2": 0.05192483452730397,
+            "wave_Jensen_Shannon": 0.04197772480866764,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 2.92073448091186e-07
+          },
+          "mass_full": 0.9999999999999999,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "radius": 4.242640687119285,
+            "direction": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0.0
+            ],
+            "nonzero_components": 2,
+            "boundary_components": 0,
+            "position_class": "plane-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 2106,
+            "fractured_degree": 236,
+            "lost_degree": 1870,
+            "local_relation_loss": 0.8879392212725546
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.483181639737099,
+            "center": [
+              2.1549460057798275,
+              2.154946005779825,
+              -4.119968255444917e-18
+            ],
+            "eigenvalues": [
+              6.033541057983932,
+              3.3261081890731194,
+              1.9040381221623002
+            ],
+            "anisotropy": 0.6844244360212373,
+            "radial_center": 2.533012048302558,
+            "radial_width": 2.2017123636781952,
+            "entropy": 0.4119739902042946,
+            "participation": 0.0016835836908327267,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.6681974565024894
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.5433186359008464,
+            "center": [
+              2.9239455561837864,
+              2.923945556183787,
+              -2.6020852139652106e-18
+            ],
+            "eigenvalues": [
+              0.5932477403004712,
+              0.43606405942390714,
+              0.17912798517997963
+            ],
+            "anisotropy": 0.698055343473784,
+            "radial_center": 0.31452182306239124,
+            "radial_width": 1.053335562734814,
+            "entropy": 0.05627348358284228,
+            "participation": 0.0008203758012555308,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9573378053866064
+          },
+          "X3_observer_difference": {
+            "L1": 0.5825273729861757,
+            "L2": 0.289298180828889,
+            "Jensen_Shannon": 0.10643850863301368,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              -2
+            ],
+            "minimum_difference": 3.3762100803738627e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              15.321125633636807,
+              3.3261081890731194,
+              1.9040381221622922
+            ],
+            "direction_effective_dimension": 1.6933120553009393,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 7.581721810770245,
+            "intensity_entropy": 0.8521672347895056,
+            "intensity_participation": 0.01709913057705869,
+            "intensity_effective_dimension": 2.8432909290129746,
+            "intensity_eigenvalues": [
+              6.040223047011157,
+              3.9489732269437856,
+              3.638830468113567
+            ],
+            "local_peak_count": 21,
+            "occupied_fraction_above_2mean": 0.018310546875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              17.6921629713543,
+              0.43606405942390714,
+              0.17912798517998083
+            ],
+            "direction_effective_dimension": 1.0699934155641477,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.5857701276764637,
+            "intensity_entropy": 0.9913077973105189,
+            "intensity_participation": 0.7445314301523915,
+            "intensity_effective_dimension": 2.9932864766841862,
+            "intensity_eigenvalues": [
+              3.693865235189959,
+              3.3637318577066444,
+              3.330611844604329
+            ],
+            "local_peak_count": 19,
+            "occupied_fraction_above_2mean": 0.023193359375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.6293507980364166,
+            "wave_L2": 0.11146186331033071,
+            "wave_Jensen_Shannon": 0.09566125857494776,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 7.548471228129776e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 0.9999999999999999
+        },
+        {
+          "step": 10,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "radius": 4.242640687119285,
+            "direction": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0.0
+            ],
+            "nonzero_components": 2,
+            "boundary_components": 0,
+            "position_class": "plane-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 2106,
+            "fractured_degree": 236,
+            "lost_degree": 1870,
+            "local_relation_loss": 0.8879392212725546
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.644169946906554,
+            "center": [
+              1.559696343908745,
+              1.5596963439087457,
+              -4.7704895589362195e-18
+            ],
+            "eigenvalues": [
+              8.760603941032983,
+              5.542601282780241,
+              3.4767869521597086
+            ],
+            "anisotropy": 0.6031338734678887,
+            "radial_center": 3.714841707318397,
+            "radial_width": 1.9949795150679268,
+            "entropy": 0.639581494188582,
+            "participation": 0.0037645706502114516,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.4465947866697551
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.558463290832879,
+            "center": [
+              2.848326013058729,
+              2.848326013058736,
+              -4.336808689942018e-19
+            ],
+            "eigenvalues": [
+              1.184772314220294,
+              0.8505238019309077,
+              0.3723511715293615
+            ],
+            "anisotropy": 0.6857192162070329,
+            "radial_center": 0.6119329525017786,
+            "radial_width": 1.4258980851810616,
+            "entropy": 0.10426489555851548,
+            "participation": 0.0008950720277003954,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9165064329023583
+          },
+          "X3_observer_difference": {
+            "L1": 0.956426852142385,
+            "L2": 0.47015908428587644,
+            "Jensen_Shannon": 0.19002057415753054,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              1
+            ],
+            "minimum_difference": 1.9092698803101823e-06
+          },
+          "XW_full_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              13.625909311437596,
+              5.542601282780241,
+              3.476786952159698
+            ],
+            "direction_effective_dimension": 2.2444994526202735,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 12.565211284338837,
+            "intensity_entropy": 0.7233962614170263,
+            "intensity_participation": 0.006293878774238132,
+            "intensity_effective_dimension": 2.835583843212608,
+            "intensity_eigenvalues": [
+              6.4596013714091916,
+              4.209731849565545,
+              3.821068412557615
+            ],
+            "local_peak_count": 15,
+            "occupied_fraction_above_2mean": 0.02294921875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              17.410694467554464,
+              0.8505238019309077,
+              0.37235117152934755
+            ],
+            "direction_effective_dimension": 1.142159210165015,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.103835067071469,
+            "intensity_entropy": 0.9804265529138643,
+            "intensity_participation": 0.45076479690665616,
+            "intensity_effective_dimension": 2.9835049549024033,
+            "intensity_eigenvalues": [
+              3.9844027674908244,
+              3.420690081841318,
+              3.4108913516221913
+            ],
+            "local_peak_count": 21,
+            "occupied_fraction_above_2mean": 0.027587890625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.9853693149654792,
+            "wave_L2": 0.18151900088506256,
+            "wave_Jensen_Shannon": 0.16849780910631643,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 4.32765094000951e-06
+          },
+          "mass_full": 0.9999999999999998,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "radius": 4.242640687119285,
+            "direction": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0.0
+            ],
+            "nonzero_components": 2,
+            "boundary_components": 0,
+            "position_class": "plane-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 2106,
+            "fractured_degree": 236,
+            "lost_degree": 1870,
+            "local_relation_loss": 0.8879392212725546
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.841606366875655,
+            "center": [
+              0.8374540270330013,
+              0.8374540270330024,
+              -1.3444106938820255e-17
+            ],
+            "eigenvalues": [
+              10.43901539328628,
+              7.998643549022943,
+              5.773470425635654
+            ],
+            "anisotropy": 0.44693343115972517,
+            "radial_center": 4.647137639464091,
+            "radial_width": 1.6171707169686749,
+            "entropy": 0.8631404898957711,
+            "participation": 0.01860046012384061,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.19972521944989619
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.583318550347948,
+            "center": [
+              2.699333904733896,
+              2.699333904733895,
+              8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              2.3350756650426368,
+              1.6213348628728914,
+              0.7827013900123938
+            ],
+            "anisotropy": 0.6648068404249752,
+            "radial_center": 1.1566682885296826,
+            "radial_width": 1.844242497134728,
+            "entropy": 0.19031307937426434,
+            "participation": 0.0010653577059570548,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.8400214462961575
+          },
+          "X3_observer_difference": {
+            "L1": 1.3347264963364163,
+            "L2": 0.6406328850771105,
+            "Jensen_Shannon": 0.3014373241037255,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              0
+            ],
+            "minimum_difference": 4.976549437723035e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              11.841673888073863,
+              7.998643549022943,
+              5.773470425635654
+            ],
+            "direction_effective_dimension": 2.761959231895706,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 18.1563190187947,
+            "intensity_entropy": 0.5601594663637339,
+            "intensity_participation": 0.003024328420822916,
+            "intensity_effective_dimension": 2.933297293097156,
+            "intensity_eigenvalues": [
+              5.629417474607322,
+              4.351328475315822,
+              3.9928843877202715
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.0263671875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4095.999999999999
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              16.907882723534485,
+              1.6213348628728914,
+              0.782701390012397
+            ],
+            "direction_effective_dimension": 1.2899591609457546,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 2.228490943535061,
+            "intensity_entropy": 0.9557003646867787,
+            "intensity_participation": 0.167611664431618,
+            "intensity_effective_dimension": 2.960245836853078,
+            "intensity_eigenvalues": [
+              4.486469290268553,
+              3.559030032525618,
+              3.519746008328894
+            ],
+            "local_peak_count": 23,
+            "occupied_fraction_above_2mean": 0.037353515625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 1.3208269712766674,
+            "wave_L2": 0.25141847853922367,
+            "wave_Jensen_Shannon": 0.2606475688761377,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 4.8264442414558e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              0
+            ],
+            "radius": 4.242640687119285,
+            "direction": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0.0
+            ],
+            "nonzero_components": 2,
+            "boundary_components": 0,
+            "position_class": "plane-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 2106,
+            "fractured_degree": 236,
+            "lost_degree": 1870,
+            "local_relation_loss": 0.8879392212725546
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9678959205728646,
+            "center": [
+              0.26860058559104993,
+              0.26860058559104966,
+              -8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              10.554909293938952,
+              9.569063113983507,
+              8.164802604763707
+            ],
+            "anisotropy": 0.2264450240749808,
+            "radial_center": 5.106830754392615,
+            "radial_width": 1.4862888880281462,
+            "entropy": 0.9811092440755952,
+            "participation": 0.32060717781953374,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.040422639775691376
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.624703361191471,
+            "center": [
+              2.4146311574300956,
+              2.4146311574300943,
+              -8.673617379884035e-18
+            ],
+            "eigenvalues": [
+              4.406091307024929,
+              2.964863705431709,
+              1.6282713585627047
+            ],
+            "anisotropy": 0.6304499282693843,
+            "radial_center": 2.06299645966794,
+            "radial_width": 2.177905410805732,
+            "entropy": 0.3354816993945783,
+            "participation": 0.0015085803609121006,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.705753283656662
+          },
+          "X3_observer_difference": {
+            "L1": 1.4934200209042274,
+            "L2": 0.6657608322718677,
+            "Jensen_Shannon": 0.3731334320255746,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              5,
+              1
+            ],
+            "minimum_difference": 2.003216150175285e-05
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              10.699201843098663,
+              9.569063113983507,
+              8.164802604763706
+            ],
+            "direction_effective_dimension": 2.9645317101815083,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 21.665662426004896,
+            "intensity_entropy": 0.44387890844186306,
+            "intensity_participation": 0.0021258461446738404,
+            "intensity_effective_dimension": 2.9969468565935498,
+            "intensity_eigenvalues": [
+              4.410309532043275,
+              4.281920592503387,
+              4.080157111803922
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.0244140625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              16.066978559889332,
+              2.964863705431709,
+              1.6282713585627058
+            ],
+            "direction_effective_dimension": 1.5832972707303299,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 4.5942241096772065,
+            "intensity_entropy": 0.9016034305359776,
+            "intensity_participation": 0.04523475559606341,
+            "intensity_effective_dimension": 2.917503404577557,
+            "intensity_eigenvalues": [
+              5.236437669587416,
+              3.776833625943124,
+              3.681602534772335
+            ],
+            "local_peak_count": 27,
+            "occupied_fraction_above_2mean": 0.043212890625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 1.384886331338754,
+            "wave_L2": 0.2692823232851638,
+            "wave_Jensen_Shannon": 0.30548059055645593,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.9992640282795416e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "space_diagonal",
+      "initial_coordinate": [
+        3,
+        3,
+        3
+      ],
+      "X0_spatial": {
+        "coordinate": [
+          3,
+          3,
+          3
+        ],
+        "radius": 5.196152422706632,
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "nonzero_components": 3,
+        "boundary_components": 0,
+        "position_class": "space-diagonal",
+        "boundary_class": "interior"
+      },
+      "X1_relational": {
+        "full_degree": 1530,
+        "fractured_degree": 56,
+        "lost_degree": 1474,
+        "local_relation_loss": 0.9633986928104575
+      },
+      "snapshots": [
+        {
+          "step": 0,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "radius": 5.196152422706632,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 0,
+            "position_class": "space-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 1530,
+            "fractured_degree": 56,
+            "lost_degree": 1474,
+            "local_relation_loss": 0.9633986928104575
+          },
+          "X2_full_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 1.0
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 1.0
+          },
+          "X3_observer_difference": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              27.000000000000007,
+              6.661338147750939e-16,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.284083995358298e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999996,
+            "intensity_effective_dimension": 3.0,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.277017086299201,
+              3.2770170862992005
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -2.356194490192345
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              27.000000000000007,
+              6.661338147750939e-16,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.284083995358298e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999996,
+            "intensity_effective_dimension": 3.0,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.277017086299201,
+              3.2770170862992005
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -2.356194490192345
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.0,
+            "wave_L2": 0.0,
+            "wave_Jensen_Shannon": 0.0,
+            "exact_equal_samples": 4096,
+            "near_equal_1e-12": 4096,
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "radius": 5.196152422706632,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 0,
+            "position_class": "space-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 1530,
+            "fractured_degree": 56,
+            "lost_degree": 1474,
+            "local_relation_loss": 0.9633986928104575
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.745408972304053,
+            "center": [
+              2.8592715231788226,
+              2.859271523178813,
+              2.8592715231788115
+            ],
+            "eigenvalues": [
+              1.6289970834612526,
+              0.29668874172185494,
+              0.2966887417218542
+            ],
+            "anisotropy": 0.8178703051502969,
+            "radial_center": 0.5482662429822397,
+            "radial_width": 1.386282328283492,
+            "entropy": 0.08267850385049832,
+            "participation": 0.0008442489210334251,
+            "support_1e-12": 897,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9437086092715231
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9692529358895288,
+            "center": [
+              2.9964679911699785,
+              2.9964679911699785,
+              2.9964679911699785
+            ],
+            "eigenvalues": [
+              0.037490168559858476,
+              0.009050772626931564,
+              0.009050772626931557
+            ],
+            "anisotropy": 0.7585827705074014,
+            "radial_center": 0.015962832362486558,
+            "radial_width": 0.23523796844193492,
+            "entropy": 0.003168210936145914,
+            "participation": 0.0007549874843741414,
+            "support_1e-12": 51,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9979396615158205
+          },
+          "X3_observer_difference": {
+            "L1": 0.10846210448859467,
+            "L2": 0.05426738254502551,
+            "Jensen_Shannon": 0.018879751708270675,
+            "exact_equal_coordinates": 433,
+            "near_equal_1e-12": 457,
+            "closest_coordinate": [
+              -5,
+              -5,
+              3
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              26.15529801324505,
+              0.2966887417218635,
+              0.2966887417218546
+            ],
+            "direction_effective_dimension": 1.0456190099306537,
+            "active_spectral_support": 897,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.253767429263767,
+            "intensity_entropy": 0.9827665666151025,
+            "intensity_participation": 0.38881265208569893,
+            "intensity_effective_dimension": 2.991272509306733,
+            "intensity_eigenvalues": [
+              3.879937624020565,
+              3.4669106699813406,
+              3.4669106699813392
+            ],
+            "local_peak_count": 9,
+            "occupied_fraction_above_2mean": 0.006591796875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              26.973951434878586,
+              0.009050772626934293,
+              0.009050772626931299
+            ],
+            "direction_effective_dimension": 1.0013423749275079,
+            "active_spectral_support": 51,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.0665609661736605,
+            "intensity_entropy": 0.9997437940819457,
+            "intensity_participation": 0.9955891793153404,
+            "intensity_effective_dimension": 2.999998795461937,
+            "intensity_eigenvalues": [
+              3.289359527930241,
+              3.2849420099979727,
+              3.2849420099979723
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000002
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.15646447799319124,
+            "wave_L2": 0.01929861140773822,
+            "wave_Jensen_Shannon": 0.0183862349457114,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 4.418378946277634e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "radius": 5.196152422706632,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 0,
+            "position_class": "space-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 1530,
+            "fractured_degree": 56,
+            "lost_degree": 1474,
+            "local_relation_loss": 0.9633986928104575
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.7827789642011846,
+            "center": [
+              2.725115498778752,
+              2.725115498778753,
+              2.725115498778753
+            ],
+            "eigenvalues": [
+              3.080517056777347,
+              0.5905452489900546,
+              0.5905452489900543
+            ],
+            "anisotropy": 0.8082967118488065,
+            "radial_center": 1.0316560608593701,
+            "radial_width": 1.7880976838108096,
+            "entropy": 0.15093166616685824,
+            "participation": 0.0009479477013254995,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.8905900623808465
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9715698422117267,
+            "center": [
+              2.9929055445369825,
+              2.9929055445369834,
+              2.9929055445369848
+            ],
+            "eigenvalues": [
+              0.07554026883394227,
+              0.01828524414946065,
+              0.018285244149460627
+            ],
+            "anisotropy": 0.7579404411485947,
+            "radial_center": 0.032002173556454586,
+            "radial_width": 0.3332965916725314,
+            "entropy": 0.005986142011798935,
+            "participation": 0.000758107840130745,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9958836600733886
+          },
+          "X3_observer_difference": {
+            "L1": 0.21065583272555183,
+            "L2": 0.10536221786566358,
+            "Jensen_Shannon": 0.03727128098481593,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              0
+            ],
+            "minimum_difference": 1.90862324102393e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              25.35928050182984,
+              0.5905452489900577,
+              0.5905452489900485
+            ],
+            "direction_effective_dimension": 1.0941310704598117,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 2.4115680250666016,
+            "intensity_entropy": 0.9612906223800284,
+            "intensity_participation": 0.14672092654046398,
+            "intensity_effective_dimension": 2.9702521920536022,
+            "intensity_eigenvalues": [
+              4.395332495161417,
+              3.577918975666279,
+              3.577918975666278
+            ],
+            "local_peak_count": 21,
+            "occupied_fraction_above_2mean": 0.015380859375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              26.947991064394518,
+              0.018285244149456474,
+              0.01828524414944605
+            ],
+            "direction_effective_dimension": 1.0027150715438116,
+            "active_spectral_support": 1330,
+            "interference_class": "single-interference-focus",
+            "intensity_contrast": 0.09772241961756797,
+            "intensity_entropy": 0.9994701289829016,
+            "intensity_participation": 0.9905406622700857,
+            "intensity_effective_dimension": 2.9999915306480816,
+            "intensity_eigenvalues": [
+              3.3018643689158287,
+              3.290123511271971,
+              3.2901235112719696
+            ],
+            "local_peak_count": 1,
+            "occupied_fraction_above_2mean": 0.000244140625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.26154421183805576,
+            "wave_L2": 0.037049770056480476,
+            "wave_Jensen_Shannon": 0.03518450357996098,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 7.706546143251836e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "radius": 5.196152422706632,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 0,
+            "position_class": "space-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 1530,
+            "fractured_degree": 56,
+            "lost_degree": 1474,
+            "local_relation_loss": 0.9633986928104575
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.896379896213639,
+            "center": [
+              2.3591552168022125,
+              2.359155216802212,
+              2.3591552168022134
+            ],
+            "eigenvalues": [
+              6.535450190975221,
+              1.4479411835214364,
+              1.4479411835214355
+            ],
+            "anisotropy": 0.7784481342202114,
+            "radial_center": 2.169083187138675,
+            "radial_width": 2.174030976157059,
+            "entropy": 0.3183166108467441,
+            "participation": 0.0013417459301860192,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.7485319239235604
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9782021286977065,
+            "center": [
+              2.9820478644482318,
+              2.982047864448236,
+              2.9820478644482367
+            ],
+            "eigenvalues": [
+              0.19276027381310684,
+              0.04701464971777211,
+              0.04701464971777206
+            ],
+            "anisotropy": 0.7560978266540765,
+            "radial_center": 0.08052433301522971,
+            "radial_width": 0.5294387642032867,
+            "entropy": 0.01390808731411272,
+            "participation": 0.0007675449285085381,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9897415676982848
+          },
+          "X3_observer_difference": {
+            "L1": 0.4830809446812934,
+            "L2": 0.241355532983103,
+            "Jensen_Shannon": 0.08976356333867971,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              0,
+              -3
+            ],
+            "minimum_difference": 8.083411779194764e-07
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              23.23229020187054,
+              1.447941183521435,
+              1.4479411835214304
+            ],
+            "direction_effective_dimension": 1.2550850670210667,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 5.489313712610979,
+            "intensity_entropy": 0.894003605855346,
+            "intensity_participation": 0.032120707010843276,
+            "intensity_effective_dimension": 2.909700389210587,
+            "intensity_eigenvalues": [
+              5.4624881107089545,
+              3.828283709996544,
+              3.8282837099965428
+            ],
+            "local_peak_count": 22,
+            "occupied_fraction_above_2mean": 0.01904296875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              26.870588671393918,
+              0.04701464971778073,
+              0.04701464971777249
+            ],
+            "direction_effective_dimension": 1.0070047578394001,
+            "active_spectral_support": 1330,
+            "interference_class": "single-interference-focus",
+            "intensity_contrast": 0.1700069236504888,
+            "intensity_entropy": 0.9985838525582466,
+            "intensity_participation": 0.9719095267162738,
+            "intensity_effective_dimension": 2.999934411401404,
+            "intensity_eigenvalues": [
+              3.334795153116135,
+              3.3019348666352712,
+              3.3019348666352712
+            ],
+            "local_peak_count": 1,
+            "occupied_fraction_above_2mean": 0.003173828125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.525964136353329,
+            "wave_L2": 0.08424381648223382,
+            "wave_Jensen_Shannon": 0.08294172428952881,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.9123594390273342e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 10,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "radius": 5.196152422706632,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 0,
+            "position_class": "space-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 1530,
+            "fractured_degree": 56,
+            "lost_degree": 1474,
+            "local_relation_loss": 0.9633986928104575
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.085827019515073,
+            "center": [
+              1.8551550758686577,
+              1.855155075868656,
+              1.855155075868656
+            ],
+            "eigenvalues": [
+              10.078311523384695,
+              2.768460692968049,
+              2.7684606929680475
+            ],
+            "anisotropy": 0.7253051082471116,
+            "radial_center": 3.3542407525168905,
+            "radial_width": 2.0890911620787915,
+            "entropy": 0.5209825017434949,
+            "participation": 0.0023928221850229377,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.5603741232469248
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9883846558080327,
+            "center": [
+              2.9634491493528614,
+              2.963449149352855,
+              2.9634491493528556
+            ],
+            "eigenvalues": [
+              0.39683256101112807,
+              0.09791549065826433,
+              0.09791549065826427
+            ],
+            "anisotropy": 0.7532574181695778,
+            "radial_center": 0.16245308353814802,
+            "radial_width": 0.7525108224979917,
+            "entropy": 0.026465472421237007,
+            "participation": 0.000783530353706145,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9795904725852882
+          },
+          "X3_observer_difference": {
+            "L1": 0.8412151310295913,
+            "L2": 0.4194456785845769,
+            "Jensen_Shannon": 0.16865588491123873,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -3,
+              0,
+              0
+            ],
+            "minimum_difference": 1.8173049006012265e-06
+          },
+          "XW_full_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              20.403112589948392,
+              2.7684606929680475,
+              2.768460692968042
+            ],
+            "direction_effective_dimension": 1.5589916694546873,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 9.715879907452639,
+            "intensity_entropy": 0.7901071784446925,
+            "intensity_participation": 0.010482364627526596,
+            "intensity_effective_dimension": 2.869031309002951,
+            "intensity_eigenvalues": [
+              6.240588480380858,
+              4.0684629796856004,
+              4.068462979685598
+            ],
+            "local_peak_count": 28,
+            "occupied_fraction_above_2mean": 0.02001953125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4095.9999999999995
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              26.742925143411675,
+              0.0979154906582715,
+              0.09791549065826465
+            ],
+            "direction_effective_dimension": 1.0146718598850624,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.2824979786884455,
+            "intensity_entropy": 0.9968983537979712,
+            "intensity_participation": 0.9260930445924621,
+            "intensity_effective_dimension": 2.9996578986529547,
+            "intensity_eigenvalues": [
+              3.394887394821688,
+              3.31912335088476,
+              3.31912335088476
+            ],
+            "local_peak_count": 13,
+            "occupied_fraction_above_2mean": 0.009033203125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.8632202074950076,
+            "wave_L2": 0.1486048459970054,
+            "wave_Jensen_Shannon": 0.15425868090593223,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 5.013230814213663e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "radius": 5.196152422706632,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 0,
+            "position_class": "space-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 1530,
+            "fractured_degree": 56,
+            "lost_degree": 1474,
+            "local_relation_loss": 0.9633986928104575
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.4287105395417763,
+            "center": [
+              1.1482867524012064,
+              1.1482867524012057,
+              1.148286752401205
+            ],
+            "eigenvalues": [
+              12.644640452835327,
+              4.928085957777508,
+              4.928085957777508
+            ],
+            "anisotropy": 0.610262863846597,
+            "radial_center": 4.431410950937997,
+            "radial_width": 1.6921611484421704,
+            "entropy": 0.7611384170738646,
+            "participation": 0.0075820759776942855,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.314222972335453
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.006464451059815,
+            "center": [
+              2.924759848904741,
+              2.9247598489047415,
+              2.9247598489047424
+            ],
+            "eigenvalues": [
+              0.828568543090192,
+              0.20865102591472953,
+              0.20865102591472942
+            ],
+            "anisotropy": 0.7481789193485986,
+            "radial_center": 0.3285754922270369,
+            "radial_width": 1.0667280538297526,
+            "entropy": 0.05070459319600581,
+            "participation": 0.0008164910156782065,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9596050691484825
+          },
+          "X3_observer_difference": {
+            "L1": 1.300842493310907,
+            "L2": 0.6456923144261413,
+            "Jensen_Shannon": 0.29606290858518436,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -3,
+              0,
+              0
+            ],
+            "minimum_difference": 2.766426756407338e-05
+          },
+          "XW_full_wave": {
+            "wave_class": "planar-wave-fan",
+            "direction_eigenvalues": [
+              16.600327850055663,
+              4.928085957777511,
+              4.928085957777507
+            ],
+            "direction_effective_dimension": 2.1593756273746525,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 15.420800664165219,
+            "intensity_entropy": 0.6358109670480762,
+            "intensity_participation": 0.004187585521147848,
+            "intensity_effective_dimension": 2.909104383604899,
+            "intensity_eigenvalues": [
+              6.072492695318841,
+              4.250856274933709,
+              4.250856274933708
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.02734375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              26.49122906438611,
+              0.2086510259147358,
+              0.2086510259147263
+            ],
+            "direction_effective_dimension": 1.0316250682265158,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.5342657309773263,
+            "intensity_entropy": 0.9928451432289789,
+            "intensity_participation": 0.7779438169995546,
+            "intensity_effective_dimension": 2.9981144466054954,
+            "intensity_eigenvalues": [
+              3.5322479245356337,
+              3.3507728550659754,
+              3.350772855065974
+            ],
+            "local_peak_count": 19,
+            "occupied_fraction_above_2mean": 0.014892578125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 1.2797703146007116,
+            "wave_L2": 0.23374366680087552,
+            "wave_Jensen_Shannon": 0.2666566255490108,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 4.2327896265232756e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "X0_spatial": {
+            "coordinate": [
+              3,
+              3,
+              3
+            ],
+            "radius": 5.196152422706632,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 0,
+            "position_class": "space-diagonal",
+            "boundary_class": "interior"
+          },
+          "X1_relational": {
+            "full_degree": 1530,
+            "fractured_degree": 56,
+            "lost_degree": 1474,
+            "local_relation_loss": 0.9633986928104575
+          },
+          "X2_full_genesis": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.831990515930525,
+            "center": [
+              0.4442883759667889,
+              0.4442883759667891,
+              0.44428837596678866
+            ],
+            "eigenvalues": [
+              12.299009367997572,
+              7.572394442790075,
+              7.572394442790074
+            ],
+            "anisotropy": 0.3843085880970467,
+            "radial_center": 5.027652842726016,
+            "radial_width": 1.4719052777290857,
+            "entropy": 0.9415779256128195,
+            "participation": 0.07172665112901737,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.09916541346460724
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.037530116744455,
+            "center": [
+              2.8434780575684893,
+              2.8434780575684817,
+              2.8434780575684817
+            ],
+            "eigenvalues": [
+              1.7403739971481884,
+              0.4536414842234588,
+              0.4536414842234584
+            ],
+            "anisotropy": 0.739342529268534,
+            "radial_center": 0.6613148154763453,
+            "radial_width": 1.4867143910067573,
+            "entropy": 0.0973281995739934,
+            "participation": 0.0008865769055375117,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.92086708219757
+          },
+          "X3_observer_difference": {
+            "L1": 1.6797193833954664,
+            "L2": 0.8220661652375157,
+            "Jensen_Shannon": 0.4469787260952809,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              5,
+              5
+            ],
+            "minimum_difference": 7.301087423328373e-06
+          },
+          "XW_full_wave": {
+            "wave_class": "three-dimensional-wave-cloud",
+            "direction_eigenvalues": [
+              12.891185851055198,
+              7.5723944427900785,
+              7.572394442790078
+            ],
+            "direction_effective_dimension": 2.7985541575536947,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 20.39268125786975,
+            "intensity_entropy": 0.48594561818917187,
+            "intensity_participation": 0.0023988785786610307,
+            "intensity_effective_dimension": 2.989818627426206,
+            "intensity_eigenvalues": [
+              4.813055502642156,
+              4.262667248378284,
+              4.262667248378281
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.02880859375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              25.996476388768507,
+              0.4536414842234736,
+              0.45364148422344697
+            ],
+            "direction_effective_dimension": 1.070366615971136,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.138717363594068,
+            "intensity_entropy": 0.982651149071553,
+            "intensity_participation": 0.4354116395331569,
+            "intensity_effective_dimension": 2.9902634872163962,
+            "intensity_eigenvalues": [
+              3.8389504549529687,
+              3.4089573762587686,
+              3.4089573762587677
+            ],
+            "local_peak_count": 25,
+            "occupied_fraction_above_2mean": 0.026611328125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 1.5905371465801146,
+            "wave_L2": 0.3018491592679639,
+            "wave_Jensen_Shannon": 0.39061993832726505,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.2079582769247482e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "corner",
+      "initial_coordinate": [
+        5,
+        5,
+        5
+      ],
+      "X0_spatial": {
+        "coordinate": [
+          5,
+          5,
+          5
+        ],
+        "radius": 8.660254037844387,
+        "direction": [
+          0.5773502691896257,
+          0.5773502691896257,
+          0.5773502691896257
+        ],
+        "nonzero_components": 3,
+        "boundary_components": 3,
+        "position_class": "space-diagonal",
+        "boundary_class": "corner"
+      },
+      "X1_relational": {
+        "full_degree": 642,
+        "fractured_degree": 338,
+        "lost_degree": 304,
+        "local_relation_loss": 0.47352024922118385
+      },
+      "snapshots": [
+        {
+          "step": 0,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "radius": 8.660254037844387,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 3,
+            "position_class": "space-diagonal",
+            "boundary_class": "corner"
+          },
+          "X1_relational": {
+            "full_degree": 642,
+            "fractured_degree": 338,
+            "lost_degree": 304,
+            "local_relation_loss": 0.47352024922118385
+          },
+          "X2_full_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 1.0
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 1.0
+          },
+          "X3_observer_difference": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              75.0,
+              1.6242474233451228e-16,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.284083995358298e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999996,
+            "intensity_effective_dimension": 3.0,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.277017086299201,
+              3.2770170862992005
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -2.356194490192345
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "single-plane-wave",
+            "direction_eigenvalues": [
+              75.0,
+              1.6242474233451228e-16,
+              0.0
+            ],
+            "direction_effective_dimension": 1.0,
+            "active_spectral_support": 1,
+            "interference_class": "uniform-plane-wave-intensity",
+            "intensity_contrast": 3.284083995358298e-16,
+            "intensity_entropy": 1.0000000000000002,
+            "intensity_participation": 0.9999999999999996,
+            "intensity_effective_dimension": 3.0,
+            "intensity_eigenvalues": [
+              3.2770170862992014,
+              3.277017086299201,
+              3.2770170862992005
+            ],
+            "local_peak_count": 0,
+            "occupied_fraction_above_2mean": 0.0,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -2.356194490192345
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.0,
+            "wave_L2": 0.0,
+            "wave_Jensen_Shannon": 0.0,
+            "exact_equal_samples": 4096,
+            "near_equal_1e-12": 4096,
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "radius": 8.660254037844387,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 3,
+            "position_class": "space-diagonal",
+            "boundary_class": "corner"
+          },
+          "X1_relational": {
+            "full_degree": 642,
+            "fractured_degree": 338,
+            "lost_degree": 304,
+            "local_relation_loss": 0.47352024922118385
+          },
+          "X2_full_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.1704443539217508,
+            "center": [
+              4.901582045621781,
+              4.901582045621781,
+              4.901582045621781
+            ],
+            "eigenvalues": [
+              1.6602353170020154,
+              0.06953642384106014,
+              0.06953642384105937
+            ],
+            "anisotropy": 0.9581165253329116,
+            "radial_center": 0.34556253995201675,
+            "radial_width": 1.2961075170162568,
+            "entropy": 0.03525587259650688,
+            "participation": 0.0007886970646609886,
+            "support_1e-12": 429,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9763796909492274
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.290851458837924,
+            "center": [
+              4.9575055187637975,
+              4.9575055187637975,
+              4.9575055187637975
+            ],
+            "eigenvalues": [
+              0.6089682348240089,
+              0.04319352465047845,
+              0.04319352465047827
+            ],
+            "anisotropy": 0.9290709725393786,
+            "radial_center": 0.15367881110961318,
+            "radial_width": 0.8195963074226854,
+            "entropy": 0.018930560352514603,
+            "participation": 0.0007709340741865799,
+            "support_1e-12": 277,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9875643855776306
+          },
+          "X3_observer_difference": {
+            "L1": 0.022369389256806448,
+            "L2": 0.011203075404366868,
+            "Jensen_Shannon": 0.002429151440031244,
+            "exact_equal_coordinates": 1025,
+            "near_equal_1e-12": 1025,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              73.73675496688743,
+              0.06953642384106024,
+              0.0695364238410561
+            ],
+            "direction_effective_dimension": 1.0037739164309174,
+            "active_spectral_support": 429,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.4162252705390405,
+            "intensity_entropy": 0.9957346694052002,
+            "intensity_participation": 0.8523380019548324,
+            "intensity_effective_dimension": 2.9994254622606036,
+            "intensity_eigenvalues": [
+              3.4506074801924167,
+              3.4506074801924163,
+              3.350281705798343
+            ],
+            "local_peak_count": 25,
+            "occupied_fraction_above_2mean": 0.009033203125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              74.33955114054453,
+              0.043193524650492435,
+              0.04319352465047847
+            ],
+            "direction_effective_dimension": 1.0023247944431446,
+            "active_spectral_support": 277,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.21984042163374287,
+            "intensity_entropy": 0.9981019385266312,
+            "intensity_participation": 0.9538982765941448,
+            "intensity_effective_dimension": 2.999291498209041,
+            "intensity_eigenvalues": [
+              3.3999783750742054,
+              3.399978375074205,
+              3.2903181486119673
+            ],
+            "local_peak_count": 19,
+            "occupied_fraction_above_2mean": 0.006103515625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000002
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.05236759983050744,
+            "wave_L2": 0.003743781855777797,
+            "wave_Jensen_Shannon": 0.0017785941447878869,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 3.251230669854433e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "radius": 8.660254037844387,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 3,
+            "position_class": "space-diagonal",
+            "boundary_class": "corner"
+          },
+          "X1_relational": {
+            "full_degree": 642,
+            "fractured_degree": 338,
+            "lost_degree": 304,
+            "local_relation_loss": 0.47352024922118385
+          },
+          "X2_full_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.1816485905911798,
+            "center": [
+              4.804527809317438,
+              4.804527809317438,
+              4.804527809317438
+            ],
+            "eigenvalues": [
+              3.243385933344297,
+              0.14464947931133634,
+              0.14464947931133618
+            ],
+            "anisotropy": 0.9554017060306523,
+            "radial_center": 0.6722105284382547,
+            "radial_width": 1.7552258821655207,
+            "entropy": 0.06591226037897613,
+            "participation": 0.0008273123318748696,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9533187492859583
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.2963531570319249,
+            "center": [
+              4.915287679606862,
+              4.915287679606862,
+              4.915287679606862
+            ],
+            "eigenvalues": [
+              1.2058352237549923,
+              0.08712360189963501,
+              0.0871236018996347
+            ],
+            "anisotropy": 0.9277483356073061,
+            "radial_center": 0.30306718756094775,
+            "radial_width": 1.1350033953156962,
+            "entropy": 0.035443648853668165,
+            "participation": 0.0007904693155780828,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.975284041040002
+          },
+          "X3_observer_difference": {
+            "L1": 0.044307694973309046,
+            "L2": 0.02199958636545036,
+            "Jensen_Shannon": 0.004762172956013741,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -4
+            ],
+            "minimum_difference": 8.663254427329311e-08
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              72.49384834485816,
+              0.1446494793113435,
+              0.14464947931133287
+            ],
+            "direction_effective_dimension": 1.0079892372511519,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.8044071664067574,
+            "intensity_entropy": 0.990020447830846,
+            "intensity_participation": 0.607138409437005,
+            "intensity_effective_dimension": 2.9999335643068177,
+            "intensity_eigenvalues": [
+              3.5426503437560912,
+              3.5426503437560903,
+              3.5074021628710716
+            ],
+            "local_peak_count": 25,
+            "occupied_fraction_above_2mean": 0.011962890625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              73.68599414364,
+              0.08712360189963497,
+              0.08712360189962663
+            ],
+            "direction_effective_dimension": 1.004732235211955,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.3808165659454445,
+            "intensity_entropy": 0.9957597729447236,
+            "intensity_participation": 0.8733462317622814,
+            "intensity_effective_dimension": 2.9992655483380437,
+            "intensity_eigenvalues": [
+              3.463761011325025,
+              3.463761011325024,
+              3.350037787002941
+            ],
+            "local_peak_count": 31,
+            "occupied_fraction_above_2mean": 0.010498046875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.07745163313304548,
+            "wave_L2": 0.007336285913910521,
+            "wave_Jensen_Shannon": 0.0031407890865585908,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.8898110423635128e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "radius": 8.660254037844387,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 3,
+            "position_class": "space-diagonal",
+            "boundary_class": "corner"
+          },
+          "X1_relational": {
+            "full_degree": 642,
+            "fractured_degree": 338,
+            "lost_degree": 304,
+            "local_relation_loss": 0.47352024922118385
+          },
+          "X2_full_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.2154610432157857,
+            "center": [
+              4.521742368921508,
+              4.521742368921508,
+              4.521742368921508
+            ],
+            "eigenvalues": [
+              7.547251106464877,
+              0.39828959271924635,
+              0.39828959271924447
+            ],
+            "anisotropy": 0.9472271974125686,
+            "radial_center": 1.5470692287811436,
+            "radial_width": 2.439345628085919,
+            "entropy": 0.1480153841950371,
+            "participation": 0.0009548442506485698,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.88736065682016
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3127715496689685,
+            "center": [
+              4.790312346141733,
+              4.790312346141733,
+              4.790312346141733
+            ],
+            "eigenvalues": [
+              2.9245425572379657,
+              0.22284378457111034,
+              0.22284378457110893
+            ],
+            "anisotropy": 0.9238021741145153,
+            "radial_center": 0.7264851178944481,
+            "radial_width": 1.6859565533720247,
+            "entropy": 0.080295987680382,
+            "participation": 0.0008520828209443983,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9393552498265121
+          },
+          "X3_observer_difference": {
+            "L1": 0.10736593845680509,
+            "L2": 0.0520654091018771,
+            "Jensen_Shannon": 0.011410853886408424,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -4
+            ],
+            "minimum_difference": 1.1436028876843547e-06
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              68.88571325916453,
+              0.3982895927192488,
+              0.39828959271924236
+            ],
+            "direction_effective_dimension": 1.0231928684204494,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.9679458581414955,
+            "intensity_entropy": 0.9690588786775898,
+            "intensity_participation": 0.20522035851662918,
+            "intensity_effective_dimension": 2.997615643530737,
+            "intensity_eigenvalues": [
+              3.977498897764357,
+              3.748660702388887,
+              3.7486607023888867
+            ],
+            "local_peak_count": 33,
+            "occupied_fraction_above_2mean": 0.021240234375,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000002
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              71.76581967803172,
+              0.2228437845711157,
+              0.2228437845711018
+            ],
+            "direction_effective_dimension": 1.012439652391551,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 0.8420256134794478,
+            "intensity_entropy": 0.9875102601312056,
+            "intensity_participation": 0.5851350648271199,
+            "intensity_effective_dimension": 2.999800574119786,
+            "intensity_eigenvalues": [
+              3.6105222362307927,
+              3.6105222362307914,
+              3.548431879366263
+            ],
+            "local_peak_count": 37,
+            "occupied_fraction_above_2mean": 0.016357421875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4095.9999999999995
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.1466215684976361,
+            "wave_L2": 0.01846419059563667,
+            "wave_Jensen_Shannon": 0.007996059418223563,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 1.1909288833366564e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 0.9999999999999998
+        },
+        {
+          "step": 10,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "radius": 8.660254037844387,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 3,
+            "position_class": "space-diagonal",
+            "boundary_class": "corner"
+          },
+          "X1_relational": {
+            "full_degree": 642,
+            "fractured_degree": 338,
+            "lost_degree": 304,
+            "local_relation_loss": 0.47352024922118385
+          },
+          "X2_full_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.273124343730232,
+            "center": [
+              4.079009656285199,
+              4.0790096562852,
+              4.0790096562852
+            ],
+            "eigenvalues": [
+              13.349485740117569,
+              0.8899547664419941,
+              0.8899547664419927
+            ],
+            "anisotropy": 0.9333341535571276,
+            "radial_center": 2.7030569927962556,
+            "radial_width": 2.7969408586340934,
+            "entropy": 0.2655334884196354,
+            "participation": 0.0012124329096863612,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.7874370073835733
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3399823390016807,
+            "center": [
+              4.587695078644256,
+              4.587695078644256,
+              4.587695078644256
+            ],
+            "eigenvalues": [
+              5.554883518571025,
+              0.4595919674520665,
+              0.45959196745206626
+            ],
+            "anisotropy": 0.9172634374932321,
+            "radial_center": 1.3555801817192799,
+            "radial_width": 2.153246345499064,
+            "entropy": 0.14694338423691033,
+            "participation": 0.000965580535865244,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.8824021336503197
+          },
+          "X3_observer_difference": {
+            "L1": 0.20268505778667434,
+            "L2": 0.09507415498399976,
+            "Jensen_Shannon": 0.02154877257763199,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              5,
+              -5,
+              5
+            ],
+            "minimum_difference": 5.221016797678535e-06
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              63.264445068321244,
+              0.8899547664419906,
+              0.8899547664419813
+            ],
+            "direction_effective_dimension": 1.05664222943239,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 3.9629725724084515,
+            "intensity_entropy": 0.9276869490835201,
+            "intensity_participation": 0.059861773383824625,
+            "intensity_effective_dimension": 2.981365128764954,
+            "intensity_eigenvalues": [
+              4.674882419133082,
+              3.9696975314763385,
+              3.9696975314763367
+            ],
+            "local_peak_count": 33,
+            "occupied_fraction_above_2mean": 0.0263671875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000002
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              68.6957219224212,
+              0.4595919674520824,
+              0.4595919674520616
+            ],
+            "direction_effective_dimension": 1.0268481397295364,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 1.645862461274215,
+            "intensity_entropy": 0.971224357421164,
+            "intensity_participation": 0.26962439294849855,
+            "intensity_effective_dimension": 2.999513840998447,
+            "intensity_eigenvalues": [
+              3.8959590109749045,
+              3.7926032449617653,
+              3.792603244961765
+            ],
+            "local_peak_count": 49,
+            "occupied_fraction_above_2mean": 0.028076171875,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.2445317661574094,
+            "wave_L2": 0.03725533761449548,
+            "wave_Jensen_Shannon": 0.01620239400751626,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 2.2867128295058425e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "radius": 8.660254037844387,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 3,
+            "position_class": "space-diagonal",
+            "boundary_class": "corner"
+          },
+          "X1_relational": {
+            "full_degree": 642,
+            "fractured_degree": 338,
+            "lost_degree": 304,
+            "local_relation_loss": 0.47352024922118385
+          },
+          "X2_full_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3967933373038717,
+            "center": [
+              3.300416762428803,
+              3.3004167624288026,
+              3.3004167624288026
+            ],
+            "eigenvalues": [
+              20.730259831747507,
+              1.998309801486931,
+              1.9983098014869272
+            ],
+            "anisotropy": 0.9036042086444762,
+            "radial_center": 4.191216857362407,
+            "radial_width": 2.6759261367389344,
+            "entropy": 0.45183222870706574,
+            "participation": 0.001954044291178916,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.620141282244327
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3946152132970593,
+            "center": [
+              4.204016758954228,
+              4.204016758954228,
+              4.204016758954228
+            ],
+            "eigenvalues": [
+              9.990252640679063,
+              0.957781953117223,
+              0.9577819531172218
+            ],
+            "anisotropy": 0.9041283551511747,
+            "radial_center": 2.368239520208127,
+            "radial_width": 2.5094338249569152,
+            "entropy": 0.2622578943216377,
+            "participation": 0.0012397194009134303,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.7786814991815996
+          },
+          "X3_observer_difference": {
+            "L1": 0.3561066121154342,
+            "L2": 0.15869715539216012,
+            "Jensen_Shannon": 0.03888831761725574,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              0,
+              0
+            ],
+            "minimum_difference": 1.5255266000901253e-05
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              53.40851224891057,
+              1.9983098014869303,
+              1.9983098014869218
+            ],
+            "direction_effective_dimension": 1.1520364407396333,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 7.704965474015787,
+            "intensity_entropy": 0.8420589834408215,
+            "intensity_participation": 0.01656548113094135,
+            "intensity_effective_dimension": 2.945033037991911,
+            "intensity_eigenvalues": [
+              5.543732685633311,
+              4.197255921732945,
+              4.1972559217329435
+            ],
+            "local_peak_count": 18,
+            "occupied_fraction_above_2mean": 0.02783203125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              63.01152336938307,
+              0.9577819531172226,
+              0.9577819531172126
+            ],
+            "direction_effective_dimension": 1.0612342225820433,
+            "active_spectral_support": 1330,
+            "interference_class": "sparse-interference-lattice",
+            "intensity_contrast": 3.3341099864003625,
+            "intensity_entropy": 0.9338288977845871,
+            "intensity_participation": 0.0825335188744539,
+            "intensity_effective_dimension": 2.991552215689192,
+            "intensity_eigenvalues": [
+              4.523191256303159,
+              4.048944219597074,
+              4.048944219597072
+            ],
+            "local_peak_count": 43,
+            "occupied_fraction_above_2mean": 0.028564453125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.38618619767703843,
+            "wave_L2": 0.06966686817978805,
+            "wave_Jensen_Shannon": 0.029193609019405563,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 5.864554076786741e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "X0_spatial": {
+            "coordinate": [
+              5,
+              5,
+              5
+            ],
+            "radius": 8.660254037844387,
+            "direction": [
+              0.5773502691896257,
+              0.5773502691896257,
+              0.5773502691896257
+            ],
+            "nonzero_components": 3,
+            "boundary_components": 3,
+            "position_class": "space-diagonal",
+            "boundary_class": "corner"
+          },
+          "X1_relational": {
+            "full_degree": 642,
+            "fractured_degree": 338,
+            "lost_degree": 304,
+            "local_relation_loss": 0.47352024922118385
+          },
+          "X2_full_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.6894578598973797,
+            "center": [
+              2.127957891091736,
+              2.1279578910917354,
+              2.127957891091736
+            ],
+            "eigenvalues": [
+              24.898023026611845,
+              4.18244415617905,
+              4.18244415617905
+            ],
+            "anisotropy": 0.832017017909064,
+            "radial_center": 5.394004836720627,
+            "radial_width": 2.04147573103489,
+            "entropy": 0.6940888089509727,
+            "participation": 0.005064982596289249,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.3847812982757392
+          },
+          "X2_fractured_genesis": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.508446636128836,
+            "center": [
+              3.521576384827449,
+              3.5215763848274486,
+              3.5215763848274486
+            ],
+            "eigenvalues": [
+              16.05113883139312,
+              1.9802426081684086,
+              1.9802426081684068
+            ],
+            "anisotropy": 0.8766291520514787,
+            "radial_center": 3.6832249387807954,
+            "radial_width": 2.538794615181216,
+            "entropy": 0.44475145205232963,
+            "participation": 0.0020420507014021964,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.6064918389549538
+          },
+          "X3_observer_difference": {
+            "L1": 0.5512936753026969,
+            "L2": 0.22197243474880493,
+            "Jensen_Shannon": 0.0632676916097844,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              3,
+              3,
+              4
+            ],
+            "minimum_difference": 1.9256512799566746e-06
+          },
+          "XW_full_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              38.4826373853906,
+              4.18244415617905,
+              4.182444156179041
+            ],
+            "direction_effective_dimension": 1.447781533919867,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 13.385909309549998,
+            "intensity_entropy": 0.6999445922752011,
+            "intensity_participation": 0.005549926448814921,
+            "intensity_effective_dimension": 2.937483742463323,
+            "intensity_eigenvalues": [
+              5.806934543042694,
+              4.317222199863026,
+              4.317222199863025
+            ],
+            "local_peak_count": 10,
+            "occupied_fraction_above_2mean": 0.03173828125,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.0
+          },
+          "XW_fractured_wave": {
+            "wave_class": "quasi-collinear-wave-bundle",
+            "direction_eigenvalues": [
+              53.255639533916224,
+              1.9802426081684137,
+              1.980242608168406
+            ],
+            "direction_effective_dimension": 1.151082342400839,
+            "active_spectral_support": 1330,
+            "interference_class": "clustered-interference-field",
+            "intensity_contrast": 6.6482891206110315,
+            "intensity_entropy": 0.8542507238769197,
+            "intensity_participation": 0.022124017038416956,
+            "intensity_effective_dimension": 2.970234888752239,
+            "intensity_eigenvalues": [
+              5.336579083849695,
+              4.343863696487069,
+              4.343863696487067
+            ],
+            "local_peak_count": 13,
+            "occupied_fraction_above_2mean": 0.03369140625,
+            "peak_coordinate": [
+              -3.141592653589793,
+              -3.141592653589793,
+              -3.141592653589793
+            ],
+            "_wave_norm": 4096.000000000001
+          },
+          "XW_wave_difference": {
+            "wave_L1": 0.5203606754289107,
+            "wave_L2": 0.10728003193605434,
+            "wave_Jensen_Shannon": 0.042591482724436885,
+            "exact_equal_samples": 0,
+            "near_equal_1e-12": 0,
+            "minimum_difference": 5.545375333538692e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    }
+  ]
+}

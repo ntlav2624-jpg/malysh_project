@@ -1,0 +1,500 @@
+                "tube_scores": chiral_zone_scores,
+                "euro_score": chiral_euro_score,
+                "geometry": "bounded_toroidal",
+                "orientation": "reflected_chiral",
+                "state": "finite_normalized",
+            },
+
+            "common": {
+                "main": common_main,
+                "euro": common_euro,
+            },
+
+            "delta": {
+                "main_added": added_main,
+                "main_removed": removed_main,
+                "main_common": common_main,
+                "euro_added": added_euro,
+                "euro_removed": removed_euro,
+                "euro_common": common_euro,
+            },
+        })
+'''
+
+if old not in source:
+    raise SystemExit(
+        "[ERROR] Не найден старый блок вывода V1-V18. "
+        "Восстанови файл из резервной копии или проверь версию."
+    )
+
+source = source.replace(
+    old,
+    new,
+    1,
+)
+
+path.write_text(
+    source,
+    encoding="utf-8",
+)
+
+print(
+    "[OK] Каждый V1-V18 теперь выводит полный расчёт"
+)
+
+print(
+    "[OK] Резервная копия:",
+    backup,
+)
+PY
+
+python3 -m py_compile     run_malysh_v12_recalculate_82.py && echo "[OK] Компиляция прошла" && python3 run_malysh_v12_recalculate_82.py | tee malysh_v12_full_recalculated_82.log
+cd ~/malysh_project && python3 - <<'PY'
+from pathlib import Path
+
+path = Path("run_malysh_v12_recalculate_82.py")
+
+if not path.exists():
+    raise SystemExit(
+        "[ERROR] Нет run_malysh_v12_recalculate_82.py"
+    )
+
+source = path.read_text(encoding="utf-8")
+
+marker = "ПОЛНЫЙ ВЕКТОРНЫЙ ИНТЕРФЕЙС V2"
+
+if marker in source:
+    print("[OK] Полный интерфейс уже установлен")
+    raise SystemExit(0)
+
+backup = Path(
+    "run_malysh_v12_recalculate_82.py.before_full_vectors.bak"
+)
+
+backup.write_text(
+    source,
+    encoding="utf-8",
+)
+
+old = '''        common = sorted(set(direct)&set(chiral))
+        print("\\n" + "─"*W)
+        print(f" [{name:<31}] | Вес: {weight:<5.1f} | Pressure: {pressure:.2f} | Trust: {trust:.2f}")
+        print(f"   ИСХОДНЫЙ  ROOT:{source[:2]} JILS:{source[2:4]} TAIL:{source[4:]} ")
+        print(f"   БЕЗ       ROOT:{direct[:2]} JILS:{direct[2:4]} TAIL:{direct[4:]} | EURO:{de}")
+        print(f"   С         ROOT:{chiral[:2]} JILS:{chiral[2:4]} TAIL:{chiral[4:]} | EURO:{ce}")
+        print(f"   ОБЩИЕ MAIN:{common} | ОБЩИЕ EURO:{sorted(set(de)&set(ce))}")
+        records.append({"id":idx,"name":name,"source":source,"without":{"main":direct,"euro":de},"with":{"main":chiral,"euro":ce},"trust":trust})
+'''
+
+new = '''        # ПОЛНЫЙ ВЕКТОРНЫЙ ИНТЕРФЕЙС V2
+
+        common_main = sorted(
+            set(direct)
+            & set(chiral)
+        )
+
+        common_euro = sorted(
+            set(de)
+            & set(ce)
+        )
+
+        added_main = sorted(
+            set(chiral)
+            - set(direct)
+        )
+
+        removed_main = sorted(
+            set(direct)
+            - set(chiral)
+        )
+
+        added_euro = sorted(
+            set(ce)
+            - set(de)
+        )
+
+        removed_euro = sorted(
+            set(de)
+            - set(ce)
+        )
+
+        direct_zone_scores = {}
+
+        chiral_zone_scores = {}
+
+        for zone_name, positions in {
+            "ROOT": (0, 1),
+            "JILS": (2, 3),
+            "TAIL": (4,),
+        }.items():
+
+            direct_field = main_scores(
+                source,
+                zone_name,
+                data,
+                reflected=False,
+            )
+
+            chiral_field = main_scores(
+                source,
+                zone_name,
+                data,
+                reflected=True,
+            )
+
+            direct_values = [
+                direct_field[
+                    direct[position]
+                ]
+                for position in positions
+            ]
+
+            chiral_values = [
+                chiral_field[
+                    chiral[position]
+                ]
+                for position in positions
+            ]
+
+            direct_zone_scores[zone_name] = (
+                sum(direct_values)
+                / len(direct_values)
+            )
+
+            chiral_zone_scores[zone_name] = (
+                sum(chiral_values)
+                / len(chiral_values)
+            )
+
+        direct_euro_field = euro_scores(
+            direct,
+            data,
+            idx,
+            reflected=False,
+        )
+
+        chiral_euro_field = euro_scores(
+            chiral,
+            data,
+            idx,
+            reflected=True,
+        )
+
+        direct_euro_score = sum(
+            direct_euro_field[number]
+            for number in de
+        ) / len(de)
+
+        chiral_euro_score = sum(
+            chiral_euro_field[number]
+            for number in ce
+        ) / len(ce)
+
+        print()
+        print("─" * W)
+
+        print(
+            f" [{name:<31}] "
+            f"| Вес: {weight:<5.1f} "
+            f"| Pressure: {pressure:.2f} "
+            f"| Trust: {trust:.2f}"
+        )
+
+        print(
+            "   ИСХОДНЫЙ MAIN           : "
+            f"{source}"
+        )
+
+        print(
+            "   ИСХОДНЫЕ ЗОНЫ          : "
+            f"ROOT={source[:2]} | "
+            f"JILS={source[2:4]} | "
+            f"TAIL={source[4:]}"
+        )
+
+        print()
+        print("   🔵 БЕЗ ХИРАЛЬНОСТИ")
+
+        print(
+            "      MAIN                : "
+            f"{direct}"
+        )
+
+        print(
+            "      ROOT                : "
+            f"{direct[:2]} "
+            f"| TubeScore="
+            f"{direct_zone_scores['ROOT']:.6f}"
+        )
+
+        print(
+            "      JILS                : "
+            f"{direct[2:4]} "
+            f"| TubeScore="
+            f"{direct_zone_scores['JILS']:.6f}"
+        )
+
+        print(
+            "      TAIL                : "
+            f"{direct[4:]} "
+            f"| TubeScore="
+            f"{direct_zone_scores['TAIL']:.6f}"
+        )
+
+        print(
+            "      EURO                : "
+            f"{de} "
+            f"| EuroScore="
+            f"{direct_euro_score:.6f}"
+        )
+
+        print(
+            "      КОНТУР              : "
+            "BOUNDED_TOROIDAL"
+        )
+
+        print(
+            "      ОРИЕНТАЦИЯ          : "
+            "DIRECT"
+        )
+
+        print(
+            "      СОСТОЯНИЕ           : "
+            "FINITE / NORMALIZED"
+        )
+
+        print()
+        print("   🟣 С ХИРАЛЬНОСТЬЮ")
+
+        print(
+            "      MAIN                : "
+            f"{chiral}"
+        )
+
+        print(
+            "      ROOT                : "
+            f"{chiral[:2]} "
+            f"| TubeScore="
+            f"{chiral_zone_scores['ROOT']:.6f}"
+        )
+
+        print(
+            "      JILS                : "
+            f"{chiral[2:4]} "
+            f"| TubeScore="
+            f"{chiral_zone_scores['JILS']:.6f}"
+        )
+
+        print(
+            "      TAIL                : "
+            f"{chiral[4:]} "
+            f"| TubeScore="
+            f"{chiral_zone_scores['TAIL']:.6f}"
+        )
+
+        print(
+            "      EURO                : "
+            f"{ce} "
+            f"| EuroScore="
+            f"{chiral_euro_score:.6f}"
+        )
+
+        print(
+            "      КОНТУР              : "
+            "BOUNDED_TOROIDAL"
+        )
+
+        print(
+            "      ОРИЕНТАЦИЯ          : "
+            "REFLECTED / CHIRAL"
+        )
+
+        print(
+            "      СОСТОЯНИЕ           : "
+            "FINITE / NORMALIZED"
+        )
+
+        print()
+        print("   🤝 ОБЩЕЕ")
+
+        print(
+            "      MAIN                : "
+            f"{common_main}"
+        )
+
+        print(
+            "      EURO                : "
+            f"{common_euro}"
+        )
+
+        print()
+        print("   🪞 ХИРАЛЬНАЯ Δ")
+
+        print(
+            "      MAIN +ВОШЛИ         : "
+            f"{added_main}"
+        )
+
+        print(
+            "      MAIN -ВЫШЛИ         : "
+            f"{removed_main}"
+        )
+
+        print(
+            "      MAIN =ОБЩИЕ         : "
+            f"{common_main}"
+        )
+
+        print(
+            "      EURO +ВОШЛИ         : "
+            f"{added_euro}"
+        )
+
+        print(
+            "      EURO -ВЫШЛИ         : "
+            f"{removed_euro}"
+        )
+
+        print(
+            "      EURO =ОБЩИЕ         : "
+            f"{common_euro}"
+        )
+
+        records.append({
+            "id": idx,
+            "name": name,
+            "weight": weight,
+            "pressure": pressure,
+            "trust": trust,
+
+            "source": {
+                "main": source,
+                "root": source[:2],
+                "jils": source[2:4],
+                "tail": source[4:],
+            },
+
+            "without_chirality": {
+                "main": direct,
+                "root": direct[:2],
+                "jils": direct[2:4],
+                "tail": direct[4:],
+                "euro": de,
+                "tube_scores": direct_zone_scores,
+                "euro_score": direct_euro_score,
+                "geometry": "bounded_toroidal",
+                "orientation": "direct",
+                "state": "finite_normalized",
+            },
+
+            "with_chirality": {
+                "main": chiral,
+                "root": chiral[:2],
+                "jils": chiral[2:4],
+                "tail": chiral[4:],
+                "euro": ce,
+                "tube_scores": chiral_zone_scores,
+                "euro_score": chiral_euro_score,
+                "geometry": "bounded_toroidal",
+                "orientation": "reflected_chiral",
+                "state": "finite_normalized",
+            },
+
+            "common": {
+                "main": common_main,
+                "euro": common_euro,
+            },
+
+            "delta": {
+                "main_added": added_main,
+                "main_removed": removed_main,
+                "main_common": common_main,
+                "euro_added": added_euro,
+                "euro_removed": removed_euro,
+                "euro_common": common_euro,
+            },
+        })
+'''
+
+if old not in source:
+    raise SystemExit(
+        "[ERROR] Не найден старый блок вывода V1-V18. "
+        "Восстанови файл из резервной копии или проверь версию."
+    )
+
+source = source.replace(
+    old,
+    new,
+    1,
+)
+
+path.write_text(
+    source,
+    encoding="utf-8",
+)
+
+print(
+    "[OK] Каждый V1-V18 теперь выводит полный расчёт"
+)
+
+print(
+    "[OK] Резервная копия:",
+    backup,
+)
+PY
+
+python3 -m py_compile     run_malysh_v12_recalculate_82.py && echo "[OK] Компиляция прошла" && python3 run_malysh_v12_recalculate_82.py | tee malysh_v12_full_recalculated_82.log
+cd ~/malysh_project
+SRC="$(find ~/storage/downloads -maxdepth 1 -type f \
+  -name 'run_malysh_v12_recalculate_82.py*' \
+  | head -n 1)"
+if [ -z "$SRC" ]; then     echo "[ERROR] Файл не найден в Downloads";     echo "Сначала нажми ссылку скачивания над командой";     exit 1; fi
+cd ~/malysh_project
+SRC="$(find ~/storage/downloads -maxdepth 1 -type f \
+  -name 'run_malysh_v12_recalculate_82.py*' \
+  | head -n 1)"
+if [ -z "$SRC" ]; then     echo "[ERROR] Файл не найден в Downloads";     echo "Сначала нажми ссылку скачивания над командой";     exit 1; fi
+cd ~/malysh_project || exit 1
+rm -f run_malysh_v12_recalculate_82.py
+termux-storage-get run_malysh_v12_recalculate_82.py
+if [ ! -s run_malysh_v12_recalculate_82.py ]; then     echo "[ERROR] Файл не выбран или оказался пустым";     exit 1; fi
+run_malysh_v12_recalculate_82.py
+cd ~/malysh_project
+ls -lh run_malysh_v12_recalculate_82.py
+cd ~/malysh_project
+termux-storage-get run_malysh_v12_recalculate_82.py
+cd ~
+find "$HOME" "$HOME/storage" /sdcard   -type f   -name 'run_malysh_v12_recalculate_82.py*'   2>/dev/null
+cd ~/malysh_project || exit 1
+rm -f run_malysh_v12_recalculate_82.py
+termux-storage-get run_malysh_v12_recalculate_82.py
+if [ ! -s run_malysh_v12_recalculate_82.py ]; then     echo "[ERROR] Файл не выбран или пустой";     exit 1; fi
+cd ~/malysh_project || exit 1
+echo "=== 1. ПРОВЕРКА ФАЙЛА ==="
+pwd
+ls -lh run_malysh_v12_recalculate_82.py
+echo "ls-код=$?"
+echo
+echo "=== 2. ПРОВЕРКА КОМПИЛЯЦИИ ==="
+python3 -m py_compile run_malysh_v12_recalculate_82.py
+echo "compile-код=$?"
+echo
+echo "=== 3. ПРОБНЫЙ ЗАПУСК ==="
+python3 run_malysh_v12_recalculate_82.py
+echo "run-код=$?"
+cd ~/malysh_project || exit 1
+mv run_malysh_v12_recalculate_82.py    run_malysh_v12_recalculate_82.py.corrupted
+termux-storage-get run_malysh_v12_recalculate_82.py
+echo "=== НАЧАЛО ФАЙЛА ==="
+head -n 5 run_malysh_v12_recalculate_82.py
+echo "=== РАЗМЕР ФАЙЛА ==="
+ls -lh run_malysh_v12_recalculate_82.py
+python3 -m py_compile run_malysh_v12_recalculate_82.py || {     echo "[ERROR] Выбран неправильный или поврежденный файл";     exit 1; }
+cd ~/malysh_project || exit 1
+mv run_malysh_v12_recalculate_82.py    run_malysh_v12_recalculate_82.py.corrupted
+termux-storage-get run_malysh_v12_recalculate_82.py
+echo "=== НАЧАЛО ФАЙЛА ==="
+head -n 5 run_malysh_v12_recalculate_82.py
+echo "=== РАЗМЕР ФАЙЛА ==="
+ls -lh run_malysh_v12_recalculate_82.py
+python3 -m py_compile run_malysh_v12_recalculate_82.py || {     echo "[ERROR] Выбран неправильный или поврежденный файл";     exit 1; }

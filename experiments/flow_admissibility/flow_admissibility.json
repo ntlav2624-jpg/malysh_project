@@ -1,0 +1,2652 @@
+{
+  "experiment": "Admissible flow cone",
+  "solver_modified": false,
+  "definition": "At rho_i=0 an admissible direction must satisfy J_i>=0. Mass-preserving directions additionally satisfy sum(J)=0.",
+  "results": [
+    {
+      "name": "axis_inner",
+      "coordinate": [
+        1,
+        0,
+        0
+      ],
+      "ages": [
+        {
+          "age": 0,
+          "support": 1,
+          "sum_J": 3.2514435588382185e-11,
+          "norm_J": 2416.288430170874,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0004140215291195198,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 1329,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 1329,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  -5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  -4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -5,
+                  5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  -5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  -4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -4,
+                  -4,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 1,
+          "support": 1330,
+          "sum_J": 1.4779288903810084e-11,
+          "norm_J": 2093.946627338017,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0004140719035676003,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 5.495310668229812e-05,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 2,
+          "support": 1330,
+          "sum_J": 1.0231815394945443e-12,
+          "norm_J": 1814.6068791333453,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00041412990278302526,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00011095732116138982,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 5,
+          "support": 1330,
+          "sum_J": -1.4779288903810084e-12,
+          "norm_J": 1180.9575667168895,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00041436217611319026,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0002938647473658687,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 10,
+          "support": 1330,
+          "sum_J": 6.252776074688882e-13,
+          "norm_J": 577.1993542466848,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0004150528212206512,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0006859324304196203,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 20,
+          "support": 1330,
+          "sum_J": 2.8421709430404007e-13,
+          "norm_J": 137.90404918512462,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.000419309814557658,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0019521937224608256,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 40,
+          "support": 1330,
+          "sum_J": -2.3092638912203256e-14,
+          "norm_J": 7.954999471135194,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0005104142417028952,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0054776298787085715,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        }
+      ]
+    },
+    {
+      "name": "axis_outer",
+      "coordinate": [
+        5,
+        0,
+        0
+      ],
+      "ages": [
+        {
+          "age": 0,
+          "support": 1,
+          "sum_J": -1.5575096767861396e-11,
+          "norm_J": 1448.6290837278762,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0006906077348066226,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 1328,
+            "tangent_boundary_nodes": 1,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 1328,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 1,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  -5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  -4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -5,
+                  5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  -5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  -4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  0,
+                  -4,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 1,
+          "support": 1329,
+          "sum_J": -3.410605131648481e-12,
+          "norm_J": 1332.7553651245032,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0006906598673959542,
+            "boundary_nodes": 1,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 1,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 1,
+            "outward_boundary_nodes": 1,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  -5,
+                  0,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.0857493254844249
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 2,
+          "support": 1330,
+          "sum_J": -1.3073986337985843e-12,
+          "norm_J": 1226.1519107668912,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0006907160292062432,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 3.0012897991402263e-05,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 5,
+          "support": 1330,
+          "sum_J": -2.3305801732931286e-12,
+          "norm_J": 954.8372433813544,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0006909123240713436,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00013101301173061006,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 10,
+          "support": 1330,
+          "sum_J": 1.5347723092418164e-12,
+          "norm_J": 629.3848508940716,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0006913591306988012,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0003435993722839617,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 20,
+          "support": 1330,
+          "sum_J": -2.842170943040401e-14,
+          "norm_J": 273.48807913493977,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0006930080414548191,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.001014916708300772,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 40,
+          "support": 1330,
+          "sum_J": -7.105427357601002e-15,
+          "norm_J": 51.677196709285525,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007051130478711962,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.004577413725026998,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        }
+      ]
+    },
+    {
+      "name": "plane_diagonal",
+      "coordinate": [
+        3,
+        3,
+        0
+      ],
+      "ages": [
+        {
+          "age": 0,
+          "support": 1,
+          "sum_J": -1.375610736431554e-11,
+          "norm_J": 1404.7288389974588,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007122507122507053,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 1130,
+            "tangent_boundary_nodes": 199,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 1130,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 199,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  -5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  -4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  -5
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  -4
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 1,
+          "support": 1131,
+          "sum_J": 3.979039320256561e-12,
+          "norm_J": 1295.7482375284953,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.000712312843876882,
+            "boundary_nodes": 199,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 199,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 199,
+            "outward_boundary_nodes": 199,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  -3,
+                  -3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.10247731174883515
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.09690949227373072
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.0969094922737307
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.08807947019867551
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.08807947019867551
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.08807947019867547
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.08807947019867547
+              },
+              {
+                "coordinate": [
+                  4,
+                  -3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.08153053715967629
+              },
+              {
+                "coordinate": [
+                  -3,
+                  4,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.08153053715967619
+              },
+              {
+                "coordinate": [
+                  -4,
+                  3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.08072111846946281
+              },
+              {
+                "coordinate": [
+                  3,
+                  -4,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.08072111846946281
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -0.07924944812362027
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -0.07924944812362027
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -0.07924944812362021
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -0.07924944812362021
+              },
+              {
+                "coordinate": [
+                  4,
+                  -3,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.07409860191317148
+              },
+              {
+                "coordinate": [
+                  4,
+                  -3,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.07409860191317148
+              },
+              {
+                "coordinate": [
+                  -3,
+                  4,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.07409860191317139
+              },
+              {
+                "coordinate": [
+                  -3,
+                  4,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.07409860191317139
+              },
+              {
+                "coordinate": [
+                  3,
+                  -4,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.07336276674025019
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 2,
+          "support": 1330,
+          "sum_J": 1.5916157281026244e-12,
+          "norm_J": 1195.226213303902,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007123790277396326,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 2.9094460740967913e-05,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 5,
+          "support": 1330,
+          "sum_J": -1.7053025658242404e-13,
+          "norm_J": 938.0944469474468,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007126053906281373,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00012265627738793986,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 10,
+          "support": 1330,
+          "sum_J": -1.7053025658242404e-13,
+          "norm_J": 626.5185189863694,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007131010304205968,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0003009552902096516,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 20,
+          "support": 1330,
+          "sum_J": 0.0,
+          "norm_J": 279.52222417739966,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007148223788623855,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007529541134860274,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 40,
+          "support": 1330,
+          "sum_J": 1.4210854715202004e-14,
+          "norm_J": 55.72828169405084,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007263721652715874,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00214388820450569,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        }
+      ]
+    },
+    {
+      "name": "space_diagonal",
+      "coordinate": [
+        3,
+        3,
+        3
+      ],
+      "ages": [
+        {
+          "age": 0,
+          "support": 1,
+          "sum_J": -2.6716406864579767e-12,
+          "norm_J": 1020.6634008221233,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0009803921568627425,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 896,
+            "tangent_boundary_nodes": 433,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 896,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 433,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -2,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  -1,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  0,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  0,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  0,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  0,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  0,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  1,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  1,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  1,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              },
+              {
+                "coordinate": [
+                  -2,
+                  1,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -2.0
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 1,
+          "support": 897,
+          "sum_J": 7.958078640513122e-13,
+          "norm_J": 963.0990312129115,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0009804682568591888,
+            "boundary_nodes": 433,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 433,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 433,
+            "outward_boundary_nodes": 433,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  3,
+                  0,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -0.07041942604856506
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.07041942604856505
+              },
+              {
+                "coordinate": [
+                  -3,
+                  0,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -0.07041942604856503
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.070419426048565
+              },
+              {
+                "coordinate": [
+                  0,
+                  3,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -0.07041942604856499
+              },
+              {
+                "coordinate": [
+                  0,
+                  -3,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -0.07041942604856498
+              },
+              {
+                "coordinate": [
+                  3,
+                  1,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -0.06649497179298505
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.06649497179298504
+              },
+              {
+                "coordinate": [
+                  1,
+                  -3,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -0.066494971792985
+              },
+              {
+                "coordinate": [
+                  1,
+                  3,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -0.066494971792985
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.06649497179298498
+              },
+              {
+                "coordinate": [
+                  -3,
+                  1,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -0.06649497179298497
+              },
+              {
+                "coordinate": [
+                  3,
+                  -1,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -0.06551385822909002
+              },
+              {
+                "coordinate": [
+                  -3,
+                  -1,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -0.06551385822909
+              },
+              {
+                "coordinate": [
+                  -3,
+                  3,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.06551385822909
+              },
+              {
+                "coordinate": [
+                  -1,
+                  3,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -0.06551385822909
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.06551385822909
+              },
+              {
+                "coordinate": [
+                  -1,
+                  -3,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -0.06551385822908999
+              },
+              {
+                "coordinate": [
+                  -3,
+                  -3,
+                  -3
+                ],
+                "rho": 0.0,
+                "direction": -0.06524405199901898
+              },
+              {
+                "coordinate": [
+                  3,
+                  -3,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -0.06257051753740502
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 2,
+          "support": 1330,
+          "sum_J": 3.979039320256561e-13,
+          "norm_J": 908.7867345423679,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0009805466794549499,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 2.8786811602655275e-05,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 5,
+          "support": 1330,
+          "sum_J": -1.7053025658242404e-13,
+          "norm_J": 763.5706902974514,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0009807978148465627,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00012007089498878181,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 10,
+          "support": 1330,
+          "sum_J": -5.684341886080801e-13,
+          "norm_J": 571.3050160716183,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0009812822307838963,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0002894873780073041,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 20,
+          "support": 1330,
+          "sum_J": 0.0,
+          "norm_J": 319.9072373109838,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0009826214548008798,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0007009484931161312,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 40,
+          "support": 1330,
+          "sum_J": -2.1316282072803006e-14,
+          "norm_J": 100.40444617702394,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0009884402317811795,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.001897146361348264,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        }
+      ]
+    },
+    {
+      "name": "corner",
+      "coordinate": [
+        5,
+        5,
+        5
+      ],
+      "ages": [
+        {
+          "age": 0,
+          "support": 1,
+          "sum_J": -3.979039320256561e-13,
+          "norm_J": 428.5551954597633,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0023364485981308388,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 428,
+            "tangent_boundary_nodes": 901,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 1329,
+            "outward_boundary_nodes": 428,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 901,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  4
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  0,
+                  5
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  1,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  1,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  1,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  1,
+                  4
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  1,
+                  5
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  2,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  2,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  2,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  2,
+                  3
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  2,
+                  4
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  2,
+                  5
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  3,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  3,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              },
+              {
+                "coordinate": [
+                  0,
+                  3,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -1.3333333333333333
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 1,
+          "support": 429,
+          "sum_J": -1.7905676941154525e-12,
+          "norm_J": 418.36197593970803,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0023365953433856505,
+            "boundary_nodes": 901,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 901,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": false,
+            "max_positive_step": 0.0,
+            "boundary_nodes": 901,
+            "outward_boundary_nodes": 901,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": [
+              {
+                "coordinate": [
+                  1,
+                  -1,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.039514348785872094
+              },
+              {
+                "coordinate": [
+                  1,
+                  0,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.039514348785872094
+              },
+              {
+                "coordinate": [
+                  0,
+                  1,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.03951434878587206
+              },
+              {
+                "coordinate": [
+                  -1,
+                  0,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.03951434878587205
+              },
+              {
+                "coordinate": [
+                  -1,
+                  1,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.03951434878587205
+              },
+              {
+                "coordinate": [
+                  0,
+                  -1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.03951434878587205
+              },
+              {
+                "coordinate": [
+                  1,
+                  1,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.036571008094186994
+              },
+              {
+                "coordinate": [
+                  1,
+                  -1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.03657100809418698
+              },
+              {
+                "coordinate": [
+                  -1,
+                  1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.03657100809418695
+              },
+              {
+                "coordinate": [
+                  2,
+                  -1,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.03598233995585
+              },
+              {
+                "coordinate": [
+                  2,
+                  0,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.03598233995585
+              },
+              {
+                "coordinate": [
+                  -1,
+                  2,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.03598233995584994
+              },
+              {
+                "coordinate": [
+                  0,
+                  -1,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -0.03598233995584993
+              },
+              {
+                "coordinate": [
+                  0,
+                  2,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.03598233995584993
+              },
+              {
+                "coordinate": [
+                  -1,
+                  0,
+                  2
+                ],
+                "rho": 0.0,
+                "direction": -0.03598233995584992
+              },
+              {
+                "coordinate": [
+                  1,
+                  -1,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.03583517292126571
+              },
+              {
+                "coordinate": [
+                  -1,
+                  1,
+                  -1
+                ],
+                "rho": 0.0,
+                "direction": -0.03583517292126569
+              },
+              {
+                "coordinate": [
+                  -1,
+                  -1,
+                  1
+                ],
+                "rho": 0.0,
+                "direction": -0.03583517292126567
+              },
+              {
+                "coordinate": [
+                  1,
+                  -2,
+                  0
+                ],
+                "rho": 0.0,
+                "direction": -0.035099337748344436
+              },
+              {
+                "coordinate": [
+                  1,
+                  0,
+                  -2
+                ],
+                "rho": 0.0,
+                "direction": -0.03509933774834442
+              }
+            ]
+          },
+          "both_directions_admissible": false
+        },
+        {
+          "age": 2,
+          "support": 1330,
+          "sum_J": -5.684341886080802e-14,
+          "norm_J": 408.4173060617339,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0023367394174798285,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 2.774218931269985e-05,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 5,
+          "support": 1330,
+          "sum_J": -1.4210854715202004e-13,
+          "norm_J": 380.00739331387206,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.002337157881113047,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00011183686224821173,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 10,
+          "support": 1330,
+          "sum_J": -2.842170943040401e-14,
+          "norm_J": 337.04131717573193,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0023378212644089677,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.00025610097863917083,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 20,
+          "support": 1330,
+          "sum_J": 1.1368683772161603e-13,
+          "norm_J": 265.2374807132323,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0023390901827286693,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0005675871689766247,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        },
+        {
+          "age": 40,
+          "support": 1330,
+          "sum_J": 1.1368683772161603e-13,
+          "norm_J": 164.3810718332186,
+          "J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0023417818801990133,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "minus_J": {
+            "admissible_positive_step": true,
+            "max_positive_step": 0.0013292846144915874,
+            "boundary_nodes": 0,
+            "outward_boundary_nodes": 0,
+            "inward_boundary_nodes": 0,
+            "tangent_boundary_nodes": 0,
+            "strongest_outward": []
+          },
+          "both_directions_admissible": true
+        }
+      ]
+    }
+  ],
+  "bidirectional_cases": [
+    {
+      "name": "axis_inner",
+      "coordinate": [
+        1,
+        0,
+        0
+      ],
+      "age": 1,
+      "support": 1330
+    },
+    {
+      "name": "axis_inner",
+      "coordinate": [
+        1,
+        0,
+        0
+      ],
+      "age": 2,
+      "support": 1330
+    },
+    {
+      "name": "axis_inner",
+      "coordinate": [
+        1,
+        0,
+        0
+      ],
+      "age": 5,
+      "support": 1330
+    },
+    {
+      "name": "axis_inner",
+      "coordinate": [
+        1,
+        0,
+        0
+      ],
+      "age": 10,
+      "support": 1330
+    },
+    {
+      "name": "axis_inner",
+      "coordinate": [
+        1,
+        0,
+        0
+      ],
+      "age": 20,
+      "support": 1330
+    },
+    {
+      "name": "axis_inner",
+      "coordinate": [
+        1,
+        0,
+        0
+      ],
+      "age": 40,
+      "support": 1330
+    },
+    {
+      "name": "axis_outer",
+      "coordinate": [
+        5,
+        0,
+        0
+      ],
+      "age": 2,
+      "support": 1330
+    },
+    {
+      "name": "axis_outer",
+      "coordinate": [
+        5,
+        0,
+        0
+      ],
+      "age": 5,
+      "support": 1330
+    },
+    {
+      "name": "axis_outer",
+      "coordinate": [
+        5,
+        0,
+        0
+      ],
+      "age": 10,
+      "support": 1330
+    },
+    {
+      "name": "axis_outer",
+      "coordinate": [
+        5,
+        0,
+        0
+      ],
+      "age": 20,
+      "support": 1330
+    },
+    {
+      "name": "axis_outer",
+      "coordinate": [
+        5,
+        0,
+        0
+      ],
+      "age": 40,
+      "support": 1330
+    },
+    {
+      "name": "plane_diagonal",
+      "coordinate": [
+        3,
+        3,
+        0
+      ],
+      "age": 2,
+      "support": 1330
+    },
+    {
+      "name": "plane_diagonal",
+      "coordinate": [
+        3,
+        3,
+        0
+      ],
+      "age": 5,
+      "support": 1330
+    },
+    {
+      "name": "plane_diagonal",
+      "coordinate": [
+        3,
+        3,
+        0
+      ],
+      "age": 10,
+      "support": 1330
+    },
+    {
+      "name": "plane_diagonal",
+      "coordinate": [
+        3,
+        3,
+        0
+      ],
+      "age": 20,
+      "support": 1330
+    },
+    {
+      "name": "plane_diagonal",
+      "coordinate": [
+        3,
+        3,
+        0
+      ],
+      "age": 40,
+      "support": 1330
+    },
+    {
+      "name": "space_diagonal",
+      "coordinate": [
+        3,
+        3,
+        3
+      ],
+      "age": 2,
+      "support": 1330
+    },
+    {
+      "name": "space_diagonal",
+      "coordinate": [
+        3,
+        3,
+        3
+      ],
+      "age": 5,
+      "support": 1330
+    },
+    {
+      "name": "space_diagonal",
+      "coordinate": [
+        3,
+        3,
+        3
+      ],
+      "age": 10,
+      "support": 1330
+    },
+    {
+      "name": "space_diagonal",
+      "coordinate": [
+        3,
+        3,
+        3
+      ],
+      "age": 20,
+      "support": 1330
+    },
+    {
+      "name": "space_diagonal",
+      "coordinate": [
+        3,
+        3,
+        3
+      ],
+      "age": 40,
+      "support": 1330
+    },
+    {
+      "name": "corner",
+      "coordinate": [
+        5,
+        5,
+        5
+      ],
+      "age": 2,
+      "support": 1330
+    },
+    {
+      "name": "corner",
+      "coordinate": [
+        5,
+        5,
+        5
+      ],
+      "age": 5,
+      "support": 1330
+    },
+    {
+      "name": "corner",
+      "coordinate": [
+        5,
+        5,
+        5
+      ],
+      "age": 10,
+      "support": 1330
+    },
+    {
+      "name": "corner",
+      "coordinate": [
+        5,
+        5,
+        5
+      ],
+      "age": 20,
+      "support": 1330
+    },
+    {
+      "name": "corner",
+      "coordinate": [
+        5,
+        5,
+        5
+      ],
+      "age": 40,
+      "support": 1330
+    }
+  ]
+}

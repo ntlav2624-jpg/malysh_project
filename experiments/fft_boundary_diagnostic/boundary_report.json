@@ -1,0 +1,1119 @@
+{
+  "experiment": "FFT boundary representation diagnostic",
+  "range_N": [
+    8,
+    30
+  ],
+  "modifies_solver": false,
+  "description": "Observes how floating-point fftfreq values interact with the strict cutoff comparison without altering the Navier-Stokes solver.",
+  "results": [
+    {
+      "N": 8,
+      "cutoff": 2,
+      "expected_side": 5,
+      "actual_side": 5,
+      "expected_modes": 124,
+      "actual_modes": 124,
+      "BRE_modes": 0,
+      "expected_triads": 6486,
+      "actual_triads": 6486,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "2.0",
+          "nearest_integer": 2,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-2.0",
+          "nearest_integer": -2,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 9,
+      "cutoff": 2,
+      "expected_side": 5,
+      "actual_side": 5,
+      "expected_modes": 124,
+      "actual_modes": 124,
+      "BRE_modes": 0,
+      "expected_triads": 6486,
+      "actual_triads": 6486,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "2.0",
+          "nearest_integer": 2,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-2.0",
+          "nearest_integer": -2,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 10,
+      "cutoff": 3,
+      "expected_side": 7,
+      "actual_side": 5,
+      "expected_modes": 342,
+      "actual_modes": 124,
+      "BRE_modes": 218,
+      "expected_triads": 49626,
+      "actual_triads": 6486,
+      "lost_triads": 43140,
+      "missing_abs_bins": [
+        3
+      ],
+      "boundary": [
+        {
+          "raw": "3.0000000000000004",
+          "nearest_integer": 3,
+          "delta": 4.440892098500626e-16,
+          "passes": false
+        },
+        {
+          "raw": "-3.0000000000000004",
+          "nearest_integer": -3,
+          "delta": -4.440892098500626e-16,
+          "passes": false
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0000000000000004",
+        "4.0",
+        "-5.0",
+        "-4.0",
+        "-3.0000000000000004",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 11,
+      "cutoff": 3,
+      "expected_side": 7,
+      "actual_side": 7,
+      "expected_modes": 342,
+      "actual_modes": 342,
+      "BRE_modes": 0,
+      "expected_triads": 49626,
+      "actual_triads": 49626,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "3.0",
+          "nearest_integer": 3,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-3.0",
+          "nearest_integer": -3,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 12,
+      "cutoff": 3,
+      "expected_side": 7,
+      "actual_side": 7,
+      "expected_modes": 342,
+      "actual_modes": 342,
+      "BRE_modes": 0,
+      "expected_triads": 49626,
+      "actual_triads": 49626,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "3.0",
+          "nearest_integer": 3,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-3.0",
+          "nearest_integer": -3,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 13,
+      "cutoff": 4,
+      "expected_side": 9,
+      "actual_side": 9,
+      "expected_modes": 728,
+      "actual_modes": 728,
+      "BRE_modes": 0,
+      "expected_triads": 224796,
+      "actual_triads": 224796,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "4.0",
+          "nearest_integer": 4,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-4.0",
+          "nearest_integer": -4,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 14,
+      "cutoff": 4,
+      "expected_side": 9,
+      "actual_side": 9,
+      "expected_modes": 728,
+      "actual_modes": 728,
+      "BRE_modes": 0,
+      "expected_triads": 224796,
+      "actual_triads": 224796,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "4.0",
+          "nearest_integer": 4,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-4.0",
+          "nearest_integer": -4,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "4.999999999999999",
+        "6.0",
+        "-7.0",
+        "-6.0",
+        "-4.999999999999999",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 15,
+      "cutoff": 4,
+      "expected_side": 9,
+      "actual_side": 9,
+      "expected_modes": 728,
+      "actual_modes": 728,
+      "BRE_modes": 0,
+      "expected_triads": 224796,
+      "actual_triads": 224796,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "4.0",
+          "nearest_integer": 4,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-4.0",
+          "nearest_integer": -4,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 16,
+      "cutoff": 5,
+      "expected_side": 11,
+      "actual_side": 11,
+      "expected_modes": 1330,
+      "actual_modes": 1330,
+      "BRE_modes": 0,
+      "expected_triads": 749580,
+      "actual_triads": 749580,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "5.0",
+          "nearest_integer": 5,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-5.0",
+          "nearest_integer": -5,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 17,
+      "cutoff": 5,
+      "expected_side": 11,
+      "actual_side": 11,
+      "expected_modes": 1330,
+      "actual_modes": 1330,
+      "BRE_modes": 0,
+      "expected_triads": 749580,
+      "actual_triads": 201388,
+      "lost_triads": 548192,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "5.0",
+          "nearest_integer": 5,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-5.0",
+          "nearest_integer": -5,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "2.9999999999999996",
+        "4.0",
+        "5.0",
+        "5.999999999999999",
+        "7.0",
+        "8.0",
+        "-8.0",
+        "-7.0",
+        "-5.999999999999999",
+        "-5.0",
+        "-4.0",
+        "-2.9999999999999996",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 18,
+      "cutoff": 5,
+      "expected_side": 11,
+      "actual_side": 11,
+      "expected_modes": 1330,
+      "actual_modes": 1330,
+      "BRE_modes": 0,
+      "expected_triads": 749580,
+      "actual_triads": 749580,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "5.0",
+          "nearest_integer": 5,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-5.0",
+          "nearest_integer": -5,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "6.999999999999999",
+        "8.0",
+        "-9.0",
+        "-8.0",
+        "-6.999999999999999",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 19,
+      "cutoff": 6,
+      "expected_side": 13,
+      "actual_side": 13,
+      "expected_modes": 2196,
+      "actual_modes": 2196,
+      "BRE_modes": 0,
+      "expected_triads": 2041794,
+      "actual_triads": 2041794,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "6.0",
+          "nearest_integer": 6,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-6.0",
+          "nearest_integer": -6,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0",
+        "9.0",
+        "-9.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 20,
+      "cutoff": 6,
+      "expected_side": 13,
+      "actual_side": 11,
+      "expected_modes": 2196,
+      "actual_modes": 1330,
+      "BRE_modes": 866,
+      "expected_triads": 2041794,
+      "actual_triads": 246056,
+      "lost_triads": 1795738,
+      "missing_abs_bins": [
+        6
+      ],
+      "boundary": [
+        {
+          "raw": "6.000000000000001",
+          "nearest_integer": 6,
+          "delta": 8.881784197001252e-16,
+          "passes": false
+        },
+        {
+          "raw": "-6.000000000000001",
+          "nearest_integer": -6,
+          "delta": -8.881784197001252e-16,
+          "passes": false
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0000000000000004",
+        "4.0",
+        "5.0",
+        "6.000000000000001",
+        "7.000000000000001",
+        "8.0",
+        "9.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.000000000000001",
+        "-6.000000000000001",
+        "-5.0",
+        "-4.0",
+        "-3.0000000000000004",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 21,
+      "cutoff": 6,
+      "expected_side": 13,
+      "actual_side": 13,
+      "expected_modes": 2196,
+      "actual_modes": 2196,
+      "BRE_modes": 0,
+      "expected_triads": 2041794,
+      "actual_triads": 2041794,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "6.0",
+          "nearest_integer": 6,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-6.0",
+          "nearest_integer": -6,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0",
+        "9.0",
+        "10.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 22,
+      "cutoff": 7,
+      "expected_side": 15,
+      "actual_side": 15,
+      "expected_modes": 3374,
+      "actual_modes": 3374,
+      "BRE_modes": 0,
+      "expected_triads": 4816686,
+      "actual_triads": 4816686,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "7.0",
+          "nearest_integer": 7,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-7.0",
+          "nearest_integer": -7,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0",
+        "9.0",
+        "10.0",
+        "-11.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 23,
+      "cutoff": 7,
+      "expected_side": 15,
+      "actual_side": 15,
+      "expected_modes": 3374,
+      "actual_modes": 3374,
+      "BRE_modes": 0,
+      "expected_triads": 4816686,
+      "actual_triads": 4816686,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "7.0",
+          "nearest_integer": 7,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-7.0",
+          "nearest_integer": -7,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0",
+        "9.0",
+        "10.0",
+        "11.0",
+        "-11.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 24,
+      "cutoff": 7,
+      "expected_side": 15,
+      "actual_side": 15,
+      "expected_modes": 3374,
+      "actual_modes": 3374,
+      "BRE_modes": 0,
+      "expected_triads": 4816686,
+      "actual_triads": 2342514,
+      "lost_triads": 2474172,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "6.999999999999999",
+          "nearest_integer": 7,
+          "delta": -8.881784197001252e-16,
+          "passes": true
+        },
+        {
+          "raw": "-6.999999999999999",
+          "nearest_integer": -7,
+          "delta": 8.881784197001252e-16,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "6.999999999999999",
+        "8.0",
+        "9.0",
+        "10.0",
+        "11.0",
+        "-12.0",
+        "-11.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-6.999999999999999",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 25,
+      "cutoff": 8,
+      "expected_side": 17,
+      "actual_side": 17,
+      "expected_modes": 4912,
+      "actual_modes": 4912,
+      "BRE_modes": 0,
+      "expected_triads": 10203576,
+      "actual_triads": 5162980,
+      "lost_triads": 5040596,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "8.0",
+          "nearest_integer": 8,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-8.0",
+          "nearest_integer": -8,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.000000000000001",
+        "8.0",
+        "9.0",
+        "10.0",
+        "11.0",
+        "12.0",
+        "-12.0",
+        "-11.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.000000000000001",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 26,
+      "cutoff": 8,
+      "expected_side": 17,
+      "actual_side": 17,
+      "expected_modes": 4912,
+      "actual_modes": 4912,
+      "BRE_modes": 0,
+      "expected_triads": 10203576,
+      "actual_triads": 5162980,
+      "lost_triads": 5040596,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "8.0",
+          "nearest_integer": 8,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-8.0",
+          "nearest_integer": -8,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.000000000000001",
+        "8.0",
+        "9.0",
+        "10.0",
+        "11.000000000000002",
+        "12.0",
+        "-13.0",
+        "-12.0",
+        "-11.000000000000002",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.000000000000001",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 27,
+      "cutoff": 8,
+      "expected_side": 17,
+      "actual_side": 17,
+      "expected_modes": 4912,
+      "actual_modes": 4912,
+      "BRE_modes": 0,
+      "expected_triads": 10203576,
+      "actual_triads": 10203576,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "8.0",
+          "nearest_integer": 8,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-8.0",
+          "nearest_integer": -8,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0",
+        "9.0",
+        "10.0",
+        "11.0",
+        "12.0",
+        "13.0",
+        "-13.0",
+        "-12.0",
+        "-11.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 28,
+      "cutoff": 9,
+      "expected_side": 19,
+      "actual_side": 19,
+      "expected_modes": 6858,
+      "actual_modes": 6858,
+      "BRE_modes": 0,
+      "expected_triads": 19881936,
+      "actual_triads": 8344852,
+      "lost_triads": 11537084,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "9.0",
+          "nearest_integer": 9,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-9.0",
+          "nearest_integer": -9,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "4.999999999999999",
+        "6.0",
+        "7.0",
+        "8.0",
+        "9.0",
+        "9.999999999999998",
+        "11.0",
+        "12.0",
+        "12.999999999999998",
+        "-14.0",
+        "-12.999999999999998",
+        "-12.0",
+        "-11.0",
+        "-9.999999999999998",
+        "-9.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-4.999999999999999",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 29,
+      "cutoff": 9,
+      "expected_side": 19,
+      "actual_side": 19,
+      "expected_modes": 6858,
+      "actual_modes": 6858,
+      "BRE_modes": 0,
+      "expected_triads": 19881936,
+      "actual_triads": 9917800,
+      "lost_triads": 9964136,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "9.0",
+          "nearest_integer": 9,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-9.0",
+          "nearest_integer": -9,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "6.999999999999999",
+        "8.0",
+        "9.0",
+        "10.0",
+        "11.0",
+        "12.0",
+        "13.0",
+        "13.999999999999998",
+        "-13.999999999999998",
+        "-13.0",
+        "-12.0",
+        "-11.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-6.999999999999999",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    },
+    {
+      "N": 30,
+      "cutoff": 9,
+      "expected_side": 19,
+      "actual_side": 19,
+      "expected_modes": 6858,
+      "actual_modes": 6858,
+      "BRE_modes": 0,
+      "expected_triads": 19881936,
+      "actual_triads": 19881936,
+      "lost_triads": 0,
+      "missing_abs_bins": [],
+      "boundary": [
+        {
+          "raw": "9.0",
+          "nearest_integer": 9,
+          "delta": 0.0,
+          "passes": true
+        },
+        {
+          "raw": "-9.0",
+          "nearest_integer": -9,
+          "delta": 0.0,
+          "passes": true
+        }
+      ],
+      "raw_freq": [
+        "0.0",
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0",
+        "9.0",
+        "10.0",
+        "11.0",
+        "12.0",
+        "13.0",
+        "14.0",
+        "-15.0",
+        "-14.0",
+        "-13.0",
+        "-12.0",
+        "-11.0",
+        "-10.0",
+        "-9.0",
+        "-8.0",
+        "-7.0",
+        "-6.0",
+        "-5.0",
+        "-4.0",
+        "-3.0",
+        "-2.0",
+        "-1.0"
+      ]
+    }
+  ]
+}

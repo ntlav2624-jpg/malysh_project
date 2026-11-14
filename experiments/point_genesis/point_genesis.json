@@ -1,0 +1,2520 @@
+{
+  "experiment": "Point genesis under full and fractured triad relations",
+  "warning": "Conservative triad-network diagnostic; not a Navier-Stokes proof.",
+  "solver_modified": false,
+  "parameters": {
+    "K": 5,
+    "NFFT": 17,
+    "steps": 40,
+    "dt": 5.518763796909492e-05,
+    "states": 1330
+  },
+  "networks": {
+    "full_relations_1D": 91,
+    "fractured_relations_1D": 59,
+    "full_triads": 749580,
+    "fractured_triads": 201388
+  },
+  "results": [
+    {
+      "name": "axis_inner",
+      "initial_coordinate": [
+        1,
+        0,
+        0
+      ],
+      "snapshots": [
+        {
+          "step": 0,
+          "full": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "fractured": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "divergence": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "full": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.99390287294237,
+            "center": [
+              0.8888888888888887,
+              2.168404344971009e-18,
+              3.2526065174565133e-19
+            ],
+            "eigenvalues": [
+              1.3355408388520957,
+              1.3355408388520955,
+              1.2116425476248849
+            ],
+            "anisotropy": 0.09277012549739927,
+            "radial_center": 0.785923382243511,
+            "radial_width": 1.806944565439681,
+            "entropy": 0.18727655847383876,
+            "participation": 0.0010009195551060617,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.8667034584253129
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9820901519534218,
+            "center": [
+              0.9334069168506267,
+              1.4094628242311558e-18,
+              -5.963111948670274e-19
+            ],
+            "eigenvalues": [
+              0.8013245033112593,
+              0.8013245033112587,
+              0.6764336467807074
+            ],
+            "anisotropy": 0.15585553170341582,
+            "radial_center": 0.46756697119160173,
+            "radial_width": 1.4354315660643449,
+            "entropy": 0.11537977422222667,
+            "participation": 0.0008880779720362157,
+            "support_1e-12": 1088,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.9201250919793965
+          },
+          "divergence": {
+            "L1": 0.10684326710816744,
+            "L2": 0.05346454004196853,
+            "Jensen_Shannon": 0.012434210179757654,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 603,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 9.486769009248164e-20
+          },
+          "mass_full": 0.9999999999999998,
+          "mass_fractured": 0.9999999999999999
+        },
+        {
+          "step": 2,
+          "full": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.993399848432182,
+            "center": [
+              0.7917600673784633,
+              6.928051882182373e-17,
+              2.710505431213761e-18
+            ],
+            "eigenvalues": [
+              2.4928474140997703,
+              2.49284741409977,
+              2.2525158514616668
+            ],
+            "anisotropy": 0.09640845295173961,
+            "radial_center": 1.4421962643847568,
+            "radial_width": 2.271184848191768,
+            "entropy": 0.3257445040388514,
+            "participation": 0.0013323317921845384,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.7511889396230728
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9815638734266243,
+            "center": [
+              0.8720177951367735,
+              1.5829351718288365e-17,
+              -1.8431436932253575e-18
+            ],
+            "eigenvalues": [
+              1.5384339218390373,
+              1.5384339218390368,
+              1.2953270173764069
+            ],
+            "anisotropy": 0.1580223245285839,
+            "radial_center": 0.8876898095257926,
+            "radial_width": 1.8931987912310064,
+            "entropy": 0.20691438511470564,
+            "participation": 0.0010489109188750521,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.8466370329219909
+          },
+          "divergence": {
+            "L1": 0.195559034393661,
+            "L2": 0.09552959773688323,
+            "Jensen_Shannon": 0.02317330671786491,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -1
+            ],
+            "minimum_difference": 3.2487204102042764e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "full": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.992601310492879,
+            "center": [
+              0.5671259919189838,
+              3.2526065174565133e-18,
+              5.204170427930421e-18
+            ],
+            "eigenvalues": [
+              5.1176186267590245,
+              5.1176186267590245,
+              4.596159787494059
+            ],
+            "anisotropy": 0.10189482204444833,
+            "radial_center": 2.8486304986131445,
+            "radial_width": 2.591659955199204,
+            "entropy": 0.6053419457890594,
+            "participation": 0.0031396627200891715,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.4891557201673865
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.980518318260829,
+            "center": [
+              0.7150895729308827,
+              -1.3010426069826053e-18,
+              5.854691731421724e-18
+            ],
+            "eigenvalues": [
+              3.4137930721119547,
+              3.413793072111952,
+              2.8599754104030297
+            ],
+            "anisotropy": 0.1622294175453065,
+            "radial_center": 1.9149193336963561,
+            "radial_width": 2.4537003688435224,
+            "entropy": 0.41695549881269,
+            "participation": 0.001727751541240881,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.6595876404925471
+          },
+          "divergence": {
+            "L1": 0.3776847412239486,
+            "L2": 0.1706114313775421,
+            "Jensen_Shannon": 0.04740946105638574,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -1
+            ],
+            "minimum_difference": 6.465952554834476e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 0.9999999999999996
+        },
+        {
+          "step": 10,
+          "full": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9929961486081216,
+            "center": [
+              0.34193706621093717,
+              9.75781955236954e-17,
+              1.2576745200831851e-17
+            ],
+            "eigenvalues": [
+              7.617085753701778,
+              7.617085753701777,
+              6.861291659178019
+            ],
+            "anisotropy": 0.09922352445047045,
+            "radial_center": 4.089713975710693,
+            "radial_width": 2.3172619108461134,
+            "entropy": 0.8350526847617957,
+            "participation": 0.013008661935706862,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.23947785678926878
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9802489722315535,
+            "center": [
+              0.5248100079738088,
+              9.974659986866641e-18,
+              1.3010426069826053e-17
+            ],
+            "eigenvalues": [
+              5.661250710468111,
+              5.661250710468108,
+              4.736807110005804
+            ],
+            "anisotropy": 0.1632931745546855,
+            "radial_center": 3.072010788436898,
+            "radial_width": 2.5733360151113818,
+            "entropy": 0.6408714036006236,
+            "participation": 0.003963317120207762,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.435178138349752
+          },
+          "divergence": {
+            "L1": 0.5048206053360931,
+            "L2": 0.19601868542574458,
+            "Jensen_Shannon": 0.06856324620764057,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              3
+            ],
+            "minimum_difference": 8.274553020949193e-07
+          },
+          "mass_full": 1.0000000000000002,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "full": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9958765672720142,
+            "center": [
+              0.15226869764909223,
+              1.0018028073766061e-16,
+              1.3010426069826053e-18
+            ],
+            "eigenvalues": [
+              9.431636691959662,
+              9.43163669195966,
+              8.70834291762187
+            ],
+            "anisotropy": 0.07668804449967737,
+            "radial_center": 4.947785998351186,
+            "radial_width": 1.7581325365458569,
+            "entropy": 0.9716458645937907,
+            "participation": 0.18706802936634329,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.057798388717007064
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.982972769404582,
+            "center": [
+              0.31060644677612154,
+              -7.632783294297951e-17,
+              1.3010426069826053e-17
+            ],
+            "eigenvalues": [
+              8.11217032432328,
+              8.112170324323277,
+              6.877964254606317
+            ],
+            "anisotropy": 0.15214252417954766,
+            "radial_center": 4.256269823354334,
+            "radial_width": 2.2330409969492555,
+            "entropy": 0.8547189958888255,
+            "participation": 0.020519664662791797,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.18970969933607174
+          },
+          "divergence": {
+            "L1": 0.5017120511202966,
+            "L2": 0.13257284445182355,
+            "Jensen_Shannon": 0.0735172939795437,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -4,
+              -5,
+              0
+            ],
+            "minimum_difference": 8.9755131951752e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "full": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.999166522996493,
+            "center": [
+              0.0540521867545774,
+              -3.426078865054194e-17,
+              7.806255641895632e-18
+            ],
+            "eigenvalues": [
+              9.963577768125166,
+              9.963577768125164,
+              9.615337756446369
+            ],
+            "anisotropy": 0.034951301609032814,
+            "radial_center": 5.22193355045637,
+            "radial_width": 1.5079467123591432,
+            "entropy": 0.9992491360276777,
+            "participation": 0.9824709205603737,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.004019284865484324
+          },
+          "fractured": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9907776188732247,
+            "center": [
+              0.16087581006714632,
+              8.326672684688674e-17,
+              2.688821387764051e-17
+            ],
+            "eigenvalues": [
+              9.623309180725684,
+              9.623309180725682,
+              8.532538310382867
+            ],
+            "anisotropy": 0.1133467552437678,
+            "radial_center": 4.979478053420268,
+            "radial_width": 1.7274128016603567,
+            "entropy": 0.9654654120205959,
+            "participation": 0.34098723402651837,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              1,
+              0,
+              0
+            ],
+            "peak_energy": 0.03664190968049782
+          },
+          "divergence": {
+            "L1": 0.4117518775157566,
+            "L2": 0.03506730142951122,
+            "Jensen_Shannon": 0.04913817235357546,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -4
+            ],
+            "minimum_difference": 7.536727573954037e-09
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "axis_outer",
+      "initial_coordinate": [
+        5,
+        0,
+        0
+      ],
+      "snapshots": [
+        {
+          "step": 0,
+          "full": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "fractured": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "divergence": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.479811365639045,
+            "center": [
+              4.667034584253138,
+              1.4094628242311558e-18,
+              -1.6263032587282567e-19
+            ],
+            "eigenvalues": [
+              1.9527837743742,
+              0.801324503311259,
+              0.8013245033112582
+            ],
+            "anisotropy": 0.5896501631021309,
+            "radial_center": 0.8001205456641848,
+            "radial_width": 1.7074073601231685,
+            "entropy": 0.11778083653885839,
+            "participation": 0.0008881503582870727,
+            "support_1e-12": 1329,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.9200883002207504
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.529789005702498,
+            "center": [
+              4.7560706401766115,
+              1.4094628242311558e-18,
+              -1.0842021724855044e-19
+            ],
+            "eigenvalues": [
+              1.443221057555954,
+              0.623252391464312,
+              0.623252391464312
+            ],
+            "anisotropy": 0.5681518169366453,
+            "radial_center": 0.6076485132603451,
+            "radial_width": 1.5233151757981902,
+            "entropy": 0.09192655219351153,
+            "participation": 0.0008547465392524455,
+            "support_1e-12": 1087,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.937895511405445
+          },
+          "divergence": {
+            "L1": 0.03561442236938931,
+            "L2": 0.01782559757181735,
+            "Jensen_Shannon": 0.0038847790001088527,
+            "exact_equal_coordinates": 1,
+            "near_equal_1e-12": 845,
+            "closest_coordinate": [
+              -5,
+              0,
+              0
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.523417441466917,
+            "center": [
+              4.35761893971512,
+              -3.859759734048396e-17,
+              -8.023096076392733e-18
+            ],
+            "eigenvalues": [
+              3.5859242429826663,
+              1.5384516517306759,
+              1.5384516517306754
+            ],
+            "anisotropy": 0.5709748596219544,
+            "radial_center": 1.4686524383404846,
+            "radial_width": 2.1227076015788353,
+            "entropy": 0.21148423293098617,
+            "participation": 0.001049089030529818,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.8465680301004774
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.564569080997593,
+            "center": [
+              4.526581287587031,
+              4.336808689942018e-19,
+              -3.469446951953614e-18
+            ],
+            "eigenvalues": [
+              2.69719145619218,
+              1.2076122202784052,
+              1.207612220278405
+            ],
+            "anisotropy": 0.5522704858396377,
+            "radial_center": 1.1367803892679542,
+            "radial_width": 1.9545194405082773,
+            "entropy": 0.16671134417902142,
+            "participation": 0.0009716670288879742,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.8796522298946169
+          },
+          "divergence": {
+            "L1": 0.06830674526404257,
+            "L2": 0.03312037240992219,
+            "Jensen_Shannon": 0.007233972908038851,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -4,
+              -2
+            ],
+            "minimum_difference": 1.3536335042500878e-09
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.6417448331158897,
+            "center": [
+              3.5540662677794472,
+              -4.96564594998361e-17,
+              -8.673617379884035e-18
+            ],
+            "eigenvalues": [
+              7.019837383832148,
+              3.413936570304836,
+              3.413936570304834
+            ],
+            "anisotropy": 0.5136729836267009,
+            "radial_center": 2.8930725137267426,
+            "radial_width": 2.340479001136446,
+            "entropy": 0.42694900718805107,
+            "participation": 0.0017285995906947936,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.6594445818881534
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.6594677268308398,
+            "center": [
+              3.9161633686484048,
+              -9.324138683375338e-18,
+              -8.239936510889834e-18
+            ],
+            "eigenvalues": [
+              5.546132734481014,
+              2.7507725295743573,
+              2.7507725295743573
+            ],
+            "anisotropy": 0.504019708639057,
+            "radial_center": 2.354000652950874,
+            "radial_width": 2.3465631718614732,
+            "entropy": 0.34592721699485035,
+            "participation": 0.0014272266151084511,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.7257624574635883
+          },
+          "divergence": {
+            "L1": 0.15070768428296472,
+            "L2": 0.06640574349189073,
+            "Jensen_Shannon": 0.01533221818132329,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              4,
+              -2
+            ],
+            "minimum_difference": 1.9545279388645835e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 10,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.792679306312022,
+            "center": [
+              2.5479242515166822,
+              -7.068998164605489e-17,
+              -1.1709383462843448e-17
+            ],
+            "eigenvalues": [
+              9.715312456990937,
+              5.661883746193516,
+              5.661883746193514
+            ],
+            "anisotropy": 0.41722062247011515,
+            "radial_center": 4.122511828974732,
+            "radial_width": 2.0109639900657954,
+            "entropy": 0.6569562308731552,
+            "participation": 0.00396866259582999,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.4349646403340344
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.7844217225160692,
+            "center": [
+              3.114873444003291,
+              -8.370040771588094e-17,
+              8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              8.228746701641539,
+              4.743235469849519,
+              4.743235469849516
+            ],
+            "anisotropy": 0.423577411988718,
+            "radial_center": 3.5700198397166374,
+            "radial_width": 2.2293891507249666,
+            "entropy": 0.5540762397236663,
+            "participation": 0.0027069073942996556,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.5268117139134117
+          },
+          "divergence": {
+            "L1": 0.24553501927278892,
+            "L2": 0.09202374661312576,
+            "Jensen_Shannon": 0.024220638108450397,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              4,
+              -2
+            ],
+            "minimum_difference": 2.790855052109864e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0000000000000002
+        },
+        {
+          "step": 20,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.944020472919084,
+            "center": [
+              1.3471656337482245,
+              -4.9439619065339e-17,
+              -8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              10.746345797091873,
+              8.115839471561204,
+              8.115839471561204
+            ],
+            "anisotropy": 0.2447814703899185,
+            "radial_center": 4.949571863706575,
+            "radial_width": 1.5747263591553038,
+            "entropy": 0.8757067098976591,
+            "participation": 0.020652150700668646,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.18945417532801787
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9250651580906517,
+            "center": [
+              2.0749673423215382,
+              -7.806255641895632e-18,
+              8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              9.99772643727956,
+              7.229729506879973,
+              7.229729506879971
+            ],
+            "anisotropy": 0.2768626394975434,
+            "radial_center": 4.6001276797929025,
+            "radial_width": 1.8154918839374228,
+            "entropy": 0.7857120383570323,
+            "participation": 0.009680855226682876,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.2777633622899206
+          },
+          "divergence": {
+            "L1": 0.33142342004339964,
+            "L2": 0.08870835898412333,
+            "Jensen_Shannon": 0.0317742398914152,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -1,
+              -5,
+              -5
+            ],
+            "minimum_difference": 5.3765445602973246e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "full": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.9974887216334754,
+            "center": [
+              0.42644563208813624,
+              -3.729655473350135e-17,
+              6.071532165918825e-18
+            ],
+            "eigenvalues": [
+              10.246064688543504,
+              9.641686439296107,
+              9.641686439296105
+            ],
+            "anisotropy": 0.05898637844080523,
+            "radial_center": 5.22664616221852,
+            "radial_width": 1.4871474244681084,
+            "entropy": 0.9846243198882619,
+            "participation": 0.3703147870449657,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.03640684741002672
+          },
+          "fractured": {
+            "geometry_class": "isotropic-volume",
+            "effective_dimension": 2.992955924591495,
+            "center": [
+              1.1404070510200681,
+              3.8163916471489756e-17,
+              1.734723475976807e-17
+            ],
+            "eigenvalues": [
+              10.191848617350837,
+              9.210321044078102,
+              9.210321044078098
+            ],
+            "anisotropy": 0.09630515622080216,
+            "radial_center": 5.1074829282313505,
+            "radial_width": 1.5893737267654608,
+            "entropy": 0.9445592760495163,
+            "participation": 0.11049019459808325,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              0,
+              0
+            ],
+            "peak_energy": 0.0776666608106844
+          },
+          "divergence": {
+            "L1": 0.3296816523850474,
+            "L2": 0.04244516855716867,
+            "Jensen_Shannon": 0.029432446963903725,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              0,
+              1
+            ],
+            "minimum_difference": 7.306669869155697e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "plane_diagonal",
+      "initial_coordinate": [
+        3,
+        3,
+        0
+      ],
+      "snapshots": [
+        {
+          "step": 0,
+          "full": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "fractured": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              0.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 1.0
+          },
+          "divergence": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.3231721097502045,
+            "center": [
+              2.806291390728496,
+              2.8062913907284828,
+              -1.8973538018496328e-18
+            ],
+            "eigenvalues": [
+              1.6103844129643459,
+              0.7770419426048575,
+              0.4079470198675487
+            ],
+            "anisotropy": 0.7466772426612025,
+            "radial_center": 0.6816860886187709,
+            "radial_width": 1.5266556429071994,
+            "entropy": 0.11267589188678832,
+            "participation": 0.000883480237129118,
+            "support_1e-12": 1131,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9225165562913906
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.5289121888027384,
+            "center": [
+              2.984768211920532,
+              2.9847682119205308,
+              0.0
+            ],
+            "eigenvalues": [
+              0.11833657393194255,
+              0.08903605592347315,
+              0.03440029433406917
+            ],
+            "anisotropy": 0.7093012482019854,
+            "radial_center": 0.06427539139271951,
+            "radial_width": 0.4874849723332993,
+            "entropy": 0.013131542799128478,
+            "participation": 0.0007651082921642556,
+            "support_1e-12": 185,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.991317144959529
+          },
+          "divergence": {
+            "L1": 0.1376011773362768,
+            "L2": 0.06883996622336098,
+            "Jensen_Shannon": 0.023409597157325587,
+            "exact_equal_coordinates": 199,
+            "near_equal_1e-12": 295,
+            "closest_coordinate": [
+              -5,
+              3,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.36549181080726,
+            "center": [
+              2.625838623333068,
+              2.625838623333066,
+              -2.710505431213761e-18
+            ],
+            "eigenvalues": [
+              2.988365546950492,
+              1.4937138478331857,
+              0.8023629689730964
+            ],
+            "anisotropy": 0.7315044105658774,
+            "radial_center": 1.2602536973262328,
+            "radial_width": 1.9225511650232692,
+            "entropy": 0.20278347529831933,
+            "participation": 0.001038082208294746,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.8510430314676471
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.5327563876553976,
+            "center": [
+              2.969544345304327,
+              2.969544345304323,
+              4.336808689942018e-19
+            ],
+            "eigenvalues": [
+              0.23691523167799894,
+              0.17714348406854571,
+              0.06956973540796625
+            ],
+            "anisotropy": 0.7063517828076107,
+            "radial_center": 0.1278660876110203,
+            "radial_width": 0.6835778776361634,
+            "entropy": 0.024648368256582606,
+            "participation": 0.0007785681076444732,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9827101691987735
+          },
+          "divergence": {
+            "L1": 0.26379969256275876,
+            "L2": 0.13174149115357675,
+            "Jensen_Shannon": 0.045646391895237295,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              2,
+              -3,
+              -1
+            ],
+            "minimum_difference": 3.248720410255776e-08
+          },
+          "mass_full": 0.9999999999999999,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.483181639737099,
+            "center": [
+              2.1549460057798275,
+              2.154946005779825,
+              -4.119968255444917e-18
+            ],
+            "eigenvalues": [
+              6.033541057983932,
+              3.3261081890731194,
+              1.9040381221623002
+            ],
+            "anisotropy": 0.6844244360212373,
+            "radial_center": 2.533012048302558,
+            "radial_width": 2.2017123636781952,
+            "entropy": 0.4119739902042946,
+            "participation": 0.0016835836908327267,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.6681974565024894
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.5433186359008464,
+            "center": [
+              2.9239455561837864,
+              2.923945556183787,
+              -2.6020852139652106e-18
+            ],
+            "eigenvalues": [
+              0.5932477403004712,
+              0.43606405942390714,
+              0.17912798517997963
+            ],
+            "anisotropy": 0.698055343473784,
+            "radial_center": 0.31452182306239124,
+            "radial_width": 1.053335562734814,
+            "entropy": 0.05627348358284228,
+            "participation": 0.0008203758012555308,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9573378053866064
+          },
+          "divergence": {
+            "L1": 0.5825273729861757,
+            "L2": 0.289298180828889,
+            "Jensen_Shannon": 0.10643850863301368,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              -2
+            ],
+            "minimum_difference": 3.3762100803738627e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 0.9999999999999999
+        },
+        {
+          "step": 10,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.644169946906554,
+            "center": [
+              1.559696343908745,
+              1.5596963439087457,
+              -4.7704895589362195e-18
+            ],
+            "eigenvalues": [
+              8.760603941032983,
+              5.542601282780241,
+              3.4767869521597086
+            ],
+            "anisotropy": 0.6031338734678887,
+            "radial_center": 3.714841707318397,
+            "radial_width": 1.9949795150679268,
+            "entropy": 0.639581494188582,
+            "participation": 0.0037645706502114516,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.4465947866697551
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.558463290832879,
+            "center": [
+              2.848326013058729,
+              2.848326013058736,
+              -4.336808689942018e-19
+            ],
+            "eigenvalues": [
+              1.184772314220294,
+              0.8505238019309077,
+              0.3723511715293615
+            ],
+            "anisotropy": 0.6857192162070329,
+            "radial_center": 0.6119329525017786,
+            "radial_width": 1.4258980851810616,
+            "entropy": 0.10426489555851548,
+            "participation": 0.0008950720277003954,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.9165064329023583
+          },
+          "divergence": {
+            "L1": 0.956426852142385,
+            "L2": 0.47015908428587644,
+            "Jensen_Shannon": 0.19002057415753054,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              1
+            ],
+            "minimum_difference": 1.9092698803101823e-06
+          },
+          "mass_full": 0.9999999999999998,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.841606366875655,
+            "center": [
+              0.8374540270330013,
+              0.8374540270330024,
+              -1.3444106938820255e-17
+            ],
+            "eigenvalues": [
+              10.43901539328628,
+              7.998643549022943,
+              5.773470425635654
+            ],
+            "anisotropy": 0.44693343115972517,
+            "radial_center": 4.647137639464091,
+            "radial_width": 1.6171707169686749,
+            "entropy": 0.8631404898957711,
+            "participation": 0.01860046012384061,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.19972521944989619
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.583318550347948,
+            "center": [
+              2.699333904733896,
+              2.699333904733895,
+              8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              2.3350756650426368,
+              1.6213348628728914,
+              0.7827013900123938
+            ],
+            "anisotropy": 0.6648068404249752,
+            "radial_center": 1.1566682885296826,
+            "radial_width": 1.844242497134728,
+            "entropy": 0.19031307937426434,
+            "participation": 0.0010653577059570548,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.8400214462961575
+          },
+          "divergence": {
+            "L1": 1.3347264963364163,
+            "L2": 0.6406328850771105,
+            "Jensen_Shannon": 0.3014373241037255,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              0
+            ],
+            "minimum_difference": 4.976549437723035e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.9678959205728646,
+            "center": [
+              0.26860058559104993,
+              0.26860058559104966,
+              -8.673617379884035e-19
+            ],
+            "eigenvalues": [
+              10.554909293938952,
+              9.569063113983507,
+              8.164802604763707
+            ],
+            "anisotropy": 0.2264450240749808,
+            "radial_center": 5.106830754392615,
+            "radial_width": 1.4862888880281462,
+            "entropy": 0.9811092440755952,
+            "participation": 0.32060717781953374,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.040422639775691376
+          },
+          "fractured": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.624703361191471,
+            "center": [
+              2.4146311574300956,
+              2.4146311574300943,
+              -8.673617379884035e-18
+            ],
+            "eigenvalues": [
+              4.406091307024929,
+              2.964863705431709,
+              1.6282713585627047
+            ],
+            "anisotropy": 0.6304499282693843,
+            "radial_center": 2.06299645966794,
+            "radial_width": 2.177905410805732,
+            "entropy": 0.3354816993945783,
+            "participation": 0.0015085803609121006,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              0
+            ],
+            "peak_energy": 0.705753283656662
+          },
+          "divergence": {
+            "L1": 1.4934200209042274,
+            "L2": 0.6657608322718677,
+            "Jensen_Shannon": 0.3731334320255746,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              5,
+              1
+            ],
+            "minimum_difference": 2.003216150175285e-05
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "space_diagonal",
+      "initial_coordinate": [
+        3,
+        3,
+        3
+      ],
+      "snapshots": [
+        {
+          "step": 0,
+          "full": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 1.0
+          },
+          "fractured": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              3.0,
+              3.0,
+              3.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 1.0
+          },
+          "divergence": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.745408972304053,
+            "center": [
+              2.8592715231788226,
+              2.859271523178813,
+              2.8592715231788115
+            ],
+            "eigenvalues": [
+              1.6289970834612526,
+              0.29668874172185494,
+              0.2966887417218542
+            ],
+            "anisotropy": 0.8178703051502969,
+            "radial_center": 0.5482662429822397,
+            "radial_width": 1.386282328283492,
+            "entropy": 0.08267850385049832,
+            "participation": 0.0008442489210334251,
+            "support_1e-12": 897,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9437086092715231
+          },
+          "fractured": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9692529358895288,
+            "center": [
+              2.9964679911699785,
+              2.9964679911699785,
+              2.9964679911699785
+            ],
+            "eigenvalues": [
+              0.037490168559858476,
+              0.009050772626931564,
+              0.009050772626931557
+            ],
+            "anisotropy": 0.7585827705074014,
+            "radial_center": 0.015962832362486558,
+            "radial_width": 0.23523796844193492,
+            "entropy": 0.003168210936145914,
+            "participation": 0.0007549874843741414,
+            "support_1e-12": 51,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9979396615158205
+          },
+          "divergence": {
+            "L1": 0.10846210448859467,
+            "L2": 0.05426738254502551,
+            "Jensen_Shannon": 0.018879751708270675,
+            "exact_equal_coordinates": 433,
+            "near_equal_1e-12": 457,
+            "closest_coordinate": [
+              -5,
+              -5,
+              3
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.7827789642011846,
+            "center": [
+              2.725115498778752,
+              2.725115498778753,
+              2.725115498778753
+            ],
+            "eigenvalues": [
+              3.080517056777347,
+              0.5905452489900546,
+              0.5905452489900543
+            ],
+            "anisotropy": 0.8082967118488065,
+            "radial_center": 1.0316560608593701,
+            "radial_width": 1.7880976838108096,
+            "entropy": 0.15093166616685824,
+            "participation": 0.0009479477013254995,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.8905900623808465
+          },
+          "fractured": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9715698422117267,
+            "center": [
+              2.9929055445369825,
+              2.9929055445369834,
+              2.9929055445369848
+            ],
+            "eigenvalues": [
+              0.07554026883394227,
+              0.01828524414946065,
+              0.018285244149460627
+            ],
+            "anisotropy": 0.7579404411485947,
+            "radial_center": 0.032002173556454586,
+            "radial_width": 0.3332965916725314,
+            "entropy": 0.005986142011798935,
+            "participation": 0.000758107840130745,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9958836600733886
+          },
+          "divergence": {
+            "L1": 0.21065583272555183,
+            "L2": 0.10536221786566358,
+            "Jensen_Shannon": 0.03727128098481593,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              -3,
+              0
+            ],
+            "minimum_difference": 1.90862324102393e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.896379896213639,
+            "center": [
+              2.3591552168022125,
+              2.359155216802212,
+              2.3591552168022134
+            ],
+            "eigenvalues": [
+              6.535450190975221,
+              1.4479411835214364,
+              1.4479411835214355
+            ],
+            "anisotropy": 0.7784481342202114,
+            "radial_center": 2.169083187138675,
+            "radial_width": 2.174030976157059,
+            "entropy": 0.3183166108467441,
+            "participation": 0.0013417459301860192,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.7485319239235604
+          },
+          "fractured": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9782021286977065,
+            "center": [
+              2.9820478644482318,
+              2.982047864448236,
+              2.9820478644482367
+            ],
+            "eigenvalues": [
+              0.19276027381310684,
+              0.04701464971777211,
+              0.04701464971777206
+            ],
+            "anisotropy": 0.7560978266540765,
+            "radial_center": 0.08052433301522971,
+            "radial_width": 0.5294387642032867,
+            "entropy": 0.01390808731411272,
+            "participation": 0.0007675449285085381,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9897415676982848
+          },
+          "divergence": {
+            "L1": 0.4830809446812934,
+            "L2": 0.241355532983103,
+            "Jensen_Shannon": 0.08976356333867971,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              0,
+              -3
+            ],
+            "minimum_difference": 8.083411779194764e-07
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 10,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.085827019515073,
+            "center": [
+              1.8551550758686577,
+              1.855155075868656,
+              1.855155075868656
+            ],
+            "eigenvalues": [
+              10.078311523384695,
+              2.768460692968049,
+              2.7684606929680475
+            ],
+            "anisotropy": 0.7253051082471116,
+            "radial_center": 3.3542407525168905,
+            "radial_width": 2.0890911620787915,
+            "entropy": 0.5209825017434949,
+            "participation": 0.0023928221850229377,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.5603741232469248
+          },
+          "fractured": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.9883846558080327,
+            "center": [
+              2.9634491493528614,
+              2.963449149352855,
+              2.9634491493528556
+            ],
+            "eigenvalues": [
+              0.39683256101112807,
+              0.09791549065826433,
+              0.09791549065826427
+            ],
+            "anisotropy": 0.7532574181695778,
+            "radial_center": 0.16245308353814802,
+            "radial_width": 0.7525108224979917,
+            "entropy": 0.026465472421237007,
+            "participation": 0.000783530353706145,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9795904725852882
+          },
+          "divergence": {
+            "L1": 0.8412151310295913,
+            "L2": 0.4194456785845769,
+            "Jensen_Shannon": 0.16865588491123873,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -3,
+              0,
+              0
+            ],
+            "minimum_difference": 1.8173049006012265e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.4287105395417763,
+            "center": [
+              1.1482867524012064,
+              1.1482867524012057,
+              1.148286752401205
+            ],
+            "eigenvalues": [
+              12.644640452835327,
+              4.928085957777508,
+              4.928085957777508
+            ],
+            "anisotropy": 0.610262863846597,
+            "radial_center": 4.431410950937997,
+            "radial_width": 1.6921611484421704,
+            "entropy": 0.7611384170738646,
+            "participation": 0.0075820759776942855,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.314222972335453
+          },
+          "fractured": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.006464451059815,
+            "center": [
+              2.924759848904741,
+              2.9247598489047415,
+              2.9247598489047424
+            ],
+            "eigenvalues": [
+              0.828568543090192,
+              0.20865102591472953,
+              0.20865102591472942
+            ],
+            "anisotropy": 0.7481789193485986,
+            "radial_center": 0.3285754922270369,
+            "radial_width": 1.0667280538297526,
+            "entropy": 0.05070459319600581,
+            "participation": 0.0008164910156782065,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.9596050691484825
+          },
+          "divergence": {
+            "L1": 1.300842493310907,
+            "L2": 0.6456923144261413,
+            "Jensen_Shannon": 0.29606290858518436,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -3,
+              0,
+              0
+            ],
+            "minimum_difference": 2.766426756407338e-05
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "full": {
+            "geometry_class": "anisotropic-volume",
+            "effective_dimension": 2.831990515930525,
+            "center": [
+              0.4442883759667889,
+              0.4442883759667891,
+              0.44428837596678866
+            ],
+            "eigenvalues": [
+              12.299009367997572,
+              7.572394442790075,
+              7.572394442790074
+            ],
+            "anisotropy": 0.3843085880970467,
+            "radial_center": 5.027652842726016,
+            "radial_width": 1.4719052777290857,
+            "entropy": 0.9415779256128195,
+            "participation": 0.07172665112901737,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.09916541346460724
+          },
+          "fractured": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 2.037530116744455,
+            "center": [
+              2.8434780575684893,
+              2.8434780575684817,
+              2.8434780575684817
+            ],
+            "eigenvalues": [
+              1.7403739971481884,
+              0.4536414842234588,
+              0.4536414842234584
+            ],
+            "anisotropy": 0.739342529268534,
+            "radial_center": 0.6613148154763453,
+            "radial_width": 1.4867143910067573,
+            "entropy": 0.0973281995739934,
+            "participation": 0.0008865769055375117,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              3,
+              3,
+              3
+            ],
+            "peak_energy": 0.92086708219757
+          },
+          "divergence": {
+            "L1": 1.6797193833954664,
+            "L2": 0.8220661652375157,
+            "Jensen_Shannon": 0.4469787260952809,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              0,
+              5,
+              5
+            ],
+            "minimum_difference": 7.301087423328373e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    },
+    {
+      "name": "corner",
+      "initial_coordinate": [
+        5,
+        5,
+        5
+      ],
+      "snapshots": [
+        {
+          "step": 0,
+          "full": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 1.0
+          },
+          "fractured": {
+            "geometry_class": "point",
+            "effective_dimension": 0.0,
+            "center": [
+              5.0,
+              5.0,
+              5.0
+            ],
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "anisotropy": 0.0,
+            "radial_center": 0.0,
+            "radial_width": 0.0,
+            "entropy": -0.0,
+            "participation": 0.0007518796992481203,
+            "support_1e-12": 1,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 1.0
+          },
+          "divergence": {
+            "L1": 0.0,
+            "L2": 0.0,
+            "Jensen_Shannon": 0.0,
+            "exact_equal_coordinates": 1330,
+            "near_equal_1e-12": 1330,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 1,
+          "full": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.1704443539217508,
+            "center": [
+              4.901582045621781,
+              4.901582045621781,
+              4.901582045621781
+            ],
+            "eigenvalues": [
+              1.6602353170020154,
+              0.06953642384106014,
+              0.06953642384105937
+            ],
+            "anisotropy": 0.9581165253329116,
+            "radial_center": 0.34556253995201675,
+            "radial_width": 1.2961075170162568,
+            "entropy": 0.03525587259650688,
+            "participation": 0.0007886970646609886,
+            "support_1e-12": 429,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9763796909492274
+          },
+          "fractured": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.290851458837924,
+            "center": [
+              4.9575055187637975,
+              4.9575055187637975,
+              4.9575055187637975
+            ],
+            "eigenvalues": [
+              0.6089682348240089,
+              0.04319352465047845,
+              0.04319352465047827
+            ],
+            "anisotropy": 0.9290709725393786,
+            "radial_center": 0.15367881110961318,
+            "radial_width": 0.8195963074226854,
+            "entropy": 0.018930560352514603,
+            "participation": 0.0007709340741865799,
+            "support_1e-12": 277,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9875643855776306
+          },
+          "divergence": {
+            "L1": 0.022369389256806448,
+            "L2": 0.011203075404366868,
+            "Jensen_Shannon": 0.002429151440031244,
+            "exact_equal_coordinates": 1025,
+            "near_equal_1e-12": 1025,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -5
+            ],
+            "minimum_difference": 0.0
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 2,
+          "full": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.1816485905911798,
+            "center": [
+              4.804527809317438,
+              4.804527809317438,
+              4.804527809317438
+            ],
+            "eigenvalues": [
+              3.243385933344297,
+              0.14464947931133634,
+              0.14464947931133618
+            ],
+            "anisotropy": 0.9554017060306523,
+            "radial_center": 0.6722105284382547,
+            "radial_width": 1.7552258821655207,
+            "entropy": 0.06591226037897613,
+            "participation": 0.0008273123318748696,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9533187492859583
+          },
+          "fractured": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.2963531570319249,
+            "center": [
+              4.915287679606862,
+              4.915287679606862,
+              4.915287679606862
+            ],
+            "eigenvalues": [
+              1.2058352237549923,
+              0.08712360189963501,
+              0.0871236018996347
+            ],
+            "anisotropy": 0.9277483356073061,
+            "radial_center": 0.30306718756094775,
+            "radial_width": 1.1350033953156962,
+            "entropy": 0.035443648853668165,
+            "participation": 0.0007904693155780828,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.975284041040002
+          },
+          "divergence": {
+            "L1": 0.044307694973309046,
+            "L2": 0.02199958636545036,
+            "Jensen_Shannon": 0.004762172956013741,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -4
+            ],
+            "minimum_difference": 8.663254427329311e-08
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 5,
+          "full": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.2154610432157857,
+            "center": [
+              4.521742368921508,
+              4.521742368921508,
+              4.521742368921508
+            ],
+            "eigenvalues": [
+              7.547251106464877,
+              0.39828959271924635,
+              0.39828959271924447
+            ],
+            "anisotropy": 0.9472271974125686,
+            "radial_center": 1.5470692287811436,
+            "radial_width": 2.439345628085919,
+            "entropy": 0.1480153841950371,
+            "participation": 0.0009548442506485698,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.88736065682016
+          },
+          "fractured": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3127715496689685,
+            "center": [
+              4.790312346141733,
+              4.790312346141733,
+              4.790312346141733
+            ],
+            "eigenvalues": [
+              2.9245425572379657,
+              0.22284378457111034,
+              0.22284378457110893
+            ],
+            "anisotropy": 0.9238021741145153,
+            "radial_center": 0.7264851178944481,
+            "radial_width": 1.6859565533720247,
+            "entropy": 0.080295987680382,
+            "participation": 0.0008520828209443983,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.9393552498265121
+          },
+          "divergence": {
+            "L1": 0.10736593845680509,
+            "L2": 0.0520654091018771,
+            "Jensen_Shannon": 0.011410853886408424,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              -5,
+              -4
+            ],
+            "minimum_difference": 1.1436028876843547e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 0.9999999999999998
+        },
+        {
+          "step": 10,
+          "full": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.273124343730232,
+            "center": [
+              4.079009656285199,
+              4.0790096562852,
+              4.0790096562852
+            ],
+            "eigenvalues": [
+              13.349485740117569,
+              0.8899547664419941,
+              0.8899547664419927
+            ],
+            "anisotropy": 0.9333341535571276,
+            "radial_center": 2.7030569927962556,
+            "radial_width": 2.7969408586340934,
+            "entropy": 0.2655334884196354,
+            "participation": 0.0012124329096863612,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.7874370073835733
+          },
+          "fractured": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3399823390016807,
+            "center": [
+              4.587695078644256,
+              4.587695078644256,
+              4.587695078644256
+            ],
+            "eigenvalues": [
+              5.554883518571025,
+              0.4595919674520665,
+              0.45959196745206626
+            ],
+            "anisotropy": 0.9172634374932321,
+            "radial_center": 1.3555801817192799,
+            "radial_width": 2.153246345499064,
+            "entropy": 0.14694338423691033,
+            "participation": 0.000965580535865244,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.8824021336503197
+          },
+          "divergence": {
+            "L1": 0.20268505778667434,
+            "L2": 0.09507415498399976,
+            "Jensen_Shannon": 0.02154877257763199,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              5,
+              -5,
+              5
+            ],
+            "minimum_difference": 5.221016797678535e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 20,
+          "full": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3967933373038717,
+            "center": [
+              3.300416762428803,
+              3.3004167624288026,
+              3.3004167624288026
+            ],
+            "eigenvalues": [
+              20.730259831747507,
+              1.998309801486931,
+              1.9983098014869272
+            ],
+            "anisotropy": 0.9036042086444762,
+            "radial_center": 4.191216857362407,
+            "radial_width": 2.6759261367389344,
+            "entropy": 0.45183222870706574,
+            "participation": 0.001954044291178916,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.620141282244327
+          },
+          "fractured": {
+            "geometry_class": "filament",
+            "effective_dimension": 1.3946152132970593,
+            "center": [
+              4.204016758954228,
+              4.204016758954228,
+              4.204016758954228
+            ],
+            "eigenvalues": [
+              9.990252640679063,
+              0.957781953117223,
+              0.9577819531172218
+            ],
+            "anisotropy": 0.9041283551511747,
+            "radial_center": 2.368239520208127,
+            "radial_width": 2.5094338249569152,
+            "entropy": 0.2622578943216377,
+            "participation": 0.0012397194009134303,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.7786814991815996
+          },
+          "divergence": {
+            "L1": 0.3561066121154342,
+            "L2": 0.15869715539216012,
+            "Jensen_Shannon": 0.03888831761725574,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              -5,
+              0,
+              0
+            ],
+            "minimum_difference": 1.5255266000901253e-05
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        },
+        {
+          "step": 40,
+          "full": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.6894578598973797,
+            "center": [
+              2.127957891091736,
+              2.1279578910917354,
+              2.127957891091736
+            ],
+            "eigenvalues": [
+              24.898023026611845,
+              4.18244415617905,
+              4.18244415617905
+            ],
+            "anisotropy": 0.832017017909064,
+            "radial_center": 5.394004836720627,
+            "radial_width": 2.04147573103489,
+            "entropy": 0.6940888089509727,
+            "participation": 0.005064982596289249,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.3847812982757392
+          },
+          "fractured": {
+            "geometry_class": "sheet-or-ring",
+            "effective_dimension": 1.508446636128836,
+            "center": [
+              3.521576384827449,
+              3.5215763848274486,
+              3.5215763848274486
+            ],
+            "eigenvalues": [
+              16.05113883139312,
+              1.9802426081684086,
+              1.9802426081684068
+            ],
+            "anisotropy": 0.8766291520514787,
+            "radial_center": 3.6832249387807954,
+            "radial_width": 2.538794615181216,
+            "entropy": 0.44475145205232963,
+            "participation": 0.0020420507014021964,
+            "support_1e-12": 1330,
+            "peak_coordinate": [
+              5,
+              5,
+              5
+            ],
+            "peak_energy": 0.6064918389549538
+          },
+          "divergence": {
+            "L1": 0.5512936753026969,
+            "L2": 0.22197243474880493,
+            "Jensen_Shannon": 0.0632676916097844,
+            "exact_equal_coordinates": 0,
+            "near_equal_1e-12": 0,
+            "closest_coordinate": [
+              3,
+              3,
+              4
+            ],
+            "minimum_difference": 1.9256512799566746e-06
+          },
+          "mass_full": 1.0,
+          "mass_fractured": 1.0
+        }
+      ]
+    }
+  ]
+}

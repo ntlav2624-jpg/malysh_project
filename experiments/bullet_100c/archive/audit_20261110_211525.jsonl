@@ -1,0 +1,17 @@
+{"utc": "2026-11-10T20:08:05.590435+00:00", "kind": "simulation_step", "beta": 0.0, "status": "valid", "O345": "known_physics_consistent"}
+{"utc": "2026-11-10T20:08:05.590879+00:00", "kind": "simulation_step", "beta": 0.1, "status": "valid", "O345": "known_physics_consistent"}
+{"utc": "2026-11-10T20:08:05.591091+00:00", "kind": "simulation_step", "beta": 0.5, "status": "valid", "O345": "known_physics_consistent"}
+{"utc": "2026-11-10T20:08:05.591291+00:00", "kind": "simulation_step", "beta": 0.9, "status": "valid", "O345": "known_physics_consistent"}
+{"utc": "2026-11-10T20:08:05.591485+00:00", "kind": "simulation_step", "beta": 0.99, "status": "valid", "O345": "known_physics_consistent"}
+{"utc": "2026-11-10T20:08:05.591673+00:00", "kind": "simulation_step", "beta": 0.999, "status": "valid", "O345": "known_physics_consistent"}
+{"utc": "2026-11-10T20:08:05.591859+00:00", "kind": "simulation_step", "beta": 0.9999, "status": "valid", "O345": "known_physics_consistent"}
+{"utc": "2026-11-10T20:08:05.592015+00:00", "kind": "simulation_step", "beta": 1.0, "status": "massive_object_light_limit", "O345": "known_model_domain_boundary"}
+{"utc": "2026-11-10T20:08:05.592194+00:00", "kind": "simulation_step", "beta": 1.01, "status": "outside_known_massive_particle_dynamics", "O345": "known_model_domain_boundary"}
+{"utc": "2026-11-10T20:08:05.592356+00:00", "kind": "simulation_step", "beta": 1.1, "status": "outside_known_massive_particle_dynamics", "O345": "known_model_domain_boundary"}
+{"utc": "2026-11-10T20:08:05.592515+00:00", "kind": "simulation_step", "beta": 2.0, "status": "outside_known_massive_particle_dynamics", "O345": "known_model_domain_boundary"}
+{"utc": "2026-11-10T20:08:05.592674+00:00", "kind": "simulation_step", "beta": 10.0, "status": "outside_known_massive_particle_dynamics", "O345": "known_model_domain_boundary"}
+{"utc": "2026-11-10T20:08:05.592822+00:00", "kind": "simulation_step", "beta": 100.0, "status": "outside_known_massive_particle_dynamics", "O345": "known_model_domain_boundary"}
+{"utc": "2026-11-10T20:08:05.592993+00:00", "kind": "formula_proposed", "name": "superluminal_real_scale", "expression": "1/sqrt(beta**2-1)", "variables": ["beta"], "reason": "Real continuation scale for beta > 1; physical meaning unresolved", "fingerprint": "198101c824edf560d19020db21365bef89dde9c60fe8f7835e9871e977dbe396", "status": "hypothesis", "tests": []}
+{"utc": "2026-11-10T20:08:05.593354+00:00", "kind": "formula_tested", "name": "superluminal_real_scale", "status": "hypothesis_failed_math", "valid_count": 0, "total": 5}
+{"utc": "2026-11-10T20:08:05.593482+00:00", "kind": "formula_proposed", "name": "spacelike_scale", "expression": "sqrt(beta**2-1)", "variables": ["beta"], "reason": "Explore real spacelike interval scale without calling it ordinary proper time", "fingerprint": "d89c62f8618735429364a999b21974ca1b4de59ab33a5379f2d09f6604f0aba2", "status": "hypothesis", "tests": []}
+{"utc": "2026-11-10T20:08:05.593794+00:00", "kind": "formula_tested", "name": "spacelike_scale", "status": "hypothesis_failed_math", "valid_count": 0, "total": 5}

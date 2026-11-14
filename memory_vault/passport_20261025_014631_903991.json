@@ -1,0 +1,36 @@
+{
+    "generation": 30,
+    "timestamp": "2026-10-25T01:46:31.903950",
+    "source": "Smooth_Wave_1",
+    "mode": "SPIRAL_FLOW",
+    "predicted_strategy": "ADAPTIVE_STRATEGY",
+    "applied_strategy": "DAMPING_STRATEGY",
+    "strategy": "DAMPING_STRATEGY",
+    "meta_metric_M": 0.469,
+    "signal_class": "chaotic",
+    "confidence": 0.24447,
+    "K_metric": 3.8435,
+    "J": {
+        "pred": 0.531,
+        "smooth": 1.7368,
+        "energy": 1.0,
+        "total": 0.9396
+    },
+    "S_n": 0.469,
+    "theta": 0.99597,
+    "eta": 5.2e-05,
+    "r7_val": 0.01,
+    "energy": 200.0,
+    "forecast_10": [
+        60.53,
+        63.96,
+        64.48,
+        62.99,
+        61.53,
+        62.13,
+        65.58,
+        71.01,
+        76.41,
+        79.79
+    ]
+}

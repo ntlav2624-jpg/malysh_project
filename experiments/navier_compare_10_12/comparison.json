@@ -1,0 +1,73 @@
+{
+  "runs": [
+    {
+      "N": 10,
+      "active": 124,
+      "max_sum_t": 5.0306980803327406e-17,
+      "E0": 1.0000000000000002,
+      "E1": 0.9913057436381745,
+      "K0": 2.6654407106505587,
+      "K1": 2.6659716311774946,
+      "W0": 0.41315790414975867,
+      "W1": 0.41348496426990333,
+      "SCC0": 116,
+      "SCC1": 116,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9687761738827031,
+          "nonlinear_flux": -0.0046602624990589574,
+          "viscous_dissipation": 0.4279698530325409,
+          "flux_to_dissipation": -0.010889230785853068
+        },
+        "2.5": {
+          "energy_fraction": 0.5247447092650834,
+          "nonlinear_flux": 0.11265773426040457,
+          "viscous_dissipation": 0.2836987748781001,
+          "flux_to_dissipation": 0.39710335128803936
+        },
+        "3.0": {
+          "energy_fraction": 0.3993274106964433,
+          "nonlinear_flux": 0.0686848807609012,
+          "viscous_dissipation": 0.22402186843521515,
+          "flux_to_dissipation": 0.30659899964526977
+        }
+      }
+    },
+    {
+      "N": 12,
+      "active": 342,
+      "max_sum_t": 3.469446951953614e-17,
+      "E0": 1.0,
+      "E1": 0.9886959415867603,
+      "K0": 3.034790750581546,
+      "K1": 3.0318205308552546,
+      "W0": 0.5218347301919171,
+      "W1": 0.523042665031651,
+      "SCC0": 298,
+      "SCC1": 296,
+      "tails": {
+        "2.0": {
+          "energy_fraction": 0.9848804828790645,
+          "nonlinear_flux": -0.015744669208215288,
+          "viscous_dissipation": 0.5590817413054481,
+          "flux_to_dissipation": -0.02816165874323083
+        },
+        "2.5": {
+          "energy_fraction": 0.7670546735581962,
+          "nonlinear_flux": -0.036955320301496994,
+          "viscous_dissipation": 0.4904230758945358,
+          "flux_to_dissipation": -0.07535395889373717
+        },
+        "3.0": {
+          "energy_fraction": 0.6740501493892526,
+          "nonlinear_flux": -0.028605698941668298,
+          "viscous_dissipation": 0.4462855420089156,
+          "flux_to_dissipation": -0.0640973015009678
+        }
+      }
+    }
+  ],
+  "threshold_sumT": 1e-12,
+  "both_pass": true,
+  "note": "This compares numerical invariants and qualitative network structure. Initial random fields are not yet identical."
+}
