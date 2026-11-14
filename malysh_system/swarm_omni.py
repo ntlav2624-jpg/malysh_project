@@ -459,9 +459,9 @@ def compute_omni(
         for name in reflections
     )
 
-    visible_layers.add(
-        "Swarm"
-    )
+    # Swarm payload validity and shared-state publication are
+    # separate facts.  Swarm belongs to visible_layers only when
+    # it is actually present in observations or reflections.
 
     missing_layers = sorted(
         expected_layers.difference(
