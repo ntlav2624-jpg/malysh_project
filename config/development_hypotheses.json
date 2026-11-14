@@ -1,0 +1,24 @@
+{
+  "schema": "malysh.development-hypotheses.config.v1",
+  "subject": "Malysh",
+  "automatic_core_modification": false,
+  "automatic_execution": false,
+  "external_reviewer": "Microsoft 365 Copilot",
+  "decision_authority": false,
+  "required_branches": [
+    "primary",
+    "possible",
+    "negative",
+    "unresolved"
+  ],
+  "candidate_storage": "runtime/development_hypotheses",
+  "review_states": [
+    "pending_external_review",
+    "supported",
+    "partially_supported",
+    "possible",
+    "contradicted",
+    "insufficient_evidence"
+  ],
+  "principle": "Malysh proposes, Copilot reviews, experiment decides, Viktor controls architectural integration."
+}
