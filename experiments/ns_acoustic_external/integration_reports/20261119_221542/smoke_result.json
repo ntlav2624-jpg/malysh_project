@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "layer": "AcousticAlphabet",
+  "standalone_observer_present": true,
+  "kmbp_bridge_present": true,
+  "prediction_available": true,
+  "decision_authority": false,
+  "main_answer_write": false,
+  "winner_selection": false,
+  "existing_logic_preserved": true
+}

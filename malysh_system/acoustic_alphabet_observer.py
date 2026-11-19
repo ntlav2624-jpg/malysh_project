@@ -1,0 +1,342 @@
+"""
+Acoustic Alphabet observer for one canonical Malysh.
+
+The observer adds a compositional interpretation:
+
+    S_a (+) S_b -> S_(a+b)
+
+For spectral modes:
+
+    S_p (+) S_q -> S_(p+q)
+
+The signed scalar T(k|p,q) describes the direction and strength
+of an interaction.
+
+Temporal alphabet:
+
+    S_next = S_current + Delta_1 + Delta_2
+
+where:
+
+    Delta_1 = S_current - S_previous
+    Delta_2 = Delta_1 - (S_previous - S_old)
+
+The observer has no decision authority and cannot modify the main
+answer, possible branch, execution gate, or transaction result.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Any, Iterable, Mapping, Sequence
+
+
+SCHEMA = "malysh.acoustic-alphabet-observer.v1"
+LAYER_NAME = "AcousticAlphabet"
+
+
+@dataclass(frozen=True)
+class AlphabetSymbol:
+    """One alphabet symbol with optional physical weight."""
+
+    value: float
+    label: str = ""
+    weight: float = 1.0
+
+    def compose(self, other: "AlphabetSymbol") -> "AlphabetSymbol":
+        return AlphabetSymbol(
+            value=self.value + other.value,
+            label=f"({self.label}+{other.label})",
+            weight=self.weight * other.weight,
+        )
+
+
+def compose_numbers(a: float, b: float) -> float:
+    """S_a (+) S_b -> S_(a+b)."""
+
+    return float(a) + float(b)
+
+
+def compose_modes(
+    p: Sequence[int],
+    q: Sequence[int],
+) -> tuple[int, ...]:
+    """Vector form p + q = k."""
+
+    if len(p) != len(q):
+        raise ValueError("mode dimensions must match")
+
+    return tuple(
+        int(a) + int(b)
+        for a, b in zip(p, q)
+    )
+
+
+def zero_identity(value: float) -> bool:
+    """S_0 (+) S_n = S_n."""
+
+    numeric = float(value)
+
+    return (
+        compose_numbers(0.0, numeric) == numeric
+        and compose_numbers(numeric, 0.0) == numeric
+    )
+
+
+def temporal_predict(
+    old: Sequence[float],
+    previous: Sequence[float],
+    current: Sequence[float],
+) -> list:
+    """
+    Temporal alphabet:
+
+        next = current + delta_1 + delta_2
+             = 3*current - 3*previous + old
+    """
+
+    if not (
+        len(old)
+        == len(previous)
+        == len(current)
+    ):
+        raise ValueError("temporal symbol dimensions must match")
+
+    output: list[float] = []
+
+    for x0, x1, x2 in zip(
+        old,
+        previous,
+        current,
+    ):
+        delta_previous = float(x1) - float(x0)
+        delta_current = float(x2) - float(x1)
+        delta_change = delta_current - delta_previous
+
+        output.append(
+            float(x2)
+            + delta_current
+            + delta_change
+        )
+
+    return output
+
+
+def interaction_record(
+    p: Sequence[int],
+    q: Sequence[int],
+    transfer: float | None = None,
+) -> dict[str, Any]:
+    """
+    Build a testable triad record.
+
+    transfer > 0: contribution into k.
+    transfer < 0: contribution out of k.
+    """
+
+    k = compose_modes(p, q)
+
+    if transfer is None:
+        direction = "unknown"
+    elif transfer > 0:
+        direction = "into_k"
+    elif transfer < 0:
+        direction = "out_of_k"
+    else:
+        direction = "neutral"
+
+    return {
+        "p": list(map(int, p)),
+        "q": list(map(int, q)),
+        "k": list(k),
+        "invariant": all(
+            int(p[i]) + int(q[i]) == k[i]
+            for i in range(len(k))
+        ),
+        "transfer": (
+            None
+            if transfer is None
+            else float(transfer)
+        ),
+        "direction": direction,
+    }
+
+
+def _numeric_sequence(value: Any) -> list[float] | None:
+    if not isinstance(value, (list, tuple)):
+        return None
+
+    converted: list[float] = []
+
+    for item in value:
+        if isinstance(item, bool):
+            return None
+
+        if not isinstance(item, (int, float)):
+            return None
+
+        converted.append(float(item))
+
+    return converted
+
+
+def _extract_temporal_context(
+    old_result: Any,
+    unresolved: Any,
+) -> dict[str, Any]:
+    """
+    Read structured semantic history when available.
+
+    This function never invents unavailable values.
+    """
+
+    sources: list[Any] = [
+        old_result,
+        unresolved,
+    ]
+
+    for source in sources:
+        if not isinstance(source, Mapping):
+            continue
+
+        context = source.get("semantic_context", source)
+
+        if not isinstance(context, Mapping):
+            continue
+
+        history = context.get("visible_snapshots")
+
+        if not isinstance(history, list) or len(history) < 3:
+            continue
+
+        selected = history[-3:]
+
+        fields: dict[str, list[list[float]]] = {}
+
+        for field in (
+            "cumulative_flux",
+            "energy_spectrum",
+        ):
+            values: list[list[float]] = []
+
+            for snapshot in selected:
+                if not isinstance(snapshot, Mapping):
+                    values = []
+                    break
+
+                numeric = _numeric_sequence(
+                    snapshot.get(field)
+                )
+
+                if numeric is None:
+                    values = []
+                    break
+
+                values.append(numeric)
+
+            if len(values) == 3:
+                fields[field] = values
+
+        if fields:
+            return {
+                "available": True,
+                "fields": fields,
+                "source": "structured_semantic_context",
+            }
+
+    return {
+        "available": False,
+        "fields": {},
+        "source": "no_structured_temporal_context",
+    }
+
+
+def observe(
+    *,
+    data: Iterable[int] | None = None,
+    old_result: Any = None,
+    unresolved: Any = None,
+) -> dict[str, Any]:
+    """
+    Produce an independent observer result.
+
+    The result is descriptive and predictive only. It must not be
+    treated as a winner, action, permission, or transaction.
+    """
+
+    temporal = _extract_temporal_context(
+        old_result,
+        unresolved,
+    )
+
+    predictions: dict[str, Any] = {}
+
+    if temporal["available"]:
+        for field, values in temporal["fields"].items():
+            predictions[field] = temporal_predict(
+                values[0],
+                values[1],
+                values[2],
+            )
+
+    data_list = (
+        list(data)
+        if data is not None
+        else []
+    )
+
+    return {
+        "organ": LAYER_NAME,
+        "schema": SCHEMA,
+        "status": "observed",
+        "principle": {
+            "number_composition":
+                "S_a plus S_b produces S_(a+b)",
+            "spectral_composition":
+                "S_p plus S_q produces S_(p+q)",
+            "temporal_composition":
+                "S_next = S_current + Delta_1 + Delta_2",
+            "zero_identity":
+                "S_0 plus S_n equals S_n",
+            "weighted_interaction":
+                "T(k|p,q) gives direction and strength",
+        },
+        "input_summary": {
+            "data_count": len(data_list),
+            "structured_context":
+                temporal["available"],
+            "structured_source":
+                temporal["source"],
+        },
+        "prediction": {
+            "available": bool(predictions),
+            "fields": predictions,
+            "kind": (
+                "alphabet_temporal_prediction"
+                if predictions
+                else "no_structured_prediction"
+            ),
+        },
+        "invariants": {
+            "zero_identity": zero_identity(7.0),
+            "mode_composition_example":
+                compose_modes((1, 0, 0), (0, 1, 0))
+                == (1, 1, 0),
+            "temporal_decomposition_example":
+                temporal_predict([1.0], [2.0], [4.0])
+                == [7.0],
+            "decision_authority": False,
+            "main_answer_write": False,
+            "possible_branch_write": False,
+            "winner_selection": False,
+            "execution_authority": False,
+            "transaction_authority": False,
+            "replace_existing_logic": False,
+        },
+        "decision_authority": False,
+        "main_answer_write": False,
+        "possible_branch_write": False,
+        "winner_selection": False,
+        "affects_main_answer": False,
+        "revisable": True,
+    }

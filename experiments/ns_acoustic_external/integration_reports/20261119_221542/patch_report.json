@@ -1,0 +1,9 @@
+{
+  "schema": "malysh.acoustic-alphabet-patch-report.v1",
+  "file": "/data/data/com.termux/files/home/malysh_project/malysh_system/thinking_cycle.py",
+  "backup": "/data/data/com.termux/files/home/malysh_project/malysh_system/thinking_cycle.py.before_acoustic_alphabet",
+  "function": "run_thinking_cycle",
+  "return_line_before_patch": 1892,
+  "marker": "# ACOUSTIC_ALPHABET_INTEGRATION_V1",
+  "syntax_valid": true
+}

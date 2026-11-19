@@ -1,0 +1,106 @@
+{
+  "schema": "malysh.ns3d-frozen-reveal.v1",
+  "frozen_prediction_sha256": "4aa813128990b8ef459f65c8eb986167751d2e80194a71b357c02e4adf93a23a",
+  "hash_verified": true,
+  "source_step": 500,
+  "target_step": 550,
+  "actual_future": {
+    "step": 550,
+    "time": 1.1,
+    "energy_spectrum": [
+      0.0,
+      0.11250330260816857,
+      0.0072945991091595145,
+      0.0006891035389152364,
+      0.0002555023765927582,
+      2.552090677309559e-05,
+      2.58006946452379e-06,
+      1.3833730061810028e-06,
+      1.6717176535565704e-07,
+      3.935797501672565e-08,
+      1.7036014657425812e-08,
+      3.2457820555557146e-10,
+      1.5994839326958245e-12,
+      1.2300840385850676e-13,
+      4.96184055921688e-14,
+      2.3645064093745657e-16,
+      2.1191570846831156e-17,
+      7.066385919021805e-19
+    ],
+    "nonlinear_transfer": [
+      0.0,
+      -0.014301123570808552,
+      0.011068537688408323,
+      0.002226924670266358,
+      0.000839204270401482,
+      0.0001365321742810652,
+      1.7536196250396392e-05,
+      1.015379990935758e-05,
+      1.5840532422887148e-06,
+      4.314709127939306e-07,
+      2.156044321077537e-07,
+      3.6220682102190393e-09,
+      1.8087821730052856e-11,
+      1.824325265417505e-12,
+      7.178476581946413e-13,
+      5.645423605053139e-15,
+      5.15296101016254e-16,
+      1.5517064788724458e-17
+    ],
+    "cumulative_flux": [
+      -0.0,
+      0.014301123570808552,
+      0.003232585882400229,
+      0.001005661212133871,
+      0.00016645694173238895,
+      2.9924767451323757e-05,
+      1.2388571200927365e-05,
+      2.234771291569784e-06,
+      6.507180492810694e-07,
+      2.1924713648713875e-07,
+      3.6427043793850643e-09,
+      2.0636169166025073e-11,
+      2.5483474359722167e-12,
+      7.240221705547116e-13,
+      6.1745123600703054e-15,
+      5.290887550171667e-16,
+      1.3792654000912681e-17,
+      -1.7244107878117768e-18
+    ],
+    "flux_peak_shell": 1,
+    "flux_peak_value": 0.014301123570808552,
+    "k4_weighted_peak_shell": 2,
+    "nonlinear_global_sum": 2.0462259057261671e-19
+  },
+  "selected_method": "C3_QUADRATIC",
+  "selected_score": {
+    "flux_relative_error": 0.0007341347163423378,
+    "energy_relative_error": 0.00016138590470797518,
+    "peak_shell_error": 0,
+    "k4_peak_shell_error": 0
+  },
+  "all_scores": {
+    "C1_LINEAR": {
+      "flux_relative_error": 0.007600335472391738,
+      "energy_relative_error": 0.0009547206984081036,
+      "peak_shell_error": 0,
+      "k4_peak_shell_error": 0
+    },
+    "C2_DAMPED": {
+      "flux_relative_error": 0.01945936476036326,
+      "energy_relative_error": 0.005156702202140202,
+      "peak_shell_error": 0,
+      "k4_peak_shell_error": 1
+    },
+    "C3_QUADRATIC": {
+      "flux_relative_error": 0.0007341347163423378,
+      "energy_relative_error": 0.00016138590470797518,
+      "peak_shell_error": 0,
+      "k4_peak_shell_error": 0
+    }
+  },
+  "best_actual_method": "C3_QUADRATIC",
+  "selection_was_best": true,
+  "nonlinear_conservation_pass": true,
+  "interpretation": "The external gate selected a method using only historical backtests. This selection is not attributed to Malysh."
+}

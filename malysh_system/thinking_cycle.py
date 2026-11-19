@@ -1889,4 +1889,33 @@ def run_thinking_cycle(
             + ", ".join(failed)
         )
 
+    # ACOUSTIC_ALPHABET_INTEGRATION_V1
+    try:
+        from malysh_system.acoustic_alphabet_integration import (
+            attach_acoustic_alphabet,
+        )
+        result = attach_acoustic_alphabet(
+            result,
+            data=data,
+            old_result=old_result,
+            unresolved=unresolved,
+        )
+    except Exception as acoustic_alphabet_error:
+        if isinstance(result, dict):
+            diagnostics = result.setdefault(
+                'diagnostics',
+                {},
+            )
+            if isinstance(diagnostics, dict):
+                diagnostics[
+                    'acoustic_alphabet_error'
+                ] = {
+                    'type': type(
+                        acoustic_alphabet_error
+                    ).__name__,
+                    'message': str(
+                        acoustic_alphabet_error
+                    ),
+                    'decision_authority': False,
+                }
     return result

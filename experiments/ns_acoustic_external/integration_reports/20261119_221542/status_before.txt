@@ -1,0 +1,7 @@
+?? experiments/ns_acoustic_external/integration_reports/
+?? experiments/ns_acoustic_external/runs/alphabet_test_20261119_221213/
+?? experiments/ns_acoustic_external/runs/frozen_future_20261119_220822/
+?? experiments/ns_acoustic_external/sync_reports/20261119_215048/malysh_semantic_flux_adapter.py
+?? experiments/ns_acoustic_external/sync_reports/20261119_215048/malysh_semantic_flux_adapter.py.before_path_fix
+?? experiments/ns_acoustic_external/sync_reports/20261119_215048/malysh_semantic_forecast.json
+?? install_acoustic_alphabet_layer.sh

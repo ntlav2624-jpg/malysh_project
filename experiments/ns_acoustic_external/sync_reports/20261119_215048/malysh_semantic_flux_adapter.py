@@ -1,0 +1,551 @@
+import inspect
+import json
+import math
+import sys
+import traceback
+from pathlib import Path
+
+ROOT = Path.home() / "malysh_project"
+
+# External adapter only: make canonical project importable.
+# No Malysh source file is modified.
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+REPORT = (
+    ROOT
+    / "experiments/ns_acoustic_external/sync_reports/20261119_215048"
+)
+
+TASK_FILE = REPORT / "blind_task.json"
+TARGET_FILE = REPORT / "hidden_target.json"
+OUTPUT_FILE = REPORT / "malysh_semantic_forecast.json"
+
+task = json.loads(
+    TASK_FILE.read_text(encoding="utf-8")
+)
+
+target = json.loads(
+    TARGET_FILE.read_text(encoding="utf-8")
+)["hidden_snapshot"]
+
+visible = task["visible_snapshots"]
+
+if len(visible) < 4:
+    raise SystemExit("[FAIL] Недостаточно видимых снимков")
+
+# ============================================================
+# ЧИСЛЕННЫЕ КАНДИДАТЫ
+# Скрытый шаг здесь не используется.
+# ============================================================
+
+s0 = visible[-4]
+s1 = visible[-3]
+s2 = visible[-2]
+s3 = visible[-1]
+
+def array(snapshot, field):
+    return [
+        float(value)
+        for value in snapshot[field]
+    ]
+
+def clip_nonnegative(values):
+    return [
+        max(0.0, float(value))
+        for value in values
+    ]
+
+def linear(a, b):
+    return [
+        2.0 * y - x
+        for x, y in zip(a, b)
+    ]
+
+def quadratic(a, b, c):
+    # Продолжение конечных разностей:
+    # next = 3*c - 3*b + a
+    return [
+        3.0 * z - 3.0 * y + x
+        for x, y, z in zip(a, b, c)
+    ]
+
+def damped_linear(a, b, damping=0.75):
+    return [
+        y + damping * (y - x)
+        for x, y in zip(a, b)
+    ]
+
+flux1 = array(s1, "cumulative_flux")
+flux2 = array(s2, "cumulative_flux")
+flux3 = array(s3, "cumulative_flux")
+
+energy1 = array(s1, "energy_spectrum")
+energy2 = array(s2, "energy_spectrum")
+energy3 = array(s3, "energy_spectrum")
+
+candidates = {
+    "C1_LINEAR": {
+        "description": "Линейное продолжение последней разности",
+        "flux": linear(flux2, flux3),
+        "energy": clip_nonnegative(
+            linear(energy2, energy3)
+        ),
+    },
+
+    "C2_DAMPED": {
+        "description": "Затухающее продолжение, коэффициент 0.75",
+        "flux": damped_linear(
+            flux2,
+            flux3,
+            0.75,
+        ),
+        "energy": clip_nonnegative(
+            damped_linear(
+                energy2,
+                energy3,
+                0.75,
+            )
+        ),
+    },
+
+    "C3_QUADRATIC": {
+        "description": "Квадратичное продолжение трёх снимков",
+        "flux": quadratic(
+            flux1,
+            flux2,
+            flux3,
+        ),
+        "energy": clip_nonnegative(
+            quadratic(
+                energy1,
+                energy2,
+                energy3,
+            )
+        ),
+    },
+}
+
+for candidate in candidates.values():
+    candidate["flux_peak_shell"] = int(
+        max(
+            range(len(candidate["flux"])),
+            key=lambda i: abs(candidate["flux"][i]),
+        )
+    )
+
+    candidate["flux_peak_value"] = float(
+        candidate["flux"][
+            candidate["flux_peak_shell"]
+        ]
+    )
+
+    weighted = [
+        (index ** 4) * value
+        for index, value
+        in enumerate(candidate["energy"])
+    ]
+
+    candidate["k4_peak_shell"] = int(
+        max(
+            range(len(weighted)),
+            key=lambda i: weighted[i],
+        )
+    )
+
+# ============================================================
+# СЕМАНТИЧЕСКИЙ ПАКЕТ
+# ============================================================
+
+semantic_context = {
+    "experiment": "3D Taylor-Green spectral flux forecast",
+
+    "target": {
+        "step": int(task["target_step"]),
+        "time": float(task["target_time"]),
+    },
+
+    "visible_last_step": int(s3["step"]),
+
+    "meaning": {
+        "cumulative_flux":
+            "Положительное значение означает прямой перенос "
+            "энергии из низких оболочек к высоким.",
+
+        "flux_peak_shell":
+            "Оболочка K, где модуль накопленного потока максимален.",
+
+        "k4_peak_shell":
+            "Оболочка максимума k^4 E(k), индикатор малых масштабов.",
+    },
+
+    "observed_trend": {
+        "recent_steps": [
+            int(s1["step"]),
+            int(s2["step"]),
+            int(s3["step"]),
+        ],
+
+        "recent_flux_peak_values": [
+            float(s1["flux_peak_value"]),
+            float(s2["flux_peak_value"]),
+            float(s3["flux_peak_value"]),
+        ],
+
+        "recent_flux_peak_shells": [
+            int(s1["flux_peak_shell"]),
+            int(s2["flux_peak_shell"]),
+            int(s3["flux_peak_shell"]),
+        ],
+
+        "recent_k4_peak_shells": [
+            int(s1["k4_weighted_peak_shell"]),
+            int(s2["k4_weighted_peak_shell"]),
+            int(s3["k4_weighted_peak_shell"]),
+        ],
+    },
+
+    "candidates": {
+        name: {
+            "description": value["description"],
+            "flux_peak_shell":
+                value["flux_peak_shell"],
+            "flux_peak_value":
+                value["flux_peak_value"],
+            "k4_peak_shell":
+                value["k4_peak_shell"],
+            "first_12_flux_values":
+                value["flux"][:12],
+            "first_12_energy_values":
+                value["energy"][:12],
+        }
+        for name, value in candidates.items()
+    },
+
+    "required_answer": {
+        "selected_candidate":
+            "C1_LINEAR, C2_DAMPED, C3_QUADRATIC или REJECT_ALL",
+
+        "primary":
+            "Основной выбор с объяснением",
+
+        "possible":
+            "Альтернативная гипотеза",
+
+        "negative":
+            "Почему основной выбор может быть ошибочен",
+
+        "confidence":
+            "Число от 0 до 1",
+    },
+
+    "prohibition":
+        "Скрытый шаг 500 отсутствует во входе. "
+        "Не заявлять доказательство глобальной регулярности.",
+}
+
+# Короткий числовой канал.
+# ID кандидатов:
+# C1 = 101, C2 = 102, C3 = 103, reject = 199.
+data = [
+    500,
+    1_000_000,
+    101,
+    102,
+    103,
+    199,
+]
+
+for snapshot in visible[-3:]:
+    data.extend([
+        int(snapshot["step"]),
+        int(
+            round(
+                snapshot["flux_peak_value"]
+                * 1_000_000_000_000
+            )
+        ),
+        int(snapshot["flux_peak_shell"]),
+        int(snapshot["k4_weighted_peak_shell"]),
+    ])
+
+for name, identifier in [
+    ("C1_LINEAR", 101),
+    ("C2_DAMPED", 102),
+    ("C3_QUADRATIC", 103),
+]:
+    value = candidates[name]
+
+    data.extend([
+        identifier,
+        int(
+            round(
+                value["flux_peak_value"]
+                * 1_000_000_000_000
+            )
+        ),
+        int(value["flux_peak_shell"]),
+        int(value["k4_peak_shell"]),
+    ])
+
+malysh_result = {
+    "status": "not_run",
+    "signature": None,
+    "output": None,
+    "error": None,
+}
+
+try:
+    from malysh_system.thinking_cycle import (
+        run_thinking_cycle,
+    )
+
+    signature = inspect.signature(
+        run_thinking_cycle
+    )
+
+    malysh_result["signature"] = str(signature)
+
+    kwargs = {
+        "data": data,
+
+        "old_result": {
+            "source":
+                "semantic_ns3d_flux_candidates",
+
+            "semantic_context":
+                semantic_context,
+
+            "candidate_ids": {
+                "101": "C1_LINEAR",
+                "102": "C2_DAMPED",
+                "103": "C3_QUADRATIC",
+                "199": "REJECT_ALL",
+            },
+        },
+
+        "unresolved": {
+            "kind":
+                "semantic_blind_flux_selection",
+
+            "hypothesis":
+                semantic_context,
+
+            "instruction":
+                "Выбрать один кандидат либо REJECT_ALL. "
+                "Сохранить primary, possible и negative отдельно. "
+                "Не использовать скрытый эталон.",
+
+            "revisable":
+                True,
+        },
+
+        "root": str(ROOT),
+    }
+
+    filtered = {
+        key: value
+        for key, value in kwargs.items()
+        if key in signature.parameters
+    }
+
+    malysh_result["output"] = (
+        run_thinking_cycle(**filtered)
+    )
+
+    malysh_result["status"] = "completed"
+
+except Exception as exc:
+    malysh_result["status"] = "failed"
+
+    malysh_result["error"] = {
+        "type": type(exc).__name__,
+        "message": str(exc),
+        "traceback": traceback.format_exc(),
+    }
+
+# ============================================================
+# ИЗВЛЕЧЕНИЕ ЯВНОГО ВЫБОРА
+# ============================================================
+
+serialized = json.dumps(
+    malysh_result.get("output"),
+    ensure_ascii=False,
+    default=str,
+)
+
+matches = []
+
+for name in [
+    "C1_LINEAR",
+    "C2_DAMPED",
+    "C3_QUADRATIC",
+    "REJECT_ALL",
+]:
+    if name in serialized:
+        matches.append(name)
+
+explicit_selection = (
+    matches[0]
+    if len(matches) == 1
+    else None
+)
+
+# Числовые коды сами по себе не считаем выбором,
+# потому что они присутствовали во входе.
+selection_status = (
+    "explicit_unique_selection"
+    if explicit_selection
+    else "no_unambiguous_selection"
+)
+
+# ============================================================
+# ТОЛЬКО ПОСЛЕ ФИКСАЦИИ ОТВЕТА ОТКРЫВАЕМ TARGET
+# ============================================================
+
+def relative_error(predicted, actual):
+    numerator = sum(
+        (p - a) ** 2
+        for p, a in zip(predicted, actual)
+    ) ** 0.5
+
+    denominator = (
+        sum(a * a for a in actual) ** 0.5
+        + 1e-30
+    )
+
+    return numerator / denominator
+
+candidate_scores = {}
+
+for name, candidate in candidates.items():
+    candidate_scores[name] = {
+        "flux_relative_error":
+            relative_error(
+                candidate["flux"],
+                target["cumulative_flux"],
+            ),
+
+        "energy_relative_error":
+            relative_error(
+                candidate["energy"],
+                target["energy_spectrum"],
+            ),
+
+        "peak_shell_error":
+            abs(
+                candidate["flux_peak_shell"]
+                - int(
+                    target["flux_peak_shell"]
+                )
+            ),
+    }
+
+selected_score = (
+    candidate_scores.get(explicit_selection)
+    if explicit_selection
+    else None
+)
+
+result = {
+    "schema":
+        "malysh.semantic-flux-selection.v1",
+
+    "malysh_status":
+        malysh_result["status"],
+
+    "selection_status":
+        selection_status,
+
+    "explicit_selection":
+        explicit_selection,
+
+    "all_name_matches":
+        matches,
+
+    "semantic_context":
+        semantic_context,
+
+    "candidates":
+        candidates,
+
+    "malysh":
+        malysh_result,
+
+    "hidden_target_opened_after_run": {
+        "step": target["step"],
+        "time": target["time"],
+        "flux_peak_shell":
+            target["flux_peak_shell"],
+        "flux_peak_value":
+            target["flux_peak_value"],
+        "k4_peak_shell":
+            target["k4_weighted_peak_shell"],
+    },
+
+    "candidate_scores":
+        candidate_scores,
+
+    "selected_score":
+        selected_score,
+
+    "baseline_to_beat":
+        0.008394358,
+
+    "interpretation": (
+        "Если нет единственного явного имени кандидата, "
+        "численный прогноз Малыша не засчитывается."
+    ),
+}
+
+OUTPUT_FILE.write_text(
+    json.dumps(
+        result,
+        ensure_ascii=False,
+        indent=2,
+        default=str,
+    ),
+    encoding="utf-8",
+)
+
+print("============================================================")
+print(" MALYSH SEMANTIC BLIND FORECAST")
+print("============================================================")
+print("Malysh status:", malysh_result["status"])
+print("Selection status:", selection_status)
+print("Explicit selection:", explicit_selection)
+print("Name matches:", matches)
+print()
+
+for name, score in candidate_scores.items():
+    print(
+        name,
+        "flux_error=",
+        f'{score["flux_relative_error"]:.9e}',
+        "energy_error=",
+        f'{score["energy_relative_error"]:.9e}',
+        "peak_error=",
+        score["peak_shell_error"],
+    )
+
+print()
+print("Baseline to beat: 8.394358e-03")
+
+if selected_score is not None:
+    print(
+        "Selected flux error:",
+        f'{selected_score["flux_relative_error"]:.9e}',
+    )
+
+    print(
+        "Beats baseline:",
+        selected_score["flux_relative_error"]
+        < 0.008394358,
+    )
+else:
+    print(
+        "Malysh numeric score: UNDEFINED "
+        "(no unambiguous candidate selected)"
+    )
+
+print()
+print("Result:", OUTPUT_FILE)
