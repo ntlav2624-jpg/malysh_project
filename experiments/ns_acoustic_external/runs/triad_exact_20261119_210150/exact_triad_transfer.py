@@ -1,0 +1,851 @@
+import json
+import math
+import os
+from pathlib import Path
+
+import numpy as np
+
+SOURCE_RUN = Path(os.environ["SOURCE_RUN"])
+RUN = Path(os.environ["OUTPUT_RUN"])
+
+FIELDS_PATH = SOURCE_RUN / "ns3d_final_fields.npz"
+PACKET_PATH = SOURCE_RUN / "ns3d_acoustic_observation.json"
+
+# Сколько выходных k-мод анализировать подробно.
+TARGET_MODE_COUNT = 24
+
+# Сколько крупнейших вкладов p,q сохранять для каждой k.
+CONTRIBUTIONS_PER_TARGET = 40
+
+ACOUSTIC_F0 = 330.0
+
+# ============================================================
+# ЗАГРУЗКА СОХРАНЁННОГО ПОЛЯ
+# ============================================================
+
+data = np.load(FIELDS_PATH)
+
+U = np.asarray(data["U"], dtype=np.complex128)
+V = np.asarray(data["V"], dtype=np.complex128)
+W = np.asarray(data["W"], dtype=np.complex128)
+
+if not (U.shape == V.shape == W.shape):
+    raise RuntimeError("U, V, W имеют разные формы")
+
+if U.ndim != 3:
+    raise RuntimeError(
+        f"Ожидалось трёхмерное поле, получено ndim={U.ndim}"
+    )
+
+N = U.shape[0]
+
+if U.shape != (N, N, N):
+    raise RuntimeError(
+        f"Ожидалась кубическая сетка, получено {U.shape}"
+    )
+
+if PACKET_PATH.exists():
+    source_packet = json.loads(
+        PACKET_PATH.read_text(encoding="utf-8")
+    )
+
+    parameters = source_packet.get("parameters", {})
+    L = float(parameters.get("L", 2.0 * np.pi))
+    NU = float(parameters.get("nu", 0.005))
+    RE = float(parameters.get("Re", 1.0 / NU))
+else:
+    source_packet = {}
+    L = 2.0 * np.pi
+    NU = 0.005
+    RE = 1.0 / NU
+
+dx = L / N
+
+k_axis = (
+    np.fft.fftfreq(N, d=dx)
+    * 2.0
+    * np.pi
+)
+
+KX, KY, KZ = np.meshgrid(
+    k_axis,
+    k_axis,
+    k_axis,
+    indexing="ij",
+)
+
+K2 = KX**2 + KY**2 + KZ**2
+
+K2_SAFE = K2.copy()
+K2_SAFE[0, 0, 0] = 1.0
+
+cutoff = N // 3
+
+DEALIAS = (
+    (np.abs(KX) <= cutoff)
+    & (np.abs(KY) <= cutoff)
+    & (np.abs(KZ) <= cutoff)
+)
+
+# Состояние в сохранённом эксперименте уже фильтровалось.
+# Повторная маска здесь защищает внешний анализ.
+U = U * DEALIAS
+V = V * DEALIAS
+W = W * DEALIAS
+
+GRID_VOLUME = N**3
+ENERGY_NORMALIZATION = N**6
+TRIAD_NORMALIZATION = N**9
+
+# ============================================================
+# ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
+# ============================================================
+
+def fft_index_to_mode(index):
+    """
+    FFT-индекс 0...N-1 -> подписанное волновое число.
+    """
+
+    value = k_axis[index]
+    return int(round(float(value)))
+
+
+def mode_to_fft_index(mode_component):
+    """
+    Подписанное целое волновое число -> FFT-индекс.
+    """
+
+    return int(mode_component) % N
+
+
+def mode_tuple_from_index(index):
+    i, j, l = index
+
+    return (
+        fft_index_to_mode(i),
+        fft_index_to_mode(j),
+        fft_index_to_mode(l),
+    )
+
+
+def vector_at(index):
+    i, j, l = index
+
+    return np.array(
+        [
+            U[i, j, l],
+            V[i, j, l],
+            W[i, j, l],
+        ],
+        dtype=np.complex128,
+    )
+
+
+def project_vector(k_vec, value):
+    """
+    Солитонная/безвидергентная проекция отдельного
+    спектрального вектора.
+    """
+
+    k2 = float(np.dot(k_vec, k_vec))
+
+    if k2 == 0.0:
+        return np.zeros(3, dtype=np.complex128)
+
+    return (
+        value
+        - k_vec
+        * np.dot(k_vec, value)
+        / k2
+    )
+
+
+def nonlinear_field_direct():
+    """
+    Вычисляет полный нелинейный член тем же
+    псевдоспектральным способом:
+
+        N = -P[(u dot grad)u]
+
+    Результат нужен для независимой проверки суммы
+    триадных вкладов.
+    """
+
+    u = np.fft.ifftn(U).real
+    v = np.fft.ifftn(V).real
+    w = np.fft.ifftn(W).real
+
+    du_dx = np.fft.ifftn(1j * KX * U).real
+    du_dy = np.fft.ifftn(1j * KY * U).real
+    du_dz = np.fft.ifftn(1j * KZ * U).real
+
+    dv_dx = np.fft.ifftn(1j * KX * V).real
+    dv_dy = np.fft.ifftn(1j * KY * V).real
+    dv_dz = np.fft.ifftn(1j * KZ * V).real
+
+    dw_dx = np.fft.ifftn(1j * KX * W).real
+    dw_dy = np.fft.ifftn(1j * KY * W).real
+    dw_dz = np.fft.ifftn(1j * KZ * W).real
+
+    conv_u = (
+        u * du_dx
+        + v * du_dy
+        + w * du_dz
+    )
+
+    conv_v = (
+        u * dv_dx
+        + v * dv_dy
+        + w * dv_dz
+    )
+
+    conv_w = (
+        u * dw_dx
+        + v * dw_dy
+        + w * dw_dz
+    )
+
+    CU = np.fft.fftn(conv_u) * DEALIAS
+    CV = np.fft.fftn(conv_v) * DEALIAS
+    CW = np.fft.fftn(conv_w) * DEALIAS
+
+    k_dot_c = (
+        KX * CU
+        + KY * CV
+        + KZ * CW
+    )
+
+    PU = CU - KX * k_dot_c / K2_SAFE
+    PV = CV - KY * k_dot_c / K2_SAFE
+    PW = CW - KZ * k_dot_c / K2_SAFE
+
+    PU[0, 0, 0] = 0.0
+    PV[0, 0, 0] = 0.0
+    PW[0, 0, 0] = 0.0
+
+    # Правая часть содержит минус конвекцию.
+    return -PU, -PV, -PW
+
+
+def mode_energy(index):
+    value = vector_at(index)
+
+    return float(
+        0.5
+        * np.vdot(value, value).real
+        / ENERGY_NORMALIZATION
+    )
+
+
+def viscous_transfer(index):
+    """
+    Вязкий вклад в производную энергии моды:
+
+        dE_k/dt |_nu = -nu |k|² |u_k|² / N^6
+    """
+
+    i, j, l = index
+
+    value = vector_at(index)
+
+    k2 = float(
+        KX[i, j, l] ** 2
+        + KY[i, j, l] ** 2
+        + KZ[i, j, l] ** 2
+    )
+
+    return float(
+        -NU
+        * k2
+        * np.vdot(value, value).real
+        / ENERGY_NORMALIZATION
+    )
+
+
+# ============================================================
+# СИЛЬНЕЙШИЕ ВЫХОДНЫЕ МОДЫ
+# ============================================================
+
+modal_energy = (
+    np.abs(U)**2
+    + np.abs(V)**2
+    + np.abs(W)**2
+) / (2.0 * ENERGY_NORMALIZATION)
+
+order = np.argsort(
+    modal_energy.ravel()
+)[::-1]
+
+targets = []
+
+for flat_index in order:
+    index = np.unravel_index(
+        flat_index,
+        modal_energy.shape,
+    )
+
+    mode = mode_tuple_from_index(index)
+
+    if mode == (0, 0, 0):
+        continue
+
+    if not DEALIAS[index]:
+        continue
+
+    targets.append(index)
+
+    if len(targets) >= TARGET_MODE_COUNT:
+        break
+
+# ============================================================
+# ПРЯМАЯ ПСЕВДОСПЕКТРАЛЬНАЯ ПРАВАЯ ЧАСТЬ
+# ============================================================
+
+NU_DIRECT, NV_DIRECT, NW_DIRECT = nonlinear_field_direct()
+
+# ============================================================
+# ТОЧНЫЙ РАЗБОР СВЁРТКИ ПО ТРИАДАМ
+# ============================================================
+
+target_results = []
+global_positive = 0
+global_negative = 0
+global_near_zero = 0
+
+max_vector_closure_error = 0.0
+max_energy_closure_error = 0.0
+
+print("============================================================")
+print(" EXACT TRIAD ENERGY TRANSFER")
+print("============================================================")
+print(f"Source        : {SOURCE_RUN}")
+print(f"Grid          : {N}^3")
+print(f"Re            : {RE}")
+print(f"nu            : {NU}")
+print(f"Target modes  : {len(targets)}")
+print()
+
+for target_number, k_index in enumerate(targets, start=1):
+    k_mode = mode_tuple_from_index(k_index)
+
+    k_vec = np.array(
+        k_mode,
+        dtype=np.float64,
+    )
+
+    u_k = vector_at(k_index)
+
+    if np.vdot(u_k, u_k).real == 0.0:
+        continue
+
+    pair_records = []
+
+    nonlinear_sum_vector = np.zeros(
+        3,
+        dtype=np.complex128,
+    )
+
+    transfer_sum = 0.0
+
+    # Полная сумма по всем p.
+    for pi in range(N):
+        p_x = fft_index_to_mode(pi)
+
+        for pj in range(N):
+            p_y = fft_index_to_mode(pj)
+
+            for pl in range(N):
+                p_z = fft_index_to_mode(pl)
+
+                p_index = (pi, pj, pl)
+
+                if not DEALIAS[p_index]:
+                    continue
+
+                p_mode = (
+                    p_x,
+                    p_y,
+                    p_z,
+                )
+
+                q_mode = (
+                    k_mode[0] - p_mode[0],
+                    k_mode[1] - p_mode[1],
+                    k_mode[2] - p_mode[2],
+                )
+
+                # Алиасинговые представления вне сохранённой
+                # 2/3 области в точный анализ не допускаются.
+                if any(
+                    abs(component) > cutoff
+                    for component in q_mode
+                ):
+                    continue
+
+                qi = mode_to_fft_index(q_mode[0])
+                qj = mode_to_fft_index(q_mode[1])
+                ql = mode_to_fft_index(q_mode[2])
+
+                q_index = (qi, qj, ql)
+
+                if not DEALIAS[q_index]:
+                    continue
+
+                u_p = vector_at(p_index)
+                u_q = vector_at(q_index)
+
+                if (
+                    np.vdot(u_p, u_p).real == 0.0
+                    or np.vdot(u_q, u_q).real == 0.0
+                ):
+                    continue
+
+                # Fourier-коэффициент вклада пары:
+                #
+                #   N_k(p,q) =
+                #   -i P_k[(k dot u_q) u_p] / N^3
+                #
+                # Суммирование идёт по p + q = k.
+                coupling = np.dot(k_vec, u_q)
+
+                raw_pair_vector = (
+                    -1j
+                    * coupling
+                    * u_p
+                    / GRID_VOLUME
+                )
+
+                pair_vector = project_vector(
+                    k_vec,
+                    raw_pair_vector,
+                )
+
+                nonlinear_sum_vector += pair_vector
+
+                # Модальный энергетический вклад:
+                #
+                #   T(k|p,q) =
+                #   Re[u_k* dot N_k(p,q)] / N^6
+                transfer = float(
+                    np.vdot(
+                        u_k,
+                        pair_vector,
+                    ).real
+                    / ENERGY_NORMALIZATION
+                )
+
+                transfer_sum += transfer
+
+                if transfer > 1e-18:
+                    global_positive += 1
+                elif transfer < -1e-18:
+                    global_negative += 1
+                else:
+                    global_near_zero += 1
+
+                pair_records.append({
+                    "p": list(p_mode),
+                    "q": list(q_mode),
+                    "k": list(k_mode),
+
+                    "arithmetic_invariant": (
+                        p_mode[0] + q_mode[0]
+                        == k_mode[0]
+                        and p_mode[1] + q_mode[1]
+                        == k_mode[1]
+                        and p_mode[2] + q_mode[2]
+                        == k_mode[2]
+                    ),
+
+                    "transfer_to_k": transfer,
+
+                    "direction": (
+                        "into_k"
+                        if transfer > 1e-18
+                        else
+                        "out_of_k"
+                        if transfer < -1e-18
+                        else
+                        "near_zero"
+                    ),
+
+                    "energy_p": mode_energy(p_index),
+                    "energy_q": mode_energy(q_index),
+
+                    "acoustic_hz": {
+                        "p": [
+                            component * ACOUSTIC_F0
+                            for component in p_mode
+                        ],
+                        "q": [
+                            component * ACOUSTIC_F0
+                            for component in q_mode
+                        ],
+                        "k": [
+                            component * ACOUSTIC_F0
+                            for component in k_mode
+                        ],
+                    },
+                })
+
+    direct_vector = np.array(
+        [
+            NU_DIRECT[k_index],
+            NV_DIRECT[k_index],
+            NW_DIRECT[k_index],
+        ],
+        dtype=np.complex128,
+    )
+
+    direct_transfer = float(
+        np.vdot(
+            u_k,
+            direct_vector,
+        ).real
+        / ENERGY_NORMALIZATION
+    )
+
+    vector_error = float(
+        np.linalg.norm(
+            nonlinear_sum_vector
+            - direct_vector
+        )
+        / (
+            np.linalg.norm(direct_vector)
+            + 1e-30
+        )
+    )
+
+    energy_error = float(
+        abs(
+            transfer_sum
+            - direct_transfer
+        )
+        / (
+            abs(direct_transfer)
+            + 1e-30
+        )
+    )
+
+    max_vector_closure_error = max(
+        max_vector_closure_error,
+        vector_error,
+    )
+
+    max_energy_closure_error = max(
+        max_energy_closure_error,
+        energy_error,
+    )
+
+    pair_records.sort(
+        key=lambda item: abs(
+            item["transfer_to_k"]
+        ),
+        reverse=True,
+    )
+
+    positive_transfer = sum(
+        item["transfer_to_k"]
+        for item in pair_records
+        if item["transfer_to_k"] > 0.0
+    )
+
+    negative_transfer = sum(
+        item["transfer_to_k"]
+        for item in pair_records
+        if item["transfer_to_k"] < 0.0
+    )
+
+    viscosity = viscous_transfer(k_index)
+
+    target_result = {
+        "rank": target_number,
+        "k": list(k_mode),
+        "mode_energy": mode_energy(k_index),
+
+        "nonlinear_transfer_from_triad_sum":
+            float(transfer_sum),
+
+        "nonlinear_transfer_direct":
+            direct_transfer,
+
+        "positive_triad_input":
+            float(positive_transfer),
+
+        "negative_triad_output":
+            float(negative_transfer),
+
+        "viscous_transfer":
+            viscosity,
+
+        "total_predicted_energy_rate":
+            float(
+                transfer_sum
+                + viscosity
+            ),
+
+        "vector_closure_relative_error":
+            vector_error,
+
+        "energy_closure_relative_error":
+            energy_error,
+
+        "pair_count":
+            len(pair_records),
+
+        "strongest_pair_contributions":
+            pair_records[
+                :CONTRIBUTIONS_PER_TARGET
+            ],
+    }
+
+    target_results.append(target_result)
+
+    print(
+        f"[MODE {target_number:02d}] "
+        f"k={k_mode} | "
+        f"E={target_result['mode_energy']:.3e} | "
+        f"Tnl={transfer_sum:+.3e} | "
+        f"Tnu={viscosity:+.3e} | "
+        f"pairs={len(pair_records)} | "
+        f"closure={energy_error:.3e}"
+    )
+
+# ============================================================
+# ОБЩИЕ БАЛАНСЫ
+# ============================================================
+
+total_nonlinear_target_transfer = float(
+    sum(
+        result[
+            "nonlinear_transfer_from_triad_sum"
+        ]
+        for result in target_results
+    )
+)
+
+total_viscous_target_transfer = float(
+    sum(
+        result["viscous_transfer"]
+        for result in target_results
+    )
+)
+
+arithmetic_pass = all(
+    pair["arithmetic_invariant"]
+    for result in target_results
+    for pair in result[
+        "strongest_pair_contributions"
+    ]
+)
+
+finite_pass = all(
+    math.isfinite(value)
+    for result in target_results
+    for value in (
+        result["mode_energy"],
+        result[
+            "nonlinear_transfer_from_triad_sum"
+        ],
+        result["nonlinear_transfer_direct"],
+        result["viscous_transfer"],
+        result[
+            "vector_closure_relative_error"
+        ],
+        result[
+            "energy_closure_relative_error"
+        ],
+    )
+)
+
+# FFT/округление могут дать небольшую численную ошибку.
+closure_pass = (
+    max_vector_closure_error < 1e-8
+    and max_energy_closure_error < 1e-8
+)
+
+output = {
+    "schema":
+        "malysh.ns3d-exact-triad-transfer.v1",
+
+    "role":
+        "external read-only postprocessor",
+
+    "source_run":
+        str(SOURCE_RUN),
+
+    "malysh_modified":
+        False,
+
+    "formula": {
+        "triad_condition":
+            "p + q = k",
+
+        "pair_vector":
+            "-i P_k[(k dot u_q) u_p] / N^3",
+
+        "energy_transfer":
+            "Re[conj(u_k) dot N_k(p,q)] / N^6",
+
+        "positive_sign":
+            "energy input into mode k",
+
+        "negative_sign":
+            "energy output from mode k",
+    },
+
+    "parameters": {
+        "N": N,
+        "Re": RE,
+        "nu": NU,
+        "dealiasing": "2/3",
+        "target_mode_count":
+            TARGET_MODE_COUNT,
+        "saved_contributions_per_target":
+            CONTRIBUTIONS_PER_TARGET,
+        "acoustic_f0_hz":
+            ACOUSTIC_F0,
+    },
+
+    "summary": {
+        "target_modes_analysed":
+            len(target_results),
+
+        "positive_pair_contributions":
+            global_positive,
+
+        "negative_pair_contributions":
+            global_negative,
+
+        "near_zero_pair_contributions":
+            global_near_zero,
+
+        "target_nonlinear_transfer_sum":
+            total_nonlinear_target_transfer,
+
+        "target_viscous_transfer_sum":
+            total_viscous_target_transfer,
+
+        "max_vector_closure_relative_error":
+            max_vector_closure_error,
+
+        "max_energy_closure_relative_error":
+            max_energy_closure_error,
+    },
+
+    "verification": {
+        "finite_pass": finite_pass,
+        "arithmetic_pass": arithmetic_pass,
+        "closure_pass": closure_pass,
+    },
+
+    "targets": target_results,
+
+    "claims_allowed": [
+        "exact decomposition of the saved "
+        "pseudospectral nonlinear coefficient "
+        "into ordered Fourier-mode pairs",
+
+        "signed modal-energy contribution "
+        "for the analysed saved state",
+
+        "verification of p + q = k",
+    ],
+
+    "claims_forbidden": [
+        "global regularity proof",
+
+        "Clay Millennium Problem solved",
+
+        "generalisation from one finite-grid "
+        "snapshot to all flows",
+    ],
+}
+
+output_path = (
+    RUN
+    / "exact_triad_transfer.json"
+)
+
+output_path.write_text(
+    json.dumps(
+        output,
+        ensure_ascii=False,
+        indent=2,
+    ),
+    encoding="utf-8",
+)
+
+print()
+print("============================================================")
+print(" VERIFICATION")
+print("============================================================")
+
+print(
+    "[PASS]" if finite_pass else "[FAIL]",
+    "all analysed values are finite",
+)
+
+print(
+    "[PASS]" if arithmetic_pass else "[FAIL]",
+    "saved strong pairs satisfy p + q = k",
+)
+
+print(
+    "[PASS]" if closure_pass else "[FAIL]",
+    "sum of pair contributions reproduces "
+    "the direct nonlinear coefficient",
+)
+
+print(
+    "[INFO] max vector closure error:",
+    f"{max_vector_closure_error:.3e}",
+)
+
+print(
+    "[INFO] max energy closure error:",
+    f"{max_energy_closure_error:.3e}",
+)
+
+print(
+    "[INFO] positive contributions:",
+    global_positive,
+)
+
+print(
+    "[INFO] negative contributions:",
+    global_negative,
+)
+
+print(
+    "[INFO] near-zero contributions:",
+    global_near_zero,
+)
+
+print(
+    "[INFO] output:",
+    output_path,
+)
+
+print()
+print(
+    "[INFO] Positive T(k|p,q) means that "
+    "the ordered pair contributes energy to k."
+)
+
+print(
+    "[INFO] Negative T(k|p,q) means that "
+    "the ordered pair removes energy from k."
+)
+
+print(
+    "[INFO] Finite-grid snapshot analysis only. "
+    "This is not a regularity proof."
+)
+
+if not (
+    finite_pass
+    and arithmetic_pass
+    and closure_pass
+):
+    raise SystemExit(2)

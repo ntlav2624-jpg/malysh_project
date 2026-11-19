@@ -1,0 +1,14 @@
+{
+  "schema": "malysh.ns3d-blind-score.v1",
+  "target_step": 500,
+  "target_time": 1.0,
+  "baseline": {
+    "flux_relative_error": 0.008394358223322499,
+    "energy_relative_error": 0.0010389855436004293,
+    "predicted_flux_peak_shell": 1,
+    "actual_flux_peak_shell": 1,
+    "peak_shell_error": 0
+  },
+  "malysh_numeric_score": null,
+  "note": "Malysh numeric score remains null unless the existing thinking output exposes an explicit machine-readable flux vector. The full Malysh output is preserved without inventing missing numbers."
+}
