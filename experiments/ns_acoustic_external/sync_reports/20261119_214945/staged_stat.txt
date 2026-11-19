@@ -1,0 +1,37 @@
+ .../runs/20261119_204922/ns_acoustic_experiment.py |   417 +
+ .../20261119_204922/ns_acoustic_observation.json   |  2282 +
+ .../runs/20261119_204922/ns_final_fields.npz       |   Bin 0 -> 76880 bytes
+ .../runs/20261119_204922/status_after.txt          |     2 +
+ .../runs/20261119_204922/status_before.txt         |     2 +
+ .../3d_20261119_205559/ns3d_acoustic_experiment.py |   820 +
+ .../ns3d_acoustic_observation.json                 | 40973 +++++++++++++++
+ .../runs/3d_20261119_205559/ns3d_final_fields.npz  |   Bin 0 -> 758155 bytes
+ .../runs/3d_20261119_205559/status_after.txt       |     2 +
+ .../runs/3d_20261119_205559/status_before.txt      |     2 +
+ .../flux_time_20261119_214105/ns3d_flux_time.json  |  1976 +
+ .../flux_time_20261119_214105/ns3d_flux_time.py    |   727 +
+ .../ns3d_flux_time_fields.npz                      |   Bin 0 -> 757953 bytes
+ .../flux_time_20261119_214105/status_after.txt     |     2 +
+ .../flux_time_20261119_214105/status_before.txt    |     2 +
+ .../exact_triad_transfer.json                      | 37969 ++++++++++++++
+ .../exact_triad_transfer.py                        |   851 +
+ .../exact_triad_transfer.py.before_chr_fix         |   851 +
+ .../exact_triad_transfer.py.before_full_syntax_fix |   848 +
+ .../exact_triad_transfer.py.before_sed_fix         |   851 +
+ .../exact_triad_transfer.py.before_syntax_fix      |   848 +
+ .../triad_exact_20261119_210150/status_after.txt   |     2 +
+ .../triad_exact_20261119_210150/status_before.txt  |     2 +
+ .../sync_reports/20261119_214945/blind_score.json  |    14 +
+ .../sync_reports/20261119_214945/blind_task.json   |  1349 +
+ .../sync_reports/20261119_214945/branch.txt        |     1 +
+ .../sync_reports/20261119_214945/head_before.txt   |     1 +
+ .../20261119_214945/hidden_target.json             |   112 +
+ .../20261119_214945/large_files_over_25mb.txt      |     0
+ .../20261119_214945/malysh_blind_output.json       | 50020 +++++++++++++++++++
+ .../20261119_214945/ns3d_flux_time.source.json     |  1976 +
+ .../20261119_214945/remotes_before.txt             |     2 +
+ .../sync_reports/20261119_214945/status_before.txt |     3 +
+ .../20261119_214945/suspicious_paths.txt           |     0
+ .../swarm_omni.py.before_swarm_visibility_fix      |   910 +
+ sync_and_malysh_flux.sh                            |   687 +
+ 36 files changed, 144504 insertions(+)
