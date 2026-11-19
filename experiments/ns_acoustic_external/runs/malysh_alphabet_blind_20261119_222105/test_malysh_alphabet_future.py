@@ -1,0 +1,801 @@
+import ast
+import hashlib
+import inspect
+import json
+import sys
+from pathlib import Path
+
+import numpy as np
+
+
+ROOT = Path.home() / "malysh_project"
+EXP = ROOT / "experiments/ns_acoustic_external"
+RUN = Path(__file__).resolve().parent
+
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+
+# ============================================================
+# FIND SOURCE ARTIFACTS
+# ============================================================
+
+FLUX_RUNS = sorted(
+    EXP.glob("runs/flux_time_*")
+)
+
+FUTURE_RUNS = sorted(
+    EXP.glob("runs/frozen_future_*")
+)
+
+if not FLUX_RUNS:
+    raise SystemExit("[FAIL] flux_time_* not found")
+
+if not FUTURE_RUNS:
+    raise SystemExit("[FAIL] frozen_future_* not found")
+
+FLUX_RUN = FLUX_RUNS[-1]
+FUTURE_RUN = FUTURE_RUNS[-1]
+
+FLUX_JSON = FLUX_RUN / "ns3d_flux_time.json"
+FIELDS_1100 = FUTURE_RUN / "fields_t1100.npz"
+REVEAL_1100 = FUTURE_RUN / "reveal_t1100.json"
+SOLVER_SOURCE = FUTURE_RUN / "freeze_reveal_t1100.py"
+
+for required in (
+    FLUX_JSON,
+    FIELDS_1100,
+    REVEAL_1100,
+    SOLVER_SOURCE,
+):
+    if not required.is_file():
+        raise SystemExit(
+            f"[FAIL] required file missing: {required}"
+        )
+
+
+FREEZE_FILE = RUN / "malysh_prediction_t1200_frozen.json"
+HASH_FILE = RUN / "malysh_prediction_t1200_frozen.sha256"
+REVEAL_FILE = RUN / "malysh_prediction_t1200_reveal.json"
+FIELDS_1200 = RUN / "fields_t1200.npz"
+
+
+def read_json(path):
+    return json.loads(
+        path.read_text(encoding="utf-8")
+    )
+
+
+def canonical_bytes(value):
+    return json.dumps(
+        value,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+        allow_nan=False,
+        default=str,
+    ).encode("utf-8")
+
+
+def digest_bytes(value):
+    return hashlib.sha256(value).hexdigest()
+
+
+def relative_error(predicted, actual):
+    p = np.asarray(predicted, dtype=float)
+    a = np.asarray(actual, dtype=float)
+
+    return float(
+        np.linalg.norm(p - a)
+        / (np.linalg.norm(a) + 1e-30)
+    )
+
+
+def complete_snapshot_1100():
+    reveal = read_json(REVEAL_1100)
+    actual = dict(reveal["actual_future"])
+
+    actual["step"] = 550
+    actual["time"] = 1.1
+
+    return actual
+
+
+# ============================================================
+# BUILD VISIBLE HISTORY THROUGH t=1.1
+# ============================================================
+
+flux_packet = read_json(FLUX_JSON)
+
+history = list(
+    flux_packet["spectral_snapshots"]
+)
+
+snapshot_1100 = complete_snapshot_1100()
+
+if int(history[-1]["step"]) != 500:
+    raise SystemExit(
+        "[FAIL] expected historical step 500"
+    )
+
+if int(snapshot_1100["step"]) != 550:
+    raise SystemExit(
+        "[FAIL] expected revealed step 550"
+    )
+
+history.append(snapshot_1100)
+
+visible_history = history[-3:]
+
+print("============================================================")
+print(" UPDATED MALYSH ACOUSTIC ALPHABET BLIND TEST")
+print("============================================================")
+print("Visible steps:", [
+    item["step"]
+    for item in visible_history
+])
+print("Hidden target step: 600")
+print("Hidden target time: 1.2")
+print()
+
+
+# ============================================================
+# RUN UPDATED MALYSH BEFORE FUTURE CALCULATION
+# ============================================================
+
+from malysh_system.thinking_cycle import (
+    run_thinking_cycle,
+)
+
+old_result = {
+    "source":
+        "ns3d_acoustic_alphabet_blind_t1200",
+
+    "semantic_context": {
+        "experiment":
+            "3D Taylor-Green spectral flux",
+
+        "visible_snapshots":
+            visible_history,
+
+        "target_step":
+            600,
+
+        "target_time":
+            1.2,
+
+        "meaning": {
+            "cumulative_flux":
+                "Positive value means forward transfer",
+
+            "energy_spectrum":
+                "Energy grouped by spectral shell",
+        },
+    },
+}
+
+unresolved = {
+    "kind":
+        "blind_acoustic_alphabet_forecast",
+
+    "target_step":
+        600,
+
+    "target_time":
+        1.2,
+
+    "instruction": (
+        "Use AcousticAlphabet as an independent observer. "
+        "Do not use future physical data. "
+        "Preserve primary, possible and negative branches."
+    ),
+
+    "revisable":
+        True,
+}
+
+numeric_data = []
+
+for snapshot in visible_history:
+    numeric_data.extend([
+        int(snapshot["step"]),
+        int(round(snapshot["time"] * 1_000_000)),
+        int(
+            round(
+                snapshot["flux_peak_value"]
+                * 1_000_000_000_000
+            )
+        ),
+        int(snapshot["flux_peak_shell"]),
+        int(snapshot["k4_weighted_peak_shell"]),
+    ])
+
+
+signature = inspect.signature(
+    run_thinking_cycle
+)
+
+result = run_thinking_cycle(
+    data=numeric_data,
+    old_result=old_result,
+    unresolved=unresolved,
+    root=ROOT,
+)
+
+if not isinstance(result, dict):
+    raise SystemExit(
+        "[FAIL] thinking cycle result is not a dict"
+    )
+
+alphabet = result.get(
+    "acoustic_alphabet"
+)
+
+if not isinstance(alphabet, dict):
+    raise SystemExit(
+        "[FAIL] AcousticAlphabet result missing"
+    )
+
+if alphabet.get("decision_authority") is not False:
+    raise SystemExit(
+        "[FAIL] AcousticAlphabet gained decision authority"
+    )
+
+prediction = alphabet.get(
+    "prediction",
+    {}
+)
+
+if prediction.get("available") is not True:
+    raise SystemExit(
+        "[FAIL] AcousticAlphabet did not produce prediction"
+    )
+
+fields = prediction.get(
+    "fields",
+    {}
+)
+
+predicted_flux = fields.get(
+    "cumulative_flux"
+)
+
+predicted_energy = fields.get(
+    "energy_spectrum"
+)
+
+if not isinstance(predicted_flux, list):
+    raise SystemExit(
+        "[FAIL] predicted flux missing"
+    )
+
+if not isinstance(predicted_energy, list):
+    raise SystemExit(
+        "[FAIL] predicted energy missing"
+    )
+
+predicted_energy = [
+    max(0.0, float(value))
+    for value in predicted_energy
+]
+
+predicted_flux = [
+    float(value)
+    for value in predicted_flux
+]
+
+flux_peak_shell = int(
+    np.argmax(
+        np.abs(
+            np.asarray(
+                predicted_flux,
+                dtype=float,
+            )
+        )
+    )
+)
+
+weighted_energy = (
+    np.arange(
+        len(predicted_energy),
+        dtype=float,
+    ) ** 4
+) * np.asarray(
+    predicted_energy,
+    dtype=float,
+)
+
+k4_peak_shell = int(
+    np.argmax(weighted_energy)
+)
+
+
+# ============================================================
+# FREEZE MALYSH PREDICTION
+# ============================================================
+
+freeze_packet = {
+    "schema":
+        "malysh.acoustic-alphabet-blind-freeze.v1",
+
+    "phase":
+        "FROZEN_BEFORE_T1200_CALCULATION",
+
+    "visible_steps": [
+        int(item["step"])
+        for item in visible_history
+    ],
+
+    "target": {
+        "step": 600,
+        "time": 1.2,
+    },
+
+    "observer": {
+        "name":
+            "AcousticAlphabet",
+
+        "kmbp_bridge_present":
+            bool(
+                result
+                .get("mind", {})
+                .get("observations", {})
+                .get("KMBP_AcousticAlphabet")
+            ),
+
+        "decision_authority":
+            alphabet["decision_authority"],
+
+        "main_answer_write":
+            alphabet["main_answer_write"],
+
+        "winner_selection":
+            alphabet["winner_selection"],
+    },
+
+    "prediction": {
+        "cumulative_flux":
+            predicted_flux,
+
+        "energy_spectrum":
+            predicted_energy,
+
+        "flux_peak_shell":
+            flux_peak_shell,
+
+        "flux_peak_value":
+            predicted_flux[
+                flux_peak_shell
+            ],
+
+        "k4_weighted_peak_shell":
+            k4_peak_shell,
+    },
+
+    "invariants": {
+        "future_not_calculated":
+            True,
+
+        "observer_only":
+            True,
+
+        "decision_authority":
+            False,
+
+        "existing_logic_preserved":
+            True,
+    },
+}
+
+freeze_data = canonical_bytes(
+    freeze_packet
+)
+
+freeze_hash = digest_bytes(
+    freeze_data
+)
+
+FREEZE_FILE.write_bytes(
+    freeze_data
+)
+
+HASH_FILE.write_text(
+    freeze_hash
+    + "  "
+    + FREEZE_FILE.name
+    + "\n",
+    encoding="utf-8",
+)
+
+print("[PASS] Malysh prediction created")
+print("[PASS] AcousticAlphabet observer used")
+print("[PASS] KMBP bridge present:", (
+    freeze_packet["observer"]
+    ["kmbp_bridge_present"]
+))
+print("[PASS] decision authority remains false")
+print("[PASS] prediction frozen before t=1.2")
+print("Frozen SHA256:", freeze_hash)
+print("Predicted flux peak shell:", flux_peak_shell)
+print(
+    "Predicted flux peak value:",
+    f"{predicted_flux[flux_peak_shell]:.12e}",
+)
+print(
+    "Predicted k4 peak shell:",
+    k4_peak_shell,
+)
+print()
+
+
+# ============================================================
+# LOAD SOLVER FUNCTIONS WITHOUT EXECUTING SOURCE CLI
+# ============================================================
+
+solver_text = SOLVER_SOURCE.read_text(
+    encoding="utf-8"
+)
+
+solver_tree = ast.parse(
+    solver_text
+)
+
+selected_nodes = []
+
+allowed_functions = {
+    "load_json",
+    "relative_error",
+    "setup_solver",
+}
+
+for node in solver_tree.body:
+    if isinstance(
+        node,
+        (
+            ast.Import,
+            ast.ImportFrom,
+        ),
+    ):
+        selected_nodes.append(node)
+
+    elif (
+        isinstance(node, ast.FunctionDef)
+        and node.name in allowed_functions
+    ):
+        selected_nodes.append(node)
+
+
+module = ast.Module(
+    body=selected_nodes,
+    type_ignores=[],
+)
+
+ast.fix_missing_locations(
+    module
+)
+
+namespace = {
+    "__name__": "frozen_solver_library",
+    "SOURCE_JSON": FLUX_JSON,
+    "SOURCE_FIELDS": FIELDS_1100,
+}
+
+exec(
+    compile(
+        module,
+        str(SOLVER_SOURCE),
+        "exec",
+    ),
+    namespace,
+)
+
+setup_solver = namespace.get(
+    "setup_solver"
+)
+
+if setup_solver is None:
+    raise SystemExit(
+        "[FAIL] setup_solver extraction failed"
+    )
+
+
+# ============================================================
+# VERIFY FROZEN HASH BEFORE REVEAL
+# ============================================================
+
+before_reveal_hash = digest_bytes(
+    FREEZE_FILE.read_bytes()
+)
+
+if before_reveal_hash != freeze_hash:
+    raise SystemExit(
+        "[FAIL] frozen prediction changed before reveal"
+    )
+
+print("[PASS] frozen hash verified before future calculation")
+print()
+
+
+# ============================================================
+# REVEAL PHYSICS t=1.1 -> t=1.2
+# ============================================================
+
+U, V, W, DT, rk2, snapshot = (
+    setup_solver()
+)
+
+for local_step in range(1, 51):
+    U, V, W = rk2(U, V, W)
+
+    if local_step % 10 == 0:
+        print(
+            f"[FUTURE {local_step:02d}/50] "
+            f"t={1.1 + local_step * DT:.3f}"
+        )
+
+actual = snapshot(
+    U,
+    V,
+    W,
+)
+
+actual["step"] = 600
+actual["time"] = 1.2
+
+
+# ============================================================
+# SCORE FROZEN MALYSH PREDICTION
+# ============================================================
+
+flux_error = relative_error(
+    predicted_flux,
+    actual["cumulative_flux"],
+)
+
+energy_error = relative_error(
+    predicted_energy,
+    actual["energy_spectrum"],
+)
+
+actual_flux_peak = int(
+    actual["flux_peak_shell"]
+)
+
+actual_k4_peak = int(
+    actual["k4_weighted_peak_shell"]
+)
+
+peak_error = abs(
+    flux_peak_shell
+    - actual_flux_peak
+)
+
+k4_error = abs(
+    k4_peak_shell
+    - actual_k4_peak
+)
+
+
+# Linear baseline from t=1.0 and t=1.1.
+previous = history[-2]
+current = history[-1]
+
+linear_flux = (
+    2.0
+    * np.asarray(
+        current["cumulative_flux"],
+        dtype=float,
+    )
+    - np.asarray(
+        previous["cumulative_flux"],
+        dtype=float,
+    )
+)
+
+linear_energy = np.maximum(
+    0.0,
+    2.0
+    * np.asarray(
+        current["energy_spectrum"],
+        dtype=float,
+    )
+    - np.asarray(
+        previous["energy_spectrum"],
+        dtype=float,
+    ),
+)
+
+baseline_flux_error = relative_error(
+    linear_flux,
+    actual["cumulative_flux"],
+)
+
+baseline_energy_error = relative_error(
+    linear_energy,
+    actual["energy_spectrum"],
+)
+
+beats_linear = bool(
+    flux_error
+    < baseline_flux_error
+)
+
+
+# ============================================================
+# FINAL HASH VERIFICATION
+# ============================================================
+
+after_reveal_hash = digest_bytes(
+    FREEZE_FILE.read_bytes()
+)
+
+if after_reveal_hash != freeze_hash:
+    raise SystemExit(
+        "[FAIL] frozen prediction changed after reveal"
+    )
+
+
+reveal_packet = {
+    "schema":
+        "malysh.acoustic-alphabet-blind-reveal.v1",
+
+    "frozen_sha256":
+        freeze_hash,
+
+    "hash_verified_before":
+        before_reveal_hash == freeze_hash,
+
+    "hash_verified_after":
+        after_reveal_hash == freeze_hash,
+
+    "source_step":
+        550,
+
+    "target_step":
+        600,
+
+    "actual_future":
+        actual,
+
+    "malysh_acoustic_alphabet": {
+        "flux_relative_error":
+            flux_error,
+
+        "energy_relative_error":
+            energy_error,
+
+        "flux_peak_shell_error":
+            peak_error,
+
+        "k4_peak_shell_error":
+            k4_error,
+    },
+
+    "linear_baseline": {
+        "flux_relative_error":
+            baseline_flux_error,
+
+        "energy_relative_error":
+            baseline_energy_error,
+    },
+
+    "comparison": {
+        "beats_linear_baseline":
+            beats_linear,
+
+        "flux_improvement_fraction":
+            float(
+                (
+                    baseline_flux_error
+                    - flux_error
+                )
+                / (
+                    baseline_flux_error
+                    + 1e-30
+                )
+            ),
+    },
+
+    "invariants": {
+        "decision_authority":
+            False,
+
+        "prediction_frozen_before_future":
+            True,
+
+        "existing_logic_preserved":
+            True,
+
+        "nonlinear_conservation":
+            abs(
+                actual[
+                    "nonlinear_global_sum"
+                ]
+            ) < 1e-10,
+    },
+}
+
+REVEAL_FILE.write_text(
+    json.dumps(
+        reveal_packet,
+        ensure_ascii=False,
+        indent=2,
+        allow_nan=False,
+    ),
+    encoding="utf-8",
+)
+
+np.savez_compressed(
+    FIELDS_1200,
+    U=U,
+    V=V,
+    W=W,
+    u=np.fft.ifftn(U).real,
+    v=np.fft.ifftn(V).real,
+    w=np.fft.ifftn(W).real,
+)
+
+
+print()
+print("============================================================")
+print(" UPDATED MALYSH BLIND RESULT")
+print("============================================================")
+print("Frozen SHA256:", freeze_hash)
+print()
+print(
+    "Malysh AcousticAlphabet flux error:",
+    f"{flux_error:.12e}",
+)
+print(
+    "Malysh AcousticAlphabet energy error:",
+    f"{energy_error:.12e}",
+)
+print(
+    "Malysh flux peak error:",
+    peak_error,
+)
+print(
+    "Malysh k4 peak error:",
+    k4_error,
+)
+print()
+print(
+    "Linear baseline flux error:",
+    f"{baseline_flux_error:.12e}",
+)
+print(
+    "Linear baseline energy error:",
+    f"{baseline_energy_error:.12e}",
+)
+print()
+print(
+    "BEATS LINEAR BASELINE:",
+    beats_linear,
+)
+print(
+    "Flux improvement:",
+    f'{100.0 * reveal_packet["comparison"]["flux_improvement_fraction"]:.6f}%',
+)
+print()
+print(
+    "Actual flux peak shell:",
+    actual_flux_peak,
+)
+print(
+    "Actual flux peak value:",
+    f'{actual["flux_peak_value"]:.12e}',
+)
+print(
+    "Actual k4 peak shell:",
+    actual_k4_peak,
+)
+print(
+    "Nonlinear conservation:",
+    reveal_packet[
+        "invariants"
+    ]["nonlinear_conservation"],
+)
+print()
+print("Freeze file:", FREEZE_FILE)
+print("Reveal file:", REVEAL_FILE)
+print("Future fields:", FIELDS_1200)

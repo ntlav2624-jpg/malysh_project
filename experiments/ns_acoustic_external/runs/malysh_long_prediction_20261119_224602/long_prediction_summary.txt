@@ -1,0 +1,14 @@
+schema=malysh.long-acoustic-alphabet-summary.v1
+
+prediction_count=8
+alphabet_wins=8
+alphabet_win_fraction=1.000000000000e+00
+mean_alphabet_flux_error=6.073533542605e-04
+mean_linear_flux_error=4.760184884093e-03
+mean_alphabet_energy_error=1.243793539294e-04
+mean_linear_energy_error=7.495066954198e-04
+overall_flux_improvement=8.724097132676e-01
+max_alphabet_flux_error=7.792053961041e-04
+all_hashes_pass=True
+all_conservation_pass=True
+all_decision_authority_false=True
