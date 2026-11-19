@@ -1,0 +1,31 @@
+ .../20261119_221542/accepted_ab_evidence.json      |     1 +
+ .../20261119_221542/accepted_ab_evidence.sha256    |     1 +
+ .../20261119_221542/cached_diff_before.patch       |     0
+ .../20261119_221542/diff_before.patch              |     0
+ .../20261119_221542/final_diff_before_commit.patch |    38 +
+ .../20261119_221542/final_diff_stat.txt            |     2 +
+ .../20261119_221542/patch_report.json              |     9 +
+ .../20261119_221542/smoke_result.json              |    11 +
+ .../20261119_221542/status_before.txt              |     7 +
+ .../20261119_221542/status_ready_to_commit.txt     |    14 +
+ .../20261119_221542/suspicious_paths.txt           |     0
+ .../acoustic_alphabet_test.json                    |     1 +
+ .../acoustic_alphabet_test.sha256                  |     1 +
+ .../test_acoustic_alphabet_principle.py            |   760 +
+ .../frozen_future_20261119_220822/fields_t1100.npz |   Bin 0 -> 756331 bytes
+ .../freeze_reveal_t1100.py                         |  1011 +
+ .../prediction_t1100_frozen.json                   |     1 +
+ .../prediction_t1100_frozen.sha256                 |     1 +
+ .../reveal_t1100.json                              |   106 +
+ .../malysh_semantic_flux_adapter.py                |   551 +
+ ...malysh_semantic_flux_adapter.py.before_path_fix |   546 +
+ .../20261119_215048/malysh_semantic_forecast.json  | 18974 +++++++++++++++++++
+ install_acoustic_alphabet_layer.sh                 |  1368 ++
+ malysh_system/acoustic_alphabet_integration.py     |   145 +
+ malysh_system/acoustic_alphabet_observer.py        |   342 +
+ ...ustic_alphabet_observer.py.before_signature_fix |   341 +
+ malysh_system/kmbp_acoustic_alphabet.py            |    72 +
+ malysh_system/thinking_cycle.py                    |    29 +
+ .../thinking_cycle.py.before_acoustic_alphabet     |  1892 ++
+ tests/test_acoustic_alphabet_observer.py           |   157 +
+ 30 files changed, 26381 insertions(+)

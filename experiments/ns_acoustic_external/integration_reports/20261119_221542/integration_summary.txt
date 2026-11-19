@@ -1,0 +1,30 @@
+schema=malysh.acoustic-alphabet-integration-summary.v1
+
+branch=full-reflections-20261103_175809
+head_before=3564aa8bd26620ba416db64aea2e003bbff5f7a8
+integration_commit=b8b3b74fbee5ef4eb23c07db017b701d36759d86
+head_after_sync=b8b3b74fbee5ef4eb23c07db017b701d36759d86
+safety_tag=pre-acoustic-alphabet-20261119_221542
+
+standalone_layer=AcousticAlphabet
+kmbp_bridge=KMBP_AcousticAlphabet
+
+number_composition=S_a + S_b -> S_(a+b)
+spectral_composition=S_p + S_q -> S_(p+q)
+temporal_composition=S_next = S_current + Delta1 + Delta2
+interaction_weight=T(k|p,q)
+zero_identity=S_0 + S_n = S_n
+
+functional_tests=PASS
+real_thinking_cycle=PASS
+ab_evidence_hash=PASS
+
+decision_authority=false
+main_answer_write=false
+possible_branch_write=false
+winner_selection=false
+replace_existing_logic=false
+legacy_kmbp_preserved=true
+
+ab_flux_improvement_percent=83.771211
+ab_wins=8/8
