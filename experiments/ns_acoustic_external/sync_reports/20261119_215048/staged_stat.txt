@@ -1,0 +1,20 @@
+ .../sync_reports/20261119_214945/ahead_behind.txt  |     2 +
+ .../20261119_214945/recent_commits.txt             |     5 +
+ .../sync_reports/20261119_214945/remote_url.txt    |     1 +
+ .../20261119_214945/staged_name_status.txt         |    36 +
+ .../sync_reports/20261119_214945/staged_stat.txt   |    37 +
+ .../sync_reports/20261119_214945/status_after.txt  |     6 +
+ .../sync_reports/20261119_214945/summary.txt       |     9 +
+ .../sync_reports/20261119_214945/sync_status.txt   |     1 +
+ .../sync_reports/20261119_215048/blind_score.json  |    14 +
+ .../sync_reports/20261119_215048/blind_task.json   |  1349 +
+ .../sync_reports/20261119_215048/branch.txt        |     1 +
+ .../sync_reports/20261119_215048/head_before.txt   |     1 +
+ .../20261119_215048/hidden_target.json             |   112 +
+ .../20261119_215048/large_files_over_25mb.txt      |     0
+ .../20261119_215048/malysh_blind_output.json       | 50020 +++++++++++++++++++
+ .../20261119_215048/ns3d_flux_time.source.json     |  1976 +
+ .../20261119_215048/remotes_before.txt             |     2 +
+ .../sync_reports/20261119_215048/status_before.txt |     9 +
+ .../20261119_215048/suspicious_paths.txt           |     0
+ 19 files changed, 53581 insertions(+)

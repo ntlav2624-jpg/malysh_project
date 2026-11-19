@@ -1,0 +1,9 @@
+timestamp=20261119_215048
+branch=full-reflections-20261103_175809
+head_before=ae061bf5c1d5e7429bbad6dd1c07132c71a06ca0
+head_after=c436315328d90d3e489b8b985e5fad0228542541
+backup=/data/data/com.termux/files/home/malysh_backups/malysh_before_sync_20261119_215048.tar.gz
+tag=pre-flux-malysh-sync-20261119_215048
+commit_created=yes
+flux_source=/data/data/com.termux/files/home/malysh_project/experiments/ns_acoustic_external/runs/flux_time_20261119_214105/ns3d_flux_time.json
+report=/data/data/com.termux/files/home/malysh_project/experiments/ns_acoustic_external/sync_reports/20261119_215048
